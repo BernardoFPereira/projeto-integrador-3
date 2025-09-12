@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgq3f8nmtd42e"]
+
+[ext_resource type="PackedScene" uid="uid://cwm0ynhwfch7v" path="res://scenes/basic_book.tscn" id="1_fe7gv"]
+
+[node name="BookStack1" type="Node3D"]
+
+[node name="BasicBook" parent="." instance=ExtResource("1_fe7gv")]
+transform = Transform3D(-3.48735e-08, 0, 1, 0, 0.8305, 0, -0.797813, 0, -4.37114e-08, -0.782796, 0.249935, -0.112166)
+
+[node name="BasicBook2" parent="." instance=ExtResource("1_fe7gv")]
+transform = Transform3D(-3.48735e-08, 0, 0.723158, 0, 0.699276, 0, -0.797813, 0, -3.16102e-08, -0.640366, 0.217835, -0.112166)
+
+[node name="BasicBook3" parent="." instance=ExtResource("1_fe7gv")]
+transform = Transform3D(-3.48735e-08, 0, 1, 0, 0.8305, 0, -0.797813, 0, -4.37114e-08, -0.496296, 0.249935, -0.112166)
+
+[node name="BasicBook11" parent="." instance=ExtResource("1_fe7gv")]
+transform = Transform3D(-3.48735e-08, -0.294035, 0.700758, 0, 0.776706, 0.265284, -0.797813, 5.9148e-08, -1.48189e-08, -0.272546, 0.249935, -0.112166)
+
+[node name="BasicBook12" parent="." instance=ExtResource("1_fe7gv")]
+transform = Transform3D(-3.48735e-08, 0, 1, 0, 0.8305, 0, -0.797813, 0, -4.37114e-08, 0.133524, 0.249935, -0.112166)
+
+[node name="BasicBook13" parent="." instance=ExtResource("1_fe7gv")]
+transform = Transform3D(-3.48735e-08, 0, 1.29478, 0, 0.8305, 0, -0.797813, 0, -5.65966e-08, 0.376514, 0.249935, -0.112166)
+
+[node name="BasicBook4" parent="." instance=ExtResource("1_fe7gv")]
+transform = Transform3D(-3.48735e-08, 0, 1, 0, 0.8305, 0, -0.797813, 0, -4.37114e-08, 0.740324, 0.249935, -0.112166)
+
+[node name="BasicBook5" parent="." instance=ExtResource("1_fe7gv")]
+transform = Transform3D(-3.48735e-08, 0, 1, 0, 0.8305, 0, -0.797813, 0, -4.37114e-08, 0.958404, 0.249935, -0.112166)

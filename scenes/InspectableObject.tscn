@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2721ltl75utc"]
+
+[ext_resource type="Script" path="res://scripts/manipulated_object.gd" id="1_x6bpw"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_rh153"]
+radius = 0.12
+height = 0.62
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_eajbp"]
+top_radius = 0.194
+bottom_radius = 0.223
+height = 0.069
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3hx8e"]
+size = Vector3(0.469604, 0.544952, 0.459717)
+
+[node name="Object" type="Node3D"]
+script = ExtResource("1_x6bpw")
+
+[node name="piece1" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_rh153")
+
+[node name="piece2" type="MeshInstance3D" parent="piece1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.151392, 0)
+mesh = SubResource("CylinderMesh_eajbp")
+
+[node name="InteractArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0230103, 0.0536346, -0.00427246)
+shape = SubResource("BoxShape3D_3hx8e")
+
+[connection signal="area_entered" from="InteractArea" to="." method="_on_interact_area_area_entered"]
+[connection signal="area_exited" from="InteractArea" to="." method="_on_interact_area_area_exited"]

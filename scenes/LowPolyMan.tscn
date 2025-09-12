@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmxxcix1vpyby"]
+
+[ext_resource type="PackedScene" uid="uid://c2ns8isnxc0vj" path="res://models/LowPoly_WalkingMan.glb" id="1_esl4n"]
+
+[node name="LowPolyMan" type="Node3D"]
+
+[node name="LowPoly_WalkingMan" parent="." instance=ExtResource("1_esl4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.40799, 0)

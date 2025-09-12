@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://x03u4iw1krl1"]
+
+[ext_resource type="Texture2D" uid="uid://c4qm8bouwokjf" path="res://tiles/stainedglass.jpg" id="1_ug82k"]
+
+[resource]
+albedo_texture = ExtResource("1_ug82k")
+uv1_scale = Vector3(0.25, 0.25, 0.25)
+uv1_offset = Vector3(-0.505, -0.175, 0)

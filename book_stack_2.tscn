@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca5f2b28eoiml"]
+
+[ext_resource type="PackedScene" uid="uid://cwm0ynhwfch7v" path="res://scenes/basic_book.tscn" id="1_mh0ql"]
+
+[node name="BookStack2" type="Node3D"]
+
+[node name="BasicBook6" parent="." instance=ExtResource("1_mh0ql")]
+transform = Transform3D(0.668, 0, 0, 0, 0.655927, 0, 0, 0, 0.726899, 0, 0.193169, -0.361934)
+
+[node name="BasicBook11" parent="." instance=ExtResource("1_mh0ql")]
+transform = Transform3D(0.668, 0, 0, 0, 0.650589, -0.0925519, 0, 0.0835154, 0.720983, 0, 0.196437, -0.662648)
+
+[node name="BasicBook14" parent="." instance=ExtResource("1_mh0ql")]
+transform = Transform3D(0.668, 0, 0, 0, 0.603676, 0.284302, 0, -0.256544, 0.668995, 0, 0.196181, -0.189255)
+
+[node name="BasicBook10" parent="." instance=ExtResource("1_mh0ql")]
+transform = Transform3D(0.790422, 0.112784, -5.93609e-09, 0, -3.63023e-08, -1, -0.108345, 0.822806, -4.33064e-08, 0, 0.075658, 0.407576)
+
+[node name="BasicBook7" parent="." instance=ExtResource("1_mh0ql")]
+transform = Transform3D(0.797813, 0, 0, 0, 0.8305, 0, 0, 0, 1, 0, 0.242304, -0.511179)
+
+[node name="BasicBook8" parent="." instance=ExtResource("1_mh0ql")]
+transform = Transform3D(0.797813, 0, 0, 0, 0.8305, 0, 0, 0, 1, 0, 0.242663, 0.0445045)
+
+[node name="BasicBook12" parent="." instance=ExtResource("1_mh0ql")]
+transform = Transform3D(0.797813, 0, 0, 0, 0.752597, -0.422855, 0, 0.351182, 0.906197, 0, 0.254523, -0.838678)
+
+[node name="BasicBook9" parent="." instance=ExtResource("1_mh0ql")]
+transform = Transform3D(0.797813, 0, 0, 0, 0.8305, 0, 0, 0, 1, 0, 0.245316, 0.781795)

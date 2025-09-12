@@ -1,0 +1,57 @@
+[gd_resource type="Environment" load_steps=6 format=3 uid="uid://dfx7slq5dxvw3"]
+
+[ext_resource type="Shader" path="res://sky.gdshader" id="1_r4i7x"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_e55jg"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_486p8"]
+seamless = true
+noise = SubResource("FastNoiseLite_e55jg")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l66ko"]
+shader = ExtResource("1_r4i7x")
+shader_parameter/sky_top_color = Color(0.385, 0.454, 0.55, 1)
+shader_parameter/sky_horizon_color = Color(0.646, 0.656, 0.67, 1)
+shader_parameter/sky_curve = 0.15
+shader_parameter/sky_energy = 1.0
+shader_parameter/sky_cover_modulate = Color(0.654232, 0.654232, 0.654232, 1)
+shader_parameter/ground_bottom_color = Color(0.0463511, 0.203532, 0.180999, 1)
+shader_parameter/ground_horizon_color = Color(0.381683, 0.413339, 0.402221, 1)
+shader_parameter/ground_curve = 0.025
+shader_parameter/ground_energy = 1.0
+shader_parameter/sun_angle_max = 30.0
+shader_parameter/sun_curve = 0.06
+shader_parameter/exposure = 0.25
+shader_parameter/wind_offset_direction = Vector2(0.5, 0.1)
+shader_parameter/wind_speed = 1.08
+shader_parameter/clouds_change = true
+shader_parameter/cloud_change_rate = 0.349
+shader_parameter/pole_blend_shape = 0.435
+shader_parameter/pole_blend_strength = 0.395
+shader_parameter/pole_blend_brightness = 0.3
+shader_parameter/horizon_blend_shape = 0.75
+shader_parameter/horizon_blend_strength = 0.09
+shader_parameter/horizon_blend_brightness = 0.231
+shader_parameter/horizon_blend_width = 0.1
+shader_parameter/sky_cover = SubResource("NoiseTexture2D_486p8")
+
+[sub_resource type="Sky" id="Sky_6lbue"]
+sky_material = SubResource("ShaderMaterial_l66ko")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_6lbue")
+ambient_light_source = 3
+ssao_enabled = true
+ssao_radius = 0.15
+ssao_intensity = 8.23
+ssao_power = 1.72305
+fog_enabled = true
+fog_light_color = Color(0.296733, 0.32402, 0.366914, 1)
+fog_light_energy = 0.27
+fog_density = 0.0163
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.3
+volumetric_fog_albedo = Color(0.396889, 0.396889, 0.396889, 1)
+volumetric_fog_emission = Color(0.00351917, 0.00351917, 0.00351917, 1)
+volumetric_fog_sky_affect = 0.405
