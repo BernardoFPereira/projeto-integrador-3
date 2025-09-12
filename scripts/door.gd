@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var animation_player = $AnimationPlayer
-@onready var audio_stream = $AudioStream
+@onready var audio_stream = $DoorMesh/AudioStream
 
 enum DoorState
 {

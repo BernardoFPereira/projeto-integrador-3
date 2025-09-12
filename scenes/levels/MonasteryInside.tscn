@@ -1,4 +1,4 @@
-[gd_scene load_steps=2184 format=3 uid="uid://imk5ccgfjb4n"]
+[gd_scene load_steps=2185 format=3 uid="uid://imk5ccgfjb4n"]
 
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_wne16"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="2_34kdn"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://8yphdw75e2g3" path="res://models/bookshelf-02_model.glb" id="17_g14qm"]
 [ext_resource type="PackedScene" uid="uid://ca5f2b28eoiml" path="res://book_stack_2.tscn" id="22_mxde0"]
 [ext_resource type="PackedScene" uid="uid://bgq3f8nmtd42e" path="res://book_stack_1.tscn" id="23_scd3h"]
+[ext_resource type="PackedScene" uid="uid://b7lanikpsv6hu" path="res://models/table-02b_model.glb" id="25_3d31q"]
 [ext_resource type="PackedScene" uid="uid://dvu67awddwb6q" path="res://scenes/angel_statue.tscn" id="25_dk8ee"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y81c2"]
@@ -21766,6 +21767,9 @@ state = 2
 transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 3.05381, 7.86893, 6.37544)
 state = 3
 
+[node name="Door" parent="Doors" instance=ExtResource("4_eytb6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.238037, 1.25554, 3.28711)
+
 [node name="LevelBlocks" type="Node3D" parent="."]
 
 [node name="Floor1" type="Node3D" parent="LevelBlocks"]
@@ -22824,6 +22828,12 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.373
 [node name="BookStack3" parent="Furniture/Misc" instance=ExtResource("23_scd3h")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.373568, 11.8191, 6.22524)
 
+[node name="angel_statue" parent="Furniture" instance=ExtResource("25_dk8ee")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.1837, 2.49029, 0.731561)
+
+[node name="table-02b_model" parent="Furniture" instance=ExtResource("25_3d31q")]
+transform = Transform3D(-5.84112e-09, 0, -0.133629, 0, 0.133629, 0, 0.133629, 0, -5.84112e-09, -0.696728, 0, 7.92302)
+
 [node name="Lights" type="Node" parent="."]
 
 [node name="WindowLight4" type="SpotLight3D" parent="Lights"]
@@ -23009,6 +23019,3 @@ unit_size = 14.25
 pitch_scale = 0.53
 autoplay = true
 panning_strength = 0.54
-
-[node name="angel_statue" parent="." instance=ExtResource("25_dk8ee")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.1837, 2.49029, 0.731561)

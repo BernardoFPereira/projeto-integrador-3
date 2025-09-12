@@ -41,7 +41,7 @@ func _ready():
 
 func _process(delta):
 	if interact_target:
-		if global_position.distance_to(interact_target.get_child(-1).global_position) > 2:
+		if global_position.distance_to(interact_target.get_child(0).get_child(0).global_position) > 2:
 			print('RELEASE ME!!!!')
 			interact_target = null
 			can_interact = false
@@ -176,9 +176,9 @@ func handle_camera_pos(delta) -> void:
 
 func _on_interact_area_area_entered(area):
 	var area_parent = area.get_parent()
-	
+	print(area_parent)
 	if area_parent.is_in_group("Door") and !can_interact:
 		print("DOOR DETECTEDEBERB")
 		can_interact = true
-		interact_target = area_parent
+		interact_target = area_parent.get_parent()
 	pass # Replace with function body.
