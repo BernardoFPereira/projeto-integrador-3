@@ -35,6 +35,8 @@ var is_dragging_mouse := false
 var can_interact := false
 var interact_target: Node3D
 
+@export var collected_keys: Array[Node3D]
+
 func _ready():
 	set_camera_mode(CameraModes.ThirdPerson)
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -45,7 +47,7 @@ func _process(delta):
 			print('RELEASE ME!!!!')
 			interact_target = null
 			can_interact = false
-			pass
+			
 	handle_camera_pos(delta)
 	handle_state(delta)
 
@@ -181,4 +183,8 @@ func _on_interact_area_area_entered(area):
 		print("DOOR DETECTEDEBERB")
 		can_interact = true
 		interact_target = area_parent.get_parent()
-	pass # Replace with function body.
+		
+	if area_parent.is_in_group("Key") and !can_interact:
+		print("KEY DETECTEDERBERB")
+		can_interact = true
+		interact_target = area_parent

@@ -1,9 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bjdelpf067oip"]
 
 [ext_resource type="Script" path="res://scripts/writable_book.gd" id="1_w12n1"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_fuvd4"]
-size = Vector3(1, 0.29, 1)
+[ext_resource type="PackedScene" uid="uid://bthqsayqdagbg" path="res://models/livro_aberto.glb" id="2_60bun"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5ihwa"]
 size = Vector3(2.02843, 1, 1.84473)
@@ -11,9 +9,8 @@ size = Vector3(2.02843, 1, 1.84473)
 [node name="Book" type="Node3D"]
 script = ExtResource("1_w12n1")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31559, 0)
-mesh = SubResource("BoxMesh_fuvd4")
+[node name="livro_aberto" parent="." instance=ExtResource("2_60bun")]
+transform = Transform3D(-9.61553e-09, 0, -0.219978, 0, 0.219978, 0, 0.219978, 0, -9.61553e-09, 0, -0.216666, 0)
 
 [node name="InteractionArea" type="Area3D" parent="."]
 
