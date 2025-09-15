@@ -1,17 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://ca5f2b28eoiml"]
+[gd_scene load_steps=10 format=3 uid="uid://ca5f2b28eoiml"]
 
 [ext_resource type="PackedScene" uid="uid://cwm0ynhwfch7v" path="res://scenes/basic_book.tscn" id="1_mh0ql"]
+[ext_resource type="Texture2D" uid="uid://bipd2ij2noktb" path="res://textures/livro_estudinhos2_standardSurface2_BaseColor.1002.png" id="2_k52lt"]
+[ext_resource type="Texture2D" uid="uid://djt46ochxoaum" path="res://textures/livro_estudinhos2_standardSurface2_BaseColor.1005.png" id="3_afkhs"]
+[ext_resource type="Texture2D" uid="uid://ckrv03jaji1rt" path="res://textures/livro_estudinhos2_standardSurface2_BaseColor.1003.png" id="4_106g4"]
+[ext_resource type="Texture2D" uid="uid://bep6t7s7b2jy1" path="res://textures/livro_estudinhos2_standardSurface2_BaseColor.1004.png" id="5_b0jv4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3viav"]
+albedo_texture = ExtResource("2_k52lt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7pnns"]
+albedo_texture = ExtResource("3_afkhs")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bop6t"]
+albedo_texture = ExtResource("4_106g4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6tjud"]
+albedo_texture = ExtResource("5_b0jv4")
 
 [node name="BookStack2" type="Node3D"]
 
 [node name="BasicBook6" parent="." instance=ExtResource("1_mh0ql")]
 transform = Transform3D(0.668, 0, 0, 0, 0.655927, 0, 0, 0, 0.726899, 0, 0.193169, -0.361934)
 
+[node name="book_geo" parent="BasicBook6/livro" index="0"]
+material_override = SubResource("StandardMaterial3D_3viav")
+
 [node name="BasicBook11" parent="." instance=ExtResource("1_mh0ql")]
 transform = Transform3D(0.668, 0, 0, 0, 0.650589, -0.0925519, 0, 0.0835154, 0.720983, 0, 0.196437, -0.662648)
 
+[node name="book_geo" parent="BasicBook11/livro" index="0"]
+material_override = SubResource("StandardMaterial3D_7pnns")
+
 [node name="BasicBook14" parent="." instance=ExtResource("1_mh0ql")]
 transform = Transform3D(0.668, 0, 0, 0, 0.603676, 0.284302, 0, -0.256544, 0.668995, 0, 0.196181, -0.189255)
+
+[node name="book_geo" parent="BasicBook14/livro" index="0"]
+material_override = SubResource("StandardMaterial3D_bop6t")
 
 [node name="BasicBook10" parent="." instance=ExtResource("1_mh0ql")]
 transform = Transform3D(0.790422, 0.112784, -5.93609e-09, 0, -3.63023e-08, -1, -0.108345, 0.822806, -4.33064e-08, 0, 0.075658, 0.407576)
@@ -27,3 +52,11 @@ transform = Transform3D(0.797813, 0, 0, 0, 0.752597, -0.422855, 0, 0.351182, 0.9
 
 [node name="BasicBook9" parent="." instance=ExtResource("1_mh0ql")]
 transform = Transform3D(0.797813, 0, 0, 0, 0.8305, 0, 0, 0, 1, 0, 0.245316, 0.781795)
+
+[node name="book_geo" parent="BasicBook9/livro" index="0"]
+material_override = SubResource("StandardMaterial3D_6tjud")
+
+[editable path="BasicBook6"]
+[editable path="BasicBook11"]
+[editable path="BasicBook14"]
+[editable path="BasicBook9"]

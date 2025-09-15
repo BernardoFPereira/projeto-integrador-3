@@ -1,4 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwm0ynhwfch7v"]
+[gd_scene load_steps=6 format=3 uid="uid://cwm0ynhwfch7v"]
+
+[ext_resource type="Texture2D" uid="uid://drw5ubk67kptp" path="res://textures/livro_estudinhos2_standardSurface2_BaseColor.1001.png" id="1_tgos8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bm73g"]
+albedo_texture = ExtResource("1_tgos8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6r2l5"]
 resource_name = "estudinhos2:standardSurface2.001"
@@ -45,5 +50,6 @@ shadow_mesh = SubResource("ArrayMesh_8ow27")
 
 [node name="book_geo" type="MeshInstance3D" parent="livro"]
 transform = Transform3D(0.20132, 0, 0, 0, 0.20132, 0, 0, 0, 0.20132, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_bm73g")
 mesh = SubResource("ArrayMesh_amnac")
 skeleton = NodePath("")

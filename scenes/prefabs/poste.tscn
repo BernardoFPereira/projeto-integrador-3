@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn1r0un3ondfq"]
+
+[ext_resource type="PackedScene" uid="uid://b7jcchekjv5au" path="res://models/poste.glb" id="1_63wui"]
+
+[node name="poste" type="Node3D"]
+
+[node name="poste" parent="." instance=ExtResource("1_63wui")]
