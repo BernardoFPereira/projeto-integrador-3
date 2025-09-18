@@ -1,4 +1,4 @@
-[gd_scene load_steps=2186 format=3 uid="uid://imk5ccgfjb4n"]
+[gd_scene load_steps=2188 format=3 uid="uid://imk5ccgfjb4n"]
 
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_wne16"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="2_34kdn"]
@@ -28,7 +28,9 @@
 [ext_resource type="PackedScene" uid="uid://cgfowgyio5ni3" path="res://scenes/Key.tscn" id="24_8o80k"]
 [ext_resource type="PackedScene" uid="uid://dvu67awddwb6q" path="res://scenes/angel_statue.tscn" id="25_dk8ee"]
 [ext_resource type="PackedScene" uid="uid://dh4r6fk7n0ge3" path="res://scenes/prefabs/table.tscn" id="26_7udxk"]
+[ext_resource type="PackedScene" uid="uid://cfbqdor8tyw7e" path="res://scenes/prefabs/benchsmall.tscn" id="26_cjtp2"]
 [ext_resource type="PackedScene" uid="uid://cvxii1ppsp1bo" path="res://scenes/broken_chair.tscn" id="29_506c8"]
+[ext_resource type="PackedScene" uid="uid://m7trdro12xfi" path="res://scenes/prefabs/cemetery.tscn" id="30_16gqg"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y81c2"]
 emission_shape = 3
@@ -22831,6 +22833,48 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.373
 [node name="BookStack3" parent="Furniture/Misc" instance=ExtResource("23_scd3h")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.373568, 11.8191, 6.22524)
 
+[node name="Table" parent="Furniture/Misc" instance=ExtResource("26_7udxk")]
+transform = Transform3D(-0.0997776, 0.0805557, -0.0375753, -0.000483283, 0.0559958, 0.12133, 0.088887, 0.09073, -0.0415194, -9.22462, 11.1771, 9.6075)
+
+[node name="Table2" parent="Furniture/Misc" instance=ExtResource("26_7udxk")]
+transform = Transform3D(0.133629, 0, 0, 0, 0.133629, 0, 0, 0, 0.133629, -13.4942, 11, 8.01179)
+
+[node name="Table3" parent="Furniture/Misc" instance=ExtResource("26_7udxk")]
+transform = Transform3D(0.133629, 0, 0, 0, 0.133629, 0, 0, 0, 0.133629, -13.5124, 10.8858, 3.91967)
+
+[node name="Cemetery" parent="Furniture/Misc" instance=ExtResource("30_16gqg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.7793, 0, 7.31528)
+
+[node name="Benches" type="Node3D" parent="Furniture/Misc"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -10.6944, -0.355036, 5.91626)
+
+[node name="benchsmall fallen" parent="Furniture/Misc/Benches" instance=ExtResource("26_cjtp2")]
+transform = Transform3D(0.999999, 1.37383e-10, -4.89987e-09, 4.89987e-09, -0.0560481, 0.998428, -1.37454e-10, -0.998427, -0.056048, -0.115757, 0.832199, 0)
+
+[node name="benchsmall2" parent="Furniture/Misc/Benches" instance=ExtResource("26_cjtp2")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, -0.115755, 0, 2.80929)
+
+[node name="benchsmall3" parent="Furniture/Misc/Benches" instance=ExtResource("26_cjtp2")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, -4.86628, 0, 0)
+
+[node name="benchsmall4" parent="Furniture/Misc/Benches" instance=ExtResource("26_cjtp2")]
+transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, -4.86628, 0, 2.67212)
+
+[node name="benchsmall5" parent="Furniture/Misc/Benches" instance=ExtResource("26_cjtp2")]
+transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, -0.115754, 0, 5.74745)
+
+[node name="benchsmall6" parent="Furniture/Misc/Benches" instance=ExtResource("26_cjtp2")]
+transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, -4.86628, 0, 5.61028)
+
+[node name="benchsmall7" parent="Furniture/Misc/Benches" instance=ExtResource("26_cjtp2")]
+transform = Transform3D(0.999999, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 0.999999, -0.115754, 0, 8.23154)
+
+[node name="benchsmall8" parent="Furniture/Misc/Benches" instance=ExtResource("26_cjtp2")]
+transform = Transform3D(0.999999, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 0.999999, -4.86627, 0, 8.09437)
+
+[node name="Table" parent="Furniture/Misc/Benches" instance=ExtResource("26_7udxk")]
+transform = Transform3D(-0.133629, 0, 1.16822e-08, 0, 0.133629, 0, -1.16822e-08, 0, -0.133629, -2.74512, 0, 17.9973)
+
 [node name="angel_statue" parent="Furniture" instance=ExtResource("25_dk8ee")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.1837, 2.49029, 0.731561)
 
@@ -22947,7 +22991,23 @@ omni_range = 7.41314
 [node name="CandleLight_MainChapel1" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.24973, 3.19129, -7.51349)
 light_color = Color(0.963222, 0.641663, 0.373259, 1)
-light_energy = 1.385
+light_energy = 7.365
+shadow_enabled = true
+omni_range = 4.58834
+omni_attenuation = 2.07053
+
+[node name="CandleLight_MainChapel8" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.76515, 2.38643, 0.0782502)
+light_color = Color(0.963222, 0.641663, 0.373259, 1)
+light_energy = 1.87
+shadow_enabled = true
+omni_range = 4.58834
+omni_attenuation = 2.07053
+
+[node name="CandleLight_MainChapel7" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.88409, 1.68021, -12.2719)
+light_color = Color(0.963222, 0.641663, 0.373259, 1)
+light_energy = 5.102
 shadow_enabled = true
 omni_range = 4.58834
 omni_attenuation = 2.07053
@@ -22955,7 +23015,7 @@ omni_attenuation = 2.07053
 [node name="CandleLight_MainChapel5" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.24973, 3.19129, -0.821259)
 light_color = Color(0.963222, 0.641663, 0.373259, 1)
-light_energy = 1.385
+light_energy = 7.365
 shadow_enabled = true
 omni_range = 4.58834
 omni_attenuation = 2.07053
@@ -22963,7 +23023,7 @@ omni_attenuation = 2.07053
 [node name="CandleLight_MainChapel6" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.24973, 3.19129, 2.57887)
 light_color = Color(0.963222, 0.641663, 0.373259, 1)
-light_energy = 1.385
+light_energy = 7.365
 shadow_enabled = true
 omni_range = 4.58834
 omni_attenuation = 2.07053
@@ -23025,12 +23085,3 @@ unit_size = 14.25
 pitch_scale = 0.53
 autoplay = true
 panning_strength = 0.54
-
-[node name="Table" parent="." instance=ExtResource("26_7udxk")]
-transform = Transform3D(-0.0997776, 0.0805557, -0.0375753, -0.000483283, 0.0559958, 0.12133, 0.088887, 0.09073, -0.0415194, -9.22462, 11.1771, 9.6075)
-
-[node name="Table2" parent="." instance=ExtResource("26_7udxk")]
-transform = Transform3D(0.133629, 0, 0, 0, 0.133629, 0, 0, 0, 0.133629, -13.4942, 11, 8.01179)
-
-[node name="Table3" parent="." instance=ExtResource("26_7udxk")]
-transform = Transform3D(0.133629, 0, 0, 0, 0.133629, 0, 0, 0, 0.133629, -13.5124, 10.8858, 3.91967)
