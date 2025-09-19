@@ -6,8 +6,9 @@ class_name Player
 @onready var camera = $View/SpringArm3D/Camera3D
 @onready var head_camer_pos = $View/HeadCamerPos
 @onready var shoulder_camera_pos = $View/ShoulderCameraPos
-@onready var animation_player = $ThePriest/AnimationPlayer
-#@onready var animation_tree = $ThePriest/AnimationTree
+#@onready var animation_player = $ThePriest/AnimationPlayer
+@onready var animation_player = $"ThePriest/Padre-walkF-walkB/AnimationPlayer"
+@onready var animation_tree = $"ThePriest/Padre-walkF-walkB/AnimationTree"
 @onready var inspect_object_pos = $InspectObjectPos
 
 const SPEED = 2.0
@@ -129,11 +130,12 @@ func handle_state(delta) -> void:
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	#var blend_value = animation_tree.get("parameters/blend/blend_amount")
+	var blend_position = animation_tree.get("parameters/blend_position")
 	
 	match state:
 		States.IDLE:
-			#blend_value = lerp(blend_value, 0.0, delta * 6) 
-			#animation_tree.set("parameters/blend/blend_amount", blend_value)
+			blend_position = lerp(blend_position, Vector2.ZERO, delta * 6) 
+			animation_tree.set("parameters/blend_position", blend_position)
 			if direction:
 				set_state(States.WALK)
 				
@@ -141,12 +143,12 @@ func handle_state(delta) -> void:
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 		
 		States.WALK:
-			#if input_dir.x != 0 and input_dir.y == 0:
-				#blend_value = lerp(blend_value, -1.0, delta * 6) 
-				#animation_tree.set("parameters/blend/blend_amount", blend_value)
-			#else:
-				#blend_value = lerp(blend_value, 1.0, delta * 6) 
-				#animation_tree.set("parameters/blend/blend_amount", blend_value)
+			if input_dir.y > 0:
+				blend_position = lerp(blend_position, Vector2.UP, delta * 6) 
+				animation_tree.set("parameters/blend_position", blend_position)
+			elif input_dir.y < 0:
+				blend_position = lerp(blend_position, Vector2.DOWN, delta * 6) 
+				animation_tree.set("parameters/blend_position", blend_position)
 			if !direction:
 				set_state(States.IDLE)
 				

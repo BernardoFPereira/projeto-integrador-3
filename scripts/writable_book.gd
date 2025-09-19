@@ -10,11 +10,13 @@ func _process(delta):
 	pass
 
 func _on_interaction_area_body_entered(body):
-	if !ProgressManager.past_first_contact:
-		ProgressManager.emit_signal("first_contact")
-		ProgressManager.past_first_contact = true
 	
 	if body.is_in_group("Player"):
+		if !ProgressManager.past_first_contact:
+			ProgressManager.emit_signal("first_contact")
+			ProgressManager.past_first_contact = true
+			ProgressManager.journal.reveal_note(1)
+			
 		print("Hit me!")
 		#player = body
 		#player.is_interacting = true
