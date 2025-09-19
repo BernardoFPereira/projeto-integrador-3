@@ -1,4 +1,4 @@
-[gd_scene load_steps=2188 format=3 uid="uid://imk5ccgfjb4n"]
+[gd_scene load_steps=2194 format=3 uid="uid://imk5ccgfjb4n"]
 
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_wne16"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="2_34kdn"]
@@ -29,8 +29,14 @@
 [ext_resource type="PackedScene" uid="uid://dvu67awddwb6q" path="res://scenes/angel_statue.tscn" id="25_dk8ee"]
 [ext_resource type="PackedScene" uid="uid://dh4r6fk7n0ge3" path="res://scenes/prefabs/table.tscn" id="26_7udxk"]
 [ext_resource type="PackedScene" uid="uid://cfbqdor8tyw7e" path="res://scenes/prefabs/benchsmall.tscn" id="26_cjtp2"]
+[ext_resource type="PackedScene" uid="uid://bcfr0cbpfsy05" path="res://scenes/prefabs/candle_02.tscn" id="29_2n8mc"]
 [ext_resource type="PackedScene" uid="uid://cvxii1ppsp1bo" path="res://scenes/broken_chair.tscn" id="29_506c8"]
 [ext_resource type="PackedScene" uid="uid://m7trdro12xfi" path="res://scenes/prefabs/cemetery.tscn" id="30_16gqg"]
+[ext_resource type="PackedScene" uid="uid://enhrnkww6cy0" path="res://scenes/prefabs/armless.tscn" id="32_j5vsp"]
+[ext_resource type="PackedScene" uid="uid://btm3172xym3f2" path="res://scenes/prefabs/armlessstatue.tscn" id="33_f7riu"]
+[ext_resource type="PackedScene" uid="uid://dh10rg2yfc0u7" path="res://scenes/prefabs/bothlessstatue.tscn" id="34_mcu2r"]
+[ext_resource type="PackedScene" uid="uid://cwm0ynhwfch7v" path="res://scenes/basic_book.tscn" id="35_tcmye"]
+[ext_resource type="PackedScene" uid="uid://du4lyekygvy8q" path="res://scenes/prefabs/candle_01.tscn" id="36_7q40q"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y81c2"]
 emission_shape = 3
@@ -22849,7 +22855,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.7793, 0, 7.31528)
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -10.6944, -0.355036, 5.91626)
 
 [node name="benchsmall fallen" parent="Furniture/Misc/Benches" instance=ExtResource("26_cjtp2")]
-transform = Transform3D(0.999999, 1.37383e-10, -4.89987e-09, 4.89987e-09, -0.0560481, 0.998428, -1.37454e-10, -0.998427, -0.056048, -0.115757, 0.832199, 0)
+transform = Transform3D(0.999999, -1.36317e-10, 4.88007e-09, -4.88007e-09, -0.0558215, 0.99844, 1.36317e-10, -0.99844, -0.0558215, -0.115757, 0.832199, 0)
 
 [node name="benchsmall2" parent="Furniture/Misc/Benches" instance=ExtResource("26_cjtp2")]
 transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, -0.115755, 0, 2.80929)
@@ -22996,14 +23002,6 @@ shadow_enabled = true
 omni_range = 4.58834
 omni_attenuation = 2.07053
 
-[node name="CandleLight_MainChapel8" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.76515, 2.38643, 0.0782502)
-light_color = Color(0.963222, 0.641663, 0.373259, 1)
-light_energy = 1.87
-shadow_enabled = true
-omni_range = 4.58834
-omni_attenuation = 2.07053
-
 [node name="CandleLight_MainChapel7" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.88409, 1.68021, -12.2719)
 light_color = Color(0.963222, 0.641663, 0.373259, 1)
@@ -23044,6 +23042,14 @@ shadow_enabled = true
 omni_range = 4.58834
 omni_attenuation = 2.07053
 
+[node name="CandleLight_Library1" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4401, 10.1996, -10.9119)
+light_color = Color(0.963222, 0.641663, 0.373259, 1)
+light_energy = 1.385
+shadow_enabled = true
+omni_range = 4.58834
+omni_attenuation = 2.07053
+
 [node name="CandleLight_MainChapel4" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.29472, 10.0725, 9.04944)
 light_color = Color(0.963222, 0.641663, 0.373259, 1)
@@ -23053,6 +23059,20 @@ light_projector = SubResource("NoiseTexture2D_0q8xx")
 shadow_enabled = true
 omni_range = 7.56621
 omni_attenuation = 0.901251
+
+[node name="Courtyard Candles" type="Node3D" parent="Lights"]
+
+[node name="candle02" parent="Lights/Courtyard Candles" instance=ExtResource("29_2n8mc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.78524, 2, 0.126194)
+
+[node name="candle03" parent="Lights/Courtyard Candles" instance=ExtResource("29_2n8mc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45822, 2, 0.0800766)
+
+[node name="candle01" parent="Lights/Courtyard Candles" instance=ExtResource("36_7q40q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.47794, 2.5, 0.360852)
+
+[node name="candle04" parent="Lights/Courtyard Candles" instance=ExtResource("29_2n8mc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.59381, 2.5, 0.404007)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("7_nvrtf")
@@ -23085,3 +23105,18 @@ unit_size = 14.25
 pitch_scale = 0.53
 autoplay = true
 panning_strength = 0.54
+
+[node name="armless" parent="." instance=ExtResource("32_j5vsp")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.92, 6.51872, -9.50552)
+
+[node name="bothless" parent="." instance=ExtResource("33_f7riu")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.9315, 6.5, -12.1677)
+
+[node name="bothlessstatue" parent="." instance=ExtResource("34_mcu2r")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.94588, 6.5, -9.54025)
+
+[node name="BasicBook" parent="." instance=ExtResource("35_tcmye")]
+transform = Transform3D(-1, 7.42195e-08, -4.61975e-08, 0, 0.528438, 0.848972, 8.74228e-08, 0.848972, -0.528438, 11.9153, 8.37385, -11.7561)
+
+[node name="candle01" parent="." instance=ExtResource("36_7q40q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.84686, 2.5, 0.627423)

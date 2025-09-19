@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://du4lyekygvy8q"]
+
+[ext_resource type="PackedScene" uid="uid://cwc5c56naxa7f" path="res://models/vela001.glb" id="1_nyuym"]
+
+[node name="candle01" type="Node3D"]
+
+[node name="vela001" parent="." instance=ExtResource("1_nyuym")]
+
+[node name="CandleLight_Courtyard" type="OmniLight3D" parent="vela001"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000900608, 0.321481, 0.0128789)
+light_color = Color(0.963222, 0.641663, 0.373259, 1)
+light_energy = 0.577
+light_indirect_energy = 1.647
+light_volumetric_fog_energy = 4.717
+light_size = 0.111
+light_bake_mode = 1
+shadow_enabled = true
+omni_range = 4.58834
+omni_attenuation = 2.07053
+
+[editable path="vela001"]
