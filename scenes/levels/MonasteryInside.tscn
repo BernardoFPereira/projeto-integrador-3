@@ -1,4 +1,4 @@
-[gd_scene load_steps=2194 format=3 uid="uid://imk5ccgfjb4n"]
+[gd_scene load_steps=2196 format=3 uid="uid://imk5ccgfjb4n"]
 
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_wne16"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="2_34kdn"]
@@ -37,6 +37,8 @@
 [ext_resource type="PackedScene" uid="uid://dh10rg2yfc0u7" path="res://scenes/prefabs/bothlessstatue.tscn" id="34_mcu2r"]
 [ext_resource type="PackedScene" uid="uid://cwm0ynhwfch7v" path="res://scenes/basic_book.tscn" id="35_tcmye"]
 [ext_resource type="PackedScene" uid="uid://du4lyekygvy8q" path="res://scenes/prefabs/candle_01.tscn" id="36_7q40q"]
+[ext_resource type="PackedScene" uid="uid://cyuqysv1hojuw" path="res://scenes/prefabs/candle_03.tscn" id="38_ap11j"]
+[ext_resource type="PackedScene" uid="uid://bgydr8f43d8yg" path="res://scenes/prefabs/candelabra.tscn" id="39_0xqyo"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y81c2"]
 emission_shape = 3
@@ -22825,6 +22827,21 @@ transform = Transform3D(-0.303866, 0, -0.00019313, 0, 0.284454, 0, 0.000381801, 
 [node name="bookshelf-02_model8" parent="Furniture" instance=ExtResource("17_g14qm")]
 transform = Transform3D(-0.303866, 0, 1.34488e-08, 0, 0.303867, 0, -2.65649e-08, 0, -0.153836, 1.98729, 8.39557, -9.22749)
 
+[node name="library" type="Node3D" parent="Furniture"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.94588, 6.5, -9.54025)
+
+[node name="armless" parent="Furniture/library" instance=ExtResource("32_j5vsp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97412, 0.0187201, -0.03473)
+
+[node name="bothless" parent="Furniture/library" instance=ExtResource("33_f7riu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98562, 0, 2.62745)
+
+[node name="bothlessstatue" parent="Furniture/library" instance=ExtResource("34_mcu2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="BasicBook" parent="Furniture/library" instance=ExtResource("35_tcmye")]
+transform = Transform3D(1, 7.10543e-15, -2.84217e-14, 0, 0.528438, 0.848972, 0, -0.848972, 0.528438, -3.96942, 1.87385, 2.21585)
+
 [node name="Misc" type="Node" parent="Furniture"]
 
 [node name="BookStack2" parent="Furniture/Misc" instance=ExtResource("22_mxde0")]
@@ -23060,6 +23077,17 @@ shadow_enabled = true
 omni_range = 7.56621
 omni_attenuation = 0.901251
 
+[node name="BackCorridor Lights" type="Node3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.90936, -2.38419e-07, -9.23495)
+
+[node name="candle03" parent="Lights/BackCorridor Lights" instance=ExtResource("38_ap11j")]
+
+[node name="candle02" parent="Lights/BackCorridor Lights" instance=ExtResource("29_2n8mc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.102892, 2.38419e-07, -0.183252)
+
+[node name="candle04" parent="Lights/BackCorridor Lights" instance=ExtResource("36_7q40q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0363, 2.38419e-07, 0.0223036)
+
 [node name="Courtyard Candles" type="Node3D" parent="Lights"]
 
 [node name="candle02" parent="Lights/Courtyard Candles" instance=ExtResource("29_2n8mc")]
@@ -23073,6 +23101,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.47794, 2.5, 0.360852)
 
 [node name="candle04" parent="Lights/Courtyard Candles" instance=ExtResource("29_2n8mc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.59381, 2.5, 0.404007)
+
+[node name="candle05" parent="Lights/Courtyard Candles" instance=ExtResource("36_7q40q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.84686, 2.5, 0.627423)
+
+[node name="Candelabra" parent="Lights/Courtyard Candles" instance=ExtResource("39_0xqyo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4614, 10, -11)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("7_nvrtf")
@@ -23106,17 +23140,5 @@ pitch_scale = 0.53
 autoplay = true
 panning_strength = 0.54
 
-[node name="armless" parent="." instance=ExtResource("32_j5vsp")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.92, 6.51872, -9.50552)
-
-[node name="bothless" parent="." instance=ExtResource("33_f7riu")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.9315, 6.5, -12.1677)
-
-[node name="bothlessstatue" parent="." instance=ExtResource("34_mcu2r")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.94588, 6.5, -9.54025)
-
-[node name="BasicBook" parent="." instance=ExtResource("35_tcmye")]
-transform = Transform3D(-1, 7.42195e-08, -4.61975e-08, 0, 0.528438, 0.848972, 8.74228e-08, 0.848972, -0.528438, 11.9153, 8.37385, -11.7561)
-
-[node name="candle01" parent="." instance=ExtResource("36_7q40q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.84686, 2.5, 0.627423)
+[node name="candle05" parent="." instance=ExtResource("36_7q40q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9242, 0.900476, -12.4495)

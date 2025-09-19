@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgydr8f43d8yg"]
+
+[ext_resource type="PackedScene" uid="uid://cyuqysv1hojuw" path="res://scenes/prefabs/candle_03.tscn" id="1_kt313"]
+
+[node name="Candelabra" type="Node3D"]
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="candle03" parent="Node3D" instance=ExtResource("1_kt313")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.742917, 0, 0)
+
+[node name="candle04" parent="Node3D" instance=ExtResource("1_kt313")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.871255, 0, 0)
+
+[node name="Node3D2" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="candle03" parent="Node3D2" instance=ExtResource("1_kt313")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.742917, 0, 0)
+
+[node name="candle04" parent="Node3D2" instance=ExtResource("1_kt313")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.871255, 0, 0)
