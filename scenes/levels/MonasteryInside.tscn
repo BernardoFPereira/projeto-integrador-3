@@ -21742,6 +21742,7 @@ script = ExtResource("33_3gsg7")
 metadata/_edit_lock_ = true
 
 [node name="Journal" type="Control" parent="UI"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
