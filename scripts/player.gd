@@ -46,10 +46,10 @@ func _ready():
 
 func _process(delta):
 	if interact_target:
-		if global_position.distance_to(interact_target.get_child(0).get_child(0).global_position) > 2:
+		if global_position.distance_to(interact_target.get_child(0).global_position) > 2:
 			print('RELEASE ME!!!!')
-			interact_target = null
 			can_interact = false
+			interact_target = null
 			
 	# handle_camera_pos(delta)
 	handle_state(delta)

@@ -22139,6 +22139,13 @@ key = NodePath("../../Keys/Key")
 
 [node name="Door2" parent="Doors" instance=ExtResource("4_eytb6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.238037, 1.25554, -11.949)
+
+[node name="Door3" parent="Doors" instance=ExtResource("4_eytb6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.283116, 7.77173, -11.9502)
+state = 2
+
+[node name="Door6" parent="Doors" instance=ExtResource("4_eytb6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3175, 1.2496, -12.2073)
 state = 2
 
 [node name="LevelBlocks" type="Node3D" parent="."]
@@ -23245,7 +23252,7 @@ transform = Transform3D(0.999919, 0, -0.0126533, 0, 1, 0, 0.0126533, 0, 0.999919
 transform = Transform3D(0.999853, 0, 0.0170685, 0, 1, 0, -0.0170685, 0, 0.999853, -4.71633, 0, 8.09437)
 
 [node name="Table" parent="Furniture/Misc/Benches" instance=ExtResource("26_7udxk")]
-transform = Transform3D(-0.133629, 0, 1.16822e-08, 0, 0.133629, 0, -1.16822e-08, 0, -0.133629, -2.74512, 0, 17.9973)
+transform = Transform3D(-0.133629, 0, 1.16822e-08, 0, 0.133629, 0, -1.16822e-08, 0, -0.133629, -2.74512, 0.370198, 17.9973)
 
 [node name="angel_statue" parent="Furniture" instance=ExtResource("25_dk8ee")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.1837, 2.49029, 0.731561)
@@ -23369,7 +23376,7 @@ omni_range = 4.58834
 omni_attenuation = 2.07053
 
 [node name="CandleLight_MainChapel7" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.88409, 1.68021, -12.2719)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.88409, 2.18007, -12.2719)
 light_color = Color(0.963222, 0.641663, 0.373259, 1)
 light_energy = 5.102
 shadow_enabled = true
@@ -23458,7 +23465,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.84686, 2.5, 0.627423)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4614, 10, -11)
 
 [node name="candle05" parent="Lights" instance=ExtResource("36_7q40q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9242, 0.900476, -12.4495)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9242, 1.27067, -12.4495)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("7_nvrtf")

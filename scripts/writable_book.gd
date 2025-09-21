@@ -22,5 +22,5 @@ func _on_interaction_area_body_entered(body):
 		#player.is_interacting = true
 		#body.go_to_first_person()
 
-func _on_interaction_area_body_exited(body):
+func _on_interaction_area_body_exited(_body):
 		player = null
