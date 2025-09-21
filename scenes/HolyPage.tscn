@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgwexqpva8xhx"]
+
+[ext_resource type="Script" path="res://scripts/manipulated_object.gd" id="1_mhkne"]
+[ext_resource type="PackedScene" uid="uid://2q1rs2q3rogl" path="res://models/livro.glb" id="2_iklto"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_enm7x"]
+size = Vector3(0.375, 0.535, 0.025)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2mg6o"]
+radius = 0.710565
+
+[node name="HolyPage" type="Node3D"]
+script = ExtResource("1_mhkne")
+inspect_mesh = ExtResource("2_iklto")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_enm7x")
+
+[node name="InteractArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea"]
+shape = SubResource("SphereShape3D_2mg6o")
+
+[connection signal="area_entered" from="InteractArea" to="." method="_on_interact_area_area_entered"]
+[connection signal="area_exited" from="InteractArea" to="." method="_on_interact_area_area_exited"]

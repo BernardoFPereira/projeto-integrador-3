@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [gd_scene load_steps=2205 format=3 uid="uid://imk5ccgfjb4n"]
 =======
 [gd_scene load_steps=2196 format=3 uid="uid://imk5ccgfjb4n"]
 >>>>>>> lauro
+=======
+[gd_scene load_steps=2206 format=3 uid="uid://imk5ccgfjb4n"]
+>>>>>>> dev-Bernardo
 
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_wne16"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="2_34kdn"]
@@ -19,6 +23,7 @@
 [ext_resource type="Material" uid="uid://benx3vras2tbg" path="res://materials/stone_wall1.tres" id="7_q2hrp"]
 [ext_resource type="Material" uid="uid://dj7lxofx8eg1b" path="res://materials/wooden_planks.tres" id="7_wob2y"]
 [ext_resource type="Material" uid="uid://x03u4iw1krl1" path="res://materials/stone_wall_window.tres" id="8_e45be"]
+[ext_resource type="PackedScene" uid="uid://dgwexqpva8xhx" path="res://scenes/HolyPage.tscn" id="8_r07ho"]
 [ext_resource type="Material" uid="uid://bbt1qfrotl325" path="res://materials/stone_ground1.tres" id="10_4t0kc"]
 [ext_resource type="Material" uid="uid://ddhf6l2bev3sn" path="res://materials/stone_wall_candle.tres" id="12_j8pg5"]
 [ext_resource type="AudioStream" uid="uid://dpjwkmpdalovg" path="res://audio/dungeon_ambient_1.ogg" id="13_x0f82"]
@@ -21748,6 +21753,7 @@ script = ExtResource("33_3gsg7")
 metadata/_edit_lock_ = true
 
 [node name="Journal" type="Control" parent="UI"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22119,6 +22125,11 @@ inspect_mesh = ExtResource("3_w4j5y")
 [node name="Book" parent="Interactable" instance=ExtResource("3_q2tu4")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.4301, 12.3614, 4.04927)
 
+[node name="Pages" type="Node" parent="Interactable"]
+
+[node name="HolyPage" parent="Interactable/Pages" instance=ExtResource("8_r07ho")]
+transform = Transform3D(0.5, 0.866025, -3.78552e-08, 0, -4.37114e-08, -1, -0.866025, 0.5, -2.18557e-08, -0.925258, 1.27198, 8.94542)
+
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door4" parent="Doors" instance=ExtResource("4_eytb6")]
@@ -22140,6 +22151,10 @@ key = NodePath("../../Keys/Key")
 
 [node name="Door2" parent="Doors" instance=ExtResource("4_eytb6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.238037, 1.25554, -11.949)
+state = 2
+
+[node name="Door3" parent="Doors" instance=ExtResource("4_eytb6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3573, 1.25554, -12.227)
 state = 2
 
 [node name="LevelBlocks" type="Node3D" parent="."]
