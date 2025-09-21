@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2lftgn6ri05y"]
+
+[ext_resource type="PackedScene" uid="uid://8yphdw75e2g3" path="res://models/bookshelf-02_model.glb" id="1_6d4ae"]
+
+[node name="shelfsmall" type="Node3D"]
+
+[node name="bookshelf-02_model" parent="." instance=ExtResource("1_6d4ae")]
+transform = Transform3D(0.225946, 0, 0, 0, 0.225946, 0, 0, 0, 0.225946, 0, 1.4, 0)

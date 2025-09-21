@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://j531ok8o0vyk"]
+
+[ext_resource type="PackedScene" uid="uid://dqp2ljrwwd5tb" path="res://scenes/prefabs/fence.tscn" id="1_qmij0"]
+[ext_resource type="PackedScene" uid="uid://cxped2saj6jto" path="res://scenes/prefabs/column.tscn" id="2_gyrmf"]
+
+[node name="CemeteryGrate" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0566202, 0, -2.14972)
+
+[node name="fence" parent="." instance=ExtResource("1_qmij0")]
+
+[node name="fence2" parent="." instance=ExtResource("1_qmij0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.23461, 0, 0)
+
+[node name="fence3" parent="." instance=ExtResource("1_qmij0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5067, 0, 0)
+
+[node name="column2" parent="." instance=ExtResource("2_gyrmf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.87001, 0, 0.149725)

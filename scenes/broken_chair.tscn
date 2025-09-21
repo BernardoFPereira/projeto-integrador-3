@@ -1,4 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvxii1ppsp1bo"]
+[gd_scene load_steps=7 format=3 uid="uid://cvxii1ppsp1bo"]
+
+[ext_resource type="Texture2D" uid="uid://c21ty5m2bk3l7" path="res://models/cadeira_standardSurface4_BaseColor.1001.png" id="1_207ue"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_idemg"]
+albedo_texture = ExtResource("1_207ue")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_67qrb"]
 resource_name = "standardSurface1"
@@ -46,6 +51,7 @@ points = PackedVector3Array(-23.0369, -7.84282, -60.1467, 27.3346, -9.85598, 62.
 
 [node name="cadeiraQuebrada_1_low" type="MeshInstance3D" parent="cadeira_quebrada"]
 transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_idemg")
 mesh = SubResource("ArrayMesh_f0tm3")
 skeleton = NodePath("")
 

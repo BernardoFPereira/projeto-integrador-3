@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://m7trdro12xfi"]
+
+[ext_resource type="PackedScene" uid="uid://ctshbwprhxuhw" path="res://scenes/prefabs/tombstone_1.tscn" id="1_afur6"]
+[ext_resource type="PackedScene" uid="uid://cxped2saj6jto" path="res://scenes/prefabs/column.tscn" id="2_osuun"]
+[ext_resource type="PackedScene" uid="uid://j531ok8o0vyk" path="res://scenes/prefabs/cemetery_grate.tscn" id="3_mi7ds"]
+[ext_resource type="PackedScene" uid="uid://yrrknc77iw8u" path="res://scenes/prefabs/coffinbase.tscn" id="4_p67dq"]
+
+[node name="Cemetery" type="Node3D"]
+
+[node name="tombstone1" parent="." instance=ExtResource("1_afur6")]
+transform = Transform3D(0.99847, 0, 0.0552987, 0, 1, 0, -0.0552987, 0, 0.99847, -2.58266, 0, 0)
+
+[node name="tombstone2" parent="." instance=ExtResource("1_afur6")]
+transform = Transform3D(0.989305, 0, -0.145859, 0, 1, 0, 0.145859, 0, 0.989305, 0.00525498, 0, 0)
+
+[node name="tombstone3" parent="." instance=ExtResource("1_afur6")]
+transform = Transform3D(0.981195, 0, -0.193019, 0, 1, 0, 0.193019, 0, 0.981195, 2.22126, 0, 0)
+
+[node name="tombstone4" parent="." instance=ExtResource("1_afur6")]
+transform = Transform3D(0.995783, 0, -0.0917449, 0, 1, 0, 0.0917449, 0, 0.995783, 1.96258, 0, 2.73255)
+
+[node name="tombstone5" parent="." instance=ExtResource("1_afur6")]
+transform = Transform3D(0.983763, 0, 0.179472, 0, 1, 0, -0.179472, 0, 0.983763, -0.676493, 0, 2.73255)
+
+[node name="tombstone7" parent="." instance=ExtResource("1_afur6")]
+transform = Transform3D(0.994654, 0, 0.103261, 0, 1, 0, -0.103261, 0, 0.994654, -0.676493, 0, 5.17795)
+
+[node name="tombstone6" parent="." instance=ExtResource("1_afur6")]
+transform = Transform3D(0.999615, 0, 0.0277472, 0, 1, 0, -0.0277472, 0, 0.999615, -3.32366, 0, 2.73255)
+
+[node name="column" parent="." instance=ExtResource("2_osuun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2)
+
+[node name="Grates" type="Node3D" parent="."]
+
+[node name="CemeteryGrate" parent="Grates" instance=ExtResource("3_mi7ds")]
+
+[node name="CemeteryGrate2" parent="Grates" instance=ExtResource("3_mi7ds")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.67345, 0, -1.24528)
+
+[node name="CemeteryGrate3" parent="Grates" instance=ExtResource("3_mi7ds")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.67345, 0, 3.15849)
+
+[node name="Grates2" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -0.000767859, 0, 1, 0, 0.000767859, 0, -1, -1.39104, 0, 4.5777)
+
+[node name="CemeteryGrate" parent="Grates2" instance=ExtResource("3_mi7ds")]
+
+[node name="CemeteryGrate4" parent="Grates2" instance=ExtResource("3_mi7ds")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.03141, 0, -2.15277)
+
+[node name="CemeteryGrate2" parent="Grates2" instance=ExtResource("3_mi7ds")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.67345, 0, -1.24528)
+
+[node name="CemeteryGrate3" parent="Grates2" instance=ExtResource("3_mi7ds")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.67345, 0, 3.15849)
+
+[node name="coffinbase" parent="." instance=ExtResource("4_p67dq")]
+transform = Transform3D(0.281136, 4.19484e-08, -0.959668, 0.959668, -1.22888e-08, 0.281136, 0, -1, -4.37114e-08, -5.84394, 0, -1.18205)
+
+[node name="coffinbase2" parent="." instance=ExtResource("4_p67dq")]
+transform = Transform3D(0.9963, -4.73062e-08, 0.0859386, -0.0859386, -3.97932e-08, 0.9963, -4.37114e-08, -1, -4.37114e-08, -6.97, 0, 0)

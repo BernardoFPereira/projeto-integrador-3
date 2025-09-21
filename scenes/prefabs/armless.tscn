@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://enhrnkww6cy0"]
+
+[ext_resource type="PackedScene" uid="uid://cnq2uan6rm56k" path="res://models/lessstatue.glb" id="1_o1qp4"]
+
+[node name="armless" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="lessstatue" parent="." instance=ExtResource("1_o1qp4")]
