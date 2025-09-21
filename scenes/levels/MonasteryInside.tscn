@@ -1,4 +1,4 @@
-[gd_scene load_steps=2202 format=3 uid="uid://imk5ccgfjb4n"]
+[gd_scene load_steps=2203 format=3 uid="uid://imk5ccgfjb4n"]
 
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_wne16"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="2_34kdn"]
@@ -41,6 +41,7 @@
 [ext_resource type="PackedScene" uid="uid://du4lyekygvy8q" path="res://scenes/prefabs/candle_01.tscn" id="36_7q40q"]
 [ext_resource type="PackedScene" uid="uid://cyuqysv1hojuw" path="res://scenes/prefabs/candle_03.tscn" id="38_ap11j"]
 [ext_resource type="PackedScene" uid="uid://bgydr8f43d8yg" path="res://scenes/prefabs/candelabra.tscn" id="39_0xqyo"]
+[ext_resource type="PackedScene" uid="uid://dgwexqpva8xhx" path="res://scenes/HolyPage.tscn" id="42_sfyr8"]
 
 [sub_resource type="SystemFont" id="SystemFont_u3a33"]
 font_names = PackedStringArray("Lucida Console")
@@ -21741,7 +21742,6 @@ script = ExtResource("33_3gsg7")
 metadata/_edit_lock_ = true
 
 [node name="Journal" type="Control" parent="UI"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22101,7 +22101,7 @@ size = Vector3(16.8404, 2.30982, 3.7334)
 [node name="Keys" type="Node" parent="."]
 
 [node name="Key" parent="Keys" instance=ExtResource("24_8o80k")]
-transform = Transform3D(2.1267e-08, 0.486533, 0.119702, 0.501042, -2.19013e-08, 0, 5.23235e-09, 0.119702, -0.486533, -1.04656, 1.28439, 7.02379)
+transform = Transform3D(2.1267e-08, 0.486533, 0.119702, 0.501042, -2.19013e-08, 0, 5.23235e-09, 0.119702, -0.486533, -1.0116, 1.28439, 6.771)
 
 [node name="Interactable" type="Node" parent="."]
 
@@ -22111,6 +22111,11 @@ inspect_mesh = ExtResource("3_w4j5y")
 
 [node name="Book" parent="Interactable" instance=ExtResource("3_q2tu4")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.4301, 12.3614, 4.04927)
+
+[node name="Pages" type="Node" parent="Interactable"]
+
+[node name="HolyPage" parent="Interactable/Pages" instance=ExtResource("42_sfyr8")]
+transform = Transform3D(0.388577, 0.921416, -2.32911e-08, 4.37114e-08, -4.37114e-08, -1, -0.921416, 0.388577, -5.72616e-08, -1.04842, 1.26288, 8.51669)
 
 [node name="Doors" type="Node" parent="."]
 
@@ -23485,3 +23490,5 @@ unit_size = 14.25
 pitch_scale = 0.53
 autoplay = true
 panning_strength = 0.54
+
+[connection signal="pressed" from="UI/Journal/MenuButton" to="UI" method="_on_menu_button_pressed"]
