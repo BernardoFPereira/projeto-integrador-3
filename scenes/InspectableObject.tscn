@@ -17,10 +17,10 @@ size = Vector3(0.469604, 0.544952, 0.459717)
 [node name="Object" type="Node3D"]
 script = ExtResource("1_x6bpw")
 
-[node name="piece1" type="MeshInstance3D" parent="."]
+[node name="Mesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_rh153")
 
-[node name="piece2" type="MeshInstance3D" parent="piece1"]
+[node name="piece2" type="MeshInstance3D" parent="Mesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.151392, 0)
 mesh = SubResource("CylinderMesh_eajbp")
 

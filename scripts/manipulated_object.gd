@@ -3,7 +3,7 @@ class_name Inspectable
 
 @export var inspect_mesh: PackedScene
 
-@onready var mesh = $piece1
+@onready var mesh = $Mesh
 
 func _on_interact_area_area_entered(area):
 	#print("Can interact")

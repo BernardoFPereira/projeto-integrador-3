@@ -3,8 +3,9 @@ class_name Player
 
 @onready var view = $View
 #@onready var camera = $View/Camera3D
-@onready var camera = $View/SpringArm3D/Camera3D
-@onready var head_camer_pos = $View/HeadCamerPos
+@onready var third_person_camera = $View/SpringArm3D/ThirdPersonCamera
+@onready var first_person_camera = $HeadCamerPos/FirstPersonCamera
+@onready var head_camer_pos = $HeadCamerPos
 @onready var shoulder_camera_pos = $View/ShoulderCameraPos
 #@onready var animation_player = $ThePriest/AnimationPlayer
 @onready var animation_player = $"ThePriest/Padre-walkF-walkB/AnimationPlayer"
@@ -37,6 +38,7 @@ var can_interact := false
 var interact_target: Node3D
 
 @export var collected_keys: Array[Node3D]
+var collected_pages: Array[Node3D]
 
 func _ready():
 	set_camera_mode(CameraModes.ThirdPerson)
@@ -49,7 +51,7 @@ func _process(delta):
 			interact_target = null
 			can_interact = false
 			
-	handle_camera_pos(delta)
+	# handle_camera_pos(delta)
 	handle_state(delta)
 
 func _physics_process(delta):
@@ -87,7 +89,7 @@ func _input(event):
 			pass
 			
 		_:
-			# DEV POWER -- DISABLE ON RELEASE
+			# DEV POWER -- DISABLE ON BUILD
 			if Input.is_action_just_pressed("ui_accept"):
 				velocity.y = JUMP_VELOCITY
 				
@@ -108,6 +110,7 @@ func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			
 		else:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
@@ -167,14 +170,19 @@ func handle_state(delta) -> void:
 
 func set_camera_mode(new_mode: CameraModes) -> void:
 	camera_mode = new_mode
-
-func handle_camera_pos(delta) -> void:
 	match camera_mode:
 		CameraModes.ThirdPerson:
-			camera.global_position = lerp(camera.global_position, shoulder_camera_pos.global_position, delta)
-			#camera.rotation = lerp(camera.rotation, shoulder_camera_pos.rotation, delta * 6)
+			third_person_camera.current = true
 		CameraModes.FirstPerson:
-			camera.global_position = lerp(camera.global_position, head_camer_pos.global_position, delta * 6)
+			first_person_camera.current = true
+
+#func handle_camera_pos(delta) -> void:
+	#match camera_mode:
+		#CameraModes.ThirdPerson:
+			#camera.global_position = lerp(camera.global_position, shoulder_camera_pos.global_position, delta)
+			#camera.rotation = lerp(camera.rotation, shoulder_camera_pos.rotation, delta * 6)
+		#CameraModes.FirstPerson:
+			#camera.global_position = lerp(camera.global_position, head_camer_pos.global_position, delta * 6)
 			#camera.rotation = lerp(camera.rotation, head_camer_pos.rotation, delta * 6)
 
 
