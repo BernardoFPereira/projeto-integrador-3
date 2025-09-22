@@ -1,7 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://rpf8kpemd48y"]
+[gd_scene load_steps=25 format=3 uid="uid://rpf8kpemd48y"]
 
 [ext_resource type="Script" path="res://scripts/door.gd" id="1_ls0ad"]
 [ext_resource type="AudioStream" uid="uid://d3p6a6mr2v7rn" path="res://audio/LockedDoorJiggle.ogg" id="2_jsjbx"]
+[ext_resource type="AudioStream" uid="uid://f5dnr45itd61" path="res://audio/Chest Creak.wav" id="3_r32qa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8hale"]
 resource_name = "standardSurface9.001"
@@ -236,6 +237,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_o6fho"]
 resource_name = "open"
+length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -243,10 +245,10 @@ tracks/0/path = NodePath("DoorMesh:rotation")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.4, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, -1.93382, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, -1.93382, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_qfmie"]
@@ -278,6 +280,7 @@ _data = {
 script = ExtResource("1_ls0ad")
 
 [node name="DoorMesh" type="Node3D" parent="." groups=["Door"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.962725)
 
 [node name="porta_grp" type="Node3D" parent="DoorMesh"]
 transform = Transform3D(-1.36867e-06, -27.787, 0, 0, 0, -22.5007, 31.3114, -1.21461e-06, 0, 0.106855, 0.286093, 0)
@@ -342,6 +345,7 @@ pitch_scale = 0.79
 
 [node name="OpenAudio" type="AudioStreamPlayer3D" parent="DoorMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.51518e-06, -0.107952, 0.971046)
+stream = ExtResource("3_r32qa")
 volume_db = -8.641
 pitch_scale = 0.79
 

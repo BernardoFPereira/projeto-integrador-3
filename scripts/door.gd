@@ -4,6 +4,9 @@ extends Node3D
 @onready var open_audio = $DoorMesh/OpenAudio
 @onready var animation_player = $AnimationPlayer
 
+@export var state := DoorState.CLOSED
+@export var key: Node3D
+
 enum DoorState
 {
 	OPEN,
@@ -12,11 +15,8 @@ enum DoorState
 	HAUNTED,
 }
 
-@export var state := DoorState.CLOSED
-@export var key: Node3D
 var player: Player
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	player = get_tree().get_first_node_in_group("Player")
 	
@@ -40,12 +40,13 @@ func interact():
 		DoorState.OPEN:
 			pass
 		DoorState.CLOSED:
+			open_audio.play()
 			animation_player.play("open")
-			pass
+			
 		DoorState.LOCKED:
-			for k in player.collected_keys:
-				print("collected key 1: %s" % k)
-				print("Door key: %s" % key)
+			#for k in player.collected_keys:
+				#print("collected key 1: %s" % k)
+				#print("Door key: %s" % key)
 				
 			if key in player.collected_keys:
 				animation_player.play("open")
@@ -55,6 +56,11 @@ func interact():
 				
 			locked_audio.play()
 			animation_player.play("locked")
+			
+		DoorState.HAUNTED:
+			locked_audio.play()
+			animation_player.play("locked")
+			
 		_:
 			pass
 

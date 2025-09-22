@@ -12,9 +12,9 @@ func _ready():
 func start_inspection() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
-	if inspect_target.is_in_group("Key"):
-		print("LOOKING AT KEY!")
-		return
+	#if inspect_target.is_in_group("Key"):
+		#print("LOOKING AT KEY!")
+		#return
 	
 	inspect_target_mesh = inspect_target.inspect_mesh.instantiate()
 	
@@ -32,4 +32,6 @@ func stop_inspection() -> void:
 	inspect_target.mesh.visible = true
 	inspect_target_mesh.queue_free()
 	
+	if inspect_target.is_in_group("Key"):
+		inspect_target.visible = false
 	can_inspect = true
