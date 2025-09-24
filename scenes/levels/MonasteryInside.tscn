@@ -1,4 +1,4 @@
-[gd_scene load_steps=2202 format=3 uid="uid://imk5ccgfjb4n"]
+[gd_scene load_steps=2205 format=3 uid="uid://imk5ccgfjb4n"]
 
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_wne16"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="2_34kdn"]
@@ -24,14 +24,17 @@
 [ext_resource type="Material" uid="uid://dvd1fvyob3e7u" path="res://materials/PH_brokenWall.tres" id="16_i2nwm"]
 [ext_resource type="PackedScene" uid="uid://8yphdw75e2g3" path="res://models/bookshelf-02_model.glb" id="17_g14qm"]
 [ext_resource type="PackedScene" uid="uid://ca5f2b28eoiml" path="res://book_stack_2.tscn" id="22_mxde0"]
+[ext_resource type="PackedScene" uid="uid://d0fj8u3meqg3v" path="res://scenes/prefabs/chair_model.tscn" id="22_v5anl"]
 [ext_resource type="PackedScene" uid="uid://bgq3f8nmtd42e" path="res://book_stack_1.tscn" id="23_scd3h"]
 [ext_resource type="PackedScene" uid="uid://cgfowgyio5ni3" path="res://scenes/Key.tscn" id="24_8o80k"]
 [ext_resource type="PackedScene" uid="uid://dvu67awddwb6q" path="res://scenes/angel_statue.tscn" id="25_dk8ee"]
+[ext_resource type="PackedScene" uid="uid://c2lftgn6ri05y" path="res://scenes/prefabs/shelfsmall.tscn" id="25_k3uok"]
 [ext_resource type="PackedScene" uid="uid://dh4r6fk7n0ge3" path="res://scenes/prefabs/table.tscn" id="26_7udxk"]
 [ext_resource type="PackedScene" uid="uid://cfbqdor8tyw7e" path="res://scenes/prefabs/benchsmall.tscn" id="26_cjtp2"]
 [ext_resource type="PackedScene" uid="uid://bcfr0cbpfsy05" path="res://scenes/prefabs/candle_02.tscn" id="29_2n8mc"]
 [ext_resource type="PackedScene" uid="uid://cvxii1ppsp1bo" path="res://scenes/broken_chair.tscn" id="29_506c8"]
 [ext_resource type="PackedScene" uid="uid://m7trdro12xfi" path="res://scenes/prefabs/cemetery.tscn" id="30_16gqg"]
+[ext_resource type="PackedScene" uid="uid://ddhttv3uxb3pl" path="res://scenes/prefabs/altar.tscn" id="30_dbx0v"]
 [ext_resource type="PackedScene" uid="uid://enhrnkww6cy0" path="res://scenes/prefabs/armless.tscn" id="32_j5vsp"]
 [ext_resource type="Script" path="res://scripts/UI_Manager.gd" id="33_3gsg7"]
 [ext_resource type="Script" path="res://scripts/Journal.gd" id="33_dbwq2"]
@@ -22110,7 +22113,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.565157, 7.67933, -4.21873)
 inspect_mesh = ExtResource("3_w4j5y")
 
 [node name="Book" parent="Interactable" instance=ExtResource("3_q2tu4")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.4301, 12.3614, 4.04927)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.4301, 12.2998, 4.04927)
 
 [node name="Doors" type="Node" parent="."]
 
@@ -23131,8 +23134,12 @@ materials = Array[Material]([ExtResource("7_q2hrp")])
 [node name="chair_model" parent="Furniture" instance=ExtResource("14_my1wc")]
 transform = Transform3D(0.00151532, 0.0436302, 0.0970505, 0.10637, -0.00315813, -0.000241142, 0.0027813, 0.097011, -0.0436558, -15.0775, 11.3061, 5.5158)
 
+[node name="chair_model" parent="Furniture/chair_model" instance=ExtResource("22_v5anl")]
+
 [node name="chair_model2" parent="Furniture" instance=ExtResource("14_my1wc")]
 transform = Transform3D(-0.102135, 0, 0.0298857, 0, 0.106418, 0, -0.0298857, 0, -0.102135, -14.1052, 11.5373, 9.43002)
+
+[node name="chair_model" parent="Furniture/chair_model2" instance=ExtResource("22_v5anl")]
 
 [node name="bookshelf-01_model" parent="Furniture" instance=ExtResource("16_2m87x")]
 transform = Transform3D(-1.24709e-08, 0, -0.285301, 0, 0.285301, 0, 0.285301, 0, -1.24709e-08, 16.7963, 8.38764, -11.1704)
@@ -23158,14 +23165,14 @@ transform = Transform3D(-0.303866, 0, 1.34488e-08, 0, 0.303867, 0, -2.65649e-08,
 [node name="bookshelf-02_model7" parent="Furniture" instance=ExtResource("17_g14qm")]
 transform = Transform3D(-0.303866, 0, 1.34488e-08, 0, 0.303867, 0, -2.65649e-08, 0, -0.153836, 1.98729, 8.39557, -12.7537)
 
-[node name="bookshelf-02_model9" parent="Furniture" instance=ExtResource("17_g14qm")]
-transform = Transform3D(3.98473e-08, 0, 0.153836, 0, 0.284454, 0, -0.303866, 0, 2.01732e-08, -0.292306, 12.7759, 2.822)
+[node name="shelfsmall2" parent="Furniture" instance=ExtResource("25_k3uok")]
+transform = Transform3D(3.98473e-08, 0, 0.153836, 0, 0.284454, 0, -0.303866, 0, 2.01732e-08, -0.292306, 11.038, 6.32323)
 
-[node name="bookshelf-02_model10" parent="Furniture" instance=ExtResource("17_g14qm")]
-transform = Transform3D(3.98473e-08, 0, 0.153836, 0, 0.284454, 0, -0.303866, 0, 2.01732e-08, -0.292306, 12.7759, 6.32323)
+[node name="shelfsmall3" parent="Furniture" instance=ExtResource("25_k3uok")]
+transform = Transform3D(3.98473e-08, 0, 0.153836, 0, 0.284454, 0, -0.303866, 0, 2.01732e-08, -0.300456, 11.038, 2.84153)
 
-[node name="bookshelf-02_model11" parent="Furniture" instance=ExtResource("17_g14qm")]
-transform = Transform3D(-0.303866, 0, -0.00019313, 0, 0.284454, 0, 0.000381801, 0, -0.153836, -3.34938, 12.7759, 9.048)
+[node name="shelfsmall" parent="Furniture" instance=ExtResource("25_k3uok")]
+transform = Transform3D(-0.303866, 0, -0.00019313, 0, 0.284454, 0, 0.000381801, 0, -0.153836, -3.34938, 11.0483, 9.08142)
 
 [node name="bookshelf-02_model8" parent="Furniture" instance=ExtResource("17_g14qm")]
 transform = Transform3D(-0.303866, 0, 1.34488e-08, 0, 0.303867, 0, -2.65649e-08, 0, -0.153836, 1.98729, 8.39557, -9.22749)
@@ -23177,13 +23184,16 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.9458
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97412, 0.0187201, -0.03473)
 
 [node name="bothless" parent="Furniture/library" instance=ExtResource("33_f7riu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98562, 0, 2.62745)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98562, 0.707431, 2.88253)
 
 [node name="bothlessstatue" parent="Furniture/library" instance=ExtResource("34_mcu2r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="BasicBook" parent="Furniture/library" instance=ExtResource("35_tcmye")]
-transform = Transform3D(1, 7.10543e-15, -2.84217e-14, 0, 0.528438, 0.848972, 0, -0.848972, 0.528438, -3.96942, 1.87385, 2.21585)
+transform = Transform3D(1, 7.10543e-15, -2.84217e-14, 0, 0.528438, 0.848972, 0, -0.848972, 0.528438, -3.96942, 2.60421, 2.41942)
+
+[node name="altar" parent="Furniture/library" instance=ExtResource("30_dbx0v")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 0.581404, 0, -8.74228e-08, 0, -1, -4.03491, 0, 2.92592)
 
 [node name="Misc" type="Node" parent="Furniture"]
 

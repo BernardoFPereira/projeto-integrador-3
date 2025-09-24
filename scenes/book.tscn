@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjdelpf067oip"]
+[gd_scene load_steps=7 format=3 uid="uid://bjdelpf067oip"]
 
 [ext_resource type="Script" path="res://scripts/writable_book.gd" id="1_w12n1"]
-[ext_resource type="PackedScene" uid="uid://bthqsayqdagbg" path="res://models/livro_aberto.glb" id="2_60bun"]
+[ext_resource type="PackedScene" uid="uid://v5wdsbjq8h0q" path="res://models/livroaberto.glb" id="2_g2snh"]
+[ext_resource type="PackedScene" uid="uid://cckysn4xoyx3a" path="res://models/garrafa.glb" id="3_qpx0y"]
+[ext_resource type="PackedScene" uid="uid://dduo6tpqrsgf1" path="res://models/inkpot.glb" id="4_n3xat"]
+[ext_resource type="PackedScene" uid="uid://pm4bkuopm11o" path="res://models/quill.glb" id="5_cl4xh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5ihwa"]
 size = Vector3(2.02843, 1, 1.84473)
@@ -9,8 +12,8 @@ size = Vector3(2.02843, 1, 1.84473)
 [node name="Book" type="Node3D"]
 script = ExtResource("1_w12n1")
 
-[node name="livro_aberto" parent="." instance=ExtResource("2_60bun")]
-transform = Transform3D(-9.61553e-09, 0, -0.219978, 0, 0.219978, 0, 0.219978, 0, -9.61553e-09, 0, -0.216666, 0)
+[node name="livroaberto" parent="." instance=ExtResource("2_g2snh")]
+transform = Transform3D(-6.55671e-08, 0, 1.66517, 0, 1.5, 0, -1.5, 0, -7.2787e-08, -0.0325541, -0.182472, 0)
 
 [node name="InteractionArea" type="Area3D" parent="."]
 
@@ -20,6 +23,15 @@ shape = SubResource("BoxShape3D_5ihwa")
 
 [node name="InteractionPosMarker" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39746, -1.35401, 0)
+
+[node name="garrafa" parent="." instance=ExtResource("3_qpx0y")]
+transform = Transform3D(0.914192, 0, 0, 0, 0.604477, 0, 0, 0, 0.811375, -0.438056, -0.159296, 1.04068)
+
+[node name="inkpot" parent="." instance=ExtResource("4_n3xat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0125802, -0.165852, -0.784767)
+
+[node name="quill" parent="inkpot" instance=ExtResource("5_cl4xh")]
+transform = Transform3D(0.743355, 0, -0.668897, 0, 1, 0, 0.668897, 0, 0.743355, 0, 0, 0)
 
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]
