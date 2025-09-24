@@ -2,9 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/manipulated_object.gd" id="1_mhkne"]
 [ext_resource type="PackedScene" uid="uid://2q1rs2q3rogl" path="res://models/livro.glb" id="2_iklto"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_enm7x"]
-size = Vector3(0.375, 0.535, 0.025)
+[ext_resource type="PackedScene" uid="uid://bsdaj1xy5atu" path="res://models/paper.glb" id="3_2axmw"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_2mg6o"]
 radius = 0.710565
@@ -13,8 +11,8 @@ radius = 0.710565
 script = ExtResource("1_mhkne")
 inspect_mesh = ExtResource("2_iklto")
 
-[node name="Mesh" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_enm7x")
+[node name="paper" parent="." instance=ExtResource("3_2axmw")]
+transform = Transform3D(0.717684, 0, 0, 0, -0.0253013, 0.812416, 0, -1.0044, -0.0204651, 0, 0.133623, 0)
 
 [node name="InteractArea" type="Area3D" parent="."]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=2205 format=3 uid="uid://imk5ccgfjb4n"]
+[gd_scene load_steps=2208 format=3 uid="uid://imk5ccgfjb4n"]
 
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_wne16"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="2_34kdn"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://c1tgka5jxahe5" path="res://models/bookshelf-01_model.glb" id="16_2m87x"]
 [ext_resource type="Material" uid="uid://dvd1fvyob3e7u" path="res://materials/PH_brokenWall.tres" id="16_i2nwm"]
 [ext_resource type="PackedScene" uid="uid://8yphdw75e2g3" path="res://models/bookshelf-02_model.glb" id="17_g14qm"]
+[ext_resource type="PackedScene" uid="uid://cb5wrqpvo66ix" path="res://scenes/prefabs/third_floor_corner_detail.tscn" id="21_4p4j4"]
 [ext_resource type="PackedScene" uid="uid://ca5f2b28eoiml" path="res://book_stack_2.tscn" id="22_mxde0"]
 [ext_resource type="PackedScene" uid="uid://d0fj8u3meqg3v" path="res://scenes/prefabs/chair_model.tscn" id="22_v5anl"]
 [ext_resource type="PackedScene" uid="uid://bgq3f8nmtd42e" path="res://book_stack_1.tscn" id="23_scd3h"]
@@ -44,6 +45,8 @@
 [ext_resource type="PackedScene" uid="uid://du4lyekygvy8q" path="res://scenes/prefabs/candle_01.tscn" id="36_7q40q"]
 [ext_resource type="PackedScene" uid="uid://cyuqysv1hojuw" path="res://scenes/prefabs/candle_03.tscn" id="38_ap11j"]
 [ext_resource type="PackedScene" uid="uid://bgydr8f43d8yg" path="res://scenes/prefabs/candelabra.tscn" id="39_0xqyo"]
+[ext_resource type="PackedScene" uid="uid://b3vq6hitybrad" path="res://scenes/prefabs/evil_paperwall.tscn" id="46_xl2mh"]
+[ext_resource type="PackedScene" uid="uid://kd5t6pntlln1" path="res://scenes/prefabs/evilpaper.tscn" id="47_5lbk2"]
 
 [sub_resource type="SystemFont" id="SystemFont_u3a33"]
 font_names = PackedStringArray("Lucida Console")
@@ -23131,6 +23134,9 @@ materials = Array[Material]([ExtResource("7_q2hrp")])
 
 [node name="Furniture" type="Node" parent="."]
 
+[node name="Third Floor Corner Detail" parent="Furniture" instance=ExtResource("21_4p4j4")]
+transform = Transform3D(-4.37114e-08, 0, 0.81475, 0, 0.860095, 0, -1, 0, -3.56138e-08, -14.2037, 12.3271, 1.00253)
+
 [node name="chair_model" parent="Furniture" instance=ExtResource("14_my1wc")]
 transform = Transform3D(0.00151532, 0.0436302, 0.0970505, 0.10637, -0.00315813, -0.000241142, 0.0027813, 0.097011, -0.0436558, -15.0775, 11.3061, 5.5158)
 
@@ -23176,6 +23182,9 @@ transform = Transform3D(-0.303866, 0, -0.00019313, 0, 0.284454, 0, 0.000381801, 
 
 [node name="bookshelf-02_model8" parent="Furniture" instance=ExtResource("17_g14qm")]
 transform = Transform3D(-0.303866, 0, 1.34488e-08, 0, 0.303867, 0, -2.65649e-08, 0, -0.153836, 1.98729, 8.39557, -9.22749)
+
+[node name="shelfsmall4" parent="Furniture" instance=ExtResource("25_k3uok")]
+transform = Transform3D(0.250542, 0, 0, 0, 0.254368, 0, 0, 0, 0.229422, -14.2746, 11, 0.865421)
 
 [node name="library" type="Node3D" parent="Furniture"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.94588, 6.5, -9.54025)
@@ -23464,6 +23473,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4614, 10, -11)
 [node name="candle05" parent="Lights" instance=ExtResource("36_7q40q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9242, 0.900476, -12.4495)
 
+[node name="Book Lights" type="Node3D" parent="Lights"]
+
+[node name="candle02" parent="Lights/Book Lights" instance=ExtResource("29_2n8mc")]
+transform = Transform3D(0.861257, 0, 0.50817, 0, 1, 0, -0.50817, 0, 0.861257, -12.7813, 12.1255, 3.59165)
+
+[node name="candle03" parent="Lights/Book Lights" instance=ExtResource("38_ap11j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1118, 12.1175, 3.67209)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("7_nvrtf")
 
@@ -23495,3 +23512,21 @@ unit_size = 14.25
 pitch_scale = 0.53
 autoplay = true
 panning_strength = 0.54
+
+[node name="evil papers" parent="." instance=ExtResource("46_xl2mh")]
+transform = Transform3D(-4.37114e-08, 0, 0.81475, 0, 0.860095, 0, -1, 0, -3.56138e-08, 3.30536, 5.96046e-08, -9.25191)
+
+[node name="evil papers4" parent="." instance=ExtResource("46_xl2mh")]
+transform = Transform3D(-4.37114e-08, 0, 0.81475, 0, 0.860095, 0, -1, 0, -3.56138e-08, 9.91812, 5.96046e-08, -9.25191)
+
+[node name="evil papers2" parent="." instance=ExtResource("46_xl2mh")]
+transform = Transform3D(-0.0288289, 0, -0.814411, 0, 0.860095, 0, 0.999584, 0, -0.0234883, 6.88442, -0.342803, -12.6068)
+
+[node name="evil papers3" parent="." instance=ExtResource("46_xl2mh")]
+transform = Transform3D(-0.0117807, 0, -0.814693, 0, 0.860095, 0, 0.999931, 0, -0.00959836, 14.3989, -0.342803, -12.6834)
+
+[node name="evilpaper" parent="." instance=ExtResource("47_5lbk2")]
+transform = Transform3D(-0.0043628, 0.984202, 0.176997, 0.0242523, 0.17705, -0.983903, -0.999696, -9.20523e-10, -0.0246416, 0.747588, 3.21584, -11.1052)
+
+[node name="evilpaper2" parent="." instance=ExtResource("47_5lbk2")]
+transform = Transform3D(-0.0149866, -0.984017, -0.17744, 0.0242523, 0.17705, -0.983903, 0.999594, -0.0190487, 0.0212113, 5.55217e-05, 3.21584, -11.1052)
