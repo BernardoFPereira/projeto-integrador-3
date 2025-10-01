@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://chgq43s1h0col"]
+
+[ext_resource type="PackedScene" uid="uid://cnjap6ngoh0ka" path="res://models/estanteG.glb" id="1_ycu30"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="estanteG" parent="." instance=ExtResource("1_ycu30")]

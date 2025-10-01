@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dousrlek4re1r"
-path.s3tc="res://.godot/imported/wall001_BASECOLOR.png-95ebcccb721ee2fa79158d6880ee6eb2.s3tc.ctex"
+uid="uid://oegujw8qw4x"
+path.s3tc="res://.godot/imported/inkpot_inkpot_inkpot_mtl_BaseColor.png-4089da5fa6d722329274eac222e6fdf6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "8ae6cec8d8fbce6e4d10e1812687abf3"
+}
 
 [deps]
 
-source_file="res://tiles/tiled textures/wall001_BASECOLOR.png"
-dest_files=["res://.godot/imported/wall001_BASECOLOR.png-95ebcccb721ee2fa79158d6880ee6eb2.s3tc.ctex"]
+source_file="res://models/inkpot_inkpot_inkpot_mtl_BaseColor.png"
+dest_files=["res://.godot/imported/inkpot_inkpot_inkpot_mtl_BaseColor.png-4089da5fa6d722329274eac222e6fdf6.s3tc.ctex"]
 
 [params]
 
