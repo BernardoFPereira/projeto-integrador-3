@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ckunkgvgme6kl"]
+
+[ext_resource type="FontFile" uid="uid://b8lxgqho3723q" path="res://fonts/Alkhemikal.ttf" id="1_x76fi"]
+
+[resource]
+default_font = ExtResource("1_x76fi")
+default_font_size = 36
