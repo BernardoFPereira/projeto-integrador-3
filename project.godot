@@ -21,6 +21,12 @@ CyclopsAutoload="*res://addons/cyclops_level_builder/cyclops_global_scene.tscn"
 InspectManager="*res://autoloads/inspect_manager.gd"
 ProgressManager="*res://autoloads/progress_manager.gd"
 
+[display]
+
+window/size/viewport_width=1240
+window/size/viewport_height=720
+window/size/mode=3
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/cyclops_level_builder/plugin.cfg")

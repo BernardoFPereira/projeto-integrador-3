@@ -118,7 +118,7 @@ func _input(event):
 		else:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 			ui_manager.menu_type = ui_manager.MenuType.NONE
-			ui_manager.journal.visible = false
+			ui_manager.clear_menu()
 	
 
 func set_state(new_state: States) -> void:
