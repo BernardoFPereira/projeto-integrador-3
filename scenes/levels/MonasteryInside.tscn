@@ -68,21 +68,21 @@ collision_mode = 1
 collision_friction = 0.0
 collision_bounce = 0.0
 
-[sub_resource type="Curve" id="Curve_5a3sb"]
+[sub_resource type="Curve" id="Curve_nni3f"]
 max_value = 0.1
 _data = [Vector2(0, 0), 0.0, 0.942537, 0, 0, Vector2(0.0740741, 0.0532564), 0.384179, 0.384179, 0, 0, Vector2(0.279461, 0.0858887), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 4
 
-[sub_resource type="Gradient" id="Gradient_chk3d"]
+[sub_resource type="Gradient" id="Gradient_syw81"]
 offsets = PackedFloat32Array(0.0705394, 0.414938, 0.692946)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.539925, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_lhcsg"]
-gradient = SubResource("Gradient_chk3d")
+gradient = SubResource("Gradient_syw81")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_onv4i"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xvo6l"]
 transparency = 1
 cull_mode = 2
 vertex_color_use_as_albedo = true
@@ -90,10 +90,10 @@ albedo_texture = SubResource("GradientTexture2D_lhcsg")
 use_particle_trails = true
 
 [sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_6pkk6"]
-material = SubResource("StandardMaterial3D_onv4i")
+material = SubResource("StandardMaterial3D_xvo6l")
 size = 0.26
 section_length = 0.06
-curve = SubResource("Curve_5a3sb")
+curve = SubResource("Curve_nni3f")
 
 [sub_resource type="Resource" id="Resource_iylai"]
 script = ExtResource("2_34kdn")
