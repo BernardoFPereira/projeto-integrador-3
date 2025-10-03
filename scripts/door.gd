@@ -12,7 +12,9 @@ enum DoorState
 	OPEN,
 	CLOSED,
 	LOCKED,
-	HAUNTED,
+	HAUNTED_1,
+	HAUNTED_2,
+	HAUNTED_3
 }
 
 var player: Player
@@ -20,18 +22,22 @@ var player: Player
 func _ready():
 	player = get_tree().get_first_node_in_group("Player")
 	
-	if state == DoorState.HAUNTED:
+	if state == DoorState.HAUNTED_1:
 		ProgressManager.connect("first_contact", _on_first_contact)
+	if state == DoorState.HAUNTED_2:
+		ProgressManager.connect("second_contact", _on_second_contact)
 
 func set_state(new_state):
 	state = new_state
-	#
-	#match state:
-		#DoorState.OPEN:
-			#pass
-		#DoorState.CLOSED:
-			#pass
-		#_:
+	
+	match state:
+		DoorState.OPEN:
+			open_audio.play()
+			pass
+		DoorState.CLOSED:
+			pass
+		_:
+			pass
 			#locked_audio.play()
 			#animation_player.play("locked")
 
@@ -57,14 +63,20 @@ func interact():
 			locked_audio.play()
 			animation_player.play("locked")
 			
-		DoorState.HAUNTED:
+		DoorState.HAUNTED_1:
 			locked_audio.play()
 			animation_player.play("locked")
-			
+		DoorState.HAUNTED_2:
+			locked_audio.play()
+			animation_player.play("locked")
 		_:
 			pass
 
 func _on_first_contact():
+	animation_player.play("open")
+	set_state(DoorState.OPEN)
+
+func _on_second_contact():
 	animation_player.play("open")
 	set_state(DoorState.OPEN)
 

@@ -4,6 +4,7 @@ extends Control
 @onready var menu = $Menu
 @onready var settings = $Settings
 @onready var pages = $Pages
+@onready var interact_tip = $InteractTip
 
 enum MenuType {
 	NONE,

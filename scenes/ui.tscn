@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://drak54rbqaie4"]
+[gd_scene load_steps=14 format=3 uid="uid://drak54rbqaie4"]
 
 [ext_resource type="Script" path="res://scripts/UI_Manager.gd" id="1_txv8k"]
 [ext_resource type="Script" path="res://scripts/Journal.gd" id="2_qjj1l"]
@@ -21,6 +21,10 @@ font_size = 26
 [sub_resource type="LabelSettings" id="LabelSettings_21gjq"]
 font = ExtResource("4_n24mj")
 font_size = 26
+
+[sub_resource type="LabelSettings" id="LabelSettings_pyvbf"]
+font = ExtResource("4_n24mj")
+font_size = 36
 
 [node name="UI" type="Control" groups=["UI"]]
 layout_mode = 3
@@ -90,6 +94,7 @@ theme_override_font_sizes/normal_font_size = 22
 text = "> O bagulho é louco nesse lugar. As sombras falam comigo aqui. Não vejo nenhum sinal de vida, mas me sinto observado constantemente."
 
 [node name="Note2" type="RichTextLabel" parent="Journal/Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -107,6 +112,7 @@ theme_override_font_sizes/normal_font_size = 22
 text = "> Parece que os monges daqui estavam transcrevendo um tomo. Nunca vi nada parecido -- A capa sozinha deve pesar mais que meu corpo."
 
 [node name="Note3" type="RichTextLabel" parent="Journal/Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -156,6 +162,7 @@ theme = ExtResource("3_x8ns6")
 icon = ExtResource("6_i6sl0")
 
 [node name="Pages" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -199,6 +206,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Page01" type="Control" parent="Pages/Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -222,7 +230,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 22
-text = "> Faltavam algumas páginas do livro. Encontrei essa na mesma sala onde transcrevem textos. O que houve aqui?"
+text = "> Você encontrou a primeira página! Agora vá até o segundo andar, tem uma porta aberta pra você! ;)"
 
 [node name="InspectButton01" type="Button" parent="Pages/Panel/Page01"]
 layout_mode = 1
@@ -264,7 +272,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 22
-text = "> Porque espalharam essas páginas pelo monastério? Esconderam uma página no altar do jardim, atrás da estátua."
+text = "> Você é bom! Neste mesmo andar tem uma porta trancada, seu destino espera do outro lado."
 
 [node name="InspectButton02" type="Button" parent="Pages/Panel/Page02"]
 layout_mode = 1
@@ -306,7 +314,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 22
-text = "> Acredito que esta é a última página escondida. Estou prester a desvendar o destino desses pobres coitados. Tudo aponta para o altar lá em cima."
+text = "> Parabéns! Agora você tem todas as dicas necessárias para completar o jogo!
+A CHAMPION BE YOU ARE"
 
 [node name="InspectButton03" type="Button" parent="Pages/Panel/Page03"]
 layout_mode = 1
@@ -340,7 +349,6 @@ theme = ExtResource("3_x8ns6")
 icon = ExtResource("7_gbf7f")
 
 [node name="Menu" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -553,6 +561,34 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_x8ns6")
 text = "Tela-cheia"
+
+[node name="InteractTip" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="InteractTip"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -192.5
+offset_top = -81.0
+offset_right = 192.5
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Pressiona 'E' para interagir"
+label_settings = SubResource("LabelSettings_pyvbf")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Journal/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Journal/PagesButton" to="." method="_on_pages_button_pressed"]

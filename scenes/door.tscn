@@ -1,8 +1,12 @@
-[gd_scene load_steps=25 format=3 uid="uid://rpf8kpemd48y"]
+[gd_scene load_steps=31 format=3 uid="uid://rpf8kpemd48y"]
 
 [ext_resource type="Script" path="res://scripts/door.gd" id="1_ls0ad"]
 [ext_resource type="AudioStream" uid="uid://d3p6a6mr2v7rn" path="res://audio/LockedDoorJiggle.ogg" id="2_jsjbx"]
+[ext_resource type="Texture2D" uid="uid://dkfnxejys2vpm" path="res://models/porta01_porta_01_standardSurface9_BaseColor.png" id="2_uek2q"]
 [ext_resource type="AudioStream" uid="uid://f5dnr45itd61" path="res://audio/Chest Creak.wav" id="3_r32qa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjl6c"]
+albedo_texture = ExtResource("2_uek2q")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8hale"]
 resource_name = "standardSurface9.001"
@@ -43,6 +47,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xv4lc")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5p756"]
+albedo_texture = ExtResource("2_uek2q")
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_xh6ry"]
 _surfaces = [{
 "aabb": AABB(0.0428349, 0.00298371, 0.002159, 0.0127234, 0.00875428, 0.013287),
@@ -77,6 +84,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xh6ry")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1oa1"]
+albedo_texture = ExtResource("2_uek2q")
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_t4xuc"]
 _surfaces = [{
 "aabb": AABB(0.0417615, 0.00653852, 0.00710544, 0.0148704, 0.0030336, 0.0128781),
@@ -108,6 +118,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_t4xuc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_srk47"]
+albedo_texture = ExtResource("2_uek2q")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_op1y6"]
 _surfaces = [{
@@ -142,6 +155,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_op1y6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oq20b"]
+albedo_texture = ExtResource("2_uek2q")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_me5kp"]
 _surfaces = [{
@@ -286,6 +302,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.962725)
 transform = Transform3D(-1.36867e-06, -27.787, 0, 0, 0, -22.5007, 31.3114, -1.21461e-06, 0, 0.106855, 0.286093, 0)
 
 [node name="porta_geo" type="MeshInstance3D" parent="DoorMesh/porta_grp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_kjl6c")
 mesh = SubResource("ArrayMesh_3bape")
 skeleton = NodePath("")
 
@@ -294,11 +312,13 @@ transform = Transform3D(-1.36867e-06, -27.787, 0, 0, 0, -27.787, 31.3114, -1.214
 
 [node name="base_01_001" type="MeshInstance3D" parent="DoorMesh/maçaneta_01_grp"]
 transform = Transform3D(0.723771, 0, 0, 0, 0.723771, 0, 0, 0, 0.723771, 0.0167635, 0, -0.00356904)
+material_override = SubResource("StandardMaterial3D_5p756")
 mesh = SubResource("ArrayMesh_jaqw8")
 skeleton = NodePath("")
 
 [node name="sla_02_002" type="MeshInstance3D" parent="DoorMesh/maçaneta_01_grp"]
 transform = Transform3D(0.723771, 0, 0, 0, 0.723771, 0, 0, 0, 0.723771, 0.0167635, 0, -0.00356904)
+material_override = SubResource("StandardMaterial3D_s1oa1")
 mesh = SubResource("ArrayMesh_cg2pb")
 skeleton = NodePath("")
 
@@ -307,11 +327,13 @@ transform = Transform3D(-1.36867e-06, -27.787, 0, 0, 0, -27.787, 31.3114, -1.214
 
 [node name="base_02_001" type="MeshInstance3D" parent="DoorMesh/maçaneta_02_grp"]
 transform = Transform3D(0.723771, 0, 0, 0, 0.723771, 0, 0, 0, 0.723771, 0.0167635, 0, -0.00356904)
+material_override = SubResource("StandardMaterial3D_srk47")
 mesh = SubResource("ArrayMesh_nh6bn")
 skeleton = NodePath("")
 
 [node name="sla_02_003" type="MeshInstance3D" parent="DoorMesh/maçaneta_02_grp"]
 transform = Transform3D(0.723771, 0, 0, 0, 0.723771, 0, 0, 0, 0.723771, 0.0167635, 0, -0.00356904)
+material_override = SubResource("StandardMaterial3D_oq20b")
 mesh = SubResource("ArrayMesh_t74k1")
 skeleton = NodePath("")
 
@@ -346,7 +368,7 @@ pitch_scale = 0.79
 [node name="OpenAudio" type="AudioStreamPlayer3D" parent="DoorMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.51518e-06, -0.107952, 0.971046)
 stream = ExtResource("3_r32qa")
-volume_db = -8.641
+volume_db = -2.927
 pitch_scale = 0.79
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
