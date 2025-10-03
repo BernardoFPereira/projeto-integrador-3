@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4m6pdjd14r80"
-path.s3tc="res://.godot/imported/wall003_BASECOLOR.png-938b41092e186af1f83b6d0c5fe0e6a9.s3tc.ctex"
+uid="uid://b3b4m5c0cimgc"
+path.s3tc="res://.godot/imported/benchsmall_banco 1_standardSurface4_BaseColor.png-10f1ef132f09980b4e4782b9e85922a3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "d3f2c79026b5db733905a4b48a42f07f"
+}
 
 [deps]
 
-source_file="res://tiles/tiled textures/wall003_BASECOLOR.png"
-dest_files=["res://.godot/imported/wall003_BASECOLOR.png-938b41092e186af1f83b6d0c5fe0e6a9.s3tc.ctex"]
+source_file="res://models/benchsmall_banco 1_standardSurface4_BaseColor.png"
+dest_files=["res://.godot/imported/benchsmall_banco 1_standardSurface4_BaseColor.png-10f1ef132f09980b4e4782b9e85922a3.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmi2ahrooyfxn"]
+
+[ext_resource type="PackedScene" uid="uid://cxped2saj6jto" path="res://scenes/prefabs/column.tscn" id="1_ctfhi"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="column" parent="." instance=ExtResource("1_ctfhi")]
+transform = Transform3D(1, 0, 0, 0, 1.26991, 0, 0, 0, 1, -1.92235, 0, 0)
+
+[node name="column4" parent="." instance=ExtResource("1_ctfhi")]
+transform = Transform3D(1, 0, 0, 0, 1.26991, 0, 0, 0, 1, -1.92235, 0, 0)
+
+[node name="column2" parent="." instance=ExtResource("1_ctfhi")]
+transform = Transform3D(1, 0, 0, 0, 1.26991, 0, 0, 0, 1, 2.30888, 0, 0)
+
+[node name="column3" parent="." instance=ExtResource("1_ctfhi")]
+transform = Transform3D(1, 0, 0, 0, 1.26991, 0, 0, 0, 1, 8.14729, 0, 0)
+
+[node name="column5" parent="." instance=ExtResource("1_ctfhi")]
+transform = Transform3D(1, 0, 0, 0, 1.26991, 0, 0, 0, 1, 8.14729, 0, 0)
+
+[node name="column6" parent="." instance=ExtResource("1_ctfhi")]
+transform = Transform3D(1, 0, 0, 0, 1.26991, 0, 0, 0, 1, 8.14729, 0, 0)

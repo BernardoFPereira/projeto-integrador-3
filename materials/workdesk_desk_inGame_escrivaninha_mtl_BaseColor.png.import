@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4m6pdjd14r80"
-path.s3tc="res://.godot/imported/wall003_BASECOLOR.png-938b41092e186af1f83b6d0c5fe0e6a9.s3tc.ctex"
+uid="uid://chcc0epivs7kc"
+path.s3tc="res://.godot/imported/workdesk_desk_inGame_escrivaninha_mtl_BaseColor.png-f778534b4776f26eba37706cd8cb422d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "d6d3b0c7aefafe71daf4d07fdc5a1f40"
+}
 
 [deps]
 
-source_file="res://tiles/tiled textures/wall003_BASECOLOR.png"
-dest_files=["res://.godot/imported/wall003_BASECOLOR.png-938b41092e186af1f83b6d0c5fe0e6a9.s3tc.ctex"]
+source_file="res://materials/workdesk_desk_inGame_escrivaninha_mtl_BaseColor.png"
+dest_files=["res://.godot/imported/workdesk_desk_inGame_escrivaninha_mtl_BaseColor.png-f778534b4776f26eba37706cd8cb422d.s3tc.ctex"]
 
 [params]
 

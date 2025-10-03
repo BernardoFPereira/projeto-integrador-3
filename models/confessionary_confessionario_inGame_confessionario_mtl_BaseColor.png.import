@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4m6pdjd14r80"
-path.s3tc="res://.godot/imported/wall003_BASECOLOR.png-938b41092e186af1f83b6d0c5fe0e6a9.s3tc.ctex"
+uid="uid://cb5kgpn2ys0hc"
+path.s3tc="res://.godot/imported/confessionary_confessionario_inGame_confessionario_mtl_BaseColor.png-d69bcf2bc49eb23f16e1d959d9427d8b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "7d897d16f10e17afe7a9935bef338d36"
+}
 
 [deps]
 
-source_file="res://tiles/tiled textures/wall003_BASECOLOR.png"
-dest_files=["res://.godot/imported/wall003_BASECOLOR.png-938b41092e186af1f83b6d0c5fe0e6a9.s3tc.ctex"]
+source_file="res://models/confessionary_confessionario_inGame_confessionario_mtl_BaseColor.png"
+dest_files=["res://.godot/imported/confessionary_confessionario_inGame_confessionario_mtl_BaseColor.png-d69bcf2bc49eb23f16e1d959d9427d8b.s3tc.ctex"]
 
 [params]
 
