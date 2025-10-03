@@ -21,9 +21,9 @@ func start_inspection() -> void:
 	inspect_target.mesh.visible = false
 	inspect_target.add_child(inspect_target_mesh)
 	inspect_target_mesh.global_transform = player.inspect_object_pos.global_transform
-	inspect_target_mesh.scale.x = 0.12
-	inspect_target_mesh.scale.y = 0.12
-	inspect_target_mesh.scale.z = 0.12
+	#inspect_target_mesh.scale.x = 0.12
+	#inspect_target_mesh.scale.y = 0.12
+	#inspect_target_mesh.scale.z = 0.12
 	
 	can_inspect = false
 
@@ -32,6 +32,16 @@ func stop_inspection() -> void:
 	inspect_target.mesh.visible = true
 	inspect_target_mesh.queue_free()
 	
-	if inspect_target.is_in_group("Key"):
+	#if inspect_target.is_in_group("Key"):
+		#inspect_target.visible = false
+	
+	if inspect_target.is_in_group("Page"):
 		inspect_target.visible = false
+		inspect_target = null
+		can_inspect = false
+		
+		player.ui_manager.pages.reveal_page()
+		InspectManager.can_inspect = false
+		InspectManager.inspect_target = null
+	
 	can_inspect = true
