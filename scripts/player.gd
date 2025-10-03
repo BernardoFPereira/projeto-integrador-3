@@ -1,6 +1,8 @@
 extends CharacterBody3D
 class_name Player
 
+@export var ui_manager: Control
+
 @onready var view = $View
 #@onready var camera = $View/Camera3D
 @onready var third_person_camera = $View/SpringArm3D/ThirdPersonCamera
@@ -46,10 +48,10 @@ func _ready():
 
 func _process(delta):
 	if interact_target:
-		if global_position.distance_to(interact_target.get_child(0).get_child(0).global_position) > 2:
-			print('RELEASE ME!!!!')
-			interact_target = null
+		if global_position.distance_to(interact_target.global_position) > 2:
+			print('Interaction Released')
 			can_interact = false
+			interact_target = null
 			
 	# handle_camera_pos(delta)
 	handle_state(delta)
@@ -110,9 +112,13 @@ func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			ui_manager.menu_type = ui_manager.MenuType.NOTES
+			ui_manager.journal.visible = true
 			
 		else:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			ui_manager.menu_type = ui_manager.MenuType.NONE
+			ui_manager.clear_menu()
 	
 
 func set_state(new_state: States) -> void:

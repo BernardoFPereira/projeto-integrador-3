@@ -23,12 +23,9 @@ ProgressManager="*res://autoloads/progress_manager.gd"
 
 [display]
 
-window/size/mode=4
-
-[editor]
-
-movie_writer/movie_file="C:/Users/Vini/Documents/GitHub/projeto-integrador-3/cutscenes/exported/test.avi"
-movie_writer/fps=24
+window/size/viewport_width=1240
+window/size/viewport_height=720
+window/size/mode=3
 
 [editor_plugins]
 
