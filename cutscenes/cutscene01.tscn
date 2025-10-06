@@ -4718,7 +4718,7 @@ fov = 60.0
 near = 0.02
 script = ExtResource("7_2q0j3")
 shake_enabled = true
-intensity = 0.001
+intensity = 0.0
 speed = 8.0
 
 [node name="Control" type="Control" parent="."]
@@ -4730,6 +4730,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -4774,7 +4775,7 @@ autoplay = true
 [node name="Rain" type="Node3D" parent="."]
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Rain"]
-transform = Transform3D(0.821233, -0.570594, 0, 0.570594, 0.821233, 0, 0, 0, 1, 4.05191, 41.1134, 10.4099)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.05191, 41.1134, 10.4099)
 amount = 2500
 randomness = 0.64
 visibility_aabb = AABB(-42.4057, -61.2865, -59.3164, 84.8115, 79.032, 118.633)
