@@ -48,7 +48,6 @@ shadow_mesh = SubResource("ArrayMesh_akv60")
 resource_name = "MT_Top.1001"
 cull_mode = 2
 albedo_texture = ExtResource("2_rctj7")
-roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_jjxxt"]
 _surfaces = [{
@@ -86,7 +85,6 @@ shadow_mesh = SubResource("ArrayMesh_jjxxt")
 resource_name = "MT_Detail.1001"
 cull_mode = 2
 albedo_texture = ExtResource("3_7os6k")
-roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ijswm"]
 _surfaces = [{

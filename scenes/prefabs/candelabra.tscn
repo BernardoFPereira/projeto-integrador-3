@@ -1,22 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgydr8f43d8yg"]
+[gd_scene load_steps=6 format=3 uid="uid://bgydr8f43d8yg"]
 
 [ext_resource type="PackedScene" uid="uid://cyuqysv1hojuw" path="res://scenes/prefabs/candle_03.tscn" id="1_kt313"]
+[ext_resource type="Script" path="res://scripts/candle.gd" id="2_8q462"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_id7po"]
+top_radius = 0.025
+bottom_radius = 0.025
+height = 1.7
+
+[sub_resource type="PrismMesh" id="PrismMesh_m3004"]
+size = Vector3(0.055, 0.075, 1.615)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qht4s"]
+top_radius = 0.095
+bottom_radius = 0.06
+height = 0.102
 
 [node name="Candelabra" type="Node3D"]
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="PH_Model" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.985592, 0)
 
-[node name="candle03" parent="Node3D" instance=ExtResource("1_kt313")]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PH_Model"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80637, 0)
+mesh = SubResource("CylinderMesh_id7po")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="PH_Model"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0.937643, 0)
+mesh = SubResource("PrismMesh_m3004")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="PH_Model"]
+transform = Transform3D(4.37114e-08, -3.82137e-15, -1, -8.74228e-08, -1, 0, -1, 8.74228e-08, -4.37114e-08, 0, 0.937643, 0)
+mesh = SubResource("PrismMesh_m3004")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="PH_Model"]
+transform = Transform3D(4.37114e-08, -3.82137e-15, -1, 0, 1, -3.82137e-15, 1, 0, 4.37114e-08, 0, 0.943834, 0.743865)
+mesh = SubResource("CylinderMesh_qht4s")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="PH_Model"]
+transform = Transform3D(4.37114e-08, -3.82137e-15, -1, 0, 1, -3.82137e-15, 1, 0, 4.37114e-08, 0, 0.943834, -0.732085)
+mesh = SubResource("CylinderMesh_qht4s")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="PH_Model"]
+transform = Transform3D(-1, 1.67037e-22, 0, 0, 1, -3.82137e-15, 0, -3.82137e-15, -1, -0.737975, 0.943834, 0.00589004)
+mesh = SubResource("CylinderMesh_qht4s")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="PH_Model"]
+transform = Transform3D(-1, 1.67037e-22, 0, 0, 1, -3.82137e-15, 0, -3.82137e-15, -1, 0.737975, 0.943834, 0.0058901)
+mesh = SubResource("CylinderMesh_qht4s")
+
+[node name="candle03" parent="." instance=ExtResource("1_kt313")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.742917, 0, 0)
+script = ExtResource("2_8q462")
 
-[node name="candle04" parent="Node3D" instance=ExtResource("1_kt313")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.871255, 0, 0)
+[node name="candle04" parent="." instance=ExtResource("1_kt313")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.744421, 0, 0)
+script = ExtResource("2_8q462")
 
-[node name="Node3D2" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+[node name="candle05" parent="." instance=ExtResource("1_kt313")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.24739e-08, 0, 0.742917)
+script = ExtResource("2_8q462")
 
-[node name="candle03" parent="Node3D2" instance=ExtResource("1_kt313")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.742917, 0, 0)
-
-[node name="candle04" parent="Node3D2" instance=ExtResource("1_kt313")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.871255, 0, 0)
+[node name="candle06" parent="." instance=ExtResource("1_kt313")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.80838e-08, 0, -0.74031)
+script = ExtResource("2_8q462")

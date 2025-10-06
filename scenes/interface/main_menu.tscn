@@ -1,0 +1,243 @@
+[gd_scene load_steps=7 format=3 uid="uid://u4odulsatae0"]
+
+[ext_resource type="FontFile" uid="uid://bq5aief5ce6cv" path="res://fonts/Pixeled English Font.ttf" id="1_6pwd4"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_oxakc"]
+[ext_resource type="Theme" uid="uid://ckunkgvgme6kl" path="res://resources/button_theme.tres" id="2_7mvmg"]
+[ext_resource type="FontFile" uid="uid://b8lxgqho3723q" path="res://fonts/Alkhemikal.ttf" id="4_h1tt7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ub0uy"]
+font = ExtResource("1_6pwd4")
+font_size = 56
+font_color = Color(0.856067, 0.856067, 0.856067, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_66kl7"]
+font = ExtResource("4_h1tt7")
+font_size = 26
+
+[node name="Master" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oxakc")
+
+[node name="MainMenu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -239.0
+offset_top = 119.0
+offset_right = 239.0
+offset_bottom = 195.0
+grow_horizontal = 2
+text = "O MONASTÉRIO"
+label_settings = SubResource("LabelSettings_ub0uy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -23.0
+offset_right = 88.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_7mvmg")
+text = "Jogar"
+
+[node name="SettingsButton" type="Button" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = 61.0
+offset_right = 85.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_7mvmg")
+text = "Opções"
+
+[node name="QuitButton" type="Button" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.0
+offset_top = 173.0
+offset_right = 77.0
+offset_bottom = 217.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_7mvmg")
+text = "Sair"
+
+[node name="Settings" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="BackButton" type="Button" parent="Settings"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -153.0
+offset_right = 76.0
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_7mvmg")
+text = "VOLTAR"
+
+[node name="HSlider" type="HSlider" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = -9.0
+offset_right = 113.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Settings/HSlider"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -33.5
+offset_right = 63.0
+offset_bottom = -10.5
+grow_vertical = 2
+text = "MASTER"
+label_settings = SubResource("LabelSettings_66kl7")
+
+[node name="HSlider2" type="HSlider" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = 46.5
+offset_right = 113.0
+offset_bottom = 71.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="Settings/HSlider2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -34.0
+offset_right = 63.0
+offset_bottom = -11.0
+grow_vertical = 2
+text = "MUSICA"
+label_settings = SubResource("LabelSettings_66kl7")
+
+[node name="HSlider3" type="HSlider" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = 102.5
+offset_right = 113.0
+offset_bottom = 127.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label3" type="Label" parent="Settings/HSlider3"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -30.0
+offset_right = 63.0
+offset_bottom = -7.0
+grow_vertical = 2
+text = "EFEITOS"
+label_settings = SubResource("LabelSettings_66kl7")
+
+[node name="OptionButton" type="OptionButton" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -188.5
+offset_top = -149.5
+offset_right = -3.5
+offset_bottom = -105.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_7mvmg")
+item_count = 2
+selected = 0
+popup/item_0/text = "1280x720"
+popup/item_0/id = 0
+popup/item_1/text = "1920x1080"
+popup/item_1/id = 1
+
+[node name="CheckBox" type="CheckBox" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 46.0
+offset_top = -150.0
+offset_right = 220.0
+offset_bottom = -106.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_7mvmg")
+button_pressed = true
+text = "Tela-cheia"
+
+[connection signal="pressed" from="MainMenu/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MainMenu/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MainMenu/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Settings/BackButton" to="." method="_on_back_button_pressed"]

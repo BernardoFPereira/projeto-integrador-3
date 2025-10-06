@@ -28,7 +28,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39746, -1.35401, 0)
 transform = Transform3D(0.914192, 0, 0, 0, 0.604477, 0, 0, 0, 0.811375, -0.438056, -0.159296, 1.04068)
 
 [node name="inkpot" parent="." instance=ExtResource("4_n3xat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0125802, -0.165852, -0.784767)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0125802, -0.183618, -0.784767)
 
 [node name="quill" parent="inkpot" instance=ExtResource("5_cl4xh")]
 transform = Transform3D(0.743355, 0, -0.668897, 0, 1, 0, 0.668897, 0, 0.743355, 0, 0, 0)

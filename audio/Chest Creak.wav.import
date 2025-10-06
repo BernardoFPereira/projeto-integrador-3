@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://f5dnr45itd61"
+path="res://.godot/imported/Chest Creak.wav-d13199a8399b1605db59bc40ca386165.sample"
+
+[deps]
+
+source_file="res://audio/Chest Creak.wav"
+dest_files=["res://.godot/imported/Chest Creak.wav-d13199a8399b1605db59bc40ca386165.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

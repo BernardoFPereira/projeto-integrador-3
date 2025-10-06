@@ -1,0 +1,600 @@
+[gd_scene load_steps=14 format=3 uid="uid://drak54rbqaie4"]
+
+[ext_resource type="Script" path="res://scripts/UI_Manager.gd" id="1_txv8k"]
+[ext_resource type="Script" path="res://scripts/Journal.gd" id="2_qjj1l"]
+[ext_resource type="FontFile" uid="uid://bq5aief5ce6cv" path="res://fonts/Pixeled English Font.ttf" id="3_u26e6"]
+[ext_resource type="Theme" uid="uid://ckunkgvgme6kl" path="res://resources/button_theme.tres" id="3_x8ns6"]
+[ext_resource type="FontFile" uid="uid://b8lxgqho3723q" path="res://fonts/Alkhemikal.ttf" id="4_n24mj"]
+[ext_resource type="Texture2D" uid="uid://c7c2vg6lbhmfn" path="res://addons/cyclops_level_builder/art/icons/arrow_right.svg" id="6_i6sl0"]
+[ext_resource type="Script" path="res://scripts/holy_pages.gd" id="7_5gck7"]
+[ext_resource type="Texture2D" uid="uid://dmu0ivr826rwb" path="res://addons/cyclops_level_builder/art/icons/eye_open.svg" id="7_28cvy"]
+[ext_resource type="Texture2D" uid="uid://ghfvfty2oswu" path="res://addons/cyclops_level_builder/art/icons/arrow_left.svg" id="7_gbf7f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hsyih"]
+font = ExtResource("3_u26e6")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_hdf1x"]
+font = ExtResource("3_u26e6")
+font_size = 26
+
+[sub_resource type="LabelSettings" id="LabelSettings_21gjq"]
+font = ExtResource("4_n24mj")
+font_size = 26
+
+[sub_resource type="LabelSettings" id="LabelSettings_pyvbf"]
+font = ExtResource("4_n24mj")
+font_size = 36
+
+[node name="UI" type="Control" groups=["UI"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_txv8k")
+metadata/_edit_lock_ = true
+
+[node name="Journal" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qjj1l")
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="Journal"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -229.0
+offset_top = -164.0
+offset_right = 229.0
+offset_bottom = 297.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Journal/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
+offset_top = 16.0
+offset_right = 51.0
+offset_bottom = 50.0
+grow_horizontal = 2
+text = "NOTAS"
+label_settings = SubResource("LabelSettings_hsyih")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Note1" type="RichTextLabel" parent="Journal/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -151.5
+offset_right = 188.0
+offset_bottom = -53.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("4_n24mj")
+theme_override_font_sizes/normal_font_size = 22
+text = "> O bagulho é louco nesse lugar. As sombras falam comigo aqui. Não vejo nenhum sinal de vida, mas me sinto observado constantemente."
+
+[node name="Note2" type="RichTextLabel" parent="Journal/Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.0
+offset_top = -33.5
+offset_right = 187.0
+offset_bottom = 64.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("4_n24mj")
+theme_override_font_sizes/normal_font_size = 22
+text = "> Parece que os monges daqui estavam transcrevendo um tomo. Nunca vi nada parecido -- A capa sozinha deve pesar mais que meu corpo."
+
+[node name="Note3" type="RichTextLabel" parent="Journal/Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.0
+offset_top = 82.5
+offset_right = 187.0
+offset_bottom = 180.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("4_n24mj")
+theme_override_font_sizes/normal_font_size = 22
+text = "> Ele está quase aqui! O que eu estou fazendo?? Ele me observa pelas chamas. Ele me ve procurando suas relíquias. O que eu fiz?"
+
+[node name="MenuButton" type="Button" parent="Journal"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -98.0
+offset_right = -54.0
+offset_bottom = -46.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("3_x8ns6")
+text = "MENU"
+
+[node name="PagesButton" type="Button" parent="Journal"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 188.0
+offset_top = 243.0
+offset_right = 213.0
+offset_bottom = 287.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_x8ns6")
+icon = ExtResource("6_i6sl0")
+
+[node name="Pages" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_5gck7")
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="Pages"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = -162.0
+offset_right = 230.0
+offset_bottom = 298.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Pages/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -188.0
+offset_top = -208.0
+offset_right = 188.0
+offset_bottom = -151.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PAGINAS
+ENCONTRADAS"
+label_settings = SubResource("LabelSettings_hdf1x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Page01" type="Control" parent="Pages/Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="PageNote01" type="RichTextLabel" parent="Pages/Panel/Page01"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -124.0
+offset_right = 186.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("4_n24mj")
+theme_override_font_sizes/normal_font_size = 22
+text = "> Você encontrou a primeira página! Agora vá até o segundo andar, tem uma porta aberta pra você! ;)"
+
+[node name="InspectButton01" type="Button" parent="Pages/Panel/Page01"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -100.0
+offset_right = -19.0
+offset_bottom = -75.0
+grow_horizontal = 0
+grow_vertical = 2
+icon = ExtResource("7_28cvy")
+
+[node name="Page02" type="Control" parent="Pages/Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="PageNote02" type="RichTextLabel" parent="Pages/Panel/Page02"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -33.0
+offset_right = 186.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("4_n24mj")
+theme_override_font_sizes/normal_font_size = 22
+text = "> Você é bom! Neste mesmo andar tem uma porta trancada, seu destino espera do outro lado."
+
+[node name="InspectButton02" type="Button" parent="Pages/Panel/Page02"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -14.0
+offset_right = -18.0
+offset_bottom = 11.0
+grow_horizontal = 0
+grow_vertical = 2
+icon = ExtResource("7_28cvy")
+
+[node name="Page03" type="Control" parent="Pages/Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="PageNote03" type="RichTextLabel" parent="Pages/Panel/Page03"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = 60.0
+offset_right = 189.0
+offset_bottom = 158.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("4_n24mj")
+theme_override_font_sizes/normal_font_size = 22
+text = "> Parabéns! Agora você tem todas as dicas necessárias para completar o jogo!
+A CHAMPION BE YOU ARE"
+
+[node name="InspectButton03" type="Button" parent="Pages/Panel/Page03"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = 91.0
+offset_right = -18.0
+offset_bottom = 116.0
+grow_horizontal = 0
+grow_vertical = 2
+icon = ExtResource("7_28cvy")
+
+[node name="PagesBackButton" type="Button" parent="Pages"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = 243.0
+offset_right = -195.0
+offset_bottom = 287.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_x8ns6")
+icon = ExtResource("7_gbf7f")
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="MainMenuButton" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.0
+offset_top = -63.0
+offset_right = 147.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_x8ns6")
+text = "MENU PRINCIPAL"
+
+[node name="NotesButton" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = 21.0
+offset_right = 114.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_x8ns6")
+text = "NOTAS"
+
+[node name="SettingsButton" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -227.0
+offset_right = 76.0
+offset_bottom = -171.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_x8ns6")
+text = "OPÇÕES"
+
+[node name="QuitButton" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = -123.0
+offset_right = 57.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_x8ns6")
+text = "SAIR"
+
+[node name="Settings" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="SettingsBackButton" type="Button" parent="Settings"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -73.0
+offset_top = -153.0
+offset_right = 75.0
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_x8ns6")
+text = "VOLTAR"
+
+[node name="HSlider" type="HSlider" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = -9.0
+offset_right = 113.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Settings/HSlider"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -33.5
+offset_right = 63.0
+offset_bottom = -10.5
+grow_vertical = 2
+text = "MASTER"
+label_settings = SubResource("LabelSettings_21gjq")
+
+[node name="HSlider2" type="HSlider" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = 46.5
+offset_right = 113.0
+offset_bottom = 71.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="Settings/HSlider2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -34.0
+offset_right = 63.0
+offset_bottom = -11.0
+grow_vertical = 2
+text = "MUSICA"
+label_settings = SubResource("LabelSettings_21gjq")
+
+[node name="HSlider3" type="HSlider" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = 102.5
+offset_right = 113.0
+offset_bottom = 127.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label3" type="Label" parent="Settings/HSlider3"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -30.0
+offset_right = 63.0
+offset_bottom = -7.0
+grow_vertical = 2
+text = "EFEITOS"
+label_settings = SubResource("LabelSettings_21gjq")
+
+[node name="OptionButton" type="OptionButton" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -188.5
+offset_top = -149.5
+offset_right = -3.5
+offset_bottom = -105.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_x8ns6")
+item_count = 2
+selected = 0
+popup/item_0/text = "1280x720"
+popup/item_0/id = 0
+popup/item_1/text = "1920x1080"
+popup/item_1/id = 1
+
+[node name="CheckBox" type="CheckBox" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 46.0
+offset_top = -150.0
+offset_right = 220.0
+offset_bottom = -106.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_x8ns6")
+text = "Tela-cheia"
+
+[node name="InteractTip" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="InteractTip"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -192.5
+offset_top = -81.0
+offset_right = 192.5
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Pressiona 'E' para interagir"
+label_settings = SubResource("LabelSettings_pyvbf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Journal/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Journal/PagesButton" to="." method="_on_pages_button_pressed"]
+[connection signal="pressed" from="Pages/PagesBackButton" to="." method="_on_pages_back_button_pressed"]
+[connection signal="pressed" from="Menu/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="Menu/NotesButton" to="." method="_on_notes_button_pressed"]
+[connection signal="pressed" from="Menu/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Menu/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Settings/SettingsBackButton" to="." method="_on_settings_back_button_pressed"]
