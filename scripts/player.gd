@@ -1,6 +1,8 @@
 extends CharacterBody3D
 class_name Player
 
+@export var ui_manager: Control
+
 @onready var view = $View
 #@onready var camera = $View/Camera3D
 @onready var third_person_camera = $View/SpringArm3D/ThirdPersonCamera
@@ -45,11 +47,19 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _process(delta):
+	if can_interact:
+		ui_manager.interact_tip.visible = true
+	else:
+		ui_manager.interact_tip.visible = false
+		
 	if interact_target:
-		if global_position.distance_to(interact_target.get_child(0).get_child(0).global_position) > 2:
-			print('RELEASE ME!!!!')
-			interact_target = null
+		if global_position.distance_to(interact_target.global_position) > 2:
+			print('Interaction Released')
+			
 			can_interact = false
+			interact_target = null
+			InspectManager.can_inspect = false
+			InspectManager.inspect_target = null
 			
 	# handle_camera_pos(delta)
 	handle_state(delta)
@@ -100,9 +110,9 @@ func _input(event):
 				view.rotation.x = clamp(view.rotation.x, deg_to_rad(-55), deg_to_rad(60))
 			
 			if event.is_action_pressed("interact") and state != States.INSPECT:
-				if InspectManager.can_inspect:
-					set_state(States.INSPECT)
-					return
+				#if InspectManager.can_inspect:
+					#set_state(States.INSPECT)
+					#return
 				
 				if interact_target and can_interact:
 					interact_target.interact()
@@ -110,9 +120,13 @@ func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			ui_manager.menu_type = ui_manager.MenuType.NOTES
+			ui_manager.journal.visible = true
 			
 		else:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			ui_manager.menu_type = ui_manager.MenuType.NONE
+			ui_manager.clear_menu()
 	
 
 func set_state(new_state: States) -> void:
@@ -187,8 +201,8 @@ func set_camera_mode(new_mode: CameraModes) -> void:
 
 
 func _on_interact_area_area_entered(area):
+	ui_manager.interact_tip.visible = true
 	var area_parent = area.get_parent()
-	print(area_parent)
 	if area_parent.is_in_group("Door") and !can_interact:
 		print("DOOR DETECTEDEBERB")
 		can_interact = true
@@ -198,3 +212,13 @@ func _on_interact_area_area_entered(area):
 		print("KEY DETECTEDERBERB")
 		can_interact = true
 		interact_target = area_parent
+		
+	if area_parent.is_in_group("Page") and !can_interact:
+		print("PAGE DETECTEDERBERB")
+		#if interact_target.was_collected:
+			#print("Page already collected")
+			#return
+		can_interact = true
+		interact_target = area_parent
+		InspectManager.can_inspect = true
+		InspectManager.inspect_target = area_parent
