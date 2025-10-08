@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://mti4xvq60www"]
+[gd_scene load_steps=15 format=3 uid="uid://dph66wxcgr54"]
 
 [ext_resource type="PackedScene" uid="uid://cmi2ahrooyfxn" path="res://scenes/prefabs/Room Prefabs/InnerColumns.tscn" id="1_lokpl"]
 [ext_resource type="PackedScene" uid="uid://cb5wrqpvo66ix" path="res://scenes/prefabs/third_floor_corner_detail.tscn" id="2_y4f18"]
@@ -19,7 +19,6 @@
 transform = Transform3D(-4.37518e-08, 0, -1.00093, 0, 1.00093, 0, 1.00093, 0, -4.37518e-08, -3.53524, 0, -5.44893)
 
 [node name="Chapel Columns" parent="." instance=ExtResource("1_lokpl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="column" parent="Chapel Columns" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1.26991, 0, 0, 0, 1, -2.4707, 0, 0)
@@ -102,7 +101,7 @@ transform = Transform3D(-1.12235, 0, 4.96742e-08, 0, 1.05065, 0, -9.81191e-08, 0
 transform = Transform3D(-1.21447, 0, 5.37514e-08, 0, 1.10808, 0, -1.06173e-07, 0, -0.614841, 8.28276, 11.1979, -3.23178)
 
 [node name="shelfsmall" parent="." instance=ExtResource("5_4cfby")]
-transform = Transform3D(0.001354, 0, -0.545537, 0, 1.00873, 0, 1.07758, 0, 0.000684905, 14.5168, 11.038, -0.185688)
+transform = Transform3D(0.001354, 0, -0.545537, 0, 1.00873, 0, 1.07758, 0, 0.000684905, 14.5168, 11.208, -2.13573)
 
 [node name="shelfsmall4" parent="." instance=ExtResource("5_4cfby")]
 transform = Transform3D(-4.2897e-08, 0, 0.999071, 0, 0.87623, 0, -0.981373, 0, -4.36705e-08, 6.30848, 11.3196, 10.7294)
@@ -112,6 +111,9 @@ transform = Transform3D(1.31012e-07, 0, -0.999071, 0, 0.999071, 0, 0.999071, 0, 
 
 [node name="Confessionary Room" parent="." instance=ExtResource("7_iluoo")]
 transform = Transform3D(0.0452339, 0, -0.998047, 0, 0.999071, 0, 0.998047, 0, 0.0452339, 0.209816, 0, 16.78)
+
+[node name="confessionary2" parent="Confessionary Room" index="2"]
+transform = Transform3D(-4.47035e-08, 0, -1, 0, 1, 0, 1, 0, -4.47035e-08, 1.35149, -0.0137701, 2.85013)
 
 [node name="Candelabro" parent="Confessionary Room" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20813, 3.39254, 4.28718)

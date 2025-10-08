@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dj7lxofx8eg1b"]
 
-[ext_resource type="Texture2D" uid="uid://xwyc5gp8nber" path="res://tiles/planks.png" id="1_02pme"]
+[ext_resource type="Texture2D" path="res://tiles/tiled textures/wall004_BASECOLOR.png" id="1_w1xcp"]
 
 [resource]
-albedo_texture = ExtResource("1_02pme")
+albedo_texture = ExtResource("1_w1xcp")
 uv1_scale = Vector3(0.25, 0.25, 0.25)
 uv1_offset = Vector3(-0.505, -0.175, 0)
