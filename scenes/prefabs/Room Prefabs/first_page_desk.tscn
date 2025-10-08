@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=3 uid="uid://3f75874hki5w"]
+
+[ext_resource type="PackedScene" uid="uid://bcfr0cbpfsy05" path="res://scenes/prefabs/candle_02.tscn" id="1_3k42q"]
+[ext_resource type="PackedScene" uid="uid://du4lyekygvy8q" path="res://scenes/prefabs/candle_01.tscn" id="2_j5y7s"]
+[ext_resource type="PackedScene" uid="uid://dh4r6fk7n0ge3" path="res://scenes/prefabs/table.tscn" id="3_1ogib"]
+[ext_resource type="PackedScene" uid="uid://cwm0ynhwfch7v" path="res://scenes/basic_book.tscn" id="4_2b6rl"]
+[ext_resource type="PackedScene" uid="uid://cvxii1ppsp1bo" path="res://scenes/broken_chair.tscn" id="5_d2rlr"]
+[ext_resource type="PackedScene" uid="uid://kd5t6pntlln1" path="res://scenes/prefabs/evilpaper.tscn" id="6_ht48h"]
+[ext_resource type="PackedScene" uid="uid://cgfowgyio5ni3" path="res://scenes/Key.tscn" id="7_ur7k7"]
+[ext_resource type="PackedScene" uid="uid://dgwexqpva8xhx" path="res://scenes/HolyPage.tscn" id="8_xpubp"]
+
+[node name="First Page Desk" type="Node3D"]
+
+[node name="candle02" parent="." instance=ExtResource("1_3k42q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6528, 7.75901, 10.0566)
+
+[node name="candle01" parent="." instance=ExtResource("2_j5y7s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6966, 7.75901, 9.88799)
+is_on = true
+
+[node name="candle06" parent="." instance=ExtResource("2_j5y7s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6966, 7.75901, 7.8482)
+is_on = true
+
+[node name="candle07" parent="." instance=ExtResource("2_j5y7s")]
+transform = Transform3D(0.978079, 0, -0.208236, 0, 1, 0, 0.208236, 0, 0.978079, 12.6197, 7.75901, 8.66723)
+
+[node name="candle03" parent="." instance=ExtResource("1_3k42q")]
+transform = Transform3D(0.978079, 0, -0.208236, 0, 1, 0, 0.208236, 0, 0.978079, 12.7414, 7.75901, 8.86097)
+is_on = true
+
+[node name="candle04" parent="." instance=ExtResource("2_j5y7s")]
+transform = Transform3D(0.978079, 0, -0.208236, 0, 1, 0, 0.208236, 0, 0.978079, 12.5313, 7.75901, 8.87807)
+
+[node name="Table4" parent="." instance=ExtResource("3_1ogib")]
+transform = Transform3D(-5.84111e-09, 0, 0.133629, 0, 0.133629, 0, -0.133629, 0, -5.84111e-09, 12.215, 6.5035, 9.18037)
+
+[node name="BasicBook" parent="." instance=ExtResource("4_2b6rl")]
+transform = Transform3D(0.175281, 0.984518, -4.30347e-08, 0, -4.37114e-08, -1, -0.984518, 0.175281, -7.66176e-09, 12.0009, 7.82936, 9.96293)
+
+[node name="BasicBook3" parent="." instance=ExtResource("4_2b6rl")]
+transform = Transform3D(-0.164831, 0.795241, -3.47611e-08, 0, -3.54999e-08, -0.812144, -0.795241, -0.164831, 7.205e-09, 12.0009, 7.9664, 9.96293)
+
+[node name="BasicBook4" parent="." instance=ExtResource("4_2b6rl")]
+transform = Transform3D(0.148012, 0.785428, 0.144126, -0.585697, 0.00714211, 0.56257, 0.542796, -0.206467, 0.567732, 12.0009, 7.91577, 10.319)
+
+[node name="BasicBook2" parent="." instance=ExtResource("4_2b6rl")]
+transform = Transform3D(0.316378, 0.948633, 2.76368e-08, 4.37114e-08, -4.37114e-08, 1, 0.948633, -0.316378, -5.52954e-08, 12.0311, 7.83202, 8.23933)
+
+[node name="BrokenChair2" parent="." instance=ExtResource("5_d2rlr")]
+transform = Transform3D(0.355512, 0.934516, 0.0170836, -0.0974715, 0.01889, 0.995059, 0.929576, -0.355421, 0.0978042, 11.9906, 6.76379, 7.0845)
+
+[node name="evilpaper" parent="." instance=ExtResource("6_ht48h")]
+transform = Transform3D(0.597254, 0.15995, -0.785941, -0.0360658, 0.984278, 0.172907, 0.801241, -0.0749239, 0.593632, 12.6085, 7.77087, 9.19158)
+
+[node name="evilpaper4" parent="." instance=ExtResource("6_ht48h")]
+transform = Transform3D(0.0933785, 0, -0.995631, 0, 1, 0, 0.995631, 0, 0.0933785, 12.6429, 7.78731, 9.63243)
+
+[node name="evilpaper_geo" parent="evilpaper4/evilpaper" index="0"]
+transform = Transform3D(0.00678096, -0.00730689, -0.000758497, 0, 0.00107826, -0.00951524, 0.00734974, 0.00674142, 0.000699799, 0.0183878, -0.00817013, 0.309552)
+
+[node name="evilpapereye_geo" parent="evilpaper4/evilpaper" index="1"]
+transform = Transform3D(0.0099995, 5.35237e-06, 0.000100054, 0.000100054, -0.00106681, -0.00994243, 5.35225e-06, 0.00994293, -0.00106681, -0.0413656, 0.00965309, -0.0571184)
+visible = false
+
+[node name="evilpaper2" parent="." instance=ExtResource("6_ht48h")]
+transform = Transform3D(-0.16325, -0.162411, 0.973125, 0.0241263, 0.985405, 0.168508, -0.98629, 0.050987, -0.156949, 12.1602, 7.78731, 8.29036)
+
+[node name="evilpaper3" parent="." instance=ExtResource("6_ht48h")]
+transform = Transform3D(-0.17204, -0.16195, 0.971686, 0.0241263, 0.985405, 0.168508, -0.984795, 0.0524334, -0.165622, 11.9045, 7.77072, 8.27257)
+
+[node name="LibraryKey" parent="." instance=ExtResource("7_ur7k7")]
+transform = Transform3D(2.1267e-08, 0.108795, 0.489087, 0.501042, -9.72549e-09, -1.96235e-08, 5.23235e-09, 0.489087, -0.108795, 11.9162, 7.77229, 7.84171)
+
+[node name="HolyPage2" parent="." instance=ExtResource("8_xpubp")]
+transform = Transform3D(0.00375241, 0.999993, -4.36633e-08, 1.88608e-09, -4.36707e-08, -1, -0.999993, 0.00375241, -2.04994e-09, 12.1196, 7.75901, 9.41865)
+
+[editable path="evilpaper4"]
+[editable path="evilpaper4/evilpaper"]
