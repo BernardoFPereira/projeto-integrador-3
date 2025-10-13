@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwg5tkv3m03yg"]
+
+[ext_resource type="PackedScene" uid="uid://b318xwmlow7kl" path="res://models/bedbroken.glb" id="1_pe38m"]
+
+[node name="brokenbed" type="Node3D"]
+
+[node name="bedbroken" parent="." instance=ExtResource("1_pe38m")]
