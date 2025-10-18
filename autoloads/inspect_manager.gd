@@ -5,11 +5,15 @@ var can_inspect := false
 var inspect_target: Node3D
 var inspect_target_mesh: Node3D
 
-# Called when the node enters the scene tree for the first time.
+var player_og_position: Vector3
+var inspect_room_pos: Vector3
+
 func _ready():
 	player = get_tree().get_first_node_in_group("Player")
-	
+
 func start_inspection() -> void:
+	player_og_position = player.global_position
+	player.global_position = inspect_room_pos
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
 	#if inspect_target.is_in_group("Key"):
@@ -28,6 +32,7 @@ func start_inspection() -> void:
 	can_inspect = false
 
 func stop_inspection() -> void:
+	player.global_position = player_og_position
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	inspect_target.mesh.visible = true
 	inspect_target_mesh.queue_free()
