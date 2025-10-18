@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://dh10rg2yfc0u7"]
+[gd_scene load_steps=3 format=3 uid="uid://dh10rg2yfc0u7"]
 
 [ext_resource type="PackedScene" uid="uid://dhk18gyadb8tu" path="res://models/bothlessstatue.glb" id="1_gy43j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8j81w"]
+size = Vector3(0.608948, 2.38086, 1.12976)
 
 [node name="bothlessstatue" type="Node3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
-[node name="bothlessstatue" parent="." instance=ExtResource("1_gy43j")]
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="bothlessstatue" parent="StaticBody3D" instance=ExtResource("1_gy43j")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0628357, 0.69043, -0.225403)
+shape = SubResource("BoxShape3D_8j81w")

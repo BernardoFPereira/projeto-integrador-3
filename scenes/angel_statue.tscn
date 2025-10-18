@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dvu67awddwb6q"]
+[gd_scene load_steps=20 format=3 uid="uid://dvu67awddwb6q"]
 
 [ext_resource type="Texture2D" uid="uid://did0thu4vx8l8" path="res://textures/statue_angel_head_mtl_BaseColor.1001.png" id="1_f413q"]
 [ext_resource type="Texture2D" uid="uid://bvnuvnoe0pn0o" path="res://textures/statue_angel_body_mtl_BaseColor.1001.png" id="2_1syrw"]
@@ -223,6 +223,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dvt6h")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hbaco"]
+size = Vector3(1, 2.19183, 0.881409)
+
 [node name="angel_statue" type="Node3D"]
 
 [node name="anja_grp" type="Node3D" parent="."]
@@ -251,3 +254,9 @@ skeleton = NodePath("")
 [node name="shoes_geo" type="MeshInstance3D" parent="anja_grp"]
 mesh = SubResource("ArrayMesh_egodw")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11904, -0.166168)
+shape = SubResource("BoxShape3D_hbaco")

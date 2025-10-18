@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4m6pdjd14r80"
-path.s3tc="res://.godot/imported/wall003_BASECOLOR.png-938b41092e186af1f83b6d0c5fe0e6a9.s3tc.ctex"
+uid="uid://cflnhnideoudu"
+path.s3tc="res://.godot/imported/chapelaltar1_altarzao_01_standardSurface13_BaseColor.png-d8d168622089326014327f1b99dd9fa7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "e34b649cf9671d2aafe3125f0e3cc174"
+}
 
 [deps]
 
-source_file="res://tiles/tiled textures/wall003_BASECOLOR.png"
-dest_files=["res://.godot/imported/wall003_BASECOLOR.png-938b41092e186af1f83b6d0c5fe0e6a9.s3tc.ctex"]
+source_file="res://models/chapelaltar1_altarzao_01_standardSurface13_BaseColor.png"
+dest_files=["res://.godot/imported/chapelaltar1_altarzao_01_standardSurface13_BaseColor.png-d8d168622089326014327f1b99dd9fa7.s3tc.ctex"]
 
 [params]
 
