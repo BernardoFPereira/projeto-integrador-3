@@ -1,8 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://c2lftgn6ri05y"]
 
-[ext_resource type="PackedScene" uid="uid://8yphdw75e2g3" path="res://models/bookshelf-02_model.glb" id="1_6d4ae"]
+[ext_resource type="PackedScene" uid="uid://20cwvo6gbfm6" path="res://models/estanteP.glb" id="1_aeta6"]
 
 [node name="shelfsmall" type="Node3D"]
 
-[node name="bookshelf-02_model" parent="." instance=ExtResource("1_6d4ae")]
-transform = Transform3D(0.225946, 0, 0, 0, 0.225946, 0, 0, 0, 0.225946, 0, 1.4, 0)
+[node name="estanteP" parent="." instance=ExtResource("1_aeta6")]
+transform = Transform3D(4.0772, 0, 0, 0, 3.95239, 0, 0, 0, 3.96037, 0, -0.376052, 0)
+
+[editable path="estanteP"]

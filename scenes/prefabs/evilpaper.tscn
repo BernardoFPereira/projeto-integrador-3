@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://kd5t6pntlln1"]
+
+[ext_resource type="PackedScene" uid="uid://b850d7j2muv8k" path="res://models/evilpaper.glb" id="1_ce50s"]
+
+[node name="evilpaper" type="Node3D"]
+
+[node name="evilpaper" parent="." instance=ExtResource("1_ce50s")]
+
+[node name="evilpapereye_geo" parent="evilpaper" index="1"]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0.0214336)
+
+[editable path="evilpaper"]
