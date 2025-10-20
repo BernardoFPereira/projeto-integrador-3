@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://jhvky7xprbq"]
+
+[ext_resource type="PackedScene" uid="uid://cfbqdor8tyw7e" path="res://scenes/prefabs/benchsmall.tscn" id="1_makea"]
+
+[node name="Garden Bench" type="Node3D"]
+
+[node name="benchsmall" parent="." instance=ExtResource("1_makea")]
+transform = Transform3D(1.66373, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="benchsmall2" parent="." instance=ExtResource("1_makea")]
+transform = Transform3D(1.66373, 0, 0, 0, 1, 0, 0, 0, 1, 5.17464, 0, 0)

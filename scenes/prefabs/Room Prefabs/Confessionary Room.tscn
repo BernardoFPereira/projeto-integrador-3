@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bs0ie2bmdee7h"]
+
+[ext_resource type="PackedScene" uid="uid://cbd2nle7hx8ct" path="res://scenes/prefabs/confessionary.tscn" id="2_8howq"]
+[ext_resource type="PackedScene" uid="uid://frw2b55povvl" path="res://models/plantpot.glb" id="2_kswjv"]
+[ext_resource type="PackedScene" uid="uid://pm6jt5dsejos" path="res://models/deadleaves.glb" id="3_cbguu"]
+[ext_resource type="PackedScene" uid="uid://b850d7j2muv8k" path="res://models/evilpaper.glb" id="4_0is66"]
+[ext_resource type="PackedScene" uid="uid://cfbqdor8tyw7e" path="res://scenes/prefabs/benchsmall.tscn" id="4_07dpe"]
+[ext_resource type="PackedScene" uid="uid://cqa1b6cyccxwc" path="res://scenes/prefabs/candelabro.tscn" id="6_ea55r"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="evilpaper" parent="." instance=ExtResource("4_0is66")]
+transform = Transform3D(0.79684, -0.00748065, 0.604144, 0.0774181, 0.992945, -0.0898165, -0.599209, 0.118341, 0.791798, -3.50809, 0.59105, 1.84116)
+
+[node name="confessionary" parent="." instance=ExtResource("2_8howq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.391449, 0, -1.03324)
+
+[node name="confessionary2" parent="." instance=ExtResource("2_8howq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.23866, -0.0137701, 2.89034)
+
+[node name="Candelabro" parent="." instance=ExtResource("6_ea55r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.26055, 3.11115, 5.44383)
+
+[node name="benchsmall2" parent="." instance=ExtResource("4_07dpe")]
+transform = Transform3D(-7.29292e-08, 0, 1, 0, 1, 0, -1.66843, 0, -4.37114e-08, -3.54826, -0.0673382, 2.89939)
+
+[node name="plantpot" parent="." instance=ExtResource("2_kswjv")]
+transform = Transform3D(-4.68081e-08, 0, 1, 0, 1.21144, 0, -1.07084, 0, -4.37114e-08, -3.54825, 0, 0.801467)
+
+[node name="deadleaves" parent="plantpot" instance=ExtResource("3_cbguu")]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 0, 0, 1, 0, -0.0594684, 0)
+
+[node name="deadleaves2" parent="plantpot" instance=ExtResource("3_cbguu")]
+transform = Transform3D(0.554438, 0, -0.832225, 0, 0.999999, 0, 0.832225, 0, 0.554437, 0, -0.0594684, 0)
+
+[node name="deadleaves3" parent="plantpot" instance=ExtResource("3_cbguu")]
+transform = Transform3D(0.513541, 0, 0.858064, 0, 0.999999, 0, -0.858065, 0, 0.513541, 0, -0.0594684, 0)

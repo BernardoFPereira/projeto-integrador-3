@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://dhnu2i6aau4v4"]
+
+[ext_resource type="PackedScene" uid="uid://enhrnkww6cy0" path="res://scenes/prefabs/armless.tscn" id="1_3k2wk"]
+[ext_resource type="PackedScene" uid="uid://btm3172xym3f2" path="res://scenes/prefabs/armlessstatue.tscn" id="2_kl8yw"]
+[ext_resource type="PackedScene" uid="uid://dh10rg2yfc0u7" path="res://scenes/prefabs/bothlessstatue.tscn" id="3_s8uh4"]
+[ext_resource type="PackedScene" uid="uid://cwm0ynhwfch7v" path="res://scenes/basic_book.tscn" id="4_p0drt"]
+[ext_resource type="PackedScene" uid="uid://ddhttv3uxb3pl" path="res://scenes/prefabs/altar.tscn" id="5_cexol"]
+[ext_resource type="PackedScene" uid="uid://3owg4uoqqodk" path="res://scenes/prefabs/Room Prefabs/bookshelfs_library.tscn" id="6_13efr"]
+[ext_resource type="PackedScene" uid="uid://dvu67awddwb6q" path="res://scenes/angel_statue.tscn" id="7_b2asp"]
+
+[node name="library" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.94588, 6.5, -9.54025)
+
+[node name="armless" parent="." instance=ExtResource("1_3k2wk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97412, 0.715538, -0.03473)
+
+[node name="bothless" parent="." instance=ExtResource("2_kl8yw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98562, 0.707431, 2.88253)
+
+[node name="bothlessstatue" parent="." instance=ExtResource("3_s8uh4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.730857, 0)
+
+[node name="BasicBook" parent="." instance=ExtResource("4_p0drt")]
+transform = Transform3D(1, 7.10543e-15, -2.84217e-14, 0, 0.528438, 0.848972, 0, -0.848972, 0.528438, -3.96942, 2.60421, 2.41942)
+
+[node name="altar" parent="." instance=ExtResource("5_cexol")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 0.581404, 0, -8.74228e-08, 0, -1, -3.99584, 0, 2.95451)
+
+[node name="altar2" parent="." instance=ExtResource("5_cexol")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 0.581404, 0, -8.74228e-08, 0, -1, 0.0285916, 0, 2.92592)
+
+[node name="altar3" parent="." instance=ExtResource("5_cexol")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 0.581404, 0, -8.74228e-08, 0, -1, 0.0494051, 0, -0.154698)
+
+[node name="altar4" parent="." instance=ExtResource("5_cexol")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 0.581404, 0, -8.74228e-08, 0, -1, -4.02917, 0, -0.110921)
+
+[node name="Bookshelfs Library" parent="." instance=ExtResource("6_13efr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.133345, 0)
+
+[node name="angel_statue" parent="." instance=ExtResource("7_b2asp")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.38419e-06, 0.721795, 2.75838)

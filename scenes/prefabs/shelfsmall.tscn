@@ -1,10 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2lftgn6ri05y"]
+[gd_scene load_steps=3 format=3 uid="uid://c2lftgn6ri05y"]
 
 [ext_resource type="PackedScene" uid="uid://20cwvo6gbfm6" path="res://models/estanteP.glb" id="1_aeta6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0c8ov"]
+size = Vector3(1.92554, 3.0498, 0.783508)
 
 [node name="shelfsmall" type="Node3D"]
 
 [node name="estanteP" parent="." instance=ExtResource("1_aeta6")]
-transform = Transform3D(4.0772, 0, 0, 0, 3.95239, 0, 0, 0, 3.96037, 0, -0.376052, 0)
+transform = Transform3D(1.11108, 0, 0, 0, 1.07707, 0, 0, 0, 1.07924, 0, -0.376052, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="estanteP"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="estanteP/StaticBody3D"]
+transform = Transform3D(0.999998, 0, 0, 0, 1, 0, 0, 0, 1, 0.0201416, 1.65559, -0.0122375)
+shape = SubResource("BoxShape3D_0c8ov")
 
 [editable path="estanteP"]

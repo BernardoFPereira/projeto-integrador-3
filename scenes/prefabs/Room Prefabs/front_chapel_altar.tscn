@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://c88sl2vxwrldk"]
+
+[ext_resource type="PackedScene" uid="uid://dh4r6fk7n0ge3" path="res://scenes/prefabs/table.tscn" id="1_v5p65"]
+[ext_resource type="PackedScene" uid="uid://q0v6r586dscp" path="res://scenes/prefabs/chapel_altar_01.tscn" id="2_dgkus"]
+[ext_resource type="PackedScene" uid="uid://b128oq0h75eyk" path="res://scenes/prefabs/chapel_altar_02.tscn" id="3_2nplg"]
+[ext_resource type="PackedScene" uid="uid://dvu67awddwb6q" path="res://scenes/angel_statue.tscn" id="4_jp1gw"]
+[ext_resource type="PackedScene" uid="uid://bcfr0cbpfsy05" path="res://scenes/prefabs/candle_02.tscn" id="5_w7hlj"]
+
+[node name="Front Chapel Altar" type="Node3D"]
+
+[node name="Table" parent="." instance=ExtResource("1_v5p65")]
+transform = Transform3D(0.0109679, 0, -0.133178, 0, 0.133629, 0, 0.133178, 0, 0.0109679, -0.874281, 0.015162, -7.39866)
+
+[node name="ChapelAltar01" parent="." instance=ExtResource("2_dgkus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -10.5526)
+
+[node name="ChapelAltar02" parent="." instance=ExtResource("2_dgkus")]
+transform = Transform3D(1, 0, 0, 0, 1.80966, 0, 0, 0, 1, -8, 0.870223, -11.897)
+
+[node name="ChapelAltar03" parent="." instance=ExtResource("3_2nplg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.85437, 0, -11.1628)
+
+[node name="ChapelAltar09" parent="." instance=ExtResource("3_2nplg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.32751, 0, -7.3072)
+
+[node name="ChapelAltar04" parent="." instance=ExtResource("3_2nplg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.81902, 1.39121, -12.3735)
+
+[node name="ChapelAltar05" parent="." instance=ExtResource("3_2nplg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98327, 0.0455295, -12.3735)
+
+[node name="ChapelAltar06" parent="." instance=ExtResource("3_2nplg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0319, 0, -11.1628)
+
+[node name="ChapelAltar07" parent="." instance=ExtResource("3_2nplg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0319, 1.39121, -12.3735)
+
+[node name="ChapelAltar08" parent="." instance=ExtResource("3_2nplg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0319, 0.0455295, -12.3735)
+
+[node name="angel_statue" parent="." instance=ExtResource("4_jp1gw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9713, 3.26314, -11.7665)
+
+[node name="angel_statue2" parent="." instance=ExtResource("4_jp1gw")]
+transform = Transform3D(0.679531, 0, 0.733647, 0, 1, 0, -0.733647, 0, 0.679531, -5.34658, 2.71662, -12.1794)
+
+[node name="angel_statue3" parent="." instance=ExtResource("4_jp1gw")]
+transform = Transform3D(0.931209, 0, -0.364487, 0, 1, 0, 0.364487, 0, 0.931209, -10.3651, 2.71662, -12.1794)
+
+[node name="candle07" parent="." instance=ExtResource("5_w7hlj")]
+transform = Transform3D(0.800585, 0, 0.599219, 0, 1, 0, -0.599219, 0, 0.800585, -6.82546, 1.37232, -10.6608)
+
+[node name="candle08" parent="." instance=ExtResource("5_w7hlj")]
+transform = Transform3D(-0.54857, 0, 0.836104, 0, 1, 0, -0.836104, 0, -0.54857, -7.01137, 1.37232, -10.826)
+is_on = true
+
+[node name="candle09" parent="." instance=ExtResource("5_w7hlj")]
+transform = Transform3D(-0.54857, 0, 0.836104, 0, 1, 0, -0.836104, 0, -0.54857, -9.20218, 1.37232, -10.826)
+is_on = true
+
+[node name="candle10" parent="." instance=ExtResource("5_w7hlj")]
+transform = Transform3D(-0.54857, 0, 0.836104, 0, 1, 0, -0.836104, 0, -0.54857, -11.5527, 1.37232, -11.3213)
+is_on = true
+
+[node name="candle11" parent="." instance=ExtResource("5_w7hlj")]
+transform = Transform3D(-0.54857, 0, 0.836104, 0, 1, 0, -0.836104, 0, -0.54857, -4.193, 1.37232, -11.3213)
+is_on = true

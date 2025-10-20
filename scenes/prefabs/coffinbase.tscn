@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://yrrknc77iw8u"]
+[gd_scene load_steps=10 format=3 uid="uid://yrrknc77iw8u"]
 
 [ext_resource type="Texture2D" uid="uid://sr6as3updamy" path="res://models/coffin_coffin_low_standardSurface2_BaseColor.png" id="1_sjari"]
 
@@ -39,6 +39,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_k33ky")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_udo7n"]
+size = Vector3(1, 2.35233, 0.311432)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvary"]
 resource_name = "standardSurface2.1001"
 cull_mode = 2
@@ -76,6 +79,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_blns0")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_uqxyy"]
+size = Vector3(0.717346, 2.14798, 0.221497)
+
 [node name="coffinbase" type="Node3D"]
 
 [node name="coffin" type="Node3D" parent="."]
@@ -85,7 +91,21 @@ transform = Transform3D(0.972983, 0, 0, 0, 0, -0.972983, 0, 0.972983, 0, -0.3064
 mesh = SubResource("ArrayMesh_f3d71")
 skeleton = NodePath("")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="coffin/coffin_geo"]
+transform = Transform3D(1.02777, 0, 0, 0, 0, 1.02777, 0, -1.02777, 0, 0.314959, 0.268132, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="coffin/coffin_geo/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.20036, -0.114066)
+shape = SubResource("BoxShape3D_udo7n")
+
 [node name="coffinDoor_geo" type="MeshInstance3D" parent="coffin"]
 transform = Transform3D(0.972983, 0, 0, 0, 0, -0.972983, 0, 0.972983, 0, -0.30645, 0, -0.260888)
 mesh = SubResource("ArrayMesh_abcuc")
 skeleton = NodePath("")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="coffin/coffinDoor_geo"]
+transform = Transform3D(1.02777, 0, 0, 0, 0, 1.02777, 0, -1.02777, 0, 0.314959, 0.268132, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="coffin/coffinDoor_geo/StaticBody3D2"]
+transform = Transform3D(0.998545, 0, -0.053922, 0, 1, 0, 0.053922, 0, 0.998545, 0.00765991, 1.25908, 0.350622)
+shape = SubResource("BoxShape3D_uqxyy")

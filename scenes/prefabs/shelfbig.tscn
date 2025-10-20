@@ -1,7 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://chgq43s1h0col"]
+[gd_scene load_steps=3 format=3 uid="uid://chgq43s1h0col"]
 
 [ext_resource type="PackedScene" uid="uid://cnjap6ngoh0ka" path="res://models/estanteG.glb" id="1_ycu30"]
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_fkhpe"]
+size = Vector3(1.96539, 4.19403, 0.81665)
+
+[node name="shelfbig" type="Node3D"]
 
 [node name="estanteG" parent="." instance=ExtResource("1_ycu30")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="estanteG"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="estanteG/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0184021, 2.18695, 0.0032959)
+shape = SubResource("BoxShape3D_fkhpe")
