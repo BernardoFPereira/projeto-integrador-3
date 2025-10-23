@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dhnu2i6aau4v4" path="res://scenes/prefabs/Room Prefabs/library.tscn" id="6_ikckr"]
 [ext_resource type="PackedScene" uid="uid://bs0ie2bmdee7h" path="res://scenes/prefabs/Room Prefabs/Confessionary Room.tscn" id="7_iluoo"]
 [ext_resource type="PackedScene" uid="uid://cewqkfkmkm156" path="res://scenes/prefabs/Room Prefabs/evil_paper_corridor.tscn" id="8_vlaqv"]
-[ext_resource type="PackedScene" uid="uid://db5ysjuhpv456" path="res://scenes/prefabs/candelabro.tscn" id="9_7fkg6"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/candelabro.tscn" id="9_7fkg6"]
 [ext_resource type="PackedScene" uid="uid://m7trdro12xfi" path="res://scenes/prefabs/cemetery.tscn" id="10_rvyfp"]
 [ext_resource type="PackedScene" path="res://scenes/prefabs/grass.tscn" id="11_6vp30"]
 [ext_resource type="PackedScene" uid="uid://cyuqysv1hojuw" path="res://scenes/prefabs/candle_03.tscn" id="12_aqghe"]
