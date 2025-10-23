@@ -32,13 +32,13 @@
 [ext_resource type="PackedScene" uid="uid://3f75874hki5w" path="res://scenes/prefabs/Room Prefabs/first_page_desk.tscn" id="32_ehvb4"]
 [ext_resource type="PackedScene" uid="uid://du4lyekygvy8q" path="res://scenes/prefabs/candle_01.tscn" id="36_7q40q"]
 [ext_resource type="PackedScene" uid="uid://c88sl2vxwrldk" path="res://scenes/prefabs/Room Prefabs/front_chapel_altar.tscn" id="36_8wkyj"]
-[ext_resource type="PackedScene" uid="uid://btgit6gihlpns" path="res://scenes/inspect_room.tscn" id="37_devb0"]
-[ext_resource type="PackedScene" uid="uid://bj2j2gm8dx44x" path="res://scenes/altar_item_01.tscn" id="38_5h783"]
+[ext_resource type="PackedScene" path="res://scenes/inspect_room.tscn" id="37_devb0"]
+[ext_resource type="PackedScene" path="res://scenes/altar_item_01.tscn" id="38_5h783"]
 [ext_resource type="PackedScene" uid="uid://cyuqysv1hojuw" path="res://scenes/prefabs/candle_03.tscn" id="38_ap11j"]
 [ext_resource type="PackedScene" uid="uid://bgydr8f43d8yg" path="res://scenes/prefabs/candelabra.tscn" id="39_0xqyo"]
-[ext_resource type="PackedScene" uid="uid://cwccv75end4v6" path="res://scenes/altar_item_02.tscn" id="39_jd7hi"]
-[ext_resource type="PackedScene" uid="uid://ctu15vujrmhaw" path="res://scenes/altar_item_03.tscn" id="40_a68l3"]
-[ext_resource type="PackedScene" uid="uid://bsp2mw6wcqx4k" path="res://scenes/altar_item_base.tscn" id="41_o6i7f"]
+[ext_resource type="PackedScene" path="res://scenes/altar_item_02.tscn" id="39_jd7hi"]
+[ext_resource type="PackedScene" path="res://scenes/altar_item_03.tscn" id="40_a68l3"]
+[ext_resource type="PackedScene" path="res://scenes/altar_item_base.tscn" id="41_o6i7f"]
 [ext_resource type="PackedScene" uid="uid://dgwexqpva8xhx" path="res://scenes/HolyPage.tscn" id="42_sfyr8"]
 [ext_resource type="PackedScene" uid="uid://jhvky7xprbq" path="res://scenes/prefabs/Room Prefabs/garden_bench.tscn" id="52_s880u"]
 
@@ -21982,7 +21982,7 @@ noise = SubResource("FastNoiseLite_fkip5")
 [node name="UI" parent="." instance=ExtResource("1_m3lcs")]
 
 [node name="Player" parent="." node_paths=PackedStringArray("ui_manager") instance=ExtResource("6_62anp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.06134, 0.921288, -0.0670738)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.06134, 0.921288, 9.31393)
 ui_manager = NodePath("../UI")
 
 [node name="Rain" type="Node3D" parent="."]
@@ -23528,9 +23528,6 @@ item_num = "2nd"
 [node name="AltarItemBase" parent="." node_paths=PackedStringArray("item") instance=ExtResource("41_o6i7f")]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -8.61767, 1.37159, -10.4453)
 item = NodePath("Items/Item01")
-
-[node name="Item01" parent="AltarItemBase/Items" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.128143, 0)
 
 [node name="AltarItemBase2" parent="." node_paths=PackedStringArray("item") instance=ExtResource("41_o6i7f")]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -7.40443, 1.37159, -10.4453)
