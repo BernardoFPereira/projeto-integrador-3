@@ -65,3 +65,37 @@ func _on_pages_back_button_pressed():
 	journal.visible = true
 	
 	menu_type = MenuType.NOTES
+
+
+func _on_inspect_button_01_pressed():
+	var player = get_tree().get_first_node_in_group("Player")
+	
+	if len(player.collected_pages) > 0:
+		InspectManager.inspect_target = player.collected_pages[0]
+		InspectManager.inspect_target.visible = true
+		InspectManager.is_not_pickup = true
+		
+		player.set_state(player.States.INSPECT)
+		pages.visible = false
+	
+func _on_inspect_button_02_pressed():
+	var player = get_tree().get_first_node_in_group("Player")
+	
+	if len(player.collected_pages) > 1:
+		InspectManager.inspect_target = player.collected_pages[1]
+		InspectManager.inspect_target.visible = true
+		InspectManager.is_not_pickup = true
+		
+		player.set_state(player.States.INSPECT)
+		pages.visible = false	
+
+func _on_inspect_button_03_pressed():
+	var player = get_tree().get_first_node_in_group("Player")
+	
+	if len(player.collected_pages) > 2:
+		InspectManager.inspect_target = player.collected_pages[2]
+		InspectManager.inspect_target.visible = true
+		InspectManager.is_not_pickup = true
+	
+		player.set_state(player.States.INSPECT)
+		pages.visible = false

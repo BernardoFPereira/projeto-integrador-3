@@ -2,8 +2,9 @@ extends Node3D
 class_name Inspectable
 
 @export var inspect_mesh: PackedScene
-@onready var interact_area = $InteractArea
+@export_multiline var inspect_text: String
 
+@onready var interact_area = $InteractArea
 @onready var mesh = $paper
 
 var was_collected := false

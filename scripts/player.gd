@@ -40,7 +40,11 @@ var can_interact := false
 var interact_target: Node3D
 
 @export var collected_keys: Array[Node3D]
-var collected_pages: Array[Node3D]
+@export var collected_pages: Array[Node3D]
+
+@export var has_item_01 := false
+@export var has_item_02 := false
+@export var has_item_03 := false
 
 func _ready():
 	set_camera_mode(CameraModes.ThirdPerson)
@@ -203,6 +207,17 @@ func set_camera_mode(new_mode: CameraModes) -> void:
 func _on_interact_area_area_entered(area):
 	ui_manager.interact_tip.visible = true
 	var area_parent = area.get_parent()
+	
+	if area_parent.is_in_group("Item"):
+		print("ITEM DETECTEDEBERB")
+		can_interact = true
+		interact_target = area_parent
+		
+	if area_parent.is_in_group("AltarItemBase"):
+		print("ALTAR BASE DETECTEDEBERB")
+		can_interact = true
+		interact_target = area_parent
+		
 	if area_parent.is_in_group("Door") and !can_interact:
 		print("DOOR DETECTEDEBERB")
 		can_interact = true
@@ -222,3 +237,19 @@ func _on_interact_area_area_entered(area):
 		interact_target = area_parent
 		InspectManager.can_inspect = true
 		InspectManager.inspect_target = area_parent
+
+
+#func _on_inspect_area_area_entered(area):
+	#var area_parent = area.get_parent()
+	#
+	#if area_parent.is_in_group("Item"):
+		#print("ITEM DETECTEDEBERB")
+		#can_interact = true
+		#interact_target = area_parent
+		#pass
+		#
+	#if area_parent.is_in_group("ItemBase"):
+		#print("ITEM BASE DETECTEDEBERB")
+		#can_interact = true
+		#interact_target = area_parent
+		#pass
