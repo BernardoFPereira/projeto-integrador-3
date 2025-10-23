@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chcc0epivs7kc"
-path.s3tc="res://.godot/imported/workdesk_desk_inGame_escrivaninha_mtl_BaseColor.png-f778534b4776f26eba37706cd8cb422d.s3tc.ctex"
+path.s3tc="res://.godot/imported/workdesk_desk_inGame_escrivaninha_mtl_BaseColor.png-71931cb6cb8f67160bc3a305e37524bc.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://materials/workdesk_desk_inGame_escrivaninha_mtl_BaseColor.png"
-dest_files=["res://.godot/imported/workdesk_desk_inGame_escrivaninha_mtl_BaseColor.png-f778534b4776f26eba37706cd8cb422d.s3tc.ctex"]
+source_file="res://scenes/prefabs/workdesk_desk_inGame_escrivaninha_mtl_BaseColor.png"
+dest_files=["res://.godot/imported/workdesk_desk_inGame_escrivaninha_mtl_BaseColor.png-71931cb6cb8f67160bc3a305e37524bc.s3tc.ctex"]
 
 [params]
 
