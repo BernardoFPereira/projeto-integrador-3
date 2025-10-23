@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://bebiok2q3k8x7"]
+
+[ext_resource type="PackedScene" uid="uid://btm3172xym3f2" path="res://scenes/prefabs/armlessstatue.tscn" id="1_k3cqj"]
+[ext_resource type="PackedScene" uid="uid://cfbqdor8tyw7e" path="res://scenes/prefabs/benchsmall.tscn" id="2_ipigq"]
+[ext_resource type="PackedScene" uid="uid://dh10rg2yfc0u7" path="res://scenes/prefabs/bothlessstatue.tscn" id="3_nfibn"]
+[ext_resource type="PackedScene" uid="uid://enhrnkww6cy0" path="res://scenes/prefabs/armless.tscn" id="4_c7oym"]
+[ext_resource type="PackedScene" uid="uid://du4lyekygvy8q" path="res://scenes/prefabs/candle_01.tscn" id="5_wasnu"]
+[ext_resource type="PackedScene" uid="uid://kd5t6pntlln1" path="res://scenes/prefabs/evilpaper.tscn" id="6_vk2ls"]
+[ext_resource type="PackedScene" uid="uid://c2lftgn6ri05y" path="res://scenes/prefabs/shelfsmall.tscn" id="7_rkk33"]
+
+[node name="Statues and trash corridor" type="Node3D"]
+
+[node name="bothless" parent="." instance=ExtResource("1_k3cqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2924, -2.38419e-07, 5.32797)
+
+[node name="benchsmall" parent="." instance=ExtResource("2_ipigq")]
+transform = Transform3D(0.638889, 0, 0.769299, 0, 1, 0, -0.769299, 0, 0.638889, 10.6546, -2.38419e-07, 3.15734)
+
+[node name="bothlessstatue" parent="." instance=ExtResource("3_nfibn")]
+transform = Transform3D(-0.927765, 0, 0.373166, 0, 1, 0, -0.373166, 0, -0.927765, 14.6189, 0, 5.16883)
+
+[node name="armless" parent="." instance=ExtResource("4_c7oym")]
+transform = Transform3D(0.702339, 0, 0.711842, 0, 1, 0, -0.711842, 0, 0.702339, 12.3599, -2.38419e-07, 2.98753)
+
+[node name="candle01" parent="." instance=ExtResource("5_wasnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.938, 0, 5.84207)
+is_on = true
+
+[node name="bothless2" parent="." instance=ExtResource("1_k3cqj")]
+transform = Transform3D(-0.0487422, -0.997726, -0.0465491, -0.998607, 0.0496213, -0.017919, 0.0201881, 0.0456109, -0.998755, 9.2673, 0.341608, 3.18352)
+
+[node name="evilpaper" parent="." instance=ExtResource("6_vk2ls")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3766, -2.38419e-07, 4.68023)
+
+[node name="shelfsmall" parent="." instance=ExtResource("7_rkk33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.84968, -2.38419e-07, 5.53854)
