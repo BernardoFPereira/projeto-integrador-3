@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://3f75874hki5w"]
+[gd_scene load_steps=10 format=3 uid="uid://3f75874hki5w"]
 
 [ext_resource type="PackedScene" uid="uid://bcfr0cbpfsy05" path="res://scenes/prefabs/candle_02.tscn" id="1_3k42q"]
 [ext_resource type="PackedScene" uid="uid://du4lyekygvy8q" path="res://scenes/prefabs/candle_01.tscn" id="2_j5y7s"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://kd5t6pntlln1" path="res://scenes/prefabs/evilpaper.tscn" id="6_ht48h"]
 [ext_resource type="PackedScene" uid="uid://cgfowgyio5ni3" path="res://scenes/Key.tscn" id="7_ur7k7"]
 [ext_resource type="PackedScene" uid="uid://dgwexqpva8xhx" path="res://scenes/HolyPage.tscn" id="8_xpubp"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/brokenbed.tscn" id="9_88kd0"]
 
 [node name="First Page Desk" type="Node3D"]
 
@@ -74,6 +75,9 @@ transform = Transform3D(2.1267e-08, 0.108795, 0.489087, 0.501042, -9.72549e-09, 
 
 [node name="HolyPage2" parent="." instance=ExtResource("8_xpubp")]
 transform = Transform3D(0.00375241, 0.999993, -4.36633e-08, 1.88608e-09, -4.36707e-08, -1, -0.999993, 0.00375241, -2.04994e-09, 12.1196, 7.75901, 9.41865)
+
+[node name="brokenbed" parent="." instance=ExtResource("9_88kd0")]
+transform = Transform3D(-0.995554, 0, 0.0941951, 0, 1, 0, -0.0941951, 0, -0.995554, 2.03719, 6.43643, 10.3618)
 
 [editable path="evilpaper4"]
 [editable path="evilpaper4/evilpaper"]
