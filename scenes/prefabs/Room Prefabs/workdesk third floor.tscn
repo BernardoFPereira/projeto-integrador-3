@@ -38,7 +38,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.79412, 11.8438, 1.85853)
 transform = Transform3D(0.806021, 0, -0.591887, 0, 1, 0, 0.591887, 0, 0.806021, -4.24947, 11.8438, 2.40366)
 
 [node name="candle05" parent="." instance=ExtResource("2_mnara")]
-transform = Transform3D(0.806021, 0, -0.591887, 0, 1, 0, 0.591887, 0, 0.806021, -4.24796, 11.8438, 4.49018)
+transform = Transform3D(0.806021, 0, -0.591887, 0, 1, 0, 0.591887, 0, 0.806021, -4.11186, 11.8438, 4.44735)
 is_on = true
 
 [node name="candle02" parent="." instance=ExtResource("3_ekfik")]
@@ -58,7 +58,7 @@ transform = Transform3D(1, 0, 0, 0, 0.90236, -0.430984, 0, 0.430984, 0.90236, -4
 transform = Transform3D(-0.862791, 0.109394, -0.493583, -0.120158, 0.903961, 0.410386, 0.491074, 0.413385, -0.766785, -5.06242, 11.8477, 2.05468)
 
 [node name="evilpaper2" parent="." instance=ExtResource("4_aralt")]
-transform = Transform3D(1, 0, 0, 0, 0.99239, 0.123134, 0, -0.123134, 0.99239, -5.79465, 11.8085, 1.87333)
+transform = Transform3D(0.411514, 0.112225, -0.904468, 0, 0.99239, 0.123134, 0.911403, -0.0506714, 0.408383, -5.8974, 11.8085, 2.29549)
 
 [node name="evilpaper10" parent="." instance=ExtResource("4_aralt")]
 transform = Transform3D(1, 0, 0, 0, 0.99239, 0.123134, 0, -0.123134, 0.99239, -6.17171, 11.8085, 2.2301)
@@ -97,7 +97,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.04983, 11, 2.39637)
 transform = Transform3D(-0.468901, 0, -0.883251, 0, 1, 0, 0.883251, 0, -0.468901, -5.22547, 11, 2.68108)
 
 [node name="evilpaper8" parent="." instance=ExtResource("4_aralt")]
-transform = Transform3D(1, 0, 0, 0, 0.886704, -0.462337, 0, 0.462337, 0.886704, -6.19929, 12.0308, 1.92049)
+transform = Transform3D(1, 0, 0, 0, 0.886704, -0.462337, 0, 0.462337, 0.886704, -6.19929, 11.9689, 1.92049)
 
 [node name="BasicBook" parent="." instance=ExtResource("5_c3odo")]
 transform = Transform3D(-0.143631, -0.988108, 0.0548978, 0, 0.0554729, 0.99846, -0.989631, 0.14341, -0.00796762, -4.41533, 11.8991, 5.16402)
