@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cjtisrn1itj7u"
-path="res://.godot/imported/workdesk.glb-618f260e61b99830646e87293d0cd762.scn"
+path="res://.godot/imported/workdesk.glb-e0202f975e8ae63419969bcfdb70ebd3.scn"
 
 [deps]
 
-source_file="res://scenes/prefabs/workdesk.glb"
-dest_files=["res://.godot/imported/workdesk.glb-618f260e61b99830646e87293d0cd762.scn"]
+source_file="res://models/workdesk.glb"
+dest_files=["res://.godot/imported/workdesk.glb-e0202f975e8ae63419969bcfdb70ebd3.scn"]
 
 [params]
 

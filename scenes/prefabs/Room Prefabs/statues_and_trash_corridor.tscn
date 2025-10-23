@@ -11,16 +11,16 @@
 [node name="Statues and trash corridor" type="Node3D"]
 
 [node name="bothless" parent="." instance=ExtResource("1_k3cqj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2924, -2.38419e-07, 5.32797)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2924, -2.38419e-07, 5.43261)
 
 [node name="benchsmall" parent="." instance=ExtResource("2_ipigq")]
 transform = Transform3D(0.638889, 0, 0.769299, 0, 1, 0, -0.769299, 0, 0.638889, 10.6546, -2.38419e-07, 3.15734)
 
 [node name="bothlessstatue" parent="." instance=ExtResource("3_nfibn")]
-transform = Transform3D(-0.927765, 0, 0.373166, 0, 1, 0, -0.373166, 0, -0.927765, 14.6189, 0, 5.16883)
+transform = Transform3D(-0.927765, 0, 0.373166, 0, 1, 0, -0.373166, 0, -0.927765, 14.6189, 0, 5.23308)
 
 [node name="armless" parent="." instance=ExtResource("4_c7oym")]
-transform = Transform3D(0.702339, 0, 0.711842, 0, 1, 0, -0.711842, 0, 0.702339, 12.3599, -2.38419e-07, 2.98753)
+transform = Transform3D(0.702339, 0, 0.711842, 0, 1, 0, -0.711842, 0, 0.702339, 12.3599, -2.38419e-07, 2.90575)
 
 [node name="candle01" parent="." instance=ExtResource("5_wasnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.938, 0, 5.84207)
