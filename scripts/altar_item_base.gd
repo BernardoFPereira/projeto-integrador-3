@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var item: MeshInstance3D
+@export var item: Node3D
 @onready var interact_area = $InteractArea
 
 func interact():

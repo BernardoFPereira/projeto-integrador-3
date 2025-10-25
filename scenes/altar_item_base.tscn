@@ -1,21 +1,12 @@
 [gd_scene load_steps=7 format=3 uid="uid://bsp2mw6wcqx4k"]
 
 [ext_resource type="Script" path="res://scripts/altar_item_base.gd" id="1_3ubyo"]
+[ext_resource type="PackedScene" uid="uid://dw4dwel00bs3y" path="res://models/collectables/estatua01.glb" id="2_bk88e"]
+[ext_resource type="PackedScene" uid="uid://1cg3m0hpg8qm" path="res://models/collectables/estatua02.glb" id="3_47l37"]
+[ext_resource type="PackedScene" uid="uid://bjjrcwf1pmnxf" path="res://models/collectables/estatua03.glb" id="4_628c3"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hgg1j"]
 size = Vector3(0.3, 0.04, 0.3)
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_pf5qt"]
-top_radius = 0.025
-bottom_radius = 0.1
-height = 0.25
-
-[sub_resource type="BoxMesh" id="BoxMesh_ub341"]
-size = Vector3(0.25, 0.25, 0.25)
-
-[sub_resource type="SphereMesh" id="SphereMesh_2wpq0"]
-radius = 0.125
-height = 0.25
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t7jn3"]
 size = Vector3(0.427979, 0.464355, 0.458008)
@@ -29,20 +20,16 @@ mesh = SubResource("BoxMesh_hgg1j")
 [node name="Items" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0199508, 0)
 
-[node name="Item01" type="MeshInstance3D" parent="Items"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.128143, 0)
+[node name="estatua01" parent="Items" instance=ExtResource("2_bk88e")]
 visible = false
-mesh = SubResource("CylinderMesh_pf5qt")
 
-[node name="Item02" type="MeshInstance3D" parent="Items"]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0.128143, 0)
+[node name="estatua02" parent="Items" instance=ExtResource("3_47l37")]
+transform = Transform3D(0.999994, 0, -0.00349072, 0, 1, 0, 0.00349072, 0, 0.999994, 0, 0.003294, 0)
 visible = false
-mesh = SubResource("BoxMesh_ub341")
 
-[node name="Item03" type="MeshInstance3D" parent="Items"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.128143, 0)
+[node name="estatua03" parent="Items" instance=ExtResource("4_628c3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0836549, 0, 0)
 visible = false
-mesh = SubResource("SphereMesh_2wpq0")
 
 [node name="InteractArea" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502585, 0)
