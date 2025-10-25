@@ -23511,6 +23511,13 @@ panning_strength = 0.54
 [node name="ChapelAltar09" parent="Front Chapel Altar" index="4"]
 transform = Transform3D(-0.997515, 0, 0.0704528, 0, 1, 0, -0.0704528, 0, -0.997515, -8.70527, 0, -5.69433)
 
+[node name="Wick" parent="Front Chapel Altar/candle10/Wax" index="1"]
+visible = true
+
+[node name="Light" parent="Front Chapel Altar/candle10" index="1"]
+visible = true
+light_specular = 0.745
+
 [node name="InspectRoom" parent="." groups=["InspectRoom"] instance=ExtResource("37_devb0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.73682, 0)
 
@@ -23529,9 +23536,6 @@ item_num = "2nd"
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -8.61767, 1.37159, -10.4453)
 item = NodePath("Items/Item01")
 
-[node name="Item01" parent="AltarItemBase/Items" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.128143, 0)
-
 [node name="AltarItemBase2" parent="." node_paths=PackedStringArray("item") instance=ExtResource("41_o6i7f")]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -7.40443, 1.37159, -10.4453)
 item = NodePath("Items/Item02")
@@ -23549,6 +23553,7 @@ item = NodePath("Items/Item03")
 [editable path="Lights/Candelabra2"]
 [editable path="Lights/Candelabra3"]
 [editable path="Front Chapel Altar"]
+[editable path="Front Chapel Altar/candle10"]
 [editable path="AltarItemBase"]
 [editable path="AltarItemBase2"]
 [editable path="AltarItemBase3"]
