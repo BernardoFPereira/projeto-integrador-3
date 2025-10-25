@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://5g63q5n4smey"]
+
+[ext_resource type="PackedScene" uid="uid://wj6iq8g475i" path="res://models/leaves2.glb" id="1_njkff"]
+
+[node name="grass" type="Node3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="leaves2" parent="." instance=ExtResource("1_njkff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.546265, 0)
+
+[node name="leaves3" parent="." instance=ExtResource("1_njkff")]
+transform = Transform3D(0.455374, 0, -0.8903, 0, 1, 0, 0.8903, 0, 0.455374, 0, -0.546265, 0)
+
+[node name="leaves4" parent="." instance=ExtResource("1_njkff")]
+transform = Transform3D(-0.486259, 0, -0.873815, 0, 1, 0, 0.873815, 0, -0.486259, 0, -0.546265, 0)

@@ -50,6 +50,7 @@ radius = 0.710565
 [node name="HolyPage" type="Node3D" groups=["Page"]]
 script = ExtResource("1_mhkne")
 inspect_mesh = ExtResource("2_t6pmx")
+inspect_text = "O que observa, move em luz. Entre as chamas e a penumbra. Novos caminhos se revelam."
 
 [node name="paper" type="Node3D" parent="."]
 transform = Transform3D(0.717684, 0, 0, 0, -0.0253013, 0.812416, 0, -1.0044, -0.0204651, 0, 0.133623, 0)

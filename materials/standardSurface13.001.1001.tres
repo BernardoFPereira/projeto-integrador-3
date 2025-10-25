@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bqvk1ty4wsn16"]
+
+[ext_resource type="Texture2D" uid="uid://dp4tq2mfiopax" path="res://models/chapelaltar2_altarzao_02_standardSurface13_BaseColor.png" id="1_v6shi"]
+
+[resource]
+resource_name = "standardSurface13.001.1001"
+cull_mode = 2
+albedo_texture = ExtResource("1_v6shi")
+roughness = 0.0

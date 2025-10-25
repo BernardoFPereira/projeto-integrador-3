@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://drak54rbqaie4"]
+[gd_scene load_steps=15 format=3 uid="uid://drak54rbqaie4"]
 
 [ext_resource type="Script" path="res://scripts/UI_Manager.gd" id="1_txv8k"]
 [ext_resource type="Script" path="res://scripts/Journal.gd" id="2_qjj1l"]
@@ -25,6 +25,10 @@ font_size = 26
 [sub_resource type="LabelSettings" id="LabelSettings_pyvbf"]
 font = ExtResource("4_n24mj")
 font_size = 36
+
+[sub_resource type="LabelSettings" id="LabelSettings_ptbmp"]
+font = ExtResource("4_n24mj")
+font_size = 31
 
 [node name="UI" type="Control" groups=["UI"]]
 layout_mode = 3
@@ -71,7 +75,7 @@ offset_top = 16.0
 offset_right = 51.0
 offset_bottom = 50.0
 grow_horizontal = 2
-text = "NOTAS"
+text = "Notas"
 label_settings = SubResource("LabelSettings_hsyih")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -199,8 +203,8 @@ offset_right = 188.0
 offset_bottom = -151.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "PAGINAS
-ENCONTRADAS"
+text = "Paginas
+Encontradas"
 label_settings = SubResource("LabelSettings_hdf1x")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -349,6 +353,7 @@ theme = ExtResource("3_x8ns6")
 icon = ExtResource("7_gbf7f")
 
 [node name="Menu" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -590,8 +595,55 @@ label_settings = SubResource("LabelSettings_pyvbf")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="InspectDetailText" type="Control" parent="." groups=["InspectText"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="InspectDetailText"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = -243.0
+offset_right = 306.0
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InspectText" type="Label" parent="InspectDetailText/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -200.0
+offset_right = 252.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hamana hamana jabirosca da teteia almanaque dos locão que tudo toca na birosca que ilumina sua bisteca com aquilo que caminho nos passos do joão até a fumaça da cantina, que bagulho muito doido que eu to escrevendo pra encher linguiça.
+Paz."
+label_settings = SubResource("LabelSettings_ptbmp")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
 [connection signal="pressed" from="Journal/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Journal/PagesButton" to="." method="_on_pages_button_pressed"]
+[connection signal="pressed" from="Pages/Panel/Page01/InspectButton01" to="." method="_on_inspect_button_01_pressed"]
+[connection signal="pressed" from="Pages/Panel/Page02/InspectButton02" to="." method="_on_inspect_button_02_pressed"]
+[connection signal="pressed" from="Pages/Panel/Page03/InspectButton03" to="." method="_on_inspect_button_03_pressed"]
 [connection signal="pressed" from="Pages/PagesBackButton" to="." method="_on_pages_back_button_pressed"]
 [connection signal="pressed" from="Menu/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
 [connection signal="pressed" from="Menu/NotesButton" to="." method="_on_notes_button_pressed"]

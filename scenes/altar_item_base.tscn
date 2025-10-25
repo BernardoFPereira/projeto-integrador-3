@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsp2mw6wcqx4k"]
+
+[ext_resource type="Script" path="res://scripts/altar_item_base.gd" id="1_3ubyo"]
+[ext_resource type="PackedScene" uid="uid://dw4dwel00bs3y" path="res://models/collectables/estatua01.glb" id="2_bk88e"]
+[ext_resource type="PackedScene" uid="uid://1cg3m0hpg8qm" path="res://models/collectables/estatua02.glb" id="3_47l37"]
+[ext_resource type="PackedScene" uid="uid://bjjrcwf1pmnxf" path="res://models/collectables/estatua03.glb" id="4_628c3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hgg1j"]
+size = Vector3(0.3, 0.04, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t7jn3"]
+size = Vector3(0.427979, 0.464355, 0.458008)
+
+[node name="AltarItemBase" type="Node3D" groups=["AltarItemBase"]]
+script = ExtResource("1_3ubyo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_hgg1j")
+
+[node name="Items" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0199508, 0)
+
+[node name="estatua01" parent="Items" instance=ExtResource("2_bk88e")]
+visible = false
+
+[node name="estatua02" parent="Items" instance=ExtResource("3_47l37")]
+transform = Transform3D(0.999994, 0, -0.00349072, 0, 1, 0, 0.00349072, 0, 0.999994, 0, 0.003294, 0)
+visible = false
+
+[node name="estatua03" parent="Items" instance=ExtResource("4_628c3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0836549, 0, 0)
+visible = false
+
+[node name="InteractArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502585, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.267822, 0)
+shape = SubResource("BoxShape3D_t7jn3")

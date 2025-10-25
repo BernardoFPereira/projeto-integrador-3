@@ -4,6 +4,7 @@ signal first_contact
 signal second_contact
 
 var past_first_contact := false
+var has_all_items := false
 
 var journal: Journal
 var page_notes: PageNotes

@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://3owg4uoqqodk"]
+
+[ext_resource type="PackedScene" uid="uid://c2lftgn6ri05y" path="res://scenes/prefabs/shelfsmall.tscn" id="1_ptwur"]
+[ext_resource type="PackedScene" uid="uid://chgq43s1h0col" path="res://scenes/prefabs/shelfbig.tscn" id="2_yb2mf"]
+
+[node name="Bookshelfs Library" type="Node3D"]
+
+[node name="shelfsmall2" parent="." instance=ExtResource("1_ptwur")]
+transform = Transform3D(1.026, 0, -7.10543e-15, 0, 1.25575, 0, 0, 0, 0.731264, 5.9356, 0, -0.277943)
+
+[node name="shelfsmall5" parent="." instance=ExtResource("1_ptwur")]
+transform = Transform3D(1.03245, 0, 0, 0, 1.23361, 0, 0, 0, 0.654944, 5.94836, 0, 3.23323)
+
+[node name="shelfsmall3" parent="." instance=ExtResource("1_ptwur")]
+transform = Transform3D(1.026, 0, -7.10543e-15, 0, 1.25575, 0, 0, 0, 0.731264, 1.99156, 0, -0.277944)
+
+[node name="shelfsmall6" parent="." instance=ExtResource("1_ptwur")]
+transform = Transform3D(1.03245, 0, 0, 0, 1.23361, 0, 0, 0, 0.654944, 2.00432, 0, 3.23323)
+
+[node name="shelfsmall4" parent="." instance=ExtResource("1_ptwur")]
+transform = Transform3D(1.026, 0, -7.10543e-15, 0, 1.25575, 0, 0, 0, 0.731264, -1.88936, 0, -0.277944)
+
+[node name="shelfsmall7" parent="." instance=ExtResource("1_ptwur")]
+transform = Transform3D(1.03245, 0, 0, 0, 1.23361, 0, 0, 0, 0.654944, -1.8766, 0, 3.23323)
+
+[node name="shelfsmall8" parent="." instance=ExtResource("1_ptwur")]
+transform = Transform3D(1.026, 0, -7.10543e-15, 0, 1.25575, 0, 0, 0, 0.731264, -6.15346, 0, -0.277942)
+
+[node name="shelfsmall9" parent="." instance=ExtResource("1_ptwur")]
+transform = Transform3D(1.03245, 0, 0, 0, 1.23361, 0, 0, 0, 0.654944, -6.1407, 0, 3.23323)
+
+[node name="shelfbig" parent="." instance=ExtResource("2_yb2mf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.78333, -0.243713, 1.60981)

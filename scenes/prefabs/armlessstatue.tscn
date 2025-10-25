@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://btm3172xym3f2"]
+[gd_scene load_steps=3 format=3 uid="uid://btm3172xym3f2"]
 
 [ext_resource type="PackedScene" uid="uid://coxbnume8mvvi" path="res://models/armlessstatue.glb" id="1_fa417"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c1njm"]
+size = Vector3(1, 1.94531, 0.64743)
 
 [node name="bothless" type="Node3D"]
 
 [node name="armlessstatue" parent="." instance=ExtResource("1_fa417")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.992188, 0.079483)
+shape = SubResource("BoxShape3D_c1njm")
