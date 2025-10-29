@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0fj8u3meqg3v"]
+[gd_scene load_steps=5 format=3 uid="uid://d0fj8u3meqg3v"]
 
 [ext_resource type="PackedScene" uid="uid://cfijp4mmuotel" path="res://models/chair_model.glb" id="1_2ilyx"]
 [ext_resource type="Texture2D" uid="uid://c21ty5m2bk3l7" path="res://models/cadeira_standardSurface4_BaseColor.1001.png" id="2_86rol"]
@@ -6,7 +6,16 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u3oh0"]
 albedo_texture = ExtResource("2_86rol")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_4i63f"]
+size = Vector3(5.427, 5.73782, 12.2787)
+
 [node name="chair_model" instance=ExtResource("1_2ilyx")]
 
 [node name="chair_01" parent="." index="0"]
 material_override = SubResource("StandardMaterial3D_u3oh0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="chair_01" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="chair_01/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0155029, 2.87581, -1.67291)
+shape = SubResource("BoxShape3D_4i63f")

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://i4qcrtoowwgs"]
+
+[ext_resource type="PackedScene" uid="uid://cjtisrn1itj7u" path="res://models/workdesk.glb" id="1_oq26n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dc25g"]
+size = Vector3(1.29102, 0.785034, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wroyg"]
+size = Vector3(1, 0.320435, 0.500732)
+
+[node name="workdesk" type="Node3D"]
+
+[node name="workdesk" parent="." instance=ExtResource("1_oq26n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.711622, 0, -0.489195)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="workdesk"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6722, 0.558751, 0.514289)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="workdesk/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0136719, -0.107483, 0)
+shape = SubResource("BoxShape3D_dc25g")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="workdesk/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.417726, -0.204956)
+shape = SubResource("BoxShape3D_wroyg")
