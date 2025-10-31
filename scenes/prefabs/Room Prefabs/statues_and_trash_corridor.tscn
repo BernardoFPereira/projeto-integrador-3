@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bebiok2q3k8x7"]
+[gd_scene load_steps=12 format=3 uid="uid://bebiok2q3k8x7"]
 
 [ext_resource type="PackedScene" uid="uid://btm3172xym3f2" path="res://scenes/prefabs/armlessstatue.tscn" id="1_k3cqj"]
 [ext_resource type="PackedScene" uid="uid://cfbqdor8tyw7e" path="res://scenes/prefabs/benchsmall.tscn" id="2_ipigq"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://du4lyekygvy8q" path="res://scenes/prefabs/candle_01.tscn" id="5_wasnu"]
 [ext_resource type="PackedScene" uid="uid://kd5t6pntlln1" path="res://scenes/prefabs/evilpaper.tscn" id="6_vk2ls"]
 [ext_resource type="PackedScene" uid="uid://c2lftgn6ri05y" path="res://scenes/prefabs/shelfsmall.tscn" id="7_rkk33"]
+[ext_resource type="AudioStream" uid="uid://br4o0awavkpb1" path="res://audio/boulder_drop.ogg" id="8_2ubua"]
 
 [sub_resource type="Animation" id="Animation_8dfhj"]
 resource_name = "caiuestatua"
@@ -57,9 +58,37 @@ tracks/4/path = NodePath(".")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = PackedFloat32Array(0.1, 1, 13.2924, -2.38419e-07, 5.43261, 0.5, 1, 13.2924, 0.310921, 5.43261)
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../AudioStreamPlayer3D:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_lftkt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AudioStreamPlayer3D:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mimby"]
 _data = {
+"RESET": SubResource("Animation_lftkt"),
 "trigger_animation": SubResource("Animation_8dfhj")
 }
 
@@ -95,3 +124,7 @@ root_node = NodePath("../bothless")
 libraries = {
 "": SubResource("AnimationLibrary_mimby")
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0366, 0, 4.78493)
+stream = ExtResource("8_2ubua")
