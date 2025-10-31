@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://cx1j2np5gvor2"]
+[gd_scene load_steps=61 format=3 uid="uid://cx1j2np5gvor2"]
 
 [ext_resource type="Texture2D" uid="uid://b00jvlgi8gb2i" path="res://cutscenes/assets/carruagem/carruagem_carruagem_carruagem_mtl_BaseColor.png" id="1_ge4f2"]
 [ext_resource type="Texture2D" uid="uid://5h4uggomcwig" path="res://cutscenes/assets/carruagem/carruagem_carruagem_janela_mtl_BaseColor-carruagem_janela_mtl_alpha.png" id="2_83mfg"]
@@ -12,6 +12,10 @@
 [ext_resource type="AudioStream" uid="uid://dyrdmqrfh3num" path="res://cutscenes/assets/audio/rain-inside-carriage.wav" id="10_ykm2a"]
 [ext_resource type="PackedScene" uid="uid://nf0jb3h468fm" path="res://cutscenes/assets/enviroment/enviroment ring.glb" id="11_q1plu"]
 [ext_resource type="Texture2D" uid="uid://cr82as2r1ld7y" path="res://cutscenes/assets/enviroment/enviroment ring_skyring_groundlevelparallax_mtl_BaseColor.png" id="12_gkvwi"]
+[ext_resource type="PackedScene" uid="uid://nv1kbb77qa4t" path="res://cutscenes/assets/enviroment/enviroment extras/cutscenemonasteryplane.glb" id="12_w7ava"]
+[ext_resource type="PackedScene" uid="uid://kgeyc6s73mgv" path="res://cutscenes/assets/enviroment/enviroment extras/cutscenemounds.glb" id="13_vmv0m"]
+[ext_resource type="PackedScene" uid="uid://c8hrbkd3f0lr7" path="res://cutscenes/assets/enviroment/enviroment extras/cutscenerocks.glb" id="14_2edbx"]
+[ext_resource type="PackedScene" uid="uid://c8b0lncd4dohw" path="res://cutscenes/assets/enviroment/enviroment extras/cutscenetrees.glb" id="15_0jy87"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhq5w"]
 resource_name = "carruagem_mtl.001"
@@ -4764,7 +4768,7 @@ mesh = SubResource("ArrayMesh_hth18")
 skin = SubResource("Skin_euxfc")
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="padre-sitting/Armature/Skeleton3D"]
-transform = Transform3D(-0.233972, -0.040651, 0.971393, 0.914174, 0.330926, 0.234039, -0.330973, 0.942781, -0.0402654, -0.46851, 1.62032, 0.533976)
+transform = Transform3D(-0.233972, -0.040651, 0.971393, 0.914174, 0.330926, 0.234039, -0.330973, 0.942781, -0.0402653, -0.46851, 1.62032, 0.533976)
 bone_name = "hand.R"
 bone_idx = 21
 
@@ -4869,10 +4873,33 @@ size = Vector3(7.23913, 2.30982, 6.04474)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -6.84508, 0)
 
 [node name="arvore_geo" parent="enviroment ring" index="0"]
-transform = Transform3D(28.863, 0, 0, 0, -0.000104484, -5.37006, 0, 28.863, -1.94396e-05, 0, -1.72291, 8.50274e-06)
+transform = Transform3D(28.863, 0, 0, 0, -1.26164e-06, -5.37006, 0, 28.863, -2.34733e-07, 0, -1.72291, 8.50274e-06)
 
-[node name="groundlevelparallax_geo" parent="enviroment ring" index="1"]
-transform = Transform3D(0.01, 0, 0, 0, -3.61999e-08, -0.01, 0, 0.01, -3.61999e-08, 0, 1.41746, 1.9275e-06)
+[node name="monastery plane" type="Node3D" parent="enviroment ring"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.39302, 3.50911)
+
+[node name="cutscenemonasteryplane" parent="enviroment ring/monastery plane" instance=ExtResource("12_w7ava")]
+
+[node name="planodetalhe_geo" parent="enviroment ring/monastery plane/cutscenemonasteryplane" index="0"]
+transform = Transform3D(0.317167, -22.9144, 0, 0, 0, -6.43877, 22.9144, 0.317167, 0, 0, 6.20512, 0)
+
+[node name="cutscenemounds" parent="enviroment ring/monastery plane" instance=ExtResource("13_vmv0m")]
+transform = Transform3D(-0.167113, 0, -0.985938, 0, 1, 0, 0.985938, 0, -0.167113, 0.452271, 0, -1.94339)
+
+[node name="cutscenemounds2" parent="enviroment ring/monastery plane" instance=ExtResource("13_vmv0m")]
+transform = Transform3D(0.730508, 0, 0.682904, 0, 1, 0, -0.682904, 0, 0.730508, 0.452271, 0, -1.94339)
+
+[node name="cutscenerocks" parent="enviroment ring/monastery plane" instance=ExtResource("14_2edbx")]
+transform = Transform3D(0.167087, 0, -0.643667, 0, 0.665, 0, 0.643667, 0, 0.167087, 2.12063, 0.125383, -3.10493)
+
+[node name="cutscenetrees" parent="enviroment ring/monastery plane" instance=ExtResource("15_0jy87")]
+transform = Transform3D(0.472766, 0, -0.881188, 0, 1, 0, 0.881188, 0, 0.472766, 0.984376, 0.0880222, -4.00958)
+
+[node name="cutscenetrees2" parent="enviroment ring/monastery plane" instance=ExtResource("15_0jy87")]
+transform = Transform3D(-0.643264, 0, 0.0933376, 0, 0.65, 0, -0.0933376, 0, -0.643264, 0.984376, -0.135578, -4.00958)
+
+[node name="groundlevelparallax_geo" parent="enviroment ring" index="2"]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 0, 1.41746, 1.9275e-06)
 
 [node name="groundlevelparallax_geo" type="MeshInstance3D" parent="enviroment ring/groundlevelparallax_geo" index="0"]
 transform = Transform3D(0.73, 0, 0, 0, 0.73, -2.27374e-13, 0, 2.27374e-13, 0.73, 0, 0.885, 131.591)
@@ -4884,7 +4911,8 @@ transform = Transform3D(0.545, 0, 0, 0, 0.545, -6.82121e-13, 0, 6.82121e-13, 0.5
 mesh = SubResource("ArrayMesh_u7fo2")
 skeleton = NodePath("")
 
-[node name="montanhas_geo" parent="enviroment ring" index="2"]
-transform = Transform3D(30.3843, 0, 0, 0, -0.000109991, -7.09673, 0, 30.3843, -2.56901e-05, 0, 2.90298, 4.07282e-06)
+[node name="montanhas_geo" parent="enviroment ring" index="3"]
+transform = Transform3D(30.3843, 0, 0, 0, -1.32814e-06, -7.09673, 0, 30.3843, -3.10208e-07, 0, 2.90298, 4.07282e-06)
 
 [editable path="enviroment ring"]
+[editable path="enviroment ring/monastery plane/cutscenemonasteryplane"]
