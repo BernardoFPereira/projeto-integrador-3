@@ -14,7 +14,7 @@ class_name Player
 @onready var animation_tree = $"ThePriest/Padre-walkF-walkB/AnimationTree"
 @onready var inspect_object_pos = $InspectObjectPos
 
-const SPEED = 2.0
+@export var SPEED = 2.0
 const JUMP_VELOCITY = 4.5
 
 enum CameraModes {
@@ -42,9 +42,9 @@ var interact_target: Node3D
 @export var collected_keys: Array[Node3D]
 @export var collected_pages: Array[Node3D]
 
-@export var has_item_01 := false
-@export var has_item_02 := false
-@export var has_item_03 := false
+#@export var has_item_01 := false
+#@export var has_item_02 := false
+#@export var has_item_03 := false
 
 func _ready():
 	set_camera_mode(CameraModes.ThirdPerson)
@@ -92,8 +92,8 @@ func _input(event):
 				
 				#print(event.relative)
 				
-				inspect_obj.rotation.y += event.relative.x * get_process_delta_time()
-				inspect_obj.rotation.x += event.relative.y * get_process_delta_time()
+				inspect_obj.rotation.y += event.relative.y * get_process_delta_time()
+				#inspect_obj.rotation.x += event.relative.y * get_process_delta_time()
 			
 			if event.is_action_pressed("exit_inspect") and state == States.INSPECT:
 				set_state(States.IDLE)
@@ -104,8 +104,8 @@ func _input(event):
 			
 		_:
 			# DEV POWER -- DISABLE ON BUILD
-			if Input.is_action_just_pressed("ui_accept"):
-				velocity.y = JUMP_VELOCITY
+			#if Input.is_action_just_pressed("ui_accept"):
+				#velocity.y = JUMP_VELOCITY
 				
 			if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 				var mouse_input = event.relative
@@ -120,8 +120,18 @@ func _input(event):
 				
 				if interact_target and can_interact:
 					interact_target.interact()
-			
+					
 	if event.is_action_pressed("ui_cancel"):
+		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			ui_manager.menu_type = ui_manager.MenuType.MENU
+			ui_manager.menu.visible = true
+		else:
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			ui_manager.menu_type = ui_manager.MenuType.NONE
+			ui_manager.clear_menu()
+			
+	if event.is_action_pressed("check_notes"):
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			ui_manager.menu_type = ui_manager.MenuType.NOTES

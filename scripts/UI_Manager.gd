@@ -6,6 +6,9 @@ extends Control
 @onready var pages = $Pages
 @onready var interact_tip = $InteractTip
 
+# TEMPORARY NODE
+@onready var temp_end = $Temp_End
+
 enum MenuType {
 	NONE,
 	NOTES,
@@ -15,6 +18,9 @@ enum MenuType {
 }
 
 var menu_type: MenuType = MenuType.NONE;
+
+func _ready():
+	ProgressManager.connect("game_complete", _on_altar_complete)
 
 func clear_menu() -> void:
 	journal.visible = false
@@ -87,7 +93,7 @@ func _on_inspect_button_02_pressed():
 		InspectManager.is_not_pickup = true
 		
 		player.set_state(player.States.INSPECT)
-		pages.visible = false	
+		pages.visible = false
 
 func _on_inspect_button_03_pressed():
 	var player = get_tree().get_first_node_in_group("Player")
@@ -99,3 +105,8 @@ func _on_inspect_button_03_pressed():
 	
 		player.set_state(player.States.INSPECT)
 		pages.visible = false
+
+func _on_altar_complete() -> void:
+	temp_end.visible = true
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	

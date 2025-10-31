@@ -14,6 +14,9 @@ var player_og_position: Vector3
 var is_not_pickup := false
 
 func _ready():
+	if get_tree().current_scene.name != "MonasteryInside":
+		return
+		
 	player = get_tree().get_first_node_in_group("Player")
 	inspect_room = get_tree().get_first_node_in_group("InspectRoom")
 	inspect_detail = get_tree().get_first_node_in_group("InspectText")
@@ -39,7 +42,6 @@ func start_inspection() -> void:
 	#inspect_target_mesh.scale.x = 0.12
 	#inspect_target_mesh.scale.y = 0.12
 	#inspect_target_mesh.scale.z = 0.12
-	
 	
 	can_inspect = false
 

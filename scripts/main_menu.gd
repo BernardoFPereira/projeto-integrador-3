@@ -1,5 +1,7 @@
 extends Control
 
+signal game_start
+
 @onready var first_scene = preload("res://scenes/levels/MonasteryInside.tscn")
 
 @onready var main_menu = $MainMenu
@@ -7,6 +9,7 @@ extends Control
 
 func _on_play_button_pressed():
 	get_tree().change_scene_to_packed(first_scene)
+	emit_signal("game_start")
 
 func _on_settings_button_pressed():
 	main_menu.visible = false

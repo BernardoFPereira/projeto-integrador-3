@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/manipulated_object.gd" id="1_mhkne"]
 [ext_resource type="Texture2D" uid="uid://cayidevambb86" path="res://models/paper_paper1_papers1_mtl_BaseColor.png" id="2_pofxv"]
-[ext_resource type="PackedScene" uid="uid://b856pc7xgjl7i" path="res://scenes/HolyPage_Inspect.tscn" id="2_t6pmx"]
+[ext_resource type="PackedScene" uid="uid://b856pc7xgjl7i" path="res://scenes/HolyPage1_Inspect.tscn" id="2_t6pmx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s3xn4"]
 resource_name = "papers1_mtl.1001"
