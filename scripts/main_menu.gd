@@ -9,7 +9,6 @@ signal game_start
 
 func _on_play_button_pressed():
 	get_tree().change_scene_to_packed(first_scene)
-	emit_signal("game_start")
 
 func _on_settings_button_pressed():
 	main_menu.visible = false

@@ -21,6 +21,8 @@ var menu_type: MenuType = MenuType.NONE;
 
 func _ready():
 	ProgressManager.connect("game_complete", _on_altar_complete)
+	ProgressManager.journal = journal
+	ProgressManager.page_notes = pages
 
 func clear_menu() -> void:
 	journal.visible = false

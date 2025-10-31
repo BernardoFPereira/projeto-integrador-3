@@ -33,10 +33,12 @@ func interact():
 			ProgressManager.emit_signal("first_item_picked")
 			ProgressManager.has_item_01 = true
 		ItemOrder.SECOND:
-			ProgressManager.has_item_02 = true
+			#ProgressManager.has_item_02 = true
+			ProgressManager.has_all_items = true
 		ItemOrder.THIRD:
 			#ProgressManager.has_item_03 = true
-			ProgressManager.has_all_items = true
+			#ProgressManager.has_all_items = true
+			pass
 		
 	self.visible = false
 	interact_area.monitorable = false

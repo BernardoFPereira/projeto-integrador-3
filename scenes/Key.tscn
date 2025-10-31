@@ -79,6 +79,8 @@ fill_from = Vector2(0.5, 0.5)
 transparency = 1
 shading_mode = 0
 albedo_texture = SubResource("GradientTexture2D_dffvo")
+billboard_mode = 1
+billboard_keep_scale = true
 
 [sub_resource type="QuadMesh" id="QuadMesh_t5i8c"]
 material = SubResource("StandardMaterial3D_lyp8l")
@@ -102,11 +104,12 @@ collision_mask = 2
 shape = SubResource("SphereShape3D_jqmej")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.412164, 0, 0)
 amount = 2
 amount_ratio = 0.359
 lifetime = 0.6
 explosiveness = 0.1
 visibility_aabb = AABB(-1.7283, -1.60061, -1.85913, 3.45661, 3.20122, 3.71827)
-transform_align = 1
+local_coords = true
 process_material = SubResource("ParticleProcessMaterial_cnos5")
 draw_pass_1 = SubResource("QuadMesh_t5i8c")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=2202 format=3 uid="uid://imk5ccgfjb4n"]
+[gd_scene load_steps=2207 format=3 uid="uid://imk5ccgfjb4n"]
 
 [ext_resource type="PackedScene" uid="uid://drak54rbqaie4" path="res://scenes/ui.tscn" id="1_m3lcs"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_wne16"]
@@ -17,6 +17,7 @@
 [ext_resource type="Material" uid="uid://dj7lxofx8eg1b" path="res://materials/wooden_planks.tres" id="7_wob2y"]
 [ext_resource type="Material" uid="uid://bbt1qfrotl325" path="res://materials/stone_ground1.tres" id="10_4t0kc"]
 [ext_resource type="Material" uid="uid://cxeeq8nvpcuol" path="res://materials/stonewall2.tres" id="13_3l7ma"]
+[ext_resource type="Script" path="res://scripts/LibraryItemTrigger.gd" id="13_g5r84"]
 [ext_resource type="AudioStream" uid="uid://dpjwkmpdalovg" path="res://audio/dungeon_ambient_1.ogg" id="13_x0f82"]
 [ext_resource type="AudioStream" uid="uid://hxcsm5dh82b" path="res://audio/334148__svampen__rain-light-loopable.wav" id="14_rm7ij"]
 [ext_resource type="Material" uid="uid://d66jqkr21twv" path="res://materials/stonegroundchapel.tres" id="16_ywy64"]
@@ -50,6 +51,7 @@
 [ext_resource type="PackedScene" uid="uid://bsp2mw6wcqx4k" path="res://scenes/altar_item_base.tscn" id="41_o6i7f"]
 [ext_resource type="PackedScene" uid="uid://dgwexqpva8xhx" path="res://scenes/HolyPage.tscn" id="42_sfyr8"]
 [ext_resource type="AudioStream" uid="uid://pv4cnrf3p4wa" path="res://audio/book_down.ogg" id="43_oxgrl"]
+[ext_resource type="AudioStream" uid="uid://bwqg18nknwevo" path="res://audio/stone_door.ogg" id="45_o5gvt"]
 [ext_resource type="PackedScene" uid="uid://ddhttv3uxb3pl" path="res://scenes/prefabs/altar.tscn" id="51_kybql"]
 [ext_resource type="PackedScene" uid="uid://jhvky7xprbq" path="res://scenes/prefabs/Room Prefabs/garden_bench.tscn" id="52_s880u"]
 
@@ -175,6 +177,138 @@ tracks/2/keys = {
 _data = {
 "RESET": SubResource("Animation_wli2j"),
 "trigger_animation": SubResource("Animation_n63m8")
+}
+
+[sub_resource type="Animation" id="Animation_sbmml"]
+resource_name = "FallReveal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ConfessionaryKey:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(11.4843, 13.3283, -10.7658), Vector3(11.3616, 6.53152, -10.7658)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Giga Level Design/library/BasicBook:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-3.96942, 2.60421, 2.41942), Vector3(-2.55719, 0.0857434, 1.59604)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ConfessionaryKey:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.91653e-08, -0.556673, 1.5708)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../Giga Level Design/library/BasicBook:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.01404, 0, 0), Vector3(-1.5543, -2.91981, -2.72658e-06)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_rkboq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ConfessionaryKey:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(11.4843, 13.3283, -10.7658)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Giga Level Design/library/BasicBook:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3.96942, 2.60421, 2.41942)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ConfessionaryKey:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.91653e-08, -0.556673, 1.5708)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../Giga Level Design/library/BasicBook:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.01404, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0choq"]
+_data = {
+"FallReveal": SubResource("Animation_sbmml"),
+"RESET": SubResource("Animation_rkboq")
 }
 
 [sub_resource type="Resource" id="Resource_0mabo"]
@@ -21666,19 +21800,19 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("BasicBook:position")
+tracks/0/path = NodePath("armless:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-3.96942, 2.60421, 2.41942)]
+"values": [Vector3(0, 7.10543e-15, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("armless:rotation")
+tracks/1/path = NodePath("bothless:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -21690,70 +21824,34 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("bothless:rotation")
+tracks/2/path = NodePath("angel_statue:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 7.10543e-15, 0)]
+"values": [Vector3(0, -3.14159, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("BasicBook:rotation")
+tracks/3/path = NodePath("bothlessstatue:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-1.01404, 0, 0)]
+"values": [Vector3(0, 0, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("angel_statue:rotation")
+tracks/4/path = NodePath("AudioStreamPlayer3D:playing")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, -3.14159, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("bothlessstatue:rotation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../../Interactable/ConfessionaryKey:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(11.5974, 13.2561, -10.9172)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("AudioStreamPlayer3D:playing")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -21766,98 +21864,62 @@ length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("BasicBook:position")
+tracks/0/path = NodePath("armless:rotation")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(-3.96942, 2.60421, 2.41942), Vector3(-3.96942, 0.0785179, 1.70274)]
+"values": [Vector3(0, 7.10543e-15, 0), Vector3(0, -0.642822, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("armless:rotation")
+tracks/1/path = NodePath("bothless:rotation")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 7.10543e-15, 0), Vector3(0, 0.890223, 0)]
+"values": [Vector3(0, 7.10543e-15, 0), Vector3(0, 0.836135, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("bothless:rotation")
+tracks/2/path = NodePath("angel_statue:rotation")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 7.10543e-15, 0), Vector3(0, -0.88839, 0)]
+"values": [Vector3(0, -3.14159, 0), Vector3(0, -2.38756, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("BasicBook:rotation")
+tracks/3/path = NodePath("bothlessstatue:rotation")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(-1.01404, 0, 0), Vector3(-1.5708, -0.482476, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, -0.940872, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("angel_statue:rotation")
-tracks/4/interp = 2
+tracks/4/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, -3.14159, 0), Vector3(0, -2.38756, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("bothlessstatue:rotation")
-tracks/5/interp = 2
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, -0.940872, 0)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../../Interactable/ConfessionaryKey:position")
-tracks/6/interp = 0
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(11.5974, 13.2561, -10.9172), Vector3(11.4843, 6.54635, -10.7658)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("AudioStreamPlayer3D:playing")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false, true]
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cieku"]
@@ -21901,7 +21963,7 @@ tg_obj = NodePath("../../Interactable/Pages/HolyPage3")
 activation_contact = 2
 
 [node name="LibraryTrigger" parent="Triggers" node_paths=PackedStringArray("tg_obj") instance=ExtResource("41_57uwx")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.02328, 6.95329, -10.9517)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.8505, 6.95329, -10.9517)
 tg_obj = NodePath("../../Giga Level Design/library")
 activation_contact = 4
 
@@ -22025,10 +22087,22 @@ transform = Transform3D(-0.272028, 0, 0.962289, 0, 1, 0, -0.962289, 0, -0.272028
 item_order = 1
 
 [node name="LibraryKey" parent="Interactable" instance=ExtResource("30_t8tnx")]
-transform = Transform3D(-2.15518e-08, -0.139072, -0.481354, 0.501042, -9.72549e-09, -1.96235e-08, -3.89644e-09, -0.481354, 0.139072, 7.51346, 0.629396, -7.47795)
+transform = Transform3D(-2.15518e-08, -0.139072, -0.481354, 0.501042, -9.72549e-09, -1.96235e-08, -3.89644e-09, -0.481354, 0.139072, 7.51346, 0.629396, -7.8009)
 
-[node name="ConfessionaryKey" parent="Interactable" instance=ExtResource("30_t8tnx")]
-transform = Transform3D(-3.5427e-09, 0.40703, -0.292179, 0.501042, -9.72549e-09, -1.96235e-08, -2.16128e-08, -0.292179, -0.40703, 11.5974, 13.2561, -10.9172)
+[node name="LibraryItemTrigger" type="Node" parent="Interactable"]
+script = ExtResource("13_g5r84")
+
+[node name="ConfessionaryKey" parent="Interactable/LibraryItemTrigger" instance=ExtResource("30_t8tnx")]
+transform = Transform3D(-2.89629e-08, -0.425393, -0.264732, 0.501042, -2.19012e-08, -1.96234e-08, 5.08884e-09, -0.264732, 0.425393, 11.4843, 13.3283, -10.7658)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Interactable/LibraryItemTrigger"]
+libraries = {
+"": SubResource("AnimationLibrary_0choq")
+}
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Interactable/LibraryItemTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5326, 7.4037, -11.0629)
+stream = ExtResource("43_oxgrl")
 
 [node name="Doors" type="Node" parent="."]
 
@@ -22058,7 +22132,7 @@ key = NodePath("../../Interactable/LibraryKey")
 [node name="Door6" parent="Doors" node_paths=PackedStringArray("key") instance=ExtResource("4_eytb6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3393, 1.2496, -11.2592)
 state = 2
-key = NodePath("../../Interactable/ConfessionaryKey")
+key = NodePath("../../Interactable/LibraryItemTrigger/ConfessionaryKey")
 
 [node name="Door7" parent="Doors" instance=ExtResource("4_eytb6")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -5.1229, 12.2651, 10.9523)
@@ -23211,7 +23285,7 @@ light_bake_mode = 1
 transform = Transform3D(-0.981677, 0, -0.190552, 0, 1, 0, 0.190552, 0, -0.981677, 2.62092, 6.45644, 9.9161)
 
 [node name="Garden Bench" parent="Furniture" instance=ExtResource("52_s880u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.42652, 0, -7.62748)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.42652, 0, -7.93348)
 
 [node name="Front Chapel Altar" parent="Furniture" instance=ExtResource("36_8wkyj")]
 
@@ -23221,7 +23295,34 @@ transform = Transform3D(1, 0, 0, 0, 1.46088, 0, 0, 0, 1, -8, 1.30585, -11.897)
 [node name="ChapelAltar09" parent="Furniture/Front Chapel Altar" index="4"]
 transform = Transform3D(-0.997515, 0, 0.0704528, 0, 1, 0, -0.0704528, 0, -0.997515, -8.70527, 0, -5.69433)
 
+[node name="candle08" parent="Furniture/Front Chapel Altar" index="14"]
+is_on = false
+
+[node name="candle09" parent="Furniture/Front Chapel Altar" index="15"]
+is_on = false
+
+[node name="candle10" parent="Furniture/Front Chapel Altar" index="16"]
+is_on = false
+
 [node name="Giga Level Design" parent="." instance=ExtResource("23_dmbe0")]
+
+[node name="column" parent="Giga Level Design/Garden Columns" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1.26991, 0, 0, 0, 1, -2.07684, 3.54315, -21.5657)
+
+[node name="column4" parent="Giga Level Design/Garden Columns" index="1"]
+transform = Transform3D(1.05824, 0, 0, 0, 1.26991, 0, 0, 0, 1.06414, -1.97549, 0, -21.5933)
+
+[node name="column2" parent="Giga Level Design/Garden Columns" index="2"]
+transform = Transform3D(1.27411, 0, 0, 0, 1.27859, 0, 1.01644e-20, 0, 1.20189, 2.19039, 0, -21.5933)
+
+[node name="column3" parent="Giga Level Design/Garden Columns" index="3"]
+transform = Transform3D(1.30221, 0, 0, 0, 1.26991, 0, 6.77626e-21, 0, 1, 6.4036, 0, -21.5933)
+
+[node name="column5" parent="Giga Level Design/Garden Columns" index="4"]
+transform = Transform3D(1.17635, 0, 0, 0, 1.30453, 0, 0, 0, 1.17817, 2.17634, 3.38187, -21.5932)
+
+[node name="column6" parent="Giga Level Design/Garden Columns" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1.26991, 0, 0, 0, 0.954673, 6.41775, 3.47931, -21.5971)
 
 [node name="InnerColumns" parent="Giga Level Design/Third Floor Corner Detail" index="0" instance=ExtResource("28_mtyf6")]
 transform = Transform3D(0.999999, 0, -7.4607e-14, 0, 1, 0, 2.84217e-14, 0, 1, 0.376206, -6.08257, 12.0218)
@@ -23279,7 +23380,7 @@ transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, -3.97412
 transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, -3.98562, 0.707431, 2.88253)
 
 [node name="BasicBook" parent="Giga Level Design/library" index="3"]
-transform = Transform3D(1, 0, 0, 0, 0.528435, 0.848974, 0, -0.848974, 0.528435, -3.96942, 2.60421, 2.41942)
+transform = Transform3D(1, 0, 0, 0, 0.528438, 0.848972, 0, -0.848972, 0.528438, -3.96942, 2.60421, 2.41942)
 
 [node name="shelfbig" parent="Giga Level Design/library/Bookshelfs Library" index="8"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.564, -0.243713, 1.60981)
@@ -23289,9 +23390,9 @@ transform = Transform3D(-1, 0, -2.53518e-06, 0, 1, 0, 2.53518e-06, 0, -1, 3.3378
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Giga Level Design/library" index="10"]
 transform = Transform3D(1, 0, 9.9476e-14, 0, 1, 0, -9.9476e-14, 0, 1, -5.37451, 1.46153, 1.30844)
-stream = ExtResource("43_oxgrl")
+stream = ExtResource("45_o5gvt")
 attenuation_model = 1
-volume_db = -17.895
+volume_db = -19.825
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Giga Level Design/library" index="11"]
 libraries = {
@@ -23569,7 +23670,7 @@ light_color = Color(0.388235, 0.490196, 1, 1)
 [node name="Statues and trash corridor" parent="Lights" instance=ExtResource("38_bv23t")]
 
 [node name="candle05" parent="Lights" instance=ExtResource("36_7q40q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.91745, 1.35253, -10.7279)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.84328, 1.35253, -10.8024)
 is_on = true
 
 [node name="Candelabra3" parent="Lights" instance=ExtResource("39_0xqyo")]
@@ -23646,10 +23747,10 @@ panning_strength = 0.54
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.73682, 0)
 
 [node name="candle02" parent="." instance=ExtResource("29_2n8mc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.53634, 0.604858, -7.70709)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.53634, 0.604858, -8.03004)
 
 [node name="candle01" parent="." instance=ExtResource("36_7q40q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3857, 0.602044, -7.6506)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3857, 0.602044, -7.97355)
 is_on = true
 
 [node name="Table" parent="." instance=ExtResource("26_7udxk")]

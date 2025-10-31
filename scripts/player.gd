@@ -13,6 +13,7 @@ class_name Player
 @onready var animation_player = $"ThePriest/Padre-walkF-walkB/AnimationPlayer"
 @onready var animation_tree = $"ThePriest/Padre-walkF-walkB/AnimationTree"
 @onready var inspect_object_pos = $InspectObjectPos
+@onready var interact_area = $InteractArea
 
 @export var SPEED = 2.0
 const JUMP_VELOCITY = 4.5
@@ -42,10 +43,6 @@ var interact_target: Node3D
 @export var collected_keys: Array[Node3D]
 @export var collected_pages: Array[Node3D]
 
-#@export var has_item_01 := false
-#@export var has_item_02 := false
-#@export var has_item_03 := false
-
 func _ready():
 	set_camera_mode(CameraModes.ThirdPerson)
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -57,7 +54,7 @@ func _process(delta):
 		ui_manager.interact_tip.visible = false
 		
 	if interact_target:
-		if global_position.distance_to(interact_target.global_position) > 2:
+		if interact_area.global_position.distance_to(interact_target.global_position) > 2:
 			print('Interaction Released')
 			
 			can_interact = false

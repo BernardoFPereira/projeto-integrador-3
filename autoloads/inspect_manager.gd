@@ -13,26 +13,14 @@ var player_og_position: Vector3
 
 var is_not_pickup := false
 
-func _ready():
-	if get_tree().current_scene.name != "MonasteryInside":
-		return
-		
-	player = get_tree().get_first_node_in_group("Player")
-	inspect_room = get_tree().get_first_node_in_group("InspectRoom")
-	inspect_detail = get_tree().get_first_node_in_group("InspectText")
-	inspect_text_label = inspect_detail.find_child("InspectText")
-
 func start_inspection() -> void:
+	player = get_tree().get_first_node_in_group("Player")
 	player_og_position = player.global_position
 	player.global_position = inspect_room.global_position
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
 	inspect_detail.visible = true
 	inspect_text_label.text = inspect_target.inspect_text
-	
-	#if inspect_target.is_in_group("Key"):
-		#print("LOOKING AT KEY!")
-		#return
 	
 	inspect_target_mesh = inspect_target.inspect_mesh.instantiate()
 	
@@ -46,6 +34,7 @@ func start_inspection() -> void:
 	can_inspect = false
 
 func stop_inspection() -> void:
+	player = get_tree().get_first_node_in_group("Player")
 	player.global_position = player_og_position
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	inspect_target.mesh.visible = true
