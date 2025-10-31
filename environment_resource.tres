@@ -40,8 +40,11 @@ sky_material = SubResource("ShaderMaterial_l66ko")
 
 [resource]
 background_mode = 2
+background_energy_multiplier = 2.55
 sky = SubResource("Sky_6lbue")
 ambient_light_source = 3
+ambient_light_color = Color(0.0705882, 0.0901961, 0.0862745, 1)
+ambient_light_energy = 1.64
 ssao_enabled = true
 ssao_radius = 0.15
 ssao_intensity = 8.23

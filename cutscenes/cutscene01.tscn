@@ -4870,27 +4870,44 @@ draw_pass_1 = SubResource("RibbonTrailMesh_loc7u")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17011, 4.45579, 1.60987)
 size = Vector3(7.23913, 2.30982, 6.04474)
 
-[node name="lights" type="Node3D" parent="."]
+[node name="Lights" type="Node3D" parent="."]
 transform = Transform3D(2.94, 0, 0, 0, 2.94, 0, 0, 0, 2.94, 0, 0, 0)
 
-[node name="SunLight" type="DirectionalLight3D" parent="lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.4115, 1.19508, -14.7424)
-light_color = Color(1, 0.668428, 0.557259, 1)
-light_energy = 1.001
+[node name="SunLight" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(-0.0181505, 0.392963, 0.919375, 0.00775645, 0.919554, -0.392887, -0.999805, -7.45058e-09, -0.0197384, 1.79446, 0.356257, -0.0813977)
+light_color = Color(0.938447, 0.437981, 0.307034, 1)
+light_energy = 0.374
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
-light_angular_distance = 1.76
+light_angular_distance = 25.29
 shadow_enabled = true
-shadow_bias = 0.623
+shadow_bias = 0.819
+shadow_normal_bias = 0.824
+directional_shadow_split_1 = 0.712
+directional_shadow_split_2 = 0.259
+directional_shadow_split_3 = 0.478
+directional_shadow_fade_start = 0.951
+directional_shadow_max_distance = 43.8
+directional_shadow_pancake_size = 3.9
+sky_mode = 1
 
-[node name="SpotLight3D" type="SpotLight3D" parent="lights"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights"]
 transform = Transform3D(-0.415049, 0.15579, 0.896361, -0.801935, -0.527962, -0.279565, 0.429691, -0.834856, 0.344064, -2.83551, -3.5893, 2.47632)
 light_color = Color(1, 0.576471, 0.305882, 1)
 light_energy = 6.96
 light_indirect_energy = 1.418
 light_volumetric_fog_energy = 0.0
+shadow_enabled = true
 spot_range = 61.0654
 spot_angle = 89.99
+
+[node name="Lightbulb" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.546155, 0.162812, -0.277631)
+light_color = Color(0.517647, 0.435294, 0.803922, 1)
+light_energy = 1.627
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+shadow_enabled = true
 
 [node name="skydome" parent="." instance=ExtResource("11_npgx7")]
 transform = Transform3D(2.94, 0, 0, 0, 2.94, 0, 0, 0, 2.94, 0, 0, 0)
@@ -4901,30 +4918,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -6.84508, 0)
 [node name="arvore_geo" parent="enviroment ring" index="0"]
 transform = Transform3D(28.863, 0, 0, 0, -1.26164e-06, -5.37006, 0, 28.863, -2.34733e-07, 0, -1.72291, 8.50274e-06)
 
-[node name="monastery plane" type="Node3D" parent="enviroment ring"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.39302, 3.50911)
-
-[node name="cutscenemonasteryplane" parent="enviroment ring/monastery plane" instance=ExtResource("12_w7ava")]
-
-[node name="planodetalhe_geo" parent="enviroment ring/monastery plane/cutscenemonasteryplane" index="0"]
-transform = Transform3D(0.317167, -22.9144, 0, 0, 0, -6.43877, 22.9144, 0.317167, 0, 0, 6.20512, 0)
-
-[node name="cutscenemounds" parent="enviroment ring/monastery plane" instance=ExtResource("13_vmv0m")]
-transform = Transform3D(-0.167113, 0, -0.985938, 0, 1, 0, 0.985938, 0, -0.167113, 0.452271, 0, -1.94339)
-
-[node name="cutscenemounds2" parent="enviroment ring/monastery plane" instance=ExtResource("13_vmv0m")]
-transform = Transform3D(0.730508, 0, 0.682904, 0, 1, 0, -0.682904, 0, 0.730508, 0.452271, 0, -1.94339)
-
-[node name="cutscenerocks" parent="enviroment ring/monastery plane" instance=ExtResource("14_2edbx")]
-transform = Transform3D(0.167087, 0, -0.643667, 0, 0.665, 0, 0.643667, 0, 0.167087, 2.12063, 0.125383, -3.10493)
-
-[node name="cutscenetrees" parent="enviroment ring/monastery plane" instance=ExtResource("15_0jy87")]
-transform = Transform3D(0.200616, 0, -0.97967, 0, 1, 0, 0.97967, 0, 0.200616, 0.984376, 0.0880222, -4.00958)
-
-[node name="cutscenetrees2" parent="enviroment ring/monastery plane" instance=ExtResource("15_0jy87")]
-transform = Transform3D(-0.643264, 0, 0.0933376, 0, 0.65, 0, -0.0933376, 0, -0.643264, 0.984376, -0.135578, -4.00958)
-
-[node name="groundlevelparallax_geo" parent="enviroment ring" index="2"]
+[node name="groundlevelparallax_geo" parent="enviroment ring" index="1"]
 transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 0, 1.41746, 1.9275e-06)
 
 [node name="groundlevelparallax_geo" type="MeshInstance3D" parent="enviroment ring/groundlevelparallax_geo" index="0"]
@@ -4937,8 +4931,31 @@ transform = Transform3D(0.545, 0, 0, 0, 0.545, -6.82121e-13, 0, 6.82121e-13, 0.5
 mesh = SubResource("ArrayMesh_u7fo2")
 skeleton = NodePath("")
 
-[node name="montanhas_geo" parent="enviroment ring" index="3"]
+[node name="montanhas_geo" parent="enviroment ring" index="2"]
 transform = Transform3D(30.3843, 0, 0, 0, -1.32814e-06, -7.09673, 0, 30.3843, -3.10208e-07, 0, 2.90298, 4.07282e-06)
+
+[node name="monastery plane" type="Node3D" parent="enviroment ring"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.39302, 3.50911)
+
+[node name="cutscenemonasteryplane" parent="enviroment ring/monastery plane" instance=ExtResource("12_w7ava")]
+
+[node name="planodetalhe_geo" parent="enviroment ring/monastery plane/cutscenemonasteryplane" index="0"]
+transform = Transform3D(0.317167, -22.9144, 0, 0, 0, -6.43877, 22.9144, 0.317167, 0, 0, 6.20512, 0)
+
+[node name="cutscenemounds" parent="enviroment ring/monastery plane" instance=ExtResource("13_vmv0m")]
+transform = Transform3D(-0.167113, 0, -0.985938, 0, 1, 0, 0.985938, 0, -0.167113, 3.72297, 0, -1.94339)
+
+[node name="cutscenemounds2" parent="enviroment ring/monastery plane" instance=ExtResource("13_vmv0m")]
+transform = Transform3D(0.806837, 0, 0.590775, 0, 1, 0, -0.590775, 0, 0.806837, 2.961, 0, -6.94908)
+
+[node name="cutscenerocks" parent="enviroment ring/monastery plane" instance=ExtResource("14_2edbx")]
+transform = Transform3D(0.167087, 0, -0.643667, 0, 0.665, 0, 0.643667, 0, 0.167087, 2.12063, 0.125383, -3.10493)
+
+[node name="cutscenetrees" parent="enviroment ring/monastery plane" instance=ExtResource("15_0jy87")]
+transform = Transform3D(0.200616, 0, -0.97967, 0, 1, 0, 0.97967, 0, 0.200616, 0.984376, 0.0880222, -4.00958)
+
+[node name="cutscenetrees2" parent="enviroment ring/monastery plane" instance=ExtResource("15_0jy87")]
+transform = Transform3D(-0.643264, 0, 0.0933376, 0, 0.65, 0, -0.0933376, 0, -0.643264, 0.984376, -0.135578, -4.00958)
 
 [editable path="enviroment ring"]
 [editable path="enviroment ring/monastery plane/cutscenemonasteryplane"]

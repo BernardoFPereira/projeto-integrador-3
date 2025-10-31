@@ -1,4 +1,4 @@
-[gd_scene load_steps=366 format=3 uid="uid://v6grbwk354e"]
+[gd_scene load_steps=367 format=3 uid="uid://v6grbwk354e"]
 
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_bbvsj"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="2_sko3p"]
@@ -8,6 +8,7 @@
 [ext_resource type="Material" uid="uid://rdhrhgrb78ls" path="res://addons/cyclops_level_builder/materials/grid.tres" id="6_c0h6x"]
 [ext_resource type="PackedScene" uid="uid://cnrts4hhd04e7" path="res://scenes/Player.tscn" id="6_d6cra"]
 [ext_resource type="Environment" uid="uid://dfx7slq5dxvw3" path="res://environment_resource.tres" id="7_fugxp"]
+[ext_resource type="PackedScene" uid="uid://dsqx0xqkt7bby" path="res://cutscenes/assets/enviroment/skydome.glb" id="9_7xaem"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_seg0b"]
 emission_shape = 3
@@ -3757,6 +3758,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.33656, -0.900429, 37.5124)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("7_fugxp")
+
+[node name="skydome" parent="." instance=ExtResource("9_7xaem")]
 
 [node name="Block_0" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 16, 9)
