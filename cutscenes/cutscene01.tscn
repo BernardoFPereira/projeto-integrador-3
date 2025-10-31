@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://cx1j2np5gvor2"]
+[gd_scene load_steps=62 format=3 uid="uid://cx1j2np5gvor2"]
 
 [ext_resource type="Texture2D" uid="uid://b00jvlgi8gb2i" path="res://cutscenes/assets/carruagem/carruagem_carruagem_carruagem_mtl_BaseColor.png" id="1_ge4f2"]
 [ext_resource type="Texture2D" uid="uid://5h4uggomcwig" path="res://cutscenes/assets/carruagem/carruagem_carruagem_janela_mtl_BaseColor-carruagem_janela_mtl_alpha.png" id="2_83mfg"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://cutscenes/camera_controls.gd" id="7_2q0j3"]
 [ext_resource type="AudioStream" uid="uid://llw2koymacha" path="res://cutscenes/assets/audio/carriage-moving.wav" id="8_yefp1"]
 [ext_resource type="AudioStream" uid="uid://dyrdmqrfh3num" path="res://cutscenes/assets/audio/rain-inside-carriage.wav" id="10_ykm2a"]
+[ext_resource type="PackedScene" uid="uid://dsqx0xqkt7bby" path="res://cutscenes/assets/enviroment/skydome.glb" id="11_npgx7"]
 [ext_resource type="PackedScene" uid="uid://nf0jb3h468fm" path="res://cutscenes/assets/enviroment/enviroment ring.glb" id="11_q1plu"]
 [ext_resource type="Texture2D" uid="uid://cr82as2r1ld7y" path="res://cutscenes/assets/enviroment/enviroment ring_skyring_groundlevelparallax_mtl_BaseColor.png" id="12_gkvwi"]
 [ext_resource type="PackedScene" uid="uid://nv1kbb77qa4t" path="res://cutscenes/assets/enviroment/enviroment extras/cutscenemonasteryplane.glb" id="12_w7ava"]
@@ -4869,6 +4870,31 @@ draw_pass_1 = SubResource("RibbonTrailMesh_loc7u")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17011, 4.45579, 1.60987)
 size = Vector3(7.23913, 2.30982, 6.04474)
 
+[node name="lights" type="Node3D" parent="."]
+transform = Transform3D(2.94, 0, 0, 0, 2.94, 0, 0, 0, 2.94, 0, 0, 0)
+
+[node name="SunLight" type="DirectionalLight3D" parent="lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.4115, 1.19508, -14.7424)
+light_color = Color(1, 0.668428, 0.557259, 1)
+light_energy = 1.001
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_angular_distance = 1.76
+shadow_enabled = true
+shadow_bias = 0.623
+
+[node name="SpotLight3D" type="SpotLight3D" parent="lights"]
+transform = Transform3D(-0.415049, 0.15579, 0.896361, -0.801935, -0.527962, -0.279565, 0.429691, -0.834856, 0.344064, -2.83551, -3.5893, 2.47632)
+light_color = Color(1, 0.576471, 0.305882, 1)
+light_energy = 6.96
+light_indirect_energy = 1.418
+light_volumetric_fog_energy = 0.0
+spot_range = 61.0654
+spot_angle = 89.99
+
+[node name="skydome" parent="." instance=ExtResource("11_npgx7")]
+transform = Transform3D(2.94, 0, 0, 0, 2.94, 0, 0, 0, 2.94, 0, 0, 0)
+
 [node name="enviroment ring" parent="." instance=ExtResource("11_q1plu")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -6.84508, 0)
 
@@ -4893,7 +4919,7 @@ transform = Transform3D(0.730508, 0, 0.682904, 0, 1, 0, -0.682904, 0, 0.730508, 
 transform = Transform3D(0.167087, 0, -0.643667, 0, 0.665, 0, 0.643667, 0, 0.167087, 2.12063, 0.125383, -3.10493)
 
 [node name="cutscenetrees" parent="enviroment ring/monastery plane" instance=ExtResource("15_0jy87")]
-transform = Transform3D(0.472766, 0, -0.881188, 0, 1, 0, 0.881188, 0, 0.472766, 0.984376, 0.0880222, -4.00958)
+transform = Transform3D(0.200616, 0, -0.97967, 0, 1, 0, 0.97967, 0, 0.200616, 0.984376, 0.0880222, -4.00958)
 
 [node name="cutscenetrees2" parent="enviroment ring/monastery plane" instance=ExtResource("15_0jy87")]
 transform = Transform3D(-0.643264, 0, 0.0933376, 0, 0.65, 0, -0.0933376, 0, -0.643264, 0.984376, -0.135578, -4.00958)
