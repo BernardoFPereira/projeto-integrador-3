@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bsp2mw6wcqx4k"]
+[gd_scene load_steps=7 format=3 uid="uid://btm3k0ke63eaw"]
 
 [ext_resource type="Script" path="res://scripts/altar_item_base.gd" id="1_3ubyo"]
 [ext_resource type="PackedScene" uid="uid://dw4dwel00bs3y" path="res://models/collectables/estatua01.glb" id="2_bk88e"]
@@ -21,6 +21,7 @@ mesh = SubResource("BoxMesh_hgg1j")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0199508, 0)
 
 [node name="estatua01" parent="Items" instance=ExtResource("2_bk88e")]
+transform = Transform3D(-0.995061, 0, -0.0992678, 0, 1, 0, 0.0992678, 0, -0.995061, 0, 0, 0)
 visible = false
 
 [node name="estatua02" parent="Items" instance=ExtResource("3_47l37")]

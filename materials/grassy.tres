@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c6sax7aaq4yo5"]
+
+[ext_resource type="Texture2D" uid="uid://cl7uerqb5prxr" path="res://textures/grassy_mtl_BaseColor.1001.png" id="1_cc2nd"]
+
+[resource]
+albedo_texture = ExtResource("1_cc2nd")
