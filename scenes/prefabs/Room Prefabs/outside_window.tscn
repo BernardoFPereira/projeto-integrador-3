@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://jsijurekpmab"]
+
+[ext_resource type="PackedScene" uid="uid://bwscpu2dpp4ra" path="res://models/background detail/enmounds.glb" id="1_tygrl"]
+[ext_resource type="PackedScene" uid="uid://dtym70va0lqjd" path="res://models/background detail/enrocks.glb" id="2_u1smo"]
+[ext_resource type="PackedScene" uid="uid://bklfqq46gvxok" path="res://models/background detail/entrees.glb" id="3_ketsa"]
+
+[node name="Outside Window" type="Node3D"]
+
+[node name="enmounds" parent="." instance=ExtResource("1_tygrl")]
+transform = Transform3D(0.776531, 0, -0.63008, 0, 1, 0, 0.63008, 0, 0.776531, -43.9595, -0.685776, 8.39262)
+
+[node name="enrocks" parent="." instance=ExtResource("2_u1smo")]
+transform = Transform3D(0.341774, 0, -0.939782, 0, 1, 0, 0.939782, 0, 0.341774, -41.7832, 0, 0)
+
+[node name="enrocks2" parent="." instance=ExtResource("2_u1smo")]
+transform = Transform3D(-0.3289, 0, -0.944365, 0, 1, 0, 0.944365, 0, -0.3289, -68.9032, 0, 0)
+
+[node name="enmounds2" parent="." instance=ExtResource("1_tygrl")]
+transform = Transform3D(-0.38149, 0, -0.924373, 0, 1, 0, 0.924373, 0, -0.38149, -56.1957, -0.685776, -7.74672)
+
+[node name="entrees" parent="." instance=ExtResource("3_ketsa")]
+transform = Transform3D(-0.266582, 0, -0.963812, 0, 1, 0, 0.963812, 0, -0.266582, -74.8428, 0, 0)
+
+[node name="entrees2" parent="." instance=ExtResource("3_ketsa")]
+transform = Transform3D(-0.990757, 0, -0.135646, 0, 1, 0, 0.135646, 0, -0.990757, -74.8428, -4.22794, -24.1344)
+
+[node name="entrees3" parent="." instance=ExtResource("3_ketsa")]
+transform = Transform3D(-0.990757, 0, -0.135646, 0, 1, 0, 0.135646, 0, -0.990757, -68.4482, -1.92988, -10.2352)
+
+[node name="entrees4" parent="." instance=ExtResource("3_ketsa")]
+transform = Transform3D(-2.2702, 0, 0.143355, 0, 1.59967, 0, -0.447741, 0, -0.726858, -33.764, -1.92988, -28.9879)
+
+[node name="entrees6" parent="." instance=ExtResource("3_ketsa")]
+transform = Transform3D(-2.2702, 0, 0.143355, 0, 1.59967, 0, -0.447741, 0, -0.726858, -4.06651, -1.92988, -28.9879)
+
+[node name="entrees7" parent="." instance=ExtResource("3_ketsa")]
+transform = Transform3D(-0.27907, 0, -0.735452, 0, 1.59967, 0, 2.29704, 0, -0.0893511, -68.0271, -1.92988, -46.3771)
+
+[node name="entrees8" parent="." instance=ExtResource("3_ketsa")]
+transform = Transform3D(-0.27907, 0, -0.735452, 0, 1.59967, 0, 2.29704, 0, -0.0893511, -68.0271, -1.92988, -2.28643)
+
+[node name="entrees9" parent="." instance=ExtResource("3_ketsa")]
+transform = Transform3D(2.3132, 0, -0.0185919, 0, 1.59967, 0, 0.0580682, 0, 0.740627, -68.0271, -1.92988, 26.4989)
+
+[node name="entrees10" parent="." instance=ExtResource("3_ketsa")]
+transform = Transform3D(1.54892, 0, -0.550393, 0, 1.59967, 0, 1.71904, 0, 0.495924, -42.8893, -1.92988, -0.763859)
+
+[node name="entrees11" parent="." instance=ExtResource("3_ketsa")]
+transform = Transform3D(1.54892, 0, -0.550393, 0, 1.59967, 0, 1.71904, 0, 0.495924, -77.2266, -1.92988, -1.23808)
+
+[node name="entrees12" parent="." instance=ExtResource("3_ketsa")]
+transform = Transform3D(1.54892, 0, -0.550393, 0, 1.59967, 0, 1.71904, 0, 0.495924, -66.4487, -1.92988, 13.6557)
+
+[node name="entrees5" parent="." instance=ExtResource("3_ketsa")]
+transform = Transform3D(-0.0236108, 0, 1.65196, 0, 1.59967, 0, -0.182216, 0, -0.214054, -29.9323, -1.92988, -28.9879)
