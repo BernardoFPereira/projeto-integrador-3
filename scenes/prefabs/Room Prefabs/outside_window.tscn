@@ -1,22 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://jsijurekpmab"]
+[gd_scene load_steps=5 format=3 uid="uid://cuw0o3ktjm24x"]
 
 [ext_resource type="PackedScene" uid="uid://bwscpu2dpp4ra" path="res://models/background detail/enmounds.glb" id="1_tygrl"]
 [ext_resource type="PackedScene" uid="uid://dtym70va0lqjd" path="res://models/background detail/enrocks.glb" id="2_u1smo"]
 [ext_resource type="PackedScene" uid="uid://bklfqq46gvxok" path="res://models/background detail/entrees.glb" id="3_ketsa"]
+[ext_resource type="PackedScene" uid="uid://cgt7uqgjkfl7y" path="res://models/background detail/enviroment ring.glb" id="4_vnb0r"]
 
 [node name="Outside Window" type="Node3D"]
 
 [node name="enmounds" parent="." instance=ExtResource("1_tygrl")]
-transform = Transform3D(0.776531, 0, -0.63008, 0, 1, 0, 0.63008, 0, 0.776531, -43.9595, -0.685776, 8.39262)
+transform = Transform3D(0.45533, 0, -1.30911, 0, 1, 0, 1.50794, 0, 0.395294, -14.8345, -0.685776, -0.218004)
 
 [node name="enrocks" parent="." instance=ExtResource("2_u1smo")]
-transform = Transform3D(0.341774, 0, -0.939782, 0, 1, 0, 0.939782, 0, 0.341774, -41.7832, 0, 0)
+transform = Transform3D(-0.0555079, 0, -0.998458, 0, 1, 0, 0.998458, 0, -0.0555079, -22.8265, 0, 0)
 
 [node name="enrocks2" parent="." instance=ExtResource("2_u1smo")]
 transform = Transform3D(-0.3289, 0, -0.944365, 0, 1, 0, 0.944365, 0, -0.3289, -68.9032, 0, 0)
-
-[node name="enmounds2" parent="." instance=ExtResource("1_tygrl")]
-transform = Transform3D(-0.38149, 0, -0.924373, 0, 1, 0, 0.924373, 0, -0.38149, -56.1957, -0.685776, -7.74672)
 
 [node name="entrees" parent="." instance=ExtResource("3_ketsa")]
 transform = Transform3D(-0.266582, 0, -0.963812, 0, 1, 0, 0.963812, 0, -0.266582, -74.8428, 0, 0)
@@ -53,3 +51,16 @@ transform = Transform3D(1.54892, 0, -0.550393, 0, 1.59967, 0, 1.71904, 0, 0.4959
 
 [node name="entrees5" parent="." instance=ExtResource("3_ketsa")]
 transform = Transform3D(-0.0236108, 0, 1.65196, 0, 1.59967, 0, -0.182216, 0, -0.214054, -29.9323, -1.92988, -28.9879)
+
+[node name="enviroment ring" parent="." instance=ExtResource("4_vnb0r")]
+
+[node name="arvore_geo" parent="enviroment ring" index="0"]
+transform = Transform3D(173.936, 0, 0, 0, 0, -11.0424, 0, 146.652, 0, -2.66338, 2.68315, 0)
+
+[node name="groundlevelparallax_geo" parent="enviroment ring" index="1"]
+visible = false
+
+[node name="montanhas_geo" parent="enviroment ring" index="2"]
+transform = Transform3D(-138.003, -134.639, 0, 0, 0, -34.6193, 134.639, -138.003, 0, -62.5916, 0.859038, 0)
+
+[editable path="enviroment ring"]

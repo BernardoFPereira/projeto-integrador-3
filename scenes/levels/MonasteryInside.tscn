@@ -1,4 +1,4 @@
-[gd_scene load_steps=2213 format=3 uid="uid://imk5ccgfjb4n"]
+[gd_scene load_steps=2226 format=3 uid="uid://imk5ccgfjb4n"]
 
 [ext_resource type="PackedScene" uid="uid://drak54rbqaie4" path="res://scenes/ui.tscn" id="1_m3lcs"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_wne16"]
@@ -10,8 +10,8 @@
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/mesh_vector_data.gd" id="5_xy45x"]
 [ext_resource type="PackedScene" uid="uid://cnrts4hhd04e7" path="res://scenes/Player.tscn" id="6_62anp"]
 [ext_resource type="Material" uid="uid://dpaydme73lkql" path="res://materials/PH_door.tres" id="6_fruiv"]
-[ext_resource type="PackedScene" uid="uid://dow6qr7nugw54" path="res://scenes/HolyPage2_Inspect.tscn" id="6_lmgdg"]
-[ext_resource type="PackedScene" uid="uid://bm3v4rt6tx85w" path="res://scenes/HolyPage3_Inspect.tscn" id="7_0hbqy"]
+[ext_resource type="PackedScene" path="res://scenes/HolyPage2_Inspect.tscn" id="6_lmgdg"]
+[ext_resource type="PackedScene" path="res://scenes/HolyPage3_Inspect.tscn" id="7_0hbqy"]
 [ext_resource type="Environment" uid="uid://dfx7slq5dxvw3" path="res://environment_resource.tres" id="7_nvrtf"]
 [ext_resource type="Material" uid="uid://benx3vras2tbg" path="res://materials/stone_wall1.tres" id="7_q2hrp"]
 [ext_resource type="Material" uid="uid://dj7lxofx8eg1b" path="res://materials/wooden_planks.tres" id="7_wob2y"]
@@ -20,13 +20,13 @@
 [ext_resource type="AudioStream" uid="uid://dpjwkmpdalovg" path="res://audio/dungeon_ambient_1.ogg" id="13_x0f82"]
 [ext_resource type="AudioStream" uid="uid://hxcsm5dh82b" path="res://audio/334148__svampen__rain-light-loopable.wav" id="14_rm7ij"]
 [ext_resource type="Material" uid="uid://d66jqkr21twv" path="res://materials/stonegroundchapel.tres" id="16_ywy64"]
-[ext_resource type="Material" uid="uid://wn3bq6w6htft" path="res://materials/stonegroundchapel03.tres" id="21_thpfn"]
-[ext_resource type="Material" uid="uid://dba5pktu5ws21" path="res://materials/stonegroundchapel04.tres" id="22_6qnck"]
+[ext_resource type="Material" path="res://materials/stonegroundchapel03.tres" id="21_thpfn"]
+[ext_resource type="Material" path="res://materials/stonegroundchapel04.tres" id="22_6qnck"]
 [ext_resource type="PackedScene" uid="uid://ca5f2b28eoiml" path="res://book_stack_2.tscn" id="22_mxde0"]
 [ext_resource type="PackedScene" uid="uid://dph66wxcgr54" path="res://scenes/prefabs/Room Prefabs/giga_level_design.tscn" id="23_dmbe0"]
-[ext_resource type="Material" uid="uid://ct066cgrk1aes" path="res://materials/stonegroundchapel02.tres" id="23_p23qe"]
+[ext_resource type="Material" path="res://materials/stonegroundchapel02.tres" id="23_p23qe"]
 [ext_resource type="PackedScene" uid="uid://bgq3f8nmtd42e" path="res://book_stack_1.tscn" id="23_scd3h"]
-[ext_resource type="Material" uid="uid://c6sax7aaq4yo5" path="res://materials/grassy.tres" id="24_i41xr"]
+[ext_resource type="Material" path="res://materials/grassy.tres" id="24_i41xr"]
 [ext_resource type="PackedScene" uid="uid://dvu67awddwb6q" path="res://scenes/angel_statue.tscn" id="25_dk8ee"]
 [ext_resource type="PackedScene" uid="uid://dh4r6fk7n0ge3" path="res://scenes/prefabs/table.tscn" id="26_7udxk"]
 [ext_resource type="PackedScene" uid="uid://cfbqdor8tyw7e" path="res://scenes/prefabs/benchsmall.tscn" id="26_cjtp2"]
@@ -35,31 +35,31 @@
 [ext_resource type="PackedScene" uid="uid://bcfr0cbpfsy05" path="res://scenes/prefabs/candle_02.tscn" id="29_2n8mc"]
 [ext_resource type="PackedScene" uid="uid://kd5t6pntlln1" path="res://scenes/prefabs/evilpaper.tscn" id="29_3rtpb"]
 [ext_resource type="PackedScene" uid="uid://cvxii1ppsp1bo" path="res://scenes/broken_chair.tscn" id="29_506c8"]
-[ext_resource type="PackedScene" uid="uid://bw2wb40x5yf4m" path="res://scenes/prefabs/Room Prefabs/lighting_pass.tscn" id="29_ftsje"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/Room Prefabs/lighting_pass.tscn" id="29_ftsje"]
 [ext_resource type="PackedScene" uid="uid://m7trdro12xfi" path="res://scenes/prefabs/cemetery.tscn" id="30_16gqg"]
 [ext_resource type="PackedScene" uid="uid://d0fj8u3meqg3v" path="res://scenes/prefabs/chair_model.tscn" id="30_k1gpb"]
 [ext_resource type="PackedScene" uid="uid://cgfowgyio5ni3" path="res://scenes/Key.tscn" id="30_t8tnx"]
 [ext_resource type="PackedScene" uid="uid://dwg5tkv3m03yg" path="res://scenes/prefabs/brokenbed.tscn" id="31_s4hnk"]
-[ext_resource type="PackedScene" uid="uid://bhtox6xw4olb5" path="res://scenes/prefabs/Room Prefabs/pequenos_vitrais.tscn" id="34_ea2n7"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/Room Prefabs/pequenos_vitrais.tscn" id="34_ea2n7"]
 [ext_resource type="PackedScene" uid="uid://du4lyekygvy8q" path="res://scenes/prefabs/candle_01.tscn" id="36_7q40q"]
 [ext_resource type="PackedScene" uid="uid://c88sl2vxwrldk" path="res://scenes/prefabs/Room Prefabs/front_chapel_altar.tscn" id="36_8wkyj"]
-[ext_resource type="PackedScene" uid="uid://dvs7a03xf3jah" path="res://scenes/prefabs/Room Prefabs/workdesk third floor.tscn" id="37_325qb"]
-[ext_resource type="PackedScene" uid="uid://btgit6gihlpns" path="res://scenes/inspect_room.tscn" id="37_devb0"]
-[ext_resource type="PackedScene" uid="uid://bj2j2gm8dx44x" path="res://scenes/altar_item_01.tscn" id="38_5h783"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/Room Prefabs/workdesk third floor.tscn" id="37_325qb"]
+[ext_resource type="PackedScene" path="res://scenes/inspect_room.tscn" id="37_devb0"]
+[ext_resource type="PackedScene" path="res://scenes/altar_item_01.tscn" id="38_5h783"]
 [ext_resource type="PackedScene" uid="uid://cyuqysv1hojuw" path="res://scenes/prefabs/candle_03.tscn" id="38_ap11j"]
-[ext_resource type="PackedScene" uid="uid://bebiok2q3k8x7" path="res://scenes/prefabs/Room Prefabs/statues_and_trash_corridor.tscn" id="38_bv23t"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/Room Prefabs/statues_and_trash_corridor.tscn" id="38_bv23t"]
 [ext_resource type="PackedScene" uid="uid://bgydr8f43d8yg" path="res://scenes/prefabs/candelabra.tscn" id="39_0xqyo"]
-[ext_resource type="PackedScene" uid="uid://cwccv75end4v6" path="res://scenes/altar_item_02.tscn" id="39_jd7hi"]
-[ext_resource type="PackedScene" uid="uid://ctu15vujrmhaw" path="res://scenes/altar_item_03.tscn" id="40_a68l3"]
-[ext_resource type="PackedScene" uid="uid://bxnl5m17btmyj" path="res://scenes/anim_trigger.tscn" id="41_57uwx"]
-[ext_resource type="PackedScene" uid="uid://btm3k0ke63eaw" path="res://scenes/altar_item_base.tscn" id="41_o6i7f"]
+[ext_resource type="PackedScene" path="res://scenes/altar_item_02.tscn" id="39_jd7hi"]
+[ext_resource type="PackedScene" path="res://scenes/altar_item_03.tscn" id="40_a68l3"]
+[ext_resource type="PackedScene" path="res://scenes/anim_trigger.tscn" id="41_57uwx"]
+[ext_resource type="PackedScene" path="res://scenes/altar_item_base.tscn" id="41_o6i7f"]
 [ext_resource type="PackedScene" uid="uid://dgwexqpva8xhx" path="res://scenes/HolyPage.tscn" id="42_sfyr8"]
-[ext_resource type="AudioStream" uid="uid://pv4cnrf3p4wa" path="res://audio/book_down.ogg" id="43_oxgrl"]
-[ext_resource type="AudioStream" uid="uid://bwqg18nknwevo" path="res://audio/stone_door.ogg" id="45_o5gvt"]
-[ext_resource type="PackedScene" uid="uid://bw0xkyh68x601" path="res://scenes/prefabs/Room Prefabs/jardim arvore.tscn" id="47_aoqfs"]
+[ext_resource type="AudioStream" path="res://audio/book_down.ogg" id="43_oxgrl"]
+[ext_resource type="AudioStream" path="res://audio/stone_door.ogg" id="45_o5gvt"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/Room Prefabs/jardim arvore.tscn" id="47_aoqfs"]
 [ext_resource type="PackedScene" uid="uid://ddhttv3uxb3pl" path="res://scenes/prefabs/altar.tscn" id="51_kybql"]
 [ext_resource type="PackedScene" uid="uid://jhvky7xprbq" path="res://scenes/prefabs/Room Prefabs/garden_bench.tscn" id="52_s880u"]
-[ext_resource type="PackedScene" uid="uid://jsijurekpmab" path="res://scenes/prefabs/Room Prefabs/outside_window.tscn" id="60_m06fk"]
+[ext_resource type="PackedScene" uid="uid://cuw0o3ktjm24x" path="res://scenes/prefabs/Room Prefabs/outside_window.tscn" id="60_m06fk"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y81c2"]
 emission_shape = 3
@@ -20229,6 +20229,137 @@ face_vertex_data = {
 "vertex_index": SubResource("Resource_tg22u")
 }
 
+[sub_resource type="Resource" id="Resource_8ci4k"]
+script = ExtResource("2_34kdn")
+data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+name = &"selected"
+category = ""
+data_type = 0
+stride = 1
+
+[sub_resource type="Resource" id="Resource_vlhhd"]
+script = ExtResource("3_xdhrx")
+data = PackedInt32Array(0, 0, 0, 0, 0, 0)
+name = &"material_index"
+category = ""
+data_type = 1
+stride = 1
+
+[sub_resource type="Resource" id="Resource_wdyyq"]
+script = ExtResource("2_34kdn")
+data = PackedByteArray(1, 1, 1, 1, 1, 1)
+name = &"visible"
+category = ""
+data_type = 0
+stride = 1
+
+[sub_resource type="Resource" id="Resource_t0fe2"]
+script = ExtResource("4_yd0by")
+data = PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+name = &"color"
+category = ""
+data_type = 4
+stride = 4
+
+[sub_resource type="Resource" id="Resource_f21j2"]
+script = ExtResource("4_yd0by")
+data = PackedFloat32Array(1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0)
+name = &"uv_transform"
+category = ""
+data_type = 8
+stride = 6
+
+[sub_resource type="Resource" id="Resource_kheoj"]
+script = ExtResource("2_34kdn")
+data = PackedByteArray(1, 1, 1, 1, 1, 1)
+name = &"selected"
+category = ""
+data_type = 0
+stride = 1
+
+[sub_resource type="Resource" id="Resource_61ghw"]
+script = ExtResource("3_xdhrx")
+data = PackedInt32Array(0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5)
+name = &"face_index"
+category = ""
+data_type = 1
+stride = 1
+
+[sub_resource type="Resource" id="Resource_f0er1"]
+script = ExtResource("3_xdhrx")
+data = PackedInt32Array(0, 1, 2, 3, 7, 6, 5, 4, 1, 0, 4, 5, 2, 1, 5, 6, 3, 2, 6, 7, 0, 3, 7, 4)
+name = &"vertex_index"
+category = ""
+data_type = 1
+stride = 1
+
+[sub_resource type="Resource" id="Resource_p8xxb"]
+script = ExtResource("4_yd0by")
+data = PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+name = &"color"
+category = ""
+data_type = 4
+stride = 4
+
+[sub_resource type="Resource" id="Resource_4ss71"]
+script = ExtResource("4_yd0by")
+data = PackedFloat32Array(-0.997597, 0, -0.0692776, -0.997597, 0, -0.0692776, -0.997597, 0, -0.0692776, -0.997597, 0, -0.0692776, 0.997597, 0, 0.0692776, 0.997597, 0, 0.0692776, 0.997597, 0, 0.0692776, 0.997597, 0, 0.0692776, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, -0.190022, 0, 0.98178, -0.190022, 0, 0.98178, -0.190022, 0, 0.98178, -0.190022, 0, 0.98178, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0.190022, 0, -0.98178, 0.190022, 0, -0.98178, 0.190022, 0, -0.98178, 0.190022, 0, -0.98178)
+name = &"normal"
+category = ""
+data_type = 6
+stride = 3
+
+[sub_resource type="Resource" id="Resource_73xa4"]
+script = ExtResource("4_yd0by")
+data = PackedFloat32Array(-26, 1, -45, -31, 1, 27, -31, 0, 27, -26, 0, -45, 5, 1, -39, 0, 1, 33, 0, 0, 33, 5, 0, -39)
+name = &"position"
+category = ""
+data_type = 6
+stride = 3
+
+[sub_resource type="Resource" id="Resource_cdm6s"]
+script = ExtResource("2_34kdn")
+data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0)
+name = &"selected"
+category = ""
+data_type = 0
+stride = 1
+
+[sub_resource type="Resource" id="Resource_x2bxi"]
+script = ExtResource("5_xy45x")
+num_vertices = 8
+num_edges = 12
+num_faces = 6
+num_face_vertices = 24
+active_vertex = -1
+active_edge = -1
+active_face = 0
+active_face_vertex = -1
+edge_vertex_indices = PackedInt32Array(0, 1, 1, 2, 2, 3, 3, 0, 7, 6, 6, 5, 5, 4, 4, 7, 0, 4, 5, 1, 6, 2, 7, 3)
+edge_face_indices = PackedInt32Array(0, 2, 0, 3, 0, 4, 0, 5, 1, 4, 1, 3, 1, 2, 1, 5, 2, 5, 2, 3, 3, 4, 4, 5)
+face_vertex_count = PackedInt32Array(4, 4, 4, 4, 4, 4)
+face_vertex_indices = PackedInt32Array(0, 1, 2, 3, 7, 6, 5, 4, 1, 0, 4, 5, 2, 1, 5, 6, 3, 2, 6, 7, 0, 3, 7, 4)
+vertex_data = {
+"position": SubResource("Resource_73xa4"),
+"selected": SubResource("Resource_cdm6s")
+}
+edge_data = {
+"selected": SubResource("Resource_8ci4k")
+}
+face_data = {
+"color": SubResource("Resource_t0fe2"),
+"material_index": SubResource("Resource_vlhhd"),
+"selected": SubResource("Resource_kheoj"),
+"uv_transform": SubResource("Resource_f21j2"),
+"visible": SubResource("Resource_wdyyq")
+}
+face_vertex_data = {
+"color": SubResource("Resource_p8xxb"),
+"face_index": SubResource("Resource_61ghw"),
+"normal": SubResource("Resource_4ss71"),
+"vertex_index": SubResource("Resource_f0er1")
+}
+
 [sub_resource type="Resource" id="Resource_gk0fs"]
 script = ExtResource("2_34kdn")
 data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
@@ -22091,7 +22222,7 @@ monitorable = false
 [node name="AltarItems" type="Node" parent="Interactable"]
 
 [node name="AltarItem3" parent="Interactable/AltarItems" instance=ExtResource("38_5h783")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8894, 6.28886, 3.15439)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8894, 5.12505, -12.5519)
 item_order = 2
 
 [node name="AltarItem1" parent="Interactable/AltarItems" instance=ExtResource("39_jd7hi")]
@@ -23068,6 +23199,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 6.5, 13.25)
 script = ExtResource("1_wne16")
 mesh_vector_data = SubResource("Resource_g3a3g")
 materials = Array[Material]([ExtResource("13_3l7ma")])
+
+[node name="Block_128" type="Node3D" parent="LevelBlocks/Floor1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, -2, 9)
+script = ExtResource("1_wne16")
+mesh_vector_data = SubResource("Resource_x2bxi")
+materials = Array[Material]([ExtResource("24_i41xr")])
 
 [node name="GardenAltar" type="Node3D" parent="LevelBlocks"]
 
