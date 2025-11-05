@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dba5pktu5ws21"]
+
+[ext_resource type="Texture2D" uid="uid://dg02h4m5jqrv7" path="res://textures/drkline_mtl_BaseColor.1001.png" id="1_54obf"]
+
+[resource]
+albedo_texture = ExtResource("1_54obf")
