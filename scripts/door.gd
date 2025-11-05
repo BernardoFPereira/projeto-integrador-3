@@ -1,8 +1,10 @@
 extends Node3D
+class_name Door
 
 @onready var locked_audio = $DoorMesh/LockedAudio
 @onready var open_audio = $DoorMesh/OpenAudio
 @onready var animation_player = $AnimationPlayer
+@onready var interact_area = $DoorMesh/InteractArea
 
 @export var state := DoorState.CLOSED
 @export var key: Node3D
@@ -33,6 +35,8 @@ func set_state(new_state):
 	match state:
 		DoorState.OPEN:
 			open_audio.play()
+			animation_player.play("open")
+			interact_area.monitoring = false
 			pass
 		DoorState.CLOSED:
 			pass
@@ -46,9 +50,10 @@ func interact():
 		DoorState.OPEN:
 			pass
 		DoorState.CLOSED:
-			open_audio.play()
-			animation_player.play("open")
-			
+			set_state(DoorState.OPEN)
+			#open_audio.play()
+			#animation_player.play("open")
+			pass
 		DoorState.LOCKED:
 			#for k in player.collected_keys:
 				#print("collected key 1: %s" % k)

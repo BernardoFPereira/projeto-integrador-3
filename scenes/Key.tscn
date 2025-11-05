@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgfowgyio5ni3"]
+[gd_scene load_steps=13 format=3 uid="uid://cgfowgyio5ni3"]
 
 [ext_resource type="Script" path="res://scripts/key.gd" id="1_14ing"]
 
@@ -46,6 +46,45 @@ shadow_mesh = SubResource("ArrayMesh_nop24")
 [sub_resource type="SphereShape3D" id="SphereShape3D_jqmej"]
 radius = 1.47646
 
+[sub_resource type="Curve" id="Curve_lca4j"]
+_data = [Vector2(0, 0), 0.0, 3.81062, 0, 0, Vector2(1, 0), -3.18331, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_hnysd"]
+curve = SubResource("Curve_lca4j")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cnos5"]
+lifetime_randomness = 0.45
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(0.2, 0.2, 0.2)
+direction = Vector3(0, 0, 0)
+initial_velocity_min = 0.2
+initial_velocity_max = 0.5
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_hnysd")
+
+[sub_resource type="Gradient" id="Gradient_vxka4"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.120332, 0.427386, 0.692946)
+colors = PackedColorArray(32.1216, 32.1216, 32.1216, 1, 14.7384, 14.7384, 14.7384, 0.441442, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dffvo"]
+gradient = SubResource("Gradient_vxka4")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lyp8l"]
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("GradientTexture2D_dffvo")
+billboard_mode = 1
+billboard_keep_scale = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_t5i8c"]
+material = SubResource("StandardMaterial3D_lyp8l")
+
 [node name="Key" type="Node3D" groups=["Key"]]
 script = ExtResource("1_14ing")
 
@@ -63,3 +102,14 @@ collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea"]
 shape = SubResource("SphereShape3D_jqmej")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.412164, 0, 0)
+amount = 2
+amount_ratio = 0.359
+lifetime = 0.6
+explosiveness = 0.1
+visibility_aabb = AABB(-1.7283, -1.60061, -1.85913, 3.45661, 3.20122, 3.71827)
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_cnos5")
+draw_pass_1 = SubResource("QuadMesh_t5i8c")
