@@ -9,6 +9,21 @@
 [ext_resource type="PackedScene" uid="uid://c2lftgn6ri05y" path="res://scenes/prefabs/shelfsmall.tscn" id="7_rkk33"]
 [ext_resource type="AudioStream" uid="uid://br4o0awavkpb1" path="res://audio/boulder_drop.ogg" id="8_2ubua"]
 
+[sub_resource type="Animation" id="Animation_lftkt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AudioStreamPlayer3D:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_8dfhj"]
 resource_name = "caiuestatua"
 tracks/0/type = "rotation_3d"
@@ -69,21 +84,6 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
-}
-
-[sub_resource type="Animation" id="Animation_lftkt"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AudioStreamPlayer3D:playing")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mimby"]

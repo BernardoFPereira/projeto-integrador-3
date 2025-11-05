@@ -22093,7 +22093,7 @@ transform = Transform3D(-2.15518e-08, -0.139072, -0.481354, 0.501042, -9.72549e-
 script = ExtResource("13_g5r84")
 
 [node name="ConfessionaryKey" parent="Interactable/LibraryItemTrigger" instance=ExtResource("30_t8tnx")]
-transform = Transform3D(-2.89629e-08, -0.425393, -0.264732, 0.501042, -2.19012e-08, -1.96234e-08, 5.08884e-09, -0.264732, 0.425393, 11.4843, 13.3283, -10.7658)
+transform = Transform3D(-1.55029e-06, -0.425393, -0.264732, 0.501042, -1.81376e-06, -1.96234e-08, -9.41669e-07, -0.264732, 0.425393, 11.4843, 13.3283, -10.7658)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Interactable/LibraryItemTrigger"]
 libraries = {
@@ -23380,7 +23380,7 @@ transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, -3.97412
 transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, -3.98562, 0.707431, 2.88253)
 
 [node name="BasicBook" parent="Giga Level Design/library" index="3"]
-transform = Transform3D(1, 0, 0, 0, 0.528438, 0.848972, 0, -0.848972, 0.528438, -3.96942, 2.60421, 2.41942)
+transform = Transform3D(1, 0, 0, 0, 0.528435, 0.848974, 0, -0.848974, 0.528435, -3.96942, 2.60421, 2.41942)
 
 [node name="shelfbig" parent="Giga Level Design/library/Bookshelfs Library" index="8"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.564, -0.243713, 1.60981)

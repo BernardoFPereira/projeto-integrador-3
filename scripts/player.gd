@@ -227,6 +227,9 @@ func _on_interact_area_area_entered(area):
 		
 	if area_parent.is_in_group("Door") and !can_interact:
 		print("DOOR DETECTEDEBERB")
+		var door: Door = area_parent.get_parent()
+		if door.state == door.DoorState.OPEN:
+			return
 		can_interact = true
 		interact_target = area_parent.get_parent()
 		
