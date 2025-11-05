@@ -2074,7 +2074,7 @@ mesh = SubResource("ArrayMesh_2agfk")
 skin = SubResource("Skin_uhfow")
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="ThePriest/Padre-walkF-walkB/Padre-Animated/Skeleton3D"]
-transform = Transform3D(-0.402028, 0.0611505, 0.913583, 0.832659, 0.439441, 0.337002, -0.380859, 0.896187, -0.227585, -0.431938, 1.67903, 0.536527)
+transform = Transform3D(-0.402028, 0.061151, 0.913583, 0.832658, 0.439443, 0.337002, -0.380859, 0.896187, -0.227586, -0.431938, 1.67903, 0.536526)
 bone_name = "hand.R"
 bone_idx = 21
 
