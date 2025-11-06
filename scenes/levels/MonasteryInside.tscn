@@ -1,4 +1,4 @@
-[gd_scene load_steps=2226 format=3 uid="uid://imk5ccgfjb4n"]
+[gd_scene load_steps=2227 format=3 uid="uid://imk5ccgfjb4n"]
 
 [ext_resource type="PackedScene" uid="uid://drak54rbqaie4" path="res://scenes/ui.tscn" id="1_m3lcs"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_wne16"]
@@ -10,8 +10,8 @@
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/mesh_vector_data.gd" id="5_xy45x"]
 [ext_resource type="PackedScene" uid="uid://cnrts4hhd04e7" path="res://scenes/Player.tscn" id="6_62anp"]
 [ext_resource type="Material" uid="uid://dpaydme73lkql" path="res://materials/PH_door.tres" id="6_fruiv"]
-[ext_resource type="PackedScene" path="res://scenes/HolyPage2_Inspect.tscn" id="6_lmgdg"]
-[ext_resource type="PackedScene" path="res://scenes/HolyPage3_Inspect.tscn" id="7_0hbqy"]
+[ext_resource type="PackedScene" uid="uid://dow6qr7nugw54" path="res://scenes/HolyPage2_Inspect.tscn" id="6_lmgdg"]
+[ext_resource type="PackedScene" uid="uid://bm3v4rt6tx85w" path="res://scenes/HolyPage3_Inspect.tscn" id="7_0hbqy"]
 [ext_resource type="Environment" uid="uid://dfx7slq5dxvw3" path="res://environment_resource.tres" id="7_nvrtf"]
 [ext_resource type="Material" uid="uid://benx3vras2tbg" path="res://materials/stone_wall1.tres" id="7_q2hrp"]
 [ext_resource type="Material" uid="uid://dj7lxofx8eg1b" path="res://materials/wooden_planks.tres" id="7_wob2y"]
@@ -20,13 +20,13 @@
 [ext_resource type="AudioStream" uid="uid://dpjwkmpdalovg" path="res://audio/dungeon_ambient_1.ogg" id="13_x0f82"]
 [ext_resource type="AudioStream" uid="uid://hxcsm5dh82b" path="res://audio/334148__svampen__rain-light-loopable.wav" id="14_rm7ij"]
 [ext_resource type="Material" uid="uid://d66jqkr21twv" path="res://materials/stonegroundchapel.tres" id="16_ywy64"]
-[ext_resource type="Material" path="res://materials/stonegroundchapel03.tres" id="21_thpfn"]
-[ext_resource type="Material" path="res://materials/stonegroundchapel04.tres" id="22_6qnck"]
+[ext_resource type="Material" uid="uid://wn3bq6w6htft" path="res://materials/stonegroundchapel03.tres" id="21_thpfn"]
+[ext_resource type="Material" uid="uid://dba5pktu5ws21" path="res://materials/stonegroundchapel04.tres" id="22_6qnck"]
 [ext_resource type="PackedScene" uid="uid://ca5f2b28eoiml" path="res://book_stack_2.tscn" id="22_mxde0"]
 [ext_resource type="PackedScene" uid="uid://dph66wxcgr54" path="res://scenes/prefabs/Room Prefabs/giga_level_design.tscn" id="23_dmbe0"]
-[ext_resource type="Material" path="res://materials/stonegroundchapel02.tres" id="23_p23qe"]
+[ext_resource type="Material" uid="uid://ct066cgrk1aes" path="res://materials/stonegroundchapel02.tres" id="23_p23qe"]
 [ext_resource type="PackedScene" uid="uid://bgq3f8nmtd42e" path="res://book_stack_1.tscn" id="23_scd3h"]
-[ext_resource type="Material" path="res://materials/grassy.tres" id="24_i41xr"]
+[ext_resource type="Material" uid="uid://c6sax7aaq4yo5" path="res://materials/grassy.tres" id="24_i41xr"]
 [ext_resource type="PackedScene" uid="uid://dvu67awddwb6q" path="res://scenes/angel_statue.tscn" id="25_dk8ee"]
 [ext_resource type="PackedScene" uid="uid://dh4r6fk7n0ge3" path="res://scenes/prefabs/table.tscn" id="26_7udxk"]
 [ext_resource type="PackedScene" uid="uid://cfbqdor8tyw7e" path="res://scenes/prefabs/benchsmall.tscn" id="26_cjtp2"]
@@ -40,25 +40,26 @@
 [ext_resource type="PackedScene" uid="uid://d0fj8u3meqg3v" path="res://scenes/prefabs/chair_model.tscn" id="30_k1gpb"]
 [ext_resource type="PackedScene" uid="uid://cgfowgyio5ni3" path="res://scenes/Key.tscn" id="30_t8tnx"]
 [ext_resource type="PackedScene" uid="uid://dwg5tkv3m03yg" path="res://scenes/prefabs/brokenbed.tscn" id="31_s4hnk"]
-[ext_resource type="PackedScene" path="res://scenes/prefabs/Room Prefabs/pequenos_vitrais.tscn" id="34_ea2n7"]
+[ext_resource type="PackedScene" uid="uid://bhtox6xw4olb5" path="res://scenes/prefabs/Room Prefabs/pequenos_vitrais.tscn" id="34_ea2n7"]
 [ext_resource type="PackedScene" uid="uid://du4lyekygvy8q" path="res://scenes/prefabs/candle_01.tscn" id="36_7q40q"]
 [ext_resource type="PackedScene" uid="uid://c88sl2vxwrldk" path="res://scenes/prefabs/Room Prefabs/front_chapel_altar.tscn" id="36_8wkyj"]
 [ext_resource type="PackedScene" path="res://scenes/prefabs/Room Prefabs/workdesk third floor.tscn" id="37_325qb"]
-[ext_resource type="PackedScene" path="res://scenes/inspect_room.tscn" id="37_devb0"]
+[ext_resource type="PackedScene" uid="uid://btgit6gihlpns" path="res://scenes/inspect_room.tscn" id="37_devb0"]
 [ext_resource type="PackedScene" path="res://scenes/altar_item_01.tscn" id="38_5h783"]
 [ext_resource type="PackedScene" uid="uid://cyuqysv1hojuw" path="res://scenes/prefabs/candle_03.tscn" id="38_ap11j"]
-[ext_resource type="PackedScene" path="res://scenes/prefabs/Room Prefabs/statues_and_trash_corridor.tscn" id="38_bv23t"]
+[ext_resource type="PackedScene" uid="uid://bebiok2q3k8x7" path="res://scenes/prefabs/Room Prefabs/statues_and_trash_corridor.tscn" id="38_bv23t"]
 [ext_resource type="PackedScene" uid="uid://bgydr8f43d8yg" path="res://scenes/prefabs/candelabra.tscn" id="39_0xqyo"]
 [ext_resource type="PackedScene" path="res://scenes/altar_item_02.tscn" id="39_jd7hi"]
 [ext_resource type="PackedScene" path="res://scenes/altar_item_03.tscn" id="40_a68l3"]
-[ext_resource type="PackedScene" path="res://scenes/anim_trigger.tscn" id="41_57uwx"]
-[ext_resource type="PackedScene" path="res://scenes/altar_item_base.tscn" id="41_o6i7f"]
+[ext_resource type="PackedScene" uid="uid://bxnl5m17btmyj" path="res://scenes/anim_trigger.tscn" id="41_57uwx"]
+[ext_resource type="PackedScene" uid="uid://btm3k0ke63eaw" path="res://scenes/altar_item_base.tscn" id="41_o6i7f"]
 [ext_resource type="PackedScene" uid="uid://dgwexqpva8xhx" path="res://scenes/HolyPage.tscn" id="42_sfyr8"]
-[ext_resource type="AudioStream" path="res://audio/book_down.ogg" id="43_oxgrl"]
-[ext_resource type="AudioStream" path="res://audio/stone_door.ogg" id="45_o5gvt"]
-[ext_resource type="PackedScene" path="res://scenes/prefabs/Room Prefabs/jardim arvore.tscn" id="47_aoqfs"]
+[ext_resource type="AudioStream" uid="uid://pv4cnrf3p4wa" path="res://audio/book_down.ogg" id="43_oxgrl"]
+[ext_resource type="AudioStream" uid="uid://bwqg18nknwevo" path="res://audio/stone_door.ogg" id="45_o5gvt"]
+[ext_resource type="PackedScene" uid="uid://bw0xkyh68x601" path="res://scenes/prefabs/Room Prefabs/jardim arvore.tscn" id="47_aoqfs"]
 [ext_resource type="PackedScene" uid="uid://ddhttv3uxb3pl" path="res://scenes/prefabs/altar.tscn" id="51_kybql"]
 [ext_resource type="PackedScene" uid="uid://jhvky7xprbq" path="res://scenes/prefabs/Room Prefabs/garden_bench.tscn" id="52_s880u"]
+[ext_resource type="PackedScene" uid="uid://dtbr6wi5uu3oe" path="res://scenes/prefabs/Room Prefabs/chapel_lights.tscn" id="55_qex18"]
 [ext_resource type="PackedScene" uid="uid://cuw0o3ktjm24x" path="res://scenes/prefabs/Room Prefabs/outside_window.tscn" id="60_m06fk"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y81c2"]
@@ -20237,22 +20238,6 @@ category = ""
 data_type = 0
 stride = 1
 
-[sub_resource type="Resource" id="Resource_vlhhd"]
-script = ExtResource("3_xdhrx")
-data = PackedInt32Array(0, 0, 0, 0, 0, 0)
-name = &"material_index"
-category = ""
-data_type = 1
-stride = 1
-
-[sub_resource type="Resource" id="Resource_wdyyq"]
-script = ExtResource("2_34kdn")
-data = PackedByteArray(1, 1, 1, 1, 1, 1)
-name = &"visible"
-category = ""
-data_type = 0
-stride = 1
-
 [sub_resource type="Resource" id="Resource_t0fe2"]
 script = ExtResource("4_yd0by")
 data = PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
@@ -20261,13 +20246,13 @@ category = ""
 data_type = 4
 stride = 4
 
-[sub_resource type="Resource" id="Resource_f21j2"]
-script = ExtResource("4_yd0by")
-data = PackedFloat32Array(1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0)
-name = &"uv_transform"
+[sub_resource type="Resource" id="Resource_vlhhd"]
+script = ExtResource("3_xdhrx")
+data = PackedInt32Array(0, 0, 0, 0, 0, 0)
+name = &"material_index"
 category = ""
-data_type = 8
-stride = 6
+data_type = 1
+stride = 1
 
 [sub_resource type="Resource" id="Resource_kheoj"]
 script = ExtResource("2_34kdn")
@@ -20277,20 +20262,20 @@ category = ""
 data_type = 0
 stride = 1
 
-[sub_resource type="Resource" id="Resource_61ghw"]
-script = ExtResource("3_xdhrx")
-data = PackedInt32Array(0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5)
-name = &"face_index"
+[sub_resource type="Resource" id="Resource_f21j2"]
+script = ExtResource("4_yd0by")
+data = PackedFloat32Array(1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0)
+name = &"uv_transform"
 category = ""
-data_type = 1
-stride = 1
+data_type = 8
+stride = 6
 
-[sub_resource type="Resource" id="Resource_f0er1"]
-script = ExtResource("3_xdhrx")
-data = PackedInt32Array(0, 1, 2, 3, 7, 6, 5, 4, 1, 0, 4, 5, 2, 1, 5, 6, 3, 2, 6, 7, 0, 3, 7, 4)
-name = &"vertex_index"
+[sub_resource type="Resource" id="Resource_wdyyq"]
+script = ExtResource("2_34kdn")
+data = PackedByteArray(1, 1, 1, 1, 1, 1)
+name = &"visible"
 category = ""
-data_type = 1
+data_type = 0
 stride = 1
 
 [sub_resource type="Resource" id="Resource_p8xxb"]
@@ -20301,6 +20286,14 @@ category = ""
 data_type = 4
 stride = 4
 
+[sub_resource type="Resource" id="Resource_61ghw"]
+script = ExtResource("3_xdhrx")
+data = PackedInt32Array(0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5)
+name = &"face_index"
+category = ""
+data_type = 1
+stride = 1
+
 [sub_resource type="Resource" id="Resource_4ss71"]
 script = ExtResource("4_yd0by")
 data = PackedFloat32Array(-0.997597, 0, -0.0692776, -0.997597, 0, -0.0692776, -0.997597, 0, -0.0692776, -0.997597, 0, -0.0692776, 0.997597, 0, 0.0692776, 0.997597, 0, 0.0692776, 0.997597, 0, 0.0692776, 0.997597, 0, 0.0692776, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, -0.190022, 0, 0.98178, -0.190022, 0, 0.98178, -0.190022, 0, 0.98178, -0.190022, 0, 0.98178, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0.190022, 0, -0.98178, 0.190022, 0, -0.98178, 0.190022, 0, -0.98178, 0.190022, 0, -0.98178)
@@ -20308,6 +20301,14 @@ name = &"normal"
 category = ""
 data_type = 6
 stride = 3
+
+[sub_resource type="Resource" id="Resource_f0er1"]
+script = ExtResource("3_xdhrx")
+data = PackedInt32Array(0, 1, 2, 3, 7, 6, 5, 4, 1, 0, 4, 5, 2, 1, 5, 6, 3, 2, 6, 7, 0, 3, 7, 4)
+name = &"vertex_index"
+category = ""
+data_type = 1
+stride = 1
 
 [sub_resource type="Resource" id="Resource_73xa4"]
 script = ExtResource("4_yd0by")
@@ -23867,87 +23868,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.154
 is_on = true
 haunted_contact = 1
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(-0.930772, -0.363847, -0.0357608, -0.260166, 0.590453, 0.763989, -0.25686, 0.720403, -0.644237, -7.90126, 11.4441, -12.4458)
-light_color = Color(0.985011, 0.451223, 0, 1)
-light_energy = 16.0
-light_indirect_energy = 4.556
-light_volumetric_fog_energy = 0.732
-light_size = 0.013
-light_specular = 6.356
-light_bake_mode = 1
-shadow_bias = 0.815
-spot_range = 14.7639
-spot_angle = 27.0311
-
-[node name="SpotLight3D6" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(-0.930772, -0.363847, -0.0357614, -0.197702, 0.418631, 0.886376, -0.307534, 0.832084, -0.461583, -7.90126, 12.745, -11.3588)
-light_color = Color(0.985011, 0.451223, 0, 1)
-light_energy = 16.0
-light_indirect_energy = 4.556
-light_volumetric_fog_energy = 0.732
-light_size = 0.013
-light_negative = true
-light_specular = 6.356
-light_bake_mode = 1
-shadow_bias = 0.815
-spot_range = 14.7639
-spot_angle = 27.0311
-
-[node name="SpotLight3D4" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(-0.930772, -0.363847, -0.0357608, -0.260166, 0.590453, 0.763989, -0.25686, 0.720403, -0.644237, -6.97287, 13.6166, -12.5681)
-light_color = Color(0.619608, 0.580392, 0.941176, 1)
-light_energy = 16.0
-light_indirect_energy = 3.138
-light_volumetric_fog_energy = 0.627
-light_size = 0.013
-light_specular = 3.532
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 0.815
-spot_range = 14.7639
-spot_angle = 27.0311
-
-[node name="SpotLight3D5" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(-0.939233, -0.343176, -0.00843377, -0.228008, 0.605289, 0.762652, -0.256619, 0.718231, -0.646754, -8.92298, 12.9698, -12.5681)
-light_color = Color(0.338746, 0.742607, 0.643099, 1)
-light_energy = 9.516
-light_indirect_energy = 1.942
-light_volumetric_fog_energy = 0.418
-light_size = 0.013
-light_specular = 6.356
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 0.815
-spot_range = 14.7639
-spot_angle = 27.0311
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(-0.930772, -0.363847, -0.0357608, -0.260166, 0.590453, 0.763989, -0.25686, 0.720403, -0.644237, -7.90126, 7.82923, -8.1349)
-light_color = Color(0.808102, 0.303852, 0.231448, 1)
-light_energy = 22.91
-light_indirect_energy = 3.092
-light_volumetric_fog_energy = 0.0
-light_size = 0.013
-light_specular = 0.0
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 0.815
-spot_range = 11.8653
-
-[node name="SpotLight3D3" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(-0.171296, -0.187552, 0.967203, 0.00758439, -0.981935, -0.189066, 0.98519, -0.0250505, 0.169624, -6.69589, 1.40942, -10.5216)
-light_color = Color(0.847059, 0.368627, 0.192157, 1)
-light_energy = 22.91
-light_indirect_energy = 3.092
-light_volumetric_fog_energy = 0.0
-light_size = 0.013
-light_specular = 0.0
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 0.815
-spot_range = 11.8653
-spot_angle = 43.9212
+[node name="ChapelLights" parent="Lights" instance=ExtResource("55_qex18")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("7_nvrtf")
