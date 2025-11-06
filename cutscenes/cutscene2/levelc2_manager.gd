@@ -3,7 +3,7 @@ extends Node
 @onready var animation_player = $SelectionAnimationPlayer
 
 var is_finale_selected = false
-var finale = "" #Criar UI para escolher final, e conectar a escolha de olhar à "A" e a escolha de não olhar à "B"
+var finale = ""
 
 func _ready():
 	animation_player.play("AmbientShot")
@@ -11,7 +11,7 @@ func _ready():
 
 func _on_animation_finished(anim_name):
 	if anim_name == "AmbientShot":
-		animation_player.play("DecisionLoop")
+		animation_player.play("EnterDecision")
 	
 	elif anim_name == "DecisionLoop":
 		if not is_finale_selected:

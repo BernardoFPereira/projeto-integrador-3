@@ -1,4 +1,4 @@
-[gd_scene load_steps=377 format=3 uid="uid://v6grbwk354e"]
+[gd_scene load_steps=379 format=3 uid="uid://v6grbwk354e"]
 
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_7mfye"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="2_s4ake"]
@@ -3598,9 +3598,50 @@ face_vertex_data = {
 "vertex_index": SubResource("Resource_suc51")
 }
 
+[sub_resource type="Animation" id="Animation_jgy2x"]
+resource_name = "AmbientShot"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 5, 7, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-7.99, 33.02, 6.21), Vector3(-2.75, 32.27, 8.695), Vector3(-4.86, 32.27, 12.5), Vector3(-9.365, 29.95, 11.58), Vector3(-7.766, 30.024, 11.385)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 5, 7, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.832522, -3.14159, 0), Vector3(-0.21293, -4.40696, 0), Vector3(-0.509636, -5.27089, -0.0785398), Vector3(-0.0890118, -7.14712, 0), Vector3(-0.497419, -3.14159, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("padre-sitting:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-7.911, 27.95, 10.806)]
+}
+
 [sub_resource type="Animation" id="Animation_lhl40"]
 resource_name = "DecisionLoop"
 length = 3.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -3652,33 +3693,6 @@ tracks/3/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_17qlh"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_kyqf3"]
 resource_name = "EnterDecision"
 length = 3.0
@@ -3719,14 +3733,156 @@ tracks/2/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_jgy2x"]
-resource_name = "AmbientShot"
+[sub_resource type="Animation" id="Animation_17qlh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("padre-sitting:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("padre-sitting:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-7.761, 27.995, 12.181)]
+}
+
+[sub_resource type="Animation" id="Animation_8m4pu"]
+resource_name = "Finale_A"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-7.766, 30.024, 11.3851), Vector3(-7.766, 29.824, 10.82)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 3.2, 3.3, 3.4, 3.5, 3.7, 4, 4.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.497554, -3.14173, -9.15615e-05), Vector3(0.253073, -3.14159, 0), Vector3(0.261799, -3.09796, 0.0174533), Vector3(0.349066, -3.14159, -0.0698132), Vector3(0.235619, -3.11541, -0.0349066), Vector3(0.296706, -3.03687, 0.0174533), Vector3(0.349066, -3.14159, -0.0698132), Vector3(0.261799, -3.09796, 0.0174533), Vector3(0.235619, -3.11541, -0.0349066)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("padre-sitting:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0), Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("padre-sitting:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3, 4.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-7.761, 27.995, 12.181), Vector3(-7.761, 33.2, 12.181)]
+}
+
+[sub_resource type="Animation" id="Animation_v5fjo"]
+resource_name = "Finale_B"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-7.766, 30.024, 11.3851), Vector3(-6.963, 30.091, 12.155), Vector3(-7.061, 30.159, 12.925)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.497554, -3.14173, -9.15615e-05), Vector3(-0.497419, -6.01266, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("padre-sitting:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.6, 3, 3.2, 3.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-7.761, 27.995, 12.181), Vector3(-7.761, 27.995, 8.231), Vector3(-7.676, 28.44, 6.886), Vector3(-7.676, 21.185, 6.886)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4foe3"]
 _data = {
 "AmbientShot": SubResource("Animation_jgy2x"),
 "DecisionLoop": SubResource("Animation_lhl40"),
 "EnterDecision": SubResource("Animation_kyqf3"),
+"Finale_A": SubResource("Animation_8m4pu"),
+"Finale_B": SubResource("Animation_v5fjo"),
 "RESET": SubResource("Animation_17qlh")
 }
 
@@ -3939,7 +4095,7 @@ mesh_vector_data = SubResource("Resource_8iubr")
 materials = Array[Material]([ExtResource("7_5ph5b")])
 
 [node name="AnjoFinal" parent="." instance=ExtResource("10_rowgn")]
-transform = Transform3D(1.5, 0, 0, 0, 1.00929, 1.10966, 0, -1.10966, 1.00929, -7.80285, 35.4103, 16.1451)
+transform = Transform3D(1, 0, 0, 0, 0.672858, 0.739771, 0, -0.739771, 0.672858, -7.80285, 36.7029, 18.1724)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="AnjoFinal"]
 transform = Transform3D(0.666667, 0, 0, 0, 0.660829, 0.0880327, 0, -0.0880327, 0.660829, 0, 0.337001, 3.916)
@@ -3957,7 +4113,7 @@ spot_range = 16.0
 spot_angle = 37.9688
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="AnjoFinal"]
-transform = Transform3D(1, 0, 0, 0, 0.611306, 0.791394, 0, -0.791394, 0.611306, -1.60431, 36.825, 24.2368)
+transform = Transform3D(0.666667, 0, 0, 0, 0.407536, 0.527595, 0, -0.527595, 0.407536, -1.60431, 36.825, 24.2368)
 light_color = Color(1, 0.780241, 0.532321, 1)
 light_energy = 16.0
 light_volumetric_fog_energy = 3.027
@@ -4015,4 +4171,4 @@ autoplay = "EnterDecision"
 fov = 99.0
 
 [node name="padre-sitting" parent="." instance=ExtResource("12_3xfeq")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.761, 27.995, 12.181)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -7.761, 27.995, 12.181)
