@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhtox6xw4olb5"]
+[gd_scene load_steps=4 format=3 uid="uid://bhtox6xw4olb5"]
 
 [ext_resource type="PackedScene" uid="uid://n3x0dypsgsah" path="res://models/Chapel/Janela.glb" id="1_x3s6j"]
 [ext_resource type="PackedScene" uid="uid://cvabt0dycpp0i" path="res://models/Chapel/Vitralzon.glb" id="2_kmd6b"]
+[ext_resource type="PackedScene" uid="uid://bibxctw3s5rcm" path="res://models/Chapel/Vitral Redondo.glb" id="2_nmigi"]
 
 [node name="Pequenos Vitrais" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 4)
@@ -18,5 +19,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.542
 [node name="Janela4" parent="." instance=ExtResource("1_x3s6j")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.54298, 1.99727, -8.75511)
 
+[node name="Vitral Redondo" parent="." instance=ExtResource("2_nmigi")]
+transform = Transform3D(0.999986, 0, 0.0052534, 0, 1, 0, -0.0052534, 0, 0.999986, 5.50455, 6.67179, -16.8735)
+
 [node name="Vitralzon" parent="." instance=ExtResource("2_kmd6b")]
 transform = Transform3D(0.599992, 0, 0.00315204, 0, 0.6, 0, -0.00315204, 0, 0.599992, 6.03213, 8.21791, -16.3068)
+visible = false

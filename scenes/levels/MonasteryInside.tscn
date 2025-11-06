@@ -1,4 +1,4 @@
-[gd_scene load_steps=2214 format=3 uid="uid://imk5ccgfjb4n"]
+[gd_scene load_steps=2216 format=3 uid="uid://imk5ccgfjb4n"]
 
 [ext_resource type="PackedScene" uid="uid://drak54rbqaie4" path="res://scenes/ui.tscn" id="1_m3lcs"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_wne16"]
@@ -60,7 +60,9 @@
 [ext_resource type="AudioStream" uid="uid://bwqg18nknwevo" path="res://audio/stone_door.ogg" id="45_o5gvt"]
 [ext_resource type="PackedScene" uid="uid://ddhttv3uxb3pl" path="res://scenes/prefabs/altar.tscn" id="51_kybql"]
 [ext_resource type="PackedScene" uid="uid://jhvky7xprbq" path="res://scenes/prefabs/Room Prefabs/garden_bench.tscn" id="52_s880u"]
-[ext_resource type="PackedScene" path="res://scenes/prefabs/Room Prefabs/chapel_lights.tscn" id="52_sq1ix"]
+[ext_resource type="PackedScene" uid="uid://dtbr6wi5uu3oe" path="res://scenes/prefabs/Room Prefabs/chapel_lights.tscn" id="52_sq1ix"]
+[ext_resource type="PackedScene" uid="uid://caiei8d0fkmh1" path="res://scenes/prefabs/Room Prefabs/tapetes.tscn" id="62_0c1n0"]
+[ext_resource type="PackedScene" uid="uid://0bomh01kmrkc" path="res://scenes/prefabs/Room Prefabs/thirdfloor_tapetes.tscn" id="63_oo4gq"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y81c2"]
 emission_shape = 3
@@ -23341,16 +23343,16 @@ transform = Transform3D(1, 0, 0, 0, 1.26991, 0, 0, 0, 0.954673, 6.41775, 3.47931
 transform = Transform3D(0.999999, 0, -7.4607e-14, 0, 1, 0, 2.84217e-14, 0, 1, 0.376206, -6.08257, 12.0218)
 
 [node name="column" parent="Giga Level Design/Third Floor Corner Detail/InnerColumns" index="0"]
-transform = Transform3D(0.999999, 0, 0, 0, 1.69589, 0, -1.20792e-13, 0, 1, -3.18921, -0.813337, 0.455146)
+transform = Transform3D(0.999999, 0, -3.55271e-15, 0, 1.69589, 0, -1.24345e-13, 0, 1, -3.18921, -0.813337, 0.455146)
 
 [node name="column4" parent="Giga Level Design/Third Floor Corner Detail/InnerColumns" index="1"]
-transform = Transform3D(0.999999, 0, 0, 0, 1.7199, 0, -1.13687e-13, 0, 1, 1.3094, -0.69752, 0.419568)
+transform = Transform3D(0.999999, 0, -7.10543e-15, 0, 1.7199, 0, -1.20792e-13, 0, 1, 1.3094, -0.69752, 0.494979)
 
 [node name="column2" parent="Giga Level Design/Third Floor Corner Detail/InnerColumns" index="2"]
-transform = Transform3D(0.999999, 0, 0, 0, 1.65212, 0, -9.23706e-14, 0, 1, 3.89683, -0.760219, 0.436705)
+transform = Transform3D(0.999999, 0, -7.10543e-15, 0, 1.65212, 0, -9.9476e-14, 0, 1, 3.89683, -0.760219, 0.521305)
 
 [node name="column3" parent="Giga Level Design/Third Floor Corner Detail/InnerColumns" index="3"]
-transform = Transform3D(0.999999, 0, 0, 0, 1.77115, 0, -8.52651e-14, 0, 1, 9.15644, -0.686124, 0.409326)
+transform = Transform3D(0.999999, 0, -1.06581e-14, 0, 1.77115, 0, -8.88178e-14, 0, 1, 9.15644, -0.686124, 0.495807)
 
 [node name="column5" parent="Giga Level Design/Third Floor Corner Detail/InnerColumns" index="4"]
 transform = Transform3D(0.846735, 0, 1.98952e-13, 0, 1.12475, 0, -2.34479e-13, 0, 0.942719, 9.20017, 3.80016, 0.389785)
@@ -23679,6 +23681,12 @@ spot_attenuation = 0.615573
 spot_angle = 60.86
 spot_angle_attenuation = 0.420448
 
+[node name="SpotLight3D5" parent="Lights/Lighting Pass" index="5"]
+light_volumetric_fog_energy = 0.32
+
+[node name="SpotLight3D6" parent="Lights/Lighting Pass" index="6"]
+light_volumetric_fog_energy = 0.853
+
 [node name="SpotLight3D8" parent="Lights/Lighting Pass" index="8"]
 light_color = Color(0.388235, 0.490196, 1, 1)
 
@@ -23783,6 +23791,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0184, 1.25551, -11.289)
 
 [node name="altar" parent="." instance=ExtResource("51_kybql")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.601, 6.5, -11.1108)
+
+[node name="tapetes" parent="." instance=ExtResource("62_0c1n0")]
+
+[node name="thirdfloor tapetes" parent="." instance=ExtResource("63_oo4gq")]
 
 [editable path="Interactable/Pages/HolyPage3"]
 [editable path="Interactable/AltarItemBase"]
