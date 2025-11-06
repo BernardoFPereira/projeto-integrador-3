@@ -16,6 +16,7 @@ class_name Player
 @onready var interact_area = $InteractArea
 
 @export var SPEED = 2.0
+@export var max_slope_angle := 45.0
 const JUMP_VELOCITY = 4.5
 
 enum CameraModes {
@@ -33,6 +34,7 @@ enum States {
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var camera_mode = CameraModes.ThirdPerson
 var state = States.IDLE
+var _floor_normal := Vector3.UP
 
 var inspected_object := false
 var is_dragging_mouse := false
@@ -66,8 +68,8 @@ func _process(delta):
 	handle_state(delta)
 
 func _physics_process(delta):
-	if not is_on_floor():
-		velocity.y -= gravity * delta
+	#if not is_on_floor():
+		#velocity.y -= gravity * delta
 	
 	move_and_slide()
 
@@ -179,9 +181,11 @@ func handle_state(delta) -> void:
 				animation_tree.set("parameters/blend_position", blend_position)
 			if !direction:
 				set_state(States.IDLE)
-				
-			velocity.x = direction.x * SPEED
-			velocity.z = direction.z * SPEED
+			
+			_floor_normal = _get_floor_normal()
+			var norm_direction = _project_direction_on_floor(direction)
+			velocity.x = norm_direction.x * SPEED
+			velocity.z = norm_direction.z * SPEED
 		
 		States.INSPECT:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -249,6 +253,37 @@ func _on_interact_area_area_entered(area):
 		InspectManager.inspect_target = area_parent
 
 
+# Get averaged floor normal (prevents jitter on edges)
+func _get_floor_normal() -> Vector3:
+	var normal = Vector3.UP
+	var count = 0
+	
+	for i in get_slide_collision_count():
+		var col = get_slide_collision(i)
+		if col.get_normal().y > 0.7:  # only consider upward-facing surfaces
+			normal += col.get_normal()
+			count += 1
+	
+	if count > 0:
+		normal /= count
+		normal = normal.normalized()
+	
+	# Only use if within slope limit
+	if rad_to_deg(acos(normal.y)) > max_slope_angle:
+		return Vector3.UP  # too steep → treat as wall
+	
+	return normal
+# Project 3D direction onto the floor plane
+func _project_direction_on_floor(dir: Vector3) -> Vector3:
+	if dir.length() < 0.01:
+		return Vector3.ZERO
+		
+	# Plane defined by floor normal
+	var plane_normal = _floor_normal
+	var projected = dir - plane_normal * dir.dot(plane_normal)
+	
+	return projected.normalized()
+	
 #func _on_inspect_area_area_entered(area):
 	#var area_parent = area.get_parent()
 	#

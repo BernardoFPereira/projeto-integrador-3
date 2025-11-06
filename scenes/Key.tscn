@@ -1,6 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cgfowgyio5ni3"]
+[gd_scene load_steps=14 format=3 uid="uid://cgfowgyio5ni3"]
 
 [ext_resource type="Script" path="res://scripts/key.gd" id="1_14ing"]
+[ext_resource type="PackedScene" uid="uid://bjwfu3bhiwybx" path="res://models/key01.glb" id="2_6qddk"]
+[ext_resource type="Texture2D" uid="uid://uw25yo2l8fl" path="res://textures/particle_sparkle.png" id="2_thkhj"]
+[ext_resource type="PackedScene" uid="uid://6smuci665u8c" path="res://models/key02.glb" id="3_bixq2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pw0co"]
 resource_name = "Material.001"
@@ -65,20 +68,13 @@ initial_velocity_max = 0.5
 gravity = Vector3(0, 0, 0)
 scale_curve = SubResource("CurveTexture_hnysd")
 
-[sub_resource type="Gradient" id="Gradient_vxka4"]
-interpolation_mode = 2
-offsets = PackedFloat32Array(0.120332, 0.427386, 0.692946)
-colors = PackedColorArray(32.1216, 32.1216, 32.1216, 1, 14.7384, 14.7384, 14.7384, 0.441442, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_dffvo"]
-gradient = SubResource("Gradient_vxka4")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lyp8l"]
 transparency = 1
 shading_mode = 0
-albedo_texture = SubResource("GradientTexture2D_dffvo")
+diffuse_mode = 3
+disable_ambient_light = true
+disable_fog = true
+albedo_texture = ExtResource("2_thkhj")
 billboard_mode = 1
 billboard_keep_scale = true
 
@@ -90,11 +86,18 @@ script = ExtResource("1_14ing")
 
 [node name="PH_key2" type="Node3D" parent="."]
 transform = Transform3D(0.397756, 0, 0, 0, 0.397756, 0, 0, 0, 0.397756, 0, 0, -0.160773)
+visible = false
 
 [node name="PH_key" type="MeshInstance3D" parent="PH_key2"]
 transform = Transform3D(0.0910025, 0, 0, 0, 0.110697, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_2hpge")
 skeleton = NodePath("")
+
+[node name="key01" parent="." instance=ExtResource("2_6qddk")]
+transform = Transform3D(-2.62268e-07, -2.62268e-07, -6, -6, -2.62268e-07, 2.62268e-07, -2.62268e-07, 6, -2.62268e-07, 0, 0, -0.674864)
+
+[node name="key02" parent="." instance=ExtResource("3_bixq2")]
+transform = Transform3D(-0.040212, -2.62262e-07, -5.99987, -5.99987, 1.75773e-09, 0.040212, 0, 6, -2.62268e-07, 0.0670784, -0.0621214, -0.597415)
 
 [node name="InteractArea" type="Area3D" parent="."]
 collision_layer = 2
