@@ -4,17 +4,23 @@ var player: Player
 var can_inspect := false
 var inspect_target: Node3D
 var inspect_target_mesh: Node3D
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	player = get_tree().get_first_node_in_group("Player")
+var inspect_detail: Control
 	
+var inspect_room: Node3D
+var inspect_text_label: Label
+var player_og_position: Vector3
+#var inspect_room_pos: Vector3
+
+var is_not_pickup := false
+
 func start_inspection() -> void:
+	player = get_tree().get_first_node_in_group("Player")
+	player_og_position = player.global_position
+	player.global_position = inspect_room.global_position
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
-	#if inspect_target.is_in_group("Key"):
-		#print("LOOKING AT KEY!")
-		#return
+	inspect_detail.visible = true
+	inspect_text_label.text = inspect_target.inspect_text
 	
 	inspect_target_mesh = inspect_target.inspect_mesh.instantiate()
 	
@@ -28,20 +34,30 @@ func start_inspection() -> void:
 	can_inspect = false
 
 func stop_inspection() -> void:
+	player = get_tree().get_first_node_in_group("Player")
+	player.global_position = player_og_position
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	inspect_target.mesh.visible = true
 	inspect_target_mesh.queue_free()
+	
+	inspect_detail.visible = false
+	inspect_text_label.text = ""
 	
 	#if inspect_target.is_in_group("Key"):
 		#inspect_target.visible = false
 	
 	if inspect_target.is_in_group("Page"):
+		var page_picked = inspect_target
+		player.collected_pages.append(page_picked)
 		inspect_target.visible = false
 		inspect_target = null
 		can_inspect = false
 		
-		player.ui_manager.pages.reveal_page()
-		InspectManager.can_inspect = false
-		InspectManager.inspect_target = null
+		if !is_not_pickup:
+			player.ui_manager.pages.reveal_page()
+			InspectManager.can_inspect = false
+			InspectManager.inspect_target = null
+		elif is_not_pickup:
+			is_not_pickup = false
 	
 	can_inspect = true

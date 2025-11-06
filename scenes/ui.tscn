@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://drak54rbqaie4"]
+[gd_scene load_steps=15 format=3 uid="uid://drak54rbqaie4"]
 
 [ext_resource type="Script" path="res://scripts/UI_Manager.gd" id="1_txv8k"]
 [ext_resource type="Script" path="res://scripts/Journal.gd" id="2_qjj1l"]
@@ -25,6 +25,10 @@ font_size = 26
 [sub_resource type="LabelSettings" id="LabelSettings_pyvbf"]
 font = ExtResource("4_n24mj")
 font_size = 36
+
+[sub_resource type="LabelSettings" id="LabelSettings_ptbmp"]
+font = ExtResource("4_n24mj")
+font_size = 31
 
 [node name="UI" type="Control" groups=["UI"]]
 layout_mode = 3
@@ -71,7 +75,7 @@ offset_top = 16.0
 offset_right = 51.0
 offset_bottom = 50.0
 grow_horizontal = 2
-text = "NOTAS"
+text = "Notas"
 label_settings = SubResource("LabelSettings_hsyih")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -185,6 +189,7 @@ offset_right = 230.0
 offset_bottom = 298.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="Pages/Panel"]
 layout_mode = 1
@@ -199,8 +204,8 @@ offset_right = 188.0
 offset_bottom = -151.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "PAGINAS
-ENCONTRADAS"
+text = "Paginas
+Encontradas"
 label_settings = SubResource("LabelSettings_hdf1x")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -213,6 +218,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 metadata/_edit_lock_ = true
 
 [node name="PageNote01" type="RichTextLabel" parent="Pages/Panel/Page01"]
@@ -224,10 +230,11 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -186.0
 offset_top = -124.0
-offset_right = 186.0
+offset_right = 179.0
 offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 22
 text = "> Você encontrou a primeira página! Agora vá até o segundo andar, tem uma porta aberta pra você! ;)"
@@ -255,6 +262,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 metadata/_edit_lock_ = true
 
 [node name="PageNote02" type="RichTextLabel" parent="Pages/Panel/Page02"]
@@ -266,10 +274,11 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -186.0
 offset_top = -33.0
-offset_right = 186.0
+offset_right = 176.0
 offset_bottom = 65.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 22
 text = "> Você é bom! Neste mesmo andar tem uma porta trancada, seu destino espera do outro lado."
@@ -297,6 +306,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 metadata/_edit_lock_ = true
 
 [node name="PageNote03" type="RichTextLabel" parent="Pages/Panel/Page03"]
@@ -308,10 +318,11 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -186.0
 offset_top = 60.0
-offset_right = 189.0
+offset_right = 175.0
 offset_bottom = 158.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 22
 text = "> Parabéns! Agora você tem todas as dicas necessárias para completar o jogo!
@@ -349,6 +360,7 @@ theme = ExtResource("3_x8ns6")
 icon = ExtResource("7_gbf7f")
 
 [node name="Menu" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -585,16 +597,156 @@ offset_right = 192.5
 offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Pressiona 'E' para interagir"
+text = "Pressione 'E' para interagir"
 label_settings = SubResource("LabelSettings_pyvbf")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ExitInspectTip" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="ExitInspectTip"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_top = 59.0
+offset_right = 193.0
+offset_bottom = 95.0
+grow_horizontal = 2
+text = "Pressione 'Tab' para voltar"
+label_settings = SubResource("LabelSettings_pyvbf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InspectDetailText" type="Control" parent="." groups=["InspectText"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="InspectDetailText"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = -243.0
+offset_right = 306.0
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InspectText" type="Label" parent="InspectDetailText/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -200.0
+offset_right = 252.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hamana hamana jabirosca da teteia almanaque dos locão que tudo toca na birosca que ilumina sua bisteca com aquilo que caminho nos passos do joão até a fumaça da cantina, que bagulho muito doido que eu to escrevendo pra encher linguiça.
+Paz."
+label_settings = SubResource("LabelSettings_ptbmp")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Temp_End" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="Temp_End"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -241.0
+offset_top = -107.0
+offset_right = 241.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Temp_End/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VOCÊ CONSEGUIU!
+TODAS SUAS ALMA É PERTENCE A MIM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="Temp_End"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -138.0
+offset_top = -167.0
+offset_right = -59.0
+offset_bottom = -130.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Menu"
+
+[node name="QuitButton" type="Button" parent="Temp_End"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 46.0
+offset_top = -167.0
+offset_right = 125.0
+offset_bottom = -130.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Sair"
+
 [connection signal="pressed" from="Journal/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Journal/PagesButton" to="." method="_on_pages_button_pressed"]
+[connection signal="pressed" from="Pages/Panel/Page01/InspectButton01" to="." method="_on_inspect_button_01_pressed"]
+[connection signal="pressed" from="Pages/Panel/Page02/InspectButton02" to="." method="_on_inspect_button_02_pressed"]
+[connection signal="pressed" from="Pages/Panel/Page03/InspectButton03" to="." method="_on_inspect_button_03_pressed"]
 [connection signal="pressed" from="Pages/PagesBackButton" to="." method="_on_pages_back_button_pressed"]
 [connection signal="pressed" from="Menu/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
 [connection signal="pressed" from="Menu/NotesButton" to="." method="_on_notes_button_pressed"]
 [connection signal="pressed" from="Menu/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Menu/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Settings/SettingsBackButton" to="." method="_on_settings_back_button_pressed"]
+[connection signal="pressed" from="Temp_End/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="Temp_End/QuitButton" to="." method="_on_quit_button_pressed"]

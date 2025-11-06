@@ -1,14 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://dph66wxcgr54"]
+[gd_scene load_steps=14 format=3 uid="uid://dph66wxcgr54"]
 
 [ext_resource type="PackedScene" uid="uid://cmi2ahrooyfxn" path="res://scenes/prefabs/Room Prefabs/InnerColumns.tscn" id="1_lokpl"]
 [ext_resource type="PackedScene" uid="uid://cb5wrqpvo66ix" path="res://scenes/prefabs/third_floor_corner_detail.tscn" id="2_y4f18"]
-[ext_resource type="PackedScene" uid="uid://cfijp4mmuotel" path="res://models/chair_model.glb" id="3_yr0qr"]
 [ext_resource type="PackedScene" uid="uid://d0fj8u3meqg3v" path="res://scenes/prefabs/chair_model.tscn" id="4_mvwnw"]
 [ext_resource type="PackedScene" uid="uid://c2lftgn6ri05y" path="res://scenes/prefabs/shelfsmall.tscn" id="5_4cfby"]
 [ext_resource type="PackedScene" uid="uid://dhnu2i6aau4v4" path="res://scenes/prefabs/Room Prefabs/library.tscn" id="6_ikckr"]
 [ext_resource type="PackedScene" uid="uid://bs0ie2bmdee7h" path="res://scenes/prefabs/Room Prefabs/Confessionary Room.tscn" id="7_iluoo"]
 [ext_resource type="PackedScene" uid="uid://cewqkfkmkm156" path="res://scenes/prefabs/Room Prefabs/evil_paper_corridor.tscn" id="8_vlaqv"]
-[ext_resource type="PackedScene" uid="uid://db5ysjuhpv456" path="res://scenes/prefabs/candelabro.tscn" id="9_7fkg6"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/candelabro.tscn" id="9_7fkg6"]
 [ext_resource type="PackedScene" uid="uid://m7trdro12xfi" path="res://scenes/prefabs/cemetery.tscn" id="10_rvyfp"]
 [ext_resource type="PackedScene" path="res://scenes/prefabs/grass.tscn" id="11_6vp30"]
 [ext_resource type="PackedScene" uid="uid://cyuqysv1hojuw" path="res://scenes/prefabs/candle_03.tscn" id="12_aqghe"]
@@ -84,15 +83,11 @@ transform = Transform3D(0.999999, 0, 0, 0, 2.26951, 0, -4.26326e-14, 0, 1.15636,
 [node name="column6" parent="Third Floor Corner Detail/Second Floor Columns" index="5"]
 transform = Transform3D(0.999999, 0, 0, 0, 1.66867, 0, -1.77636e-14, 0, 1, 12.0882, 5.05524, -11.1084)
 
-[node name="chair_model" parent="." instance=ExtResource("3_yr0qr")]
+[node name="chair_model3" parent="." instance=ExtResource("4_mvwnw")]
 transform = Transform3D(0.00277872, 0.0969209, -0.0436152, 0.106271, -0.0031552, -0.000240918, -0.00151391, -0.0435897, -0.0969603, 10.9545, 11.2956, 11.5315)
 
-[node name="chair_model" parent="chair_model" instance=ExtResource("4_mvwnw")]
-
-[node name="chair_model2" parent="." instance=ExtResource("3_yr0qr")]
+[node name="chair_model" parent="." instance=ExtResource("4_mvwnw")]
 transform = Transform3D(-0.0298579, 0, -0.10204, 0, 0.106319, 0, 0.10204, 0, -0.0298579, 14.8651, 11.5266, 10.5601)
-
-[node name="chair_model" parent="chair_model2" instance=ExtResource("4_mvwnw")]
 
 [node name="shelfsmall2" parent="." instance=ExtResource("5_4cfby")]
 transform = Transform3D(-1.12235, 0, 4.96742e-08, 0, 1.05065, 0, -9.81191e-08, 0, -0.568203, 11.7612, 11.0277, -3.23992)

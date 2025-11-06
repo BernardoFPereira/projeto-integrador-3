@@ -1,5 +1,7 @@
 extends Control
 
+signal game_start
+
 @onready var first_scene = preload("res://scenes/levels/MonasteryInside.tscn")
 
 @onready var main_menu = $MainMenu

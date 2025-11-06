@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://dtbr6wi5uu3oe"]
+
+[node name="ChapelLights" type="Node3D"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.930772, -0.363847, -0.0357606, -0.260166, 0.590453, 0.763989, -0.25686, 0.720403, -0.644238, -7.90126, 11.4441, -12.4458)
+light_color = Color(0.985011, 0.451223, 0, 1)
+light_energy = 16.0
+light_indirect_energy = 4.556
+light_volumetric_fog_energy = 0.732
+light_size = 0.013
+light_specular = 6.356
+light_bake_mode = 1
+shadow_bias = 0.815
+spot_range = 14.7639
+spot_angle = 27.0311
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.930772, -0.363847, -0.0357614, -0.197702, 0.418631, 0.886376, -0.307534, 0.832084, -0.461583, -7.90126, 12.745, -11.3588)
+light_color = Color(0.985011, 0.451223, 0, 1)
+light_energy = 16.0
+light_indirect_energy = 4.556
+light_volumetric_fog_energy = 0.732
+light_size = 0.013
+light_negative = true
+light_specular = 6.356
+light_bake_mode = 1
+shadow_bias = 0.815
+spot_range = 14.7639
+spot_angle = 27.0311
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.930772, -0.363847, -0.0357606, -0.260166, 0.590453, 0.763989, -0.25686, 0.720403, -0.644238, -6.97287, 13.6166, -12.5681)
+light_color = Color(0.619608, 0.580392, 0.941176, 1)
+light_energy = 16.0
+light_indirect_energy = 3.138
+light_volumetric_fog_energy = 0.627
+light_size = 0.013
+light_specular = 3.532
+light_bake_mode = 1
+shadow_enabled = true
+shadow_bias = 0.815
+spot_range = 14.7639
+spot_angle = 27.0311
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.939233, -0.343176, -0.00843376, -0.228008, 0.605289, 0.762652, -0.256619, 0.718231, -0.646754, -8.92298, 12.9698, -12.5681)
+light_color = Color(0.338746, 0.742607, 0.643099, 1)
+light_energy = 9.516
+light_indirect_energy = 1.942
+light_volumetric_fog_energy = 0.418
+light_size = 0.013
+light_specular = 6.356
+light_bake_mode = 1
+shadow_enabled = true
+shadow_bias = 0.815
+spot_range = 14.7639
+spot_angle = 27.0311
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.930772, -0.363847, -0.0357606, -0.260166, 0.590453, 0.763989, -0.25686, 0.720403, -0.644238, -7.90126, 7.82923, -8.1349)
+light_color = Color(0.808102, 0.303852, 0.231448, 1)
+light_energy = 22.91
+light_indirect_energy = 3.092
+light_volumetric_fog_energy = 0.0
+light_size = 0.013
+light_specular = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+shadow_bias = 0.815
+spot_range = 11.8653
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.171296, -0.187552, 0.967203, 0.00758439, -0.981935, -0.189066, 0.98519, -0.0250505, 0.169624, -6.69589, 1.40942, -10.5216)
+light_color = Color(0.847059, 0.368627, 0.192157, 1)
+light_energy = 22.91
+light_indirect_energy = 3.092
+light_volumetric_fog_energy = 0.0
+light_size = 0.013
+light_specular = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+shadow_bias = 0.815
+spot_range = 11.8653
+spot_angle = 43.9212

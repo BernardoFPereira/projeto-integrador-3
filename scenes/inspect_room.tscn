@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://btgit6gihlpns"]
+
+[ext_resource type="Script" path="res://scripts/inspect_room.gd" id="1_p2fgl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3612"]
+albedo_color = Color(0.0475577, 0.0475576, 0.0475576, 1)
+metallic = 0.35
+
+[sub_resource type="SphereMesh" id="SphereMesh_q83r8"]
+material = SubResource("StandardMaterial3D_e3612")
+flip_faces = true
+radius = 3.0
+height = 3.0
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6kvvc"]
+
+[node name="InspectRoom" type="Node3D"]
+script = ExtResource("1_p2fgl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9565, 0)
+mesh = SubResource("SphereMesh_q83r8")
+
+[node name="RigidBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("WorldBoundaryShape3D_6kvvc")

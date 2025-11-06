@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctu15vujrmhaw"]
+
+[ext_resource type="Script" path="res://scripts/altar_item.gd" id="1_owi6q"]
+[ext_resource type="PackedScene" uid="uid://dw4dwel00bs3y" path="res://models/collectables/estatua01.glb" id="2_bi1ky"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_je6ax"]
+radius = 0.332125
+
+[node name="AltarItem" type="Node3D" groups=["Item"]]
+script = ExtResource("1_owi6q")
+
+[node name="estatua01" parent="." instance=ExtResource("2_bi1ky")]
+
+[node name="InteractArea" type="Area3D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.304757, 0)
+shape = SubResource("SphereShape3D_je6ax")

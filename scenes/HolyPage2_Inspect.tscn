@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://b856pc7xgjl7i"]
+[gd_scene load_steps=7 format=3 uid="uid://dow6qr7nugw54"]
 
-[ext_resource type="Texture2D" uid="uid://cayidevambb86" path="res://models/paper_paper1_papers1_mtl_BaseColor.png" id="3_u3o7p"]
+[ext_resource type="Texture2D" uid="uid://cayidevambb86" path="res://models/paper_paper1_papers1_mtl_BaseColor.png" id="1_ufjac"]
+[ext_resource type="Texture2D" uid="uid://d3rit074gqw2b" path="res://textures/holy-paper2_content.png" id="2_1at17"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s3xn4"]
 resource_name = "papers1_mtl.1001"
 cull_mode = 2
-albedo_texture = ExtResource("3_u3o7p")
+albedo_texture = ExtResource("1_ufjac")
 roughness = 0.552786
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_k42s0"]
@@ -42,9 +43,22 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_k42s0")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sdl8u"]
+transparency = 1
+cull_mode = 1
+albedo_texture = ExtResource("2_1at17")
+uv1_scale = Vector3(1.505, -1.085, 1)
+uv1_offset = Vector3(-0.44, 0.05, 0)
+
 [node name="IspectedHolyPage" type="Node3D"]
 
 [node name="papers_geo" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.00717684, 0, 0, 0, 0.00812674, 0, 0, 0, 0.0100472, 0, 0.133623, 0)
 mesh = SubResource("ArrayMesh_qv8iw")
 skeleton = NodePath("")
+
+[node name="papers_geo2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.00717684, 0, 0, 0, 0.00812674, 0, 0, 0, 0.0100472, 0, 0.133623, 0.00558558)
+mesh = SubResource("ArrayMesh_qv8iw")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_sdl8u")

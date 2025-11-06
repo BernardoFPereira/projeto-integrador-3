@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://b128oq0h75eyk"]
+[gd_scene load_steps=3 format=3 uid="uid://dho41dwmqrowu"]
 
 [ext_resource type="PackedScene" uid="uid://dsarxnyyv7meg" path="res://models/chapelaltar2.glb" id="1_2l3nb"]
 
@@ -14,3 +14,5 @@ size = Vector3(3.07587, 1.24658, 1.25754)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01297, 0.7682, 0.0318146)
 shape = SubResource("BoxShape3D_7lix1")
+
+[editable path="chapelaltar2"]

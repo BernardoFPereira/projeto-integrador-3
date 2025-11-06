@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chcc0epivs7kc"
-path.s3tc="res://.godot/imported/workdesk_desk_inGame_escrivaninha_mtl_BaseColor.png-f778534b4776f26eba37706cd8cb422d.s3tc.ctex"
+uid="uid://d3rit074gqw2b"
+path.s3tc="res://.godot/imported/holy-paper2_content.png-2d3e63371929c3ad6747742e762d0496.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "d6d3b0c7aefafe71daf4d07fdc5a1f40"
-}
 
 [deps]
 
-source_file="res://materials/workdesk_desk_inGame_escrivaninha_mtl_BaseColor.png"
-dest_files=["res://.godot/imported/workdesk_desk_inGame_escrivaninha_mtl_BaseColor.png-f778534b4776f26eba37706cd8cb422d.s3tc.ctex"]
+source_file="res://textures/holy-paper2_content.png"
+dest_files=["res://.godot/imported/holy-paper2_content.png-2d3e63371929c3ad6747742e762d0496.s3tc.ctex"]
 
 [params]
 

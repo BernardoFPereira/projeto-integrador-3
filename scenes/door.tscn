@@ -302,7 +302,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.962725)
 transform = Transform3D(-1.36867e-06, -27.787, 0, 0, 0, -22.5007, 31.3114, -1.21461e-06, 0, 0.106855, 0.286093, 0)
 
 [node name="porta_geo" type="MeshInstance3D" parent="DoorMesh/porta_grp"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_kjl6c")
 mesh = SubResource("ArrayMesh_3bape")
 skeleton = NodePath("")

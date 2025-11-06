@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/manipulated_object.gd" id="1_mhkne"]
 [ext_resource type="Texture2D" uid="uid://cayidevambb86" path="res://models/paper_paper1_papers1_mtl_BaseColor.png" id="2_pofxv"]
-[ext_resource type="PackedScene" uid="uid://b856pc7xgjl7i" path="res://scenes/HolyPage_Inspect.tscn" id="2_t6pmx"]
+[ext_resource type="PackedScene" uid="uid://b856pc7xgjl7i" path="res://scenes/HolyPage1_Inspect.tscn" id="2_t6pmx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s3xn4"]
 resource_name = "papers1_mtl.1001"
@@ -50,6 +50,7 @@ radius = 0.710565
 [node name="HolyPage" type="Node3D" groups=["Page"]]
 script = ExtResource("1_mhkne")
 inspect_mesh = ExtResource("2_t6pmx")
+inspect_text = "O que observa, move em luz. Entre as chamas e a penumbra. Novos caminhos se revelam."
 
 [node name="paper" type="Node3D" parent="."]
 transform = Transform3D(0.717684, 0, 0, 0, -0.0253013, 0.812416, 0, -1.0044, -0.0204651, 0, 0.133623, 0)

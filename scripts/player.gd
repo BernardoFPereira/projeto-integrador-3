@@ -13,8 +13,10 @@ class_name Player
 @onready var animation_player = $"ThePriest/Padre-walkF-walkB/AnimationPlayer"
 @onready var animation_tree = $"ThePriest/Padre-walkF-walkB/AnimationTree"
 @onready var inspect_object_pos = $InspectObjectPos
+@onready var interact_area = $InteractArea
 
-const SPEED = 2.0
+@export var SPEED = 2.0
+@export var max_slope_angle := 45.0
 const JUMP_VELOCITY = 4.5
 
 enum CameraModes {
@@ -32,6 +34,7 @@ enum States {
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var camera_mode = CameraModes.ThirdPerson
 var state = States.IDLE
+var _floor_normal := Vector3.UP
 
 var inspected_object := false
 var is_dragging_mouse := false
@@ -40,7 +43,7 @@ var can_interact := false
 var interact_target: Node3D
 
 @export var collected_keys: Array[Node3D]
-var collected_pages: Array[Node3D]
+@export var collected_pages: Array[Node3D]
 
 func _ready():
 	set_camera_mode(CameraModes.ThirdPerson)
@@ -53,7 +56,7 @@ func _process(delta):
 		ui_manager.interact_tip.visible = false
 		
 	if interact_target:
-		if global_position.distance_to(interact_target.global_position) > 2:
+		if interact_area.global_position.distance_to(interact_target.global_position) > 2:
 			print('Interaction Released')
 			
 			can_interact = false
@@ -65,8 +68,8 @@ func _process(delta):
 	handle_state(delta)
 
 func _physics_process(delta):
-	if not is_on_floor():
-		velocity.y -= gravity * delta
+	#if not is_on_floor():
+		#velocity.y -= gravity * delta
 	
 	move_and_slide()
 
@@ -88,8 +91,8 @@ func _input(event):
 				
 				#print(event.relative)
 				
-				inspect_obj.rotation.y += event.relative.x * get_process_delta_time()
-				inspect_obj.rotation.x += event.relative.y * get_process_delta_time()
+				inspect_obj.rotation.y += event.relative.y * get_process_delta_time()
+				#inspect_obj.rotation.x += event.relative.y * get_process_delta_time()
 			
 			if event.is_action_pressed("exit_inspect") and state == States.INSPECT:
 				set_state(States.IDLE)
@@ -100,8 +103,8 @@ func _input(event):
 			
 		_:
 			# DEV POWER -- DISABLE ON BUILD
-			if Input.is_action_just_pressed("ui_accept"):
-				velocity.y = JUMP_VELOCITY
+			#if Input.is_action_just_pressed("ui_accept"):
+				#velocity.y = JUMP_VELOCITY
 				
 			if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 				var mouse_input = event.relative
@@ -116,8 +119,18 @@ func _input(event):
 				
 				if interact_target and can_interact:
 					interact_target.interact()
-			
+					
 	if event.is_action_pressed("ui_cancel"):
+		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			ui_manager.menu_type = ui_manager.MenuType.MENU
+			ui_manager.menu.visible = true
+		else:
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			ui_manager.menu_type = ui_manager.MenuType.NONE
+			ui_manager.clear_menu()
+			
+	if event.is_action_pressed("check_notes"):
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			ui_manager.menu_type = ui_manager.MenuType.NOTES
@@ -168,9 +181,11 @@ func handle_state(delta) -> void:
 				animation_tree.set("parameters/blend_position", blend_position)
 			if !direction:
 				set_state(States.IDLE)
-				
-			velocity.x = direction.x * SPEED
-			velocity.z = direction.z * SPEED
+			
+			_floor_normal = _get_floor_normal()
+			var norm_direction = _project_direction_on_floor(direction)
+			velocity.x = norm_direction.x * SPEED
+			velocity.z = norm_direction.z * SPEED
 		
 		States.INSPECT:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -203,8 +218,22 @@ func set_camera_mode(new_mode: CameraModes) -> void:
 func _on_interact_area_area_entered(area):
 	ui_manager.interact_tip.visible = true
 	var area_parent = area.get_parent()
+	
+	if area_parent.is_in_group("Item"):
+		print("ITEM DETECTEDEBERB")
+		can_interact = true
+		interact_target = area_parent
+		
+	if area_parent.is_in_group("AltarItemBase"):
+		print("ALTAR BASE DETECTEDEBERB")
+		can_interact = true
+		interact_target = area_parent
+		
 	if area_parent.is_in_group("Door") and !can_interact:
 		print("DOOR DETECTEDEBERB")
+		var door: Door = area_parent.get_parent()
+		if door.state == door.DoorState.OPEN:
+			return
 		can_interact = true
 		interact_target = area_parent.get_parent()
 		
@@ -222,3 +251,50 @@ func _on_interact_area_area_entered(area):
 		interact_target = area_parent
 		InspectManager.can_inspect = true
 		InspectManager.inspect_target = area_parent
+
+
+# Get averaged floor normal (prevents jitter on edges)
+func _get_floor_normal() -> Vector3:
+	var normal = Vector3.UP
+	var count = 0
+	
+	for i in get_slide_collision_count():
+		var col = get_slide_collision(i)
+		if col.get_normal().y > 0.7:  # only consider upward-facing surfaces
+			normal += col.get_normal()
+			count += 1
+	
+	if count > 0:
+		normal /= count
+		normal = normal.normalized()
+	
+	# Only use if within slope limit
+	if rad_to_deg(acos(normal.y)) > max_slope_angle:
+		return Vector3.UP  # too steep → treat as wall
+	
+	return normal
+# Project 3D direction onto the floor plane
+func _project_direction_on_floor(dir: Vector3) -> Vector3:
+	if dir.length() < 0.01:
+		return Vector3.ZERO
+		
+	# Plane defined by floor normal
+	var plane_normal = _floor_normal
+	var projected = dir - plane_normal * dir.dot(plane_normal)
+	
+	return projected.normalized()
+	
+#func _on_inspect_area_area_entered(area):
+	#var area_parent = area.get_parent()
+	#
+	#if area_parent.is_in_group("Item"):
+		#print("ITEM DETECTEDEBERB")
+		#can_interact = true
+		#interact_target = area_parent
+		#pass
+		#
+	#if area_parent.is_in_group("ItemBase"):
+		#print("ITEM BASE DETECTEDEBERB")
+		#can_interact = true
+		#interact_target = area_parent
+		#pass

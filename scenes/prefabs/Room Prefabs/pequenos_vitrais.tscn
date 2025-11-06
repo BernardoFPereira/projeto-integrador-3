@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0rvlr2p65pj3"]
+
+[ext_resource type="PackedScene" uid="uid://n3x0dypsgsah" path="res://models/Chapel/Janela.glb" id="1_x3s6j"]
+[ext_resource type="PackedScene" uid="uid://cvabt0dycpp0i" path="res://models/Chapel/Vitralzon.glb" id="2_kmd6b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_do7lg"]
+size = Vector3(7.74805, 9.3597, 2.25317)
+
+[node name="Pequenos Vitrais" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 4)
+
+[node name="Janela1" parent="." instance=ExtResource("1_x3s6j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.8036, 1.99727, 3.45115)
+
+[node name="Janela2" parent="." instance=ExtResource("1_x3s6j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.67354, 1.99727, -0.671602)
+
+[node name="Janela3" parent="." instance=ExtResource("1_x3s6j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.54298, 1.99727, -4.8098)
+
+[node name="Janela4" parent="." instance=ExtResource("1_x3s6j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.54298, 1.99727, -8.75511)
+
+[node name="Vitralzon" parent="." instance=ExtResource("2_kmd6b")]
+transform = Transform3D(0.599992, 0, 0.00315204, 0, 0.6, 0, -0.00315204, 0, 0.599992, 6.03213, 8.21791, -16.3068)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Vitralzon"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Vitralzon/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-06, 4.45027, -0.523325)
+shape = SubResource("BoxShape3D_do7lg")

@@ -1,6 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgfowgyio5ni3"]
+[gd_scene load_steps=14 format=3 uid="uid://cgfowgyio5ni3"]
 
 [ext_resource type="Script" path="res://scripts/key.gd" id="1_14ing"]
+[ext_resource type="PackedScene" uid="uid://bjwfu3bhiwybx" path="res://models/key01.glb" id="2_6qddk"]
+[ext_resource type="Texture2D" uid="uid://uw25yo2l8fl" path="res://textures/particle_sparkle.png" id="2_thkhj"]
+[ext_resource type="PackedScene" uid="uid://6smuci665u8c" path="res://models/key02.glb" id="3_bixq2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pw0co"]
 resource_name = "Material.001"
@@ -46,16 +49,55 @@ shadow_mesh = SubResource("ArrayMesh_nop24")
 [sub_resource type="SphereShape3D" id="SphereShape3D_jqmej"]
 radius = 1.47646
 
+[sub_resource type="Curve" id="Curve_lca4j"]
+_data = [Vector2(0, 0), 0.0, 3.81062, 0, 0, Vector2(1, 0), -3.18331, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_hnysd"]
+curve = SubResource("Curve_lca4j")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cnos5"]
+lifetime_randomness = 0.45
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(0.2, 0.2, 0.2)
+direction = Vector3(0, 0, 0)
+initial_velocity_min = 0.2
+initial_velocity_max = 0.5
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_hnysd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lyp8l"]
+transparency = 1
+shading_mode = 0
+diffuse_mode = 3
+disable_ambient_light = true
+disable_fog = true
+albedo_texture = ExtResource("2_thkhj")
+billboard_mode = 1
+billboard_keep_scale = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_t5i8c"]
+material = SubResource("StandardMaterial3D_lyp8l")
+
 [node name="Key" type="Node3D" groups=["Key"]]
 script = ExtResource("1_14ing")
 
 [node name="PH_key2" type="Node3D" parent="."]
 transform = Transform3D(0.397756, 0, 0, 0, 0.397756, 0, 0, 0, 0.397756, 0, 0, -0.160773)
+visible = false
 
 [node name="PH_key" type="MeshInstance3D" parent="PH_key2"]
 transform = Transform3D(0.0910025, 0, 0, 0, 0.110697, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_2hpge")
 skeleton = NodePath("")
+
+[node name="key01" parent="." instance=ExtResource("2_6qddk")]
+transform = Transform3D(-2.62268e-07, -2.62268e-07, -6, -6, -2.62268e-07, 2.62268e-07, -2.62268e-07, 6, -2.62268e-07, 0, 0, -0.674864)
+
+[node name="key02" parent="." instance=ExtResource("3_bixq2")]
+transform = Transform3D(-0.040212, -2.62262e-07, -5.99987, -5.99987, 1.75773e-09, 0.040212, 0, 6, -2.62268e-07, 0.0670784, -0.0621214, -0.597415)
 
 [node name="InteractArea" type="Area3D" parent="."]
 collision_layer = 2
@@ -63,3 +105,14 @@ collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea"]
 shape = SubResource("SphereShape3D_jqmej")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.412164, 0, 0)
+amount = 2
+amount_ratio = 0.359
+lifetime = 0.6
+explosiveness = 0.1
+visibility_aabb = AABB(-1.7283, -1.60061, -1.85913, 3.45661, 3.20122, 3.71827)
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_cnos5")
+draw_pass_1 = SubResource("QuadMesh_t5i8c")
