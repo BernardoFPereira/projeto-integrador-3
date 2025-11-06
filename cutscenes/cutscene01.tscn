@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://cx1j2np5gvor2"]
+[gd_scene load_steps=63 format=3 uid="uid://cx1j2np5gvor2"]
 
 [ext_resource type="Texture2D" uid="uid://b00jvlgi8gb2i" path="res://cutscenes/assets/carruagem/carruagem_carruagem_carruagem_mtl_BaseColor.png" id="1_ge4f2"]
 [ext_resource type="Texture2D" uid="uid://5h4uggomcwig" path="res://cutscenes/assets/carruagem/carruagem_carruagem_janela_mtl_BaseColor-carruagem_janela_mtl_alpha.png" id="2_83mfg"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://duktg6ht07bwi" path="res://cutscenes/assets/paper/paper-animated_paper1_papers1_mtl_BaseColor.png" id="5_q5yg2"]
 [ext_resource type="Animation" uid="uid://b81rdqofp2i3m" path="res://cutscenes/assets/locals/padre-idle-sitting.res" id="5_q8s33"]
 [ext_resource type="Script" path="res://cutscenes/camera_controls.gd" id="7_2q0j3"]
+[ext_resource type="Script" path="res://cutscenes/level_manager.gd" id="8_7ej02"]
 [ext_resource type="AudioStream" uid="uid://llw2koymacha" path="res://cutscenes/assets/audio/carriage-moving.wav" id="8_yefp1"]
 [ext_resource type="AudioStream" uid="uid://dyrdmqrfh3num" path="res://cutscenes/assets/audio/rain-inside-carriage.wav" id="10_ykm2a"]
 [ext_resource type="PackedScene" uid="uid://dsqx0xqkt7bby" path="res://cutscenes/assets/enviroment/skydome.glb" id="11_npgx7"]
@@ -4264,7 +4265,7 @@ tracks/3/path = NodePath("Control/ColorRect:modulate")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 23.3, 26.3, 44.4, 49.8),
+"times": PackedFloat32Array(0, 23.3, 26.3, 46, 49.8),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -4458,6 +4459,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hvgs3")
 
 [node name="Cutscene01" type="Node3D"]
+script = ExtResource("8_7ej02")
 
 [node name="carruagem" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0732179, 0)
@@ -4839,9 +4841,7 @@ theme = SubResource("Theme_50bs7")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 32
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-- Lorem Ipsum, 1834"
+text = "“Sua Santidade, venho por meio desta pedir que um representante esteja presente conosco enquanto transcrevemos um livro enviado até nós pela sede, nosso remoto monastério progrediu na transcrição com excelência, mas acontecimentos recentes nos necessitam a requerer a ajuda de vossa Santidade. Grato, Frade João do Monastério”"
 scroll_active = false
 
 [node name="CarriageAndHorses" type="AudioStreamPlayer" parent="Control"]
@@ -4917,10 +4917,10 @@ transform = Transform3D(2.94, 0, 0, 0, 2.94, 0, 0, 0, 2.94, 0, 0, 0)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -6.84508, 0)
 
 [node name="arvore_geo" parent="enviroment ring" index="0"]
-transform = Transform3D(23.623, 0, 0, 0, -1.03259e-06, -3.041, 0, 23.623, -1.32926e-07, 0, -0.614428, 8.50274e-06)
+transform = Transform3D(23.623, 0, 0, 0, -8.5515e-05, -3.041, 0, 23.623, -1.10084e-05, 0, -0.614428, 8.50274e-06)
 
 [node name="groundlevelparallax_geo" parent="enviroment ring" index="1"]
-transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 0, 1.41746, 1.9275e-06)
+transform = Transform3D(0.01, 0, 0, 0, -3.61999e-08, -0.01, 0, 0.01, -3.61999e-08, 0, 1.41746, 1.9275e-06)
 
 [node name="groundlevelparallax_geo" type="MeshInstance3D" parent="enviroment ring/groundlevelparallax_geo" index="0"]
 transform = Transform3D(0.73, 0, 0, 0, 0.73, -2.27374e-13, 0, 2.27374e-13, 0.73, 0, 0.885, 131.591)
@@ -4933,7 +4933,7 @@ mesh = SubResource("ArrayMesh_u7fo2")
 skeleton = NodePath("")
 
 [node name="montanhas_geo" parent="enviroment ring" index="2"]
-transform = Transform3D(30.3843, 0, 0, 0, -1.32814e-06, -7.09673, 0, 30.3843, -3.10208e-07, 0, 2.90298, 4.07282e-06)
+transform = Transform3D(30.3843, 0, 0, 0, -0.000109991, -7.09673, 0, 30.3843, -2.56901e-05, 0, 2.90298, 4.07282e-06)
 
 [node name="monastery plane" type="Node3D" parent="enviroment ring"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.39302, 3.50911)
