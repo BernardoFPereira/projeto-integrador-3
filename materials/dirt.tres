@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dtnrtdscc3qqs"]
+
+[ext_resource type="Texture2D" uid="uid://7qakjk8hbv88" path="res://textures/dirtground_mtl_BaseColor.1001.png" id="1_pijcd"]
+
+[resource]
+albedo_texture = ExtResource("1_pijcd")

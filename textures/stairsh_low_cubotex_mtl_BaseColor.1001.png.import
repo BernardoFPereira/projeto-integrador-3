@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7qakjk8hbv88"
-path.s3tc="res://.godot/imported/dirtground_mtl_BaseColor.1001.png-e7f5b5a5c8516a0e53f40845cc5000fd.s3tc.ctex"
+uid="uid://cmb1g6ikqqx8a"
+path.s3tc="res://.godot/imported/stairsh_low_cubotex_mtl_BaseColor.1001.png-e367f1e909bd1a3caf160342b3f67716.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/dirtground_mtl_BaseColor.1001.png"
-dest_files=["res://.godot/imported/dirtground_mtl_BaseColor.1001.png-e7f5b5a5c8516a0e53f40845cc5000fd.s3tc.ctex"]
+source_file="res://textures/stairsh_low_cubotex_mtl_BaseColor.1001.png"
+dest_files=["res://.godot/imported/stairsh_low_cubotex_mtl_BaseColor.1001.png-e367f1e909bd1a3caf160342b3f67716.s3tc.ctex"]
 
 [params]
 
