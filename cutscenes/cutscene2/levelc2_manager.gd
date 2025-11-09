@@ -1,32 +1,51 @@
 extends Node
 
-@onready var animation_player = $SelectionAnimationPlayer
+@onready var scene_animation_player = $SelectionAnimationPlayer
+@onready var char_animation_player = $"padre-cutscene-finale_a/AnimationPlayer"
+
 
 var is_finale_selected = false
 var finale = ""
 
 func _ready():
-	animation_player.play("AmbientShot")
-	animation_player.animation_finished.connect(_on_animation_finished)
+	scene_animation_player.play("AmbientShot")
+	char_animation_player.play("cutscene02-scene01")
+	scene_animation_player.animation_finished.connect(_on_animation_finished)
+	char_animation_player.animation_finished.connect(_on_animation_finished)
 
 func _on_animation_finished(anim_name):
 	if anim_name == "AmbientShot":
-		animation_player.play("EnterDecision")
+		scene_animation_player.play("EnterDecision")
 	
 	if anim_name == "EnterDecision":
-		animation_player.play("DecisionLoop")
+		scene_animation_player.play("DecisionLoop")
 	
-	elif anim_name == "DecisionLoop":
+	if anim_name == "DecisionLoop":
 		if not is_finale_selected:
-			animation_player.play("DecisionLoop")
+			scene_animation_player.play("DecisionLoop")
 		else:
 			if finale == "A":
-				animation_player.play("Finale_A")
+				scene_animation_player.play("Finale_A")
+				char_animation_player.play("cutscene02-finale_A")
 			elif finale == "B":
-				animation_player.play("Finale_B")
+				scene_animation_player.play("Finale_B")
+				#char_animation_player.play("CharFinaleB")
 	
-	elif anim_name == "Finale_A" or anim_name == "Finale_B":
+	if anim_name == "Finale_A":
+		scene_animation_player.play("Finale_A_2")
+		char_animation_player.play("cutscene02-finale_a_2")
+	
+	if anim_name == "Finale_A_2":
 		get_tree().change_scene_to_file("res://scenes/interface/main_menu.tscn")
+	
+	if anim_name == "Finale_B":
+		get_tree().change_scene_to_file("res://scenes/interface/main_menu.tscn")
+	
+	if anim_name == "cutscene02-scene01":
+		char_animation_player.play("cutscene02-loopscene")
+	
+	if anim_name == "cutscene02-loopscene" and not is_finale_selected:
+		char_animation_player.play("cutscene02-loopscene")
 
 func get_choice(value):
 	is_finale_selected = true
@@ -35,7 +54,7 @@ func get_choice(value):
 
 func verify_selection():
 	if not is_finale_selected:
-		animation_player.play("DecisionLoop")
+		scene_animation_player.play("DecisionLoop")
 		print("NotSelected")
 	else:
 		print("Finale Selected")
