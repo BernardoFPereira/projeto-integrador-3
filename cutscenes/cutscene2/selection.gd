@@ -11,6 +11,12 @@ func _ready():
 
 func _on_button_a_pressed():
 	cutscene.get_choice("A")
+	hide_buttons()
 
 func _on_button_b_pressed():
 	cutscene.get_choice("B")
+	hide_buttons()
+
+func hide_buttons():
+	button_a.visible = false
+	button_b.visible = false

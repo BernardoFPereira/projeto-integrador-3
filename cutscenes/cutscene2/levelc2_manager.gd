@@ -13,16 +13,19 @@ func _on_animation_finished(anim_name):
 	if anim_name == "AmbientShot":
 		animation_player.play("EnterDecision")
 	
+	if anim_name == "EnterDecision":
+		animation_player.play("DecisionLoop")
+	
 	elif anim_name == "DecisionLoop":
 		if not is_finale_selected:
 			animation_player.play("DecisionLoop")
 		else:
 			if finale == "A":
-				animation_player.play("Final_A")
+				animation_player.play("Finale_A")
 			elif finale == "B":
-				animation_player.play("Final_B")
+				animation_player.play("Finale_B")
 	
-	elif anim_name == "Final_A" or anim_name == "Final_B":
+	elif anim_name == "Finale_A" or anim_name == "Finale_B":
 		get_tree().change_scene_to_file("res://scenes/interface/main_menu.tscn")
 
 func get_choice(value):
@@ -32,6 +35,7 @@ func get_choice(value):
 
 func verify_selection():
 	if not is_finale_selected:
-		pass
-	else:
 		animation_player.play("DecisionLoop")
+		print("NotSelected")
+	else:
+		print("Finale Selected")
