@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://3tfq0uaojln7"]
+
+[ext_resource type="PackedScene" uid="uid://bcfsg31shimyg" path="res://models/quadro_michuruca.glb" id="1_g5bua"]
+
+[node name="Quadro01" type="Node3D"]
+transform = Transform3D(0.55499, 0, 0, 0, 0.55499, 0, 0, 0, 0.55499, 0, 0, 0)
+
+[node name="quadro_michuruca" parent="." instance=ExtResource("1_g5bua")]

@@ -5,7 +5,8 @@ var can_inspect := false
 var inspect_target: Node3D
 var inspect_target_mesh: Node3D
 var inspect_detail: Control
-	
+var inspect_exit_tip: Control
+
 var inspect_room: Node3D
 var inspect_text_label: Label
 var player_og_position: Vector3
@@ -21,6 +22,7 @@ func start_inspection() -> void:
 	
 	inspect_detail.visible = true
 	inspect_text_label.text = inspect_target.inspect_text
+	inspect_exit_tip.visible = true
 	
 	inspect_target_mesh = inspect_target.inspect_mesh.instantiate()
 	
@@ -42,22 +44,23 @@ func stop_inspection() -> void:
 	
 	inspect_detail.visible = false
 	inspect_text_label.text = ""
+	inspect_exit_tip.visible = false
 	
 	#if inspect_target.is_in_group("Key"):
 		#inspect_target.visible = false
 	
 	if inspect_target.is_in_group("Page"):
 		var page_picked = inspect_target
-		player.collected_pages.append(page_picked)
 		inspect_target.visible = false
 		inspect_target = null
 		can_inspect = false
 		
 		if !is_not_pickup:
+			player.collected_pages.append(page_picked)
 			player.ui_manager.pages.reveal_page()
 			InspectManager.can_inspect = false
 			InspectManager.inspect_target = null
 		elif is_not_pickup:
 			is_not_pickup = false
-	
+			
 	can_inspect = true

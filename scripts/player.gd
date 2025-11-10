@@ -10,10 +10,13 @@ class_name Player
 @onready var head_camer_pos = $HeadCamerPos
 @onready var shoulder_camera_pos = $View/ShoulderCameraPos
 #@onready var animation_player = $ThePriest/AnimationPlayer
-@onready var animation_player = $"ThePriest/Padre-walkF-walkB/AnimationPlayer"
-@onready var animation_tree = $"ThePriest/Padre-walkF-walkB/AnimationTree"
+#@onready var animation_player = $"ThePriest/GuardNode/AnimationPlayer"
+#@onready var animation_tree = $"ThePriest/GuardNode/AnimationTree"
+@onready var animation_player = $ThePriest/GuardNode/Char_Full_Anims/AnimationPlayer
+@onready var animation_tree = $ThePriest/GuardNode/Char_Full_Anims/AnimationTree
 @onready var inspect_object_pos = $InspectObjectPos
 @onready var interact_area = $InteractArea
+@onready var footstep_audio_player = $AudioStreamPlayer3D
 
 @export var SPEED = 2.0
 @export var max_slope_angle := 45.0
@@ -28,8 +31,11 @@ enum States {
 	IDLE,
 	WALK,
 	INSPECT,
+	PICKUP,
 	DEAD,
 }
+
+@export var footstep_audios: Array[AudioStream]
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var camera_mode = CameraModes.ThirdPerson
@@ -44,6 +50,10 @@ var interact_target: Node3D
 
 @export var collected_keys: Array[Node3D]
 @export var collected_pages: Array[Node3D]
+
+var step_distance: float = 1.5  # Tweak: ~half walk cycle
+var last_step_pos: float = 0.0
+var is_moving: bool = false
 
 func _ready():
 	set_camera_mode(CameraModes.ThirdPerson)
@@ -68,43 +78,40 @@ func _process(delta):
 	handle_state(delta)
 
 func _physics_process(delta):
-	#if not is_on_floor():
-		#velocity.y -= gravity * delta
+	if not is_on_floor():
+		velocity.y -= gravity * delta
 	
 	move_and_slide()
 
 func _input(event):
 	match state:
 		States.INSPECT:
-			if event is InputEventMouseButton:
-				if event.button_index == 1:
-					if event.pressed:
-						is_dragging_mouse = true
-						#print("--- START DRAG ---")
-					else:
-						is_dragging_mouse = false
-						#print("--- STOP DRAG ---")
-				
-			if event is InputEventMouseMotion and is_dragging_mouse:
-				var obj: Node3D = InspectManager.inspect_target
-				var inspect_obj: Node3D = obj.get_child(-1)
-				
-				#print(event.relative)
-				
-				inspect_obj.rotation.y += event.relative.y * get_process_delta_time()
-				#inspect_obj.rotation.x += event.relative.y * get_process_delta_time()
-			
-			if event.is_action_pressed("exit_inspect") and state == States.INSPECT:
-				set_state(States.IDLE)
+			if event.is_action_pressed("exit_inspect"):
 				InspectManager.stop_inspection()
+				set_state(States.IDLE)
 			
+			#if event is InputEventMouseButton:
+				#if event.button_index == 1:
+					#if event.pressed:
+						#is_dragging_mouse = true
+						##print("--- START DRAG ---")
+					#else:
+						#is_dragging_mouse = false
+						#print("--- STOP DRAG ---")
+			#if event is InputEventMouseMotion and is_dragging_mouse:
+				#var obj: Node3D = InspectManager.inspect_target
+				#var inspect_obj: Node3D = obj.get_child(-1)
+				#print(event.relative)
+				#inspect_obj.rotation.y += event.relative.y * get_process_delta_time()
+				#inspect_obj.rotation.x += event.relative.y * get_process_delta_time()
+				
 		States.DEAD:
 			pass
 			
 		_:
 			# DEV POWER -- DISABLE ON BUILD
-			#if Input.is_action_just_pressed("ui_accept"):
-				#velocity.y = JUMP_VELOCITY
+			if Input.is_action_just_pressed("ui_accept"):
+				velocity.y = JUMP_VELOCITY
 				
 			if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 				var mouse_input = event.relative
@@ -118,28 +125,31 @@ func _input(event):
 					#return
 				
 				if interact_target and can_interact:
+					#animation_tree.active = false
+					#animation_player.play("interacting")
 					interact_target.interact()
 					
-	if event.is_action_pressed("ui_cancel"):
-		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-			ui_manager.menu_type = ui_manager.MenuType.MENU
-			ui_manager.menu.visible = true
-		else:
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-			ui_manager.menu_type = ui_manager.MenuType.NONE
-			ui_manager.clear_menu()
 			
-	if event.is_action_pressed("check_notes"):
-		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-			ui_manager.menu_type = ui_manager.MenuType.NOTES
-			ui_manager.journal.visible = true
-			
-		else:
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-			ui_manager.menu_type = ui_manager.MenuType.NONE
-			ui_manager.clear_menu()
+			if event.is_action_pressed("ui_cancel"):
+				if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+					Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+					ui_manager.menu_type = ui_manager.MenuType.MENU
+					ui_manager.menu.visible = true
+				else:
+					Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+					ui_manager.menu_type = ui_manager.MenuType.NONE
+					ui_manager.clear_menu()
+					
+			if event.is_action_pressed("check_notes"):
+				if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+					Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+					ui_manager.menu_type = ui_manager.MenuType.NOTES
+					ui_manager.journal.visible = true
+					
+				else:
+					Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+					ui_manager.menu_type = ui_manager.MenuType.NONE
+					ui_manager.clear_menu()
 	
 
 func set_state(new_state: States) -> void:
@@ -151,6 +161,10 @@ func set_state(new_state: States) -> void:
 		States.INSPECT:
 			set_camera_mode(CameraModes.FirstPerson)
 			InspectManager.start_inspection()
+		States.PICKUP:
+			animation_tree.active = false
+			animation_player.play("interacting")
+			pass
 		_:
 			set_camera_mode(CameraModes.ThirdPerson)
 		
@@ -163,7 +177,15 @@ func handle_state(delta) -> void:
 	var blend_position = animation_tree.get("parameters/blend_position")
 	
 	match state:
+		States.PICKUP:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+			velocity.z = move_toward(velocity.z, 0, SPEED)
+			pass
+			
 		States.IDLE:
+			if ui_manager.menu_type != ui_manager.MenuType.NONE:
+				return
+			
 			blend_position = lerp(blend_position, Vector2.ZERO, delta * 6) 
 			animation_tree.set("parameters/blend_position", blend_position)
 			if direction:
@@ -173,13 +195,26 @@ func handle_state(delta) -> void:
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 		
 		States.WALK:
-			if input_dir.y > 0:
-				blend_position = lerp(blend_position, Vector2.UP, delta * 6) 
+			var speed = velocity.length()
+			is_moving = speed > 0.1  # Deadzone
+			
+			if direction:
+				blend_position = lerp(blend_position, input_dir, delta * 6) 
 				animation_tree.set("parameters/blend_position", blend_position)
-			elif input_dir.y < 0:
-				blend_position = lerp(blend_position, Vector2.DOWN, delta * 6) 
-				animation_tree.set("parameters/blend_position", blend_position)
+				
+			# Accumulate distance traveled
+				last_step_pos += speed * delta
+				if last_step_pos >= step_distance:
+					play_footsteps()
+					last_step_pos = 0.0
+			#if input_dir.y > 0:
+				#blend_position = lerp(blend_position, Vector2.UP, delta * 6) 
+				#animation_tree.set("parameters/blend_position", blend_position)
+			#elif input_dir.y < 0:
+				#blend_position = lerp(blend_position, Vector2.DOWN, delta * 6) 
+				#animation_tree.set("parameters/blend_position", blend_position)
 			if !direction:
+				#animation_tree.set("parameters/blend_position", Vector2.ZERO)
 				set_state(States.IDLE)
 			
 			_floor_normal = _get_floor_normal()
@@ -252,8 +287,6 @@ func _on_interact_area_area_entered(area):
 		InspectManager.can_inspect = true
 		InspectManager.inspect_target = area_parent
 
-
-# Get averaged floor normal (prevents jitter on edges)
 func _get_floor_normal() -> Vector3:
 	var normal = Vector3.UP
 	var count = 0
@@ -268,22 +301,25 @@ func _get_floor_normal() -> Vector3:
 		normal /= count
 		normal = normal.normalized()
 	
-	# Only use if within slope limit
 	if rad_to_deg(acos(normal.y)) > max_slope_angle:
-		return Vector3.UP  # too steep → treat as wall
+		return Vector3.UP 
 	
 	return normal
-# Project 3D direction onto the floor plane
+
 func _project_direction_on_floor(dir: Vector3) -> Vector3:
 	if dir.length() < 0.01:
 		return Vector3.ZERO
 		
-	# Plane defined by floor normal
 	var plane_normal = _floor_normal
 	var projected = dir - plane_normal * dir.dot(plane_normal)
 	
 	return projected.normalized()
-	
+
+func play_footsteps():
+	var rnd_idx = randi_range(0, len(footstep_audios) - 1)
+	footstep_audio_player.stream = footstep_audios[rnd_idx]
+	footstep_audio_player.play()
+
 #func _on_inspect_area_area_entered(area):
 	#var area_parent = area.get_parent()
 	#
@@ -298,3 +334,12 @@ func _project_direction_on_floor(dir: Vector3) -> Vector3:
 		#can_interact = true
 		#interact_target = area_parent
 		#pass
+
+
+func _on_animation_player_animation_finished(anim_name):
+	match anim_name:
+		"interacting":
+			animation_tree.active = true
+			set_state(States.IDLE)
+		_:
+			pass

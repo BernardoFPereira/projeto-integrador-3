@@ -4,6 +4,7 @@ extends Node3D
 @export var item_kind: ItemKind
 
 @onready var interact_area = $InteractArea
+@onready var audio_player = $AudioStreamPlayer3D
 
 enum ItemKind
 {
@@ -13,6 +14,7 @@ enum ItemKind
 }
 
 func interact():
+	var player = get_tree().get_first_node_in_group("Player")
 	match item_kind:
 		ItemKind.WAXING_MOON:
 			if ProgressManager.has_item_01:
@@ -20,6 +22,7 @@ func interact():
 				interact_area.monitorable = false
 				ProgressManager.altar_item_count += 1
 				ProgressManager.has_item_01 = false
+				audio_player.play()
 		ItemKind.SPHERE:
 			#if ProgressManager.has_all_items:
 				#item.visible = true
@@ -32,7 +35,8 @@ func interact():
 				interact_area.monitorable = false
 				ProgressManager.altar_item_count += 1
 				ProgressManager.has_item_02 = false
-		
-	#var player = get_tree().get_first_node_in_group("Player")
+				audio_player.play()
+	
+	player.set_state(player.States.PICKUP)
 	#item.visible = true
 	#interact_area.monitorable = false

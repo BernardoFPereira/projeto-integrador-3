@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d3yag7fm5032k"]
+
+[ext_resource type="Texture2D" uid="uid://ex4xc0a1vsac" path="res://models/chapelaltar1_altarzao_01_altarzao01_mtl_BaseColor.png" id="1_oo4qw"]
+
+[resource]
+resource_name = "altarzao01_mtl.1001"
+cull_mode = 2
+albedo_texture = ExtResource("1_oo4qw")
+texture_filter = 0

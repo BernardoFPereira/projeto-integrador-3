@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://wu80p110vjqw"
+path="res://.godot/imported/PI3 FootStep5.wav-4fa3a8855ea19e6960dd31608f3a69ff.sample"
+
+[deps]
+
+source_file="res://audio/footsteps/PI3 FootStep5.wav"
+dest_files=["res://.godot/imported/PI3 FootStep5.wav-4fa3a8855ea19e6960dd31608f3a69ff.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

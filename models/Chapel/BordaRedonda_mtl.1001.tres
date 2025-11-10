@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://stq56af1b7oc"]
+
+[ext_resource type="Texture2D" uid="uid://ddyr3emf0664m" path="res://models/Chapel/Vitral Redondo_vitralredondo_BordaRedonda_mtl_BaseColor.png" id="1_aoadt"]
+
+[resource]
+resource_name = "BordaRedonda_mtl.1001"
+cull_mode = 2
+albedo_texture = ExtResource("1_aoadt")
+texture_filter = 0

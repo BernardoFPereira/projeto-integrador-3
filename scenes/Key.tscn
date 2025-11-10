@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://cgfowgyio5ni3"]
+[gd_scene load_steps=15 format=3 uid="uid://cgfowgyio5ni3"]
 
 [ext_resource type="Script" path="res://scripts/key.gd" id="1_14ing"]
 [ext_resource type="PackedScene" uid="uid://bjwfu3bhiwybx" path="res://models/key01.glb" id="2_6qddk"]
 [ext_resource type="Texture2D" uid="uid://uw25yo2l8fl" path="res://textures/particle_sparkle.png" id="2_thkhj"]
 [ext_resource type="PackedScene" uid="uid://6smuci665u8c" path="res://models/key02.glb" id="3_bixq2"]
+[ext_resource type="AudioStream" uid="uid://co6amkn0tfk3e" path="res://audio/key_pickup.ogg" id="5_8tb7q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pw0co"]
 resource_name = "Material.001"
@@ -116,3 +117,8 @@ visibility_aabb = AABB(-1.7283, -1.60061, -1.85913, 3.45661, 3.20122, 3.71827)
 local_coords = true
 process_material = SubResource("ParticleProcessMaterial_cnos5")
 draw_pass_1 = SubResource("QuadMesh_t5i8c")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_8tb7q")
+volume_db = -15.0
+pitch_scale = 0.81

@@ -43,8 +43,7 @@ albedo_color = Color(1, 0.741176, 0.270588, 1)
 material = SubResource("StandardMaterial3D_06x22")
 size = Vector3(0.035, 0.035, 0.035)
 
-[node name="Torch" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="Lamp" type="Node3D"]
 
 [node name="TorchMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.523928, -2.6077e-08, -4.47035e-08, -2.6077e-08, 0.710832, 0, 4.47035e-08, -7.45058e-09, -0.523928, 0, -0.188248, 0)

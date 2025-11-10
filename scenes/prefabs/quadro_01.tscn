@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dipurvmrylacm"]
+
+[ext_resource type="PackedScene" uid="uid://bhr2irap5y5t7" path="res://models/quadro_chique.glb" id="1_4bikb"]
+
+[node name="Quadro01" type="Node3D"]
+transform = Transform3D(0.469689, 0, 0, 0, 0.469689, 0, 0, 0, 0.469689, 0, 0, 0)
+
+[node name="quadro_chique" parent="." instance=ExtResource("1_4bikb")]
