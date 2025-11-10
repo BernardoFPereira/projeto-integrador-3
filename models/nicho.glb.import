@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cha7q8sxrad35"
-path="res://.godot/imported/nicho.glb-a860238bd8ce9eebac49cfa777a222c9.scn"
+path="res://.godot/imported/Nicho.glb-8393e733b512c42ba006274d714abd95.scn"
 
 [deps]
 
-source_file="res://models/nicho.glb"
-dest_files=["res://.godot/imported/nicho.glb-a860238bd8ce9eebac49cfa777a222c9.scn"]
+source_file="res://models/Nicho.glb"
+dest_files=["res://.godot/imported/Nicho.glb-8393e733b512c42ba006274d714abd95.scn"]
 
 [params]
 
