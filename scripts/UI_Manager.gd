@@ -5,6 +5,8 @@ extends Control
 @onready var settings = $Settings
 @onready var pages = $Pages
 @onready var interact_tip = $InteractTip
+@onready var inspect_text = $InspectDetailText
+@onready var exit_inspect_tip = $ExitInspectTip
 
 # TEMPORARY NODE
 @onready var temp_end = $Temp_End

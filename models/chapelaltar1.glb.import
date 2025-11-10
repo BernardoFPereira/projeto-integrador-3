@@ -31,9 +31,9 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"standardSurface13.1001": {
+"altarzao01_mtl.1001": {
 "use_external/enabled": true,
-"use_external/path": "res://materials/standardSurface13.1001.tres"
+"use_external/path": "res://materials/altarzao01_mtl.1001.tres"
 }
 }
 }

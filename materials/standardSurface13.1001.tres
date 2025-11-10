@@ -7,3 +7,4 @@ resource_name = "standardSurface13.1001"
 cull_mode = 2
 albedo_texture = ExtResource("1_h6ebs")
 roughness = 0.0
+texture_filter = 0
