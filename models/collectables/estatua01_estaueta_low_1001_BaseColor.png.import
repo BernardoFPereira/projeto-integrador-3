@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drnj0bgqdwxhv"
-path.s3tc="res://.godot/imported/darkercubes_mtl_BaseColor.1001.png-792723cf4df86e6eba3c00ca11807708.s3tc.ctex"
+uid="uid://bp2ge5s3d2n3s"
+path.s3tc="res://.godot/imported/estatua01_estaueta_low_1001_BaseColor.png-8d3dabf01684523c34f5f23d8dc7bbd5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "8ee9d4b23fc7679ec827787de4f8dc9d"
+}
 
 [deps]
 
-source_file="res://textures/darkercubes_mtl_BaseColor.1001.png"
-dest_files=["res://.godot/imported/darkercubes_mtl_BaseColor.1001.png-792723cf4df86e6eba3c00ca11807708.s3tc.ctex"]
+source_file="res://models/collectables/estatua01_estaueta_low_1001_BaseColor.png"
+dest_files=["res://.godot/imported/estatua01_estaueta_low_1001_BaseColor.png-8d3dabf01684523c34f5f23d8dc7bbd5.s3tc.ctex"]
 
 [params]
 
