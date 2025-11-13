@@ -4859,6 +4859,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="IntroText" type="RichTextLabel" parent="Control"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.243
@@ -4892,7 +4893,7 @@ autoplay = true
 visible = false
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Rain"]
-transform = Transform3D(0.787306, -0.616564, 0, 0.616564, 0.787306, 0, 0, 0, 1, 4.05191, 41.1134, 10.4099)
+transform = Transform3D(0.770914, -0.63694, 0, 0.63694, 0.770914, 0, 0, 0, 1, 4.05191, 41.1134, 10.4099)
 amount = 2500
 randomness = 0.64
 visibility_aabb = AABB(-42.4057, -61.2865, -59.3164, 84.8115, 79.032, 118.633)
@@ -4952,10 +4953,10 @@ transform = Transform3D(2.94, 0, 1.31312e-05, 0, 2.94, 0, -1.31312e-05, 0, 2.94,
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -6.84508, 0)
 
 [node name="arvore_geo" parent="enviroment ring" index="0"]
-transform = Transform3D(10.0031, -21.4006, 1.20421e-07, 0, -1.0326e-06, -3.041, 21.4006, 10.0031, -5.62872e-08, 0, 0, 0)
+transform = Transform3D(23.623, 0, 0, 0, -8.55152e-05, -3.041, 0, 23.623, -1.10084e-05, 0, 0, 0)
 
 [node name="groundlevelparallax_geo" parent="enviroment ring" index="1"]
-transform = Transform3D(-0.00990377, -0.00138396, 6.04948e-11, 0, -4.37114e-10, -0.01, 0.00138396, -0.00990377, 4.32908e-10, -5.96906e-11, 1.31819, 4.77183e-06)
+transform = Transform3D(0.01, 0, 0, 0, -3.61999e-08, -0.01, 0, 0.01, -3.61999e-08, -5.96906e-11, 1.31819, 4.77183e-06)
 
 [node name="groundlevelparallax_geo" type="MeshInstance3D" parent="enviroment ring/groundlevelparallax_geo" index="0"]
 transform = Transform3D(0.73, 0, 0, 0, 0.73, -2.27374e-13, 0, 2.27374e-13, 0.73, 0, 0, 0)
@@ -4968,10 +4969,10 @@ mesh = SubResource("ArrayMesh_u7fo2")
 skeleton = NodePath("")
 
 [node name="montanhas_geo" parent="enviroment ring" index="2"]
-transform = Transform3D(17.0662, 46.9973, -4.79888e-07, 0, -2.18557e-06, -11.68, -46.9973, 17.0662, -1.74263e-07, 0, 6.39, 0)
+transform = Transform3D(50, 0, 0, 0, -0.000181, -11.68, 0, 50, -4.22815e-05, 0, 6.39, 0)
 
 [node name="monastery plane" type="Node3D" parent="enviroment ring"]
-transform = Transform3D(-0.736404, 0, -0.312585, 0, 0.8, 0, 0.312585, 0, -0.736404, 0, 1.4971, 0)
+transform = Transform3D(-0.736405, 0, -0.312583, 0, 0.8, 0, 0.312583, 0, -0.736405, 0, 1.4971, 0)
 
 [node name="cutscenemonasteryplane" parent="enviroment ring/monastery plane" instance=ExtResource("12_w7ava")]
 transform = Transform3D(1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 0, -0.0425267, 0)
