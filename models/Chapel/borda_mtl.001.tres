@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bxym1m21heys6"]
+
+[ext_resource type="Texture2D" uid="uid://miiw0yxruao8" path="res://models/Chapel/Janela_vitralbig_borda_mtl_BaseColor.png" id="1_h4mn7"]
+
+[resource]
+resource_name = "borda_mtl.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_h4mn7")
+texture_filter = 0

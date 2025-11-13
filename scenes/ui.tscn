@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://drak54rbqaie4"]
+[gd_scene load_steps=18 format=3 uid="uid://drak54rbqaie4"]
 
 [ext_resource type="Script" path="res://scripts/UI_Manager.gd" id="1_txv8k"]
 [ext_resource type="Script" path="res://scripts/Journal.gd" id="2_qjj1l"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" path="res://scripts/holy_pages.gd" id="7_5gck7"]
 [ext_resource type="Texture2D" uid="uid://dmu0ivr826rwb" path="res://addons/cyclops_level_builder/art/icons/eye_open.svg" id="7_28cvy"]
 [ext_resource type="Texture2D" uid="uid://ghfvfty2oswu" path="res://addons/cyclops_level_builder/art/icons/arrow_left.svg" id="7_gbf7f"]
+[ext_resource type="Script" path="res://scripts/InnerThoughtsManager.gd" id="10_45j4o"]
+[ext_resource type="Texture2D" uid="uid://cpeyuvojceg0j" path="res://UI/go_text_arrow.png" id="10_abgis"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hsyih"]
 font = ExtResource("3_u26e6")
@@ -29,6 +31,17 @@ font_size = 36
 [sub_resource type="LabelSettings" id="LabelSettings_ptbmp"]
 font = ExtResource("4_n24mj")
 font_size = 31
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7yt3o"]
+bg_color = Color(0.164706, 0.172549, 0.227451, 0.639216)
+border_width_bottom = 65
+border_color = Color(0.0655913, 0.0824482, 0.134485, 0.886275)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+anti_aliasing = false
 
 [node name="UI" type="Control" groups=["UI"]]
 layout_mode = 3
@@ -602,7 +615,7 @@ label_settings = SubResource("LabelSettings_pyvbf")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ExitInspectTip" type="Control" parent="."]
+[node name="ExitInspectTip" type="Control" parent="." groups=["InspectExitTip"]]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -618,11 +631,11 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -192.0
-offset_top = 59.0
+offset_top = 53.0
 offset_right = 193.0
-offset_bottom = 95.0
+offset_bottom = 89.0
 grow_horizontal = 2
-text = "Pressione 'Tab' para voltar"
+text = "Pressione 'Q' para sair"
 label_settings = SubResource("LabelSettings_pyvbf")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -736,6 +749,54 @@ offset_bottom = -130.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Sair"
+
+[node name="InnerThought" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_45j4o")
+
+[node name="Panel" type="Panel" parent="InnerThought"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -293.0
+offset_top = -172.0
+offset_right = 293.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7yt3o")
+
+[node name="MarginContainer" type="MarginContainer" parent="InnerThought/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 15
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InnerThought/Panel/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("3_x8ns6")
+text = "Hm... Parece que este é o tal do livro que estavam transcrevendo..."
+
+[node name="Sprite2D" type="Sprite2D" parent="InnerThought/Panel"]
+texture_filter = 1
+position = Vector2(551, 100)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_abgis")
 
 [connection signal="pressed" from="Journal/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Journal/PagesButton" to="." method="_on_pages_button_pressed"]

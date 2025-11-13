@@ -30,9 +30,9 @@ func _ready():
 func interact():
 	match item_order:
 		ItemOrder.FIRST:
-			ProgressManager.emit_signal("first_item_picked")
 			ProgressManager.has_item_01 = true
 		ItemOrder.SECOND:
+			ProgressManager.emit_signal("first_item_picked")
 			ProgressManager.has_item_02 = true
 			#ProgressManager.has_item_02 = true
 			#pass
@@ -40,7 +40,8 @@ func interact():
 			#ProgressManager.has_item_03 = true
 			#ProgressManager.has_all_items = true
 			pass
-		
+	
+	player.set_state(player.States.PICKUP)
 	self.visible = false
 	interact_area.monitorable = false
 

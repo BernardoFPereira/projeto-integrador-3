@@ -25,12 +25,13 @@ light_size = 0.013
 light_negative = true
 light_specular = 6.356
 light_bake_mode = 1
+shadow_enabled = true
 shadow_bias = 0.815
 spot_range = 14.7639
 spot_angle = 27.0311
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="."]
-transform = Transform3D(-0.930772, -0.363847, -0.0357606, -0.260166, 0.590453, 0.763989, -0.25686, 0.720403, -0.644238, -6.97287, 13.6166, -12.5681)
+transform = Transform3D(-0.930772, -0.363847, -0.0357606, -0.260166, 0.590453, 0.763989, -0.25686, 0.720403, -0.644238, -6.97287, 13.6166, -12.3286)
 light_color = Color(0.619608, 0.580392, 0.941176, 1)
 light_energy = 16.0
 light_indirect_energy = 3.138
@@ -44,7 +45,7 @@ spot_range = 14.7639
 spot_angle = 27.0311
 
 [node name="SpotLight3D5" type="SpotLight3D" parent="."]
-transform = Transform3D(-0.939233, -0.343176, -0.00843376, -0.228008, 0.605289, 0.762652, -0.256619, 0.718231, -0.646754, -8.92298, 12.9698, -12.5681)
+transform = Transform3D(-0.939233, -0.343176, -0.00843376, -0.228008, 0.605289, 0.762652, -0.256619, 0.718231, -0.646754, -8.92298, 12.9698, -12.365)
 light_color = Color(0.338746, 0.742607, 0.643099, 1)
 light_energy = 9.516
 light_indirect_energy = 1.942

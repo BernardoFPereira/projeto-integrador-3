@@ -1,15 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://dph66wxcgr54"]
+[gd_scene load_steps=15 format=3 uid="uid://dph66wxcgr54"]
 
 [ext_resource type="PackedScene" uid="uid://cmi2ahrooyfxn" path="res://scenes/prefabs/Room Prefabs/InnerColumns.tscn" id="1_lokpl"]
+[ext_resource type="PackedScene" uid="uid://dtwqilcneimx0" path="res://models/Chapel/Candlehold.glb" id="2_23uo4"]
 [ext_resource type="PackedScene" uid="uid://cb5wrqpvo66ix" path="res://scenes/prefabs/third_floor_corner_detail.tscn" id="2_y4f18"]
 [ext_resource type="PackedScene" uid="uid://d0fj8u3meqg3v" path="res://scenes/prefabs/chair_model.tscn" id="4_mvwnw"]
 [ext_resource type="PackedScene" uid="uid://c2lftgn6ri05y" path="res://scenes/prefabs/shelfsmall.tscn" id="5_4cfby"]
 [ext_resource type="PackedScene" uid="uid://dhnu2i6aau4v4" path="res://scenes/prefabs/Room Prefabs/library.tscn" id="6_ikckr"]
 [ext_resource type="PackedScene" uid="uid://bs0ie2bmdee7h" path="res://scenes/prefabs/Room Prefabs/Confessionary Room.tscn" id="7_iluoo"]
 [ext_resource type="PackedScene" uid="uid://cewqkfkmkm156" path="res://scenes/prefabs/Room Prefabs/evil_paper_corridor.tscn" id="8_vlaqv"]
-[ext_resource type="PackedScene" path="res://scenes/prefabs/candelabro.tscn" id="9_7fkg6"]
+[ext_resource type="PackedScene" uid="uid://db5ysjuhpv456" path="res://scenes/prefabs/candelabro.tscn" id="9_7fkg6"]
 [ext_resource type="PackedScene" uid="uid://m7trdro12xfi" path="res://scenes/prefabs/cemetery.tscn" id="10_rvyfp"]
-[ext_resource type="PackedScene" path="res://scenes/prefabs/grass.tscn" id="11_6vp30"]
+[ext_resource type="PackedScene" uid="uid://5g63q5n4smey" path="res://scenes/prefabs/grass.tscn" id="11_6vp30"]
 [ext_resource type="PackedScene" uid="uid://cyuqysv1hojuw" path="res://scenes/prefabs/candle_03.tscn" id="12_aqghe"]
 [ext_resource type="PackedScene" uid="uid://bcfr0cbpfsy05" path="res://scenes/prefabs/candle_02.tscn" id="13_6fcrr"]
 [ext_resource type="PackedScene" uid="uid://du4lyekygvy8q" path="res://scenes/prefabs/candle_01.tscn" id="14_4qtxd"]
@@ -37,6 +38,18 @@ transform = Transform3D(1.08278, 0, 0, 0, 1.26991, 0, 0, 0, 1.10398, 8.14729, 0,
 
 [node name="column6" parent="Chapel Columns" index="5"]
 visible = false
+
+[node name="Candlehold" parent="Chapel Columns" instance=ExtResource("2_23uo4")]
+transform = Transform3D(0.0203666, 0, 0.999792, 0, 0.999999, 0, -0.999792, 0, 0.0203666, 8.12427, 0.699972, 0.310931)
+
+[node name="Candlehold2" parent="Chapel Columns" instance=ExtResource("2_23uo4")]
+transform = Transform3D(0.103626, 0, 0.994615, 0, 0.999999, 0, -0.994615, 0, 0.103626, 4.62908, 0.631142, 0.537093)
+
+[node name="Candlehold3" parent="Chapel Columns" instance=ExtResource("2_23uo4")]
+transform = Transform3D(-0.051447, 0, 0.998674, 0, 0.999999, 0, -0.998674, 0, -0.051447, 1.32827, 0.744552, 0.286289)
+
+[node name="Candlehold4" parent="Chapel Columns" instance=ExtResource("2_23uo4")]
+transform = Transform3D(-0.0514469, 0, 0.998674, 0, 0.999998, 0, -0.998674, 0, -0.0514469, -2.29021, 0.744552, 0.286289)
 
 [node name="Garden Columns" parent="." instance=ExtResource("1_lokpl")]
 transform = Transform3D(-4.36705e-08, 0, 0.999071, 0, 0.999071, 0, -0.999071, 0, -4.36705e-08, -0.281808, -0.265873, -6.55402)
@@ -216,6 +229,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.46314, 14.8123, 5.6205)
 
 [node name="Candelabro2" parent="Book Lights" instance=ExtResource("9_7fkg6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.82901, 14.1031, 3.60066)
+
+[node name="candle01" parent="." instance=ExtResource("14_4qtxd")]
+transform = Transform3D(0.999999, 0, -1.06581e-14, 0, 0.999999, 0, 1.06581e-14, 0, 0.999999, 8.19028, 2.71459, -0.517101)
+is_on = true
+
+[node name="candle02" parent="." instance=ExtResource("13_6fcrr")]
+transform = Transform3D(0.999999, 0, -1.06581e-14, 0, 0.999999, 0, 1.06581e-14, 0, 0.999999, 4.72997, 2.63443, -0.239176)
+is_on = true
+
+[node name="candle04" parent="." instance=ExtResource("13_6fcrr")]
+transform = Transform3D(0.999999, 0, -2.4869e-14, 0, 0.999999, 0, 2.4869e-14, 0, 0.999999, -2.33755, 2.74795, -0.530754)
+is_on = true
+
+[node name="candle03" parent="." instance=ExtResource("12_aqghe")]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 1.26749, 2.73532, -0.452743)
 
 [editable path="Chapel Columns"]
 [editable path="Garden Columns"]

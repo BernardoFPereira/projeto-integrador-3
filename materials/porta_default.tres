@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://drlhp4ee3isbs"]
+
+[ext_resource type="Texture2D" uid="uid://dkfnxejys2vpm" path="res://models/porta01_porta_01_standardSurface9_BaseColor.png" id="1_rxsq7"]
+
+[resource]
+resource_name = "standardSurface9.1001"
+cull_mode = 2
+albedo_texture = ExtResource("1_rxsq7")
+texture_filter = 0

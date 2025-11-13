@@ -1,8 +1,8 @@
 extends Node3D
 class_name Door
 
-@onready var locked_audio = $DoorMesh/LockedAudio
-@onready var open_audio = $DoorMesh/OpenAudio
+@onready var locked_audio = $LockedAudio
+@onready var open_audio = $OpenAudio
 @onready var animation_player = $AnimationPlayer
 @onready var interact_area = $DoorMesh/InteractArea
 

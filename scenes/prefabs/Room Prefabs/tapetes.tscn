@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://caiei8d0fkmh1"]
+
+[ext_resource type="PackedScene" uid="uid://ch1evb01mx566" path="res://models/Chapel/tapete001.glb" id="1_cj6sm"]
+
+[node name="tapetes" type="Node3D"]
+
+[node name="tapete001" parent="." instance=ExtResource("1_cj6sm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.14646, -0.0157955, 13.759)
+
+[node name="tapete002" parent="." instance=ExtResource("1_cj6sm")]
+transform = Transform3D(0.996872, 0, 0.0790333, 0, 1, 0, -0.0790333, 0, 0.996872, -7.93739, -0.0157955, 9.43145)
+
+[node name="tapete003" parent="." instance=ExtResource("1_cj6sm")]
+transform = Transform3D(0.997946, 0, -0.0640621, 0, 1, 0, 0.0640621, 0, 0.997946, -8.53699, -0.0157955, 5.17586)
+
+[node name="tapete004" parent="." instance=ExtResource("1_cj6sm")]
+transform = Transform3D(0.997946, 0, -0.0640621, 0, 1, 0, 0.0640621, 0, 0.997946, -8.34752, -0.0157955, 0.814723)
