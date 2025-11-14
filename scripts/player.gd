@@ -184,6 +184,10 @@ func handle_state(delta) -> void:
 			
 		States.IDLE:
 			if ui_manager.menu_type != ui_manager.MenuType.NONE:
+				velocity.x = move_toward(velocity.x, 0, SPEED)
+				velocity.z = move_toward(velocity.z, 0, SPEED)
+				blend_position = lerp(blend_position, Vector2.ZERO, delta * 6) 
+				animation_tree.set("parameters/blend_position", blend_position)
 				return
 			
 			blend_position = lerp(blend_position, Vector2.ZERO, delta * 6) 
@@ -195,8 +199,12 @@ func handle_state(delta) -> void:
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 		
 		States.WALK:
+			if ui_manager.menu_type != ui_manager.MenuType.NONE:
+				#velocity.x = move_toward(velocity.x, 0, SPEED)
+				#velocity.z = move_toward(velocity.z, 0, SPEED)
+				set_state(States.IDLE)
+			
 			var speed = velocity.length()
-			is_moving = speed > 0.1  # Deadzone
 			
 			if direction:
 				blend_position = lerp(blend_position, input_dir, delta * 6) 

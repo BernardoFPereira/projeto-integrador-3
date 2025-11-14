@@ -63,4 +63,4 @@ func stop_inspection() -> void:
 		elif is_not_pickup:
 			is_not_pickup = false
 			
-	can_inspect = true
+	#can_inspect = false

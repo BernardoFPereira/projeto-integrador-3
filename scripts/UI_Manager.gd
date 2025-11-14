@@ -87,6 +87,7 @@ func _on_inspect_button_01_pressed():
 		
 		player.set_state(player.States.INSPECT)
 		pages.visible = false
+		menu_type = MenuType.NONE
 	
 func _on_inspect_button_02_pressed():
 	var player = get_tree().get_first_node_in_group("Player")
@@ -98,6 +99,7 @@ func _on_inspect_button_02_pressed():
 		
 		player.set_state(player.States.INSPECT)
 		pages.visible = false
+		menu_type = MenuType.NONE
 
 func _on_inspect_button_03_pressed():
 	var player = get_tree().get_first_node_in_group("Player")
@@ -109,7 +111,8 @@ func _on_inspect_button_03_pressed():
 	
 		player.set_state(player.States.INSPECT)
 		pages.visible = false
-
+		menu_type = MenuType.NONE
+		
 func _on_altar_complete() -> void:
 	temp_end.visible = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
