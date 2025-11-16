@@ -7,6 +7,7 @@ extends Control
 @onready var interact_tip = $InteractTip
 @onready var inspect_text = $InspectDetailText
 @onready var exit_inspect_tip = $ExitInspectTip
+@onready var inner_thought = $InnerThought
 
 # TEMPORARY NODE
 @onready var temp_end = $Temp_End

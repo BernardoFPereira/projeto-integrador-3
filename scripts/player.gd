@@ -3,15 +3,12 @@ class_name Player
 
 @export var ui_manager: Control
 
+@onready var camera_fx = $CameraFX
 @onready var view = $View
-#@onready var camera = $View/Camera3D
 @onready var third_person_camera = $View/SpringArm3D/ThirdPersonCamera
 @onready var first_person_camera = $HeadCamerPos/FirstPersonCamera
 @onready var head_camer_pos = $HeadCamerPos
 @onready var shoulder_camera_pos = $View/ShoulderCameraPos
-#@onready var animation_player = $ThePriest/AnimationPlayer
-#@onready var animation_player = $"ThePriest/GuardNode/AnimationPlayer"
-#@onready var animation_tree = $"ThePriest/GuardNode/AnimationTree"
 @onready var animation_player = $ThePriest/GuardNode/Char_Full_Anims/AnimationPlayer
 @onready var animation_tree = $ThePriest/GuardNode/Char_Full_Anims/AnimationTree
 @onready var inspect_object_pos = $InspectObjectPos
@@ -32,6 +29,8 @@ enum States {
 	WALK,
 	INSPECT,
 	PICKUP,
+	CHECK_BOOK,
+	THOUGHT,
 	DEAD,
 }
 
@@ -51,7 +50,7 @@ var interact_target: Node3D
 @export var collected_keys: Array[Node3D]
 @export var collected_pages: Array[Node3D]
 
-var step_distance: float = 1.5  # Tweak: ~half walk cycle
+var step_distance: float = 1.5
 var last_step_pos: float = 0.0
 var is_moving: bool = false
 
@@ -64,15 +63,16 @@ func _process(delta):
 		ui_manager.interact_tip.visible = true
 	else:
 		ui_manager.interact_tip.visible = false
-		
-	if interact_target:
-		if interact_area.global_position.distance_to(interact_target.global_position) > 2:
-			print('Interaction Released')
-			
-			can_interact = false
-			interact_target = null
-			InspectManager.can_inspect = false
-			InspectManager.inspect_target = null
+	
+	if state != States.CHECK_BOOK:
+		if interact_target:
+			if interact_area.global_position.distance_to(interact_target.global_position) > 2:
+				print('Interaction Released')
+				
+				can_interact = false
+				interact_target = null
+				InspectManager.can_inspect = false
+				InspectManager.inspect_target = null
 			
 	# handle_camera_pos(delta)
 	handle_state(delta)
@@ -112,12 +112,13 @@ func _input(event):
 			# DEV POWER -- DISABLE ON BUILD
 			if Input.is_action_just_pressed("ui_accept"):
 				velocity.y = JUMP_VELOCITY
-				
-			if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-				var mouse_input = event.relative
-				rotate_y(-mouse_input.x * 0.0007)
-				view.rotate_x(-mouse_input.y * 0.0007)
-				view.rotation.x = clamp(view.rotation.x, deg_to_rad(-55), deg_to_rad(60))
+			
+			if state != States.CHECK_BOOK:
+				if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+					var mouse_input = event.relative
+					rotate_y(-mouse_input.x * 0.0007)
+					view.rotate_x(-mouse_input.y * 0.0007)
+					view.rotation.x = clamp(view.rotation.x, deg_to_rad(-30), deg_to_rad(45))
 			
 			if event.is_action_pressed("interact") and state != States.INSPECT:
 				#if InspectManager.can_inspect:
@@ -154,8 +155,8 @@ func _input(event):
 
 func set_state(new_state: States) -> void:
 	match new_state:
-		#States.IDLE:
-			#set_camera_mode(CameraModes.ThirdPerson)
+		States.IDLE:
+			set_camera_mode(CameraModes.ThirdPerson)
 		#States.WALK:
 			#set_camera_mode(CameraModes.ThirdPerson)
 		States.INSPECT:
@@ -164,9 +165,12 @@ func set_state(new_state: States) -> void:
 		States.PICKUP:
 			animation_tree.active = false
 			animation_player.play("interacting")
-			pass
+		States.CHECK_BOOK:
+			view.rotation = Vector3.ZERO
+			animation_tree.active = false
+			animation_player.play("check_book")
 		_:
-			set_camera_mode(CameraModes.ThirdPerson)
+			pass
 		
 	state = new_state
 
@@ -177,6 +181,14 @@ func handle_state(delta) -> void:
 	var blend_position = animation_tree.get("parameters/blend_position")
 	
 	match state:
+		States.CHECK_BOOK:
+			velocity.x = 0
+			velocity.z = 0
+			var interact_target_pos = interact_target.interaction_pos_marker.global_position
+			var look_target = Vector3(interact_target.global_position.x, global_position.y, interact_target.global_position.z)
+			global_position = lerp(global_position, interact_target_pos, delta)
+			look_at(look_target)
+			
 		States.PICKUP:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
@@ -210,7 +222,6 @@ func handle_state(delta) -> void:
 				blend_position = lerp(blend_position, input_dir, delta * 6) 
 				animation_tree.set("parameters/blend_position", blend_position)
 				
-			# Accumulate distance traveled
 				last_step_pos += speed * delta
 				if last_step_pos >= step_distance:
 					play_footsteps()
@@ -244,6 +255,7 @@ func set_camera_mode(new_mode: CameraModes) -> void:
 	camera_mode = new_mode
 	match camera_mode:
 		CameraModes.ThirdPerson:
+			#third_person_camera.position = shoulder_camera_pos.position
 			third_person_camera.current = true
 		CameraModes.FirstPerson:
 			first_person_camera.current = true
@@ -256,7 +268,6 @@ func set_camera_mode(new_mode: CameraModes) -> void:
 		#CameraModes.FirstPerson:
 			#camera.global_position = lerp(camera.global_position, head_camer_pos.global_position, delta * 6)
 			#camera.rotation = lerp(camera.rotation, head_camer_pos.rotation, delta * 6)
-
 
 func _on_interact_area_area_entered(area):
 	ui_manager.interact_tip.visible = true
@@ -349,5 +360,12 @@ func _on_animation_player_animation_finished(anim_name):
 		"interacting":
 			animation_tree.active = true
 			set_state(States.IDLE)
+		"check_book":
+			animation_tree.active = true
+			interact_target = null
+			#camera_fx.visible = false
+			set_state(States.IDLE)
+			camera_fx.fade_out()
+			pass
 		_:
 			pass

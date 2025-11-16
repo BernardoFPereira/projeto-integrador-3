@@ -26600,8 +26600,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, -1.13687e-13, 0, 1, 0, 0, 0)
 
 [node name="Interactable" type="Node" parent="."]
 
-[node name="Book" parent="Interactable" instance=ExtResource("3_q2tu4")]
+[node name="Book" parent="Interactable" groups=["TomeOfKnowledge"] instance=ExtResource("3_q2tu4")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.4301, 12.3306, 4.15278)
+
+[node name="InteractionPosMarker" parent="Interactable/Book" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.118, -1.29775, 0)
 
 [node name="Pages" type="Node" parent="Interactable"]
 
@@ -28832,6 +28835,7 @@ omni_range = 1.30832
 
 [editable path="Keys/ConfessionaryKey"]
 [editable path="Keys/LibraryKey"]
+[editable path="Interactable/Book"]
 [editable path="Interactable/Pages/HolyPage3"]
 [editable path="Interactable/AltarItemBase"]
 [editable path="Interactable/AltarItemBase2"]
