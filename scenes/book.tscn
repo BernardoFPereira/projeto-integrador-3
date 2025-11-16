@@ -22,7 +22,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.519005, 0, 0)
 shape = SubResource("BoxShape3D_5ihwa")
 
 [node name="InteractionPosMarker" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39746, -1.35401, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0958434, -1.24455, 0)
 
 [node name="garrafa" parent="." instance=ExtResource("3_qpx0y")]
 transform = Transform3D(0.914192, 0, 0, 0, 0.604477, 0, 0, 0, 0.811375, -0.438056, -0.159296, 1.04068)

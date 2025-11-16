@@ -84,9 +84,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -51.0
-offset_top = 16.0
+offset_top = 19.0
 offset_right = 51.0
-offset_bottom = 50.0
+offset_bottom = 53.0
 grow_horizontal = 2
 text = "Notas"
 label_settings = SubResource("LabelSettings_hsyih")
@@ -100,15 +100,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -184.0
-offset_top = -151.5
-offset_right = 188.0
-offset_bottom = -53.5
+offset_left = -199.0
+offset_top = -162.5
+offset_right = 195.0
+offset_bottom = -64.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 22
-text = "> O bagulho é louco nesse lugar. As sombras falam comigo aqui. Não vejo nenhum sinal de vida, mas me sinto observado constantemente."
+text = "> Chegada. O monastério se encontra aparentemente vazio. O único sinal de vida é a bagunça de ficou pra trás. O que será que aconteceu por aqui?"
 
 [node name="Note2" type="RichTextLabel" parent="Journal/Panel"]
 visible = false
@@ -118,15 +118,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -185.0
-offset_top = -33.5
-offset_right = 187.0
-offset_bottom = 64.5
+offset_left = -199.0
+offset_top = -56.5
+offset_right = 201.0
+offset_bottom = 61.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 22
-text = "> Parece que os monges daqui estavam transcrevendo um tomo. Nunca vi nada parecido -- A capa sozinha deve pesar mais que meu corpo."
+text = "> Encontrei o tomo que estavam transcrevendo. Nunca vi nada parecido. A capa sozinha deve pesar mais que meu corpo. Entretanto, algo não está certo... O que estavam pensando quando rasgaram páginas sagradas?"
 
 [node name="Note3" type="RichTextLabel" parent="Journal/Panel"]
 visible = false
@@ -136,15 +136,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -185.0
-offset_top = 82.5
-offset_right = 187.0
-offset_bottom = 180.5
+offset_left = -199.0
+offset_top = 75.5
+offset_right = 188.0
+offset_bottom = 173.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 22
-text = "> Ele está quase aqui! O que eu estou fazendo?? Ele me observa pelas chamas. Ele me ve procurando suas relíquias. O que eu fiz?"
+text = "> Acredito que agora entendo. Existe algo aqui, me guiando pelas sombras. O que quer de mim?"
 
 [node name="MenuButton" type="Button" parent="Journal"]
 layout_mode = 1
@@ -250,7 +250,7 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 22
-text = "> Você encontrou a primeira página! Agora vá até o segundo andar, tem uma porta aberta pra você! ;)"
+text = "> O que será que aconteceu aqui? Porque arrancariam páginas de um livro sagrado e abandonariam o monastério?"
 
 [node name="InspectButton01" type="Button" parent="Pages/Panel/Page01"]
 layout_mode = 1
@@ -294,7 +294,7 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 22
-text = "> Você é bom! Neste mesmo andar tem uma porta trancada, seu destino espera do outro lado."
+text = "> Acho que não estou sozinho... Não vejo nenhum dos monges ou sinal deles. Mas me sinto sendo observado constantemente."
 
 [node name="InspectButton02" type="Button" parent="Pages/Panel/Page02"]
 layout_mode = 1
@@ -338,8 +338,7 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 22
-text = "> Parabéns! Agora você tem todas as dicas necessárias para completar o jogo!
-A CHAMPION BE YOU ARE"
+text = "> Finalmente. Já tenho tudo que preciso para resolver esse mistério. Aquele grande altar na Capela deve ter algum papel."
 
 [node name="InspectButton03" type="Button" parent="Pages/Panel/Page03"]
 layout_mode = 1
@@ -759,6 +758,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("10_45j4o")
+no_interaction_altar = Array[String](["Hm... Parece que falta algo aqui"])
+found_book = Array[String](["Então esse é tomo mencionado na carta...?"])
 
 [node name="Panel" type="Panel" parent="InnerThought"]
 layout_mode = 1
