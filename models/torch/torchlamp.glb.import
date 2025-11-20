@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cha7q8sxrad35"
-path="res://.godot/imported/nicho.glb-a860238bd8ce9eebac49cfa777a222c9.scn"
+uid="uid://dbggv2jnp4tfw"
+path="res://.godot/imported/torchlamp.glb-bf2d2976849efc6a370047af15bfe29b.scn"
 
 [deps]
 
-source_file="res://models/nicho.glb"
-dest_files=["res://.godot/imported/nicho.glb-a860238bd8ce9eebac49cfa777a222c9.scn"]
+source_file="res://models/torch/torchlamp.glb"
+dest_files=["res://.godot/imported/torchlamp.glb-bf2d2976849efc6a370047af15bfe29b.scn"]
 
 [params]
 

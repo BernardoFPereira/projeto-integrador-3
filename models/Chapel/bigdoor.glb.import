@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cha7q8sxrad35"
-path="res://.godot/imported/nicho.glb-a860238bd8ce9eebac49cfa777a222c9.scn"
+uid="uid://dmtavq4a10kny"
+path="res://.godot/imported/bigdoor.glb-b70aa39b7f3ba5ebfef4480e559fd717.scn"
 
 [deps]
 
-source_file="res://models/nicho.glb"
-dest_files=["res://.godot/imported/nicho.glb-a860238bd8ce9eebac49cfa777a222c9.scn"]
+source_file="res://models/Chapel/bigdoor.glb"
+dest_files=["res://.godot/imported/bigdoor.glb-b70aa39b7f3ba5ebfef4480e559fd717.scn"]
 
 [params]
 
