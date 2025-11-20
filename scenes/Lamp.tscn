@@ -41,7 +41,9 @@ scale_curve = SubResource("CurveTexture_tgqas")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06x22"]
 transparency = 1
-albedo_color = Color(1, 0.741176, 0.270588, 1)
+shading_mode = 0
+diffuse_mode = 3
+albedo_color = Color(0.986605, 0.601242, 7.70092e-07, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gsueo"]
 material = SubResource("StandardMaterial3D_06x22")
@@ -52,6 +54,8 @@ resource_name = "lampplanes_mtl.002.1001"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_u4tvt")
+texture_filter = 2
+disable_receive_shadows = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_xuslq"]
 _surfaces = [{
@@ -92,6 +96,7 @@ resource_name = "handle_mtl.002.1001"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("2_3x14a")
+texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_olwtm"]
 _surfaces = [{
@@ -130,6 +135,7 @@ resource_name = "chainhold_mtl.002.1001"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("3_wsedp")
+texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_3xwhm"]
 _surfaces = [{
@@ -170,6 +176,8 @@ resource_name = "lampplanes_mtl.002.1001"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_u4tvt")
+texture_filter = 2
+disable_receive_shadows = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_5v6mu"]
 _surfaces = [{
@@ -248,6 +256,7 @@ resource_name = "lampplanes_mtl.002.1001"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_u4tvt")
+texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_6pksn"]
 _surfaces = [{
@@ -288,6 +297,7 @@ resource_name = "lampplanes_mtl.002.1001"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_u4tvt")
+texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_2hkp5"]
 _surfaces = [{
@@ -328,6 +338,7 @@ resource_name = "lampplanes_mtl.002.1001"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_u4tvt")
+texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_722qh"]
 _surfaces = [{
@@ -408,6 +419,8 @@ resource_name = "lampplanes_mtl.002.1001"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_u4tvt")
+texture_filter = 2
+disable_receive_shadows = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_cc5w0"]
 _surfaces = [{
@@ -448,6 +461,8 @@ resource_name = "lampplanes_mtl.002.1001"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_u4tvt")
+texture_filter = 2
+disable_receive_shadows = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_neywc"]
 _surfaces = [{
@@ -488,6 +503,7 @@ resource_name = "handle_mtl.002.1001"
 transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("2_3x14a")
+texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_t5ba6"]
 _surfaces = [{
