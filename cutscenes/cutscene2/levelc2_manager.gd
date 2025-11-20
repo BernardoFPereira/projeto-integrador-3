@@ -36,6 +36,9 @@ func _on_animation_finished(anim_name):
 		char_animation_player.play("cutscene02-finale_a_2")
 	
 	if anim_name == "Finale_A_2":
+		scene_animation_player.play("Credits")
+	
+	if anim_name == "Credits":
 		get_tree().change_scene_to_file("res://scenes/interface/main_menu.tscn")
 	
 	if anim_name == "Finale_B":
@@ -46,6 +49,9 @@ func _on_animation_finished(anim_name):
 	
 	if anim_name == "cutscene02-loopscene" and not is_finale_selected:
 		char_animation_player.play("cutscene02-loopscene")
+
+	if anim_name == "cutscene02-finale_a_2":
+		char_animation_player.play("cutscene02-finale_a_2")
 
 func get_choice(value):
 	is_finale_selected = true
