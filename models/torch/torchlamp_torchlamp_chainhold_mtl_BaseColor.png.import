@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7qakjk8hbv88"
-path.s3tc="res://.godot/imported/dirtground_mtl_BaseColor.1001.png-e7f5b5a5c8516a0e53f40845cc5000fd.s3tc.ctex"
+uid="uid://uobjv4h5slkr"
+path.s3tc="res://.godot/imported/torchlamp_torchlamp_chainhold_mtl_BaseColor.png-7ae20e32b65b6edfb8c102ba71c966f6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "094949d2b9e2cec686298f3744ce2d2d"
+}
 
 [deps]
 
-source_file="res://textures/dirtground_mtl_BaseColor.1001.png"
-dest_files=["res://.godot/imported/dirtground_mtl_BaseColor.1001.png-e7f5b5a5c8516a0e53f40845cc5000fd.s3tc.ctex"]
+source_file="res://models/torch/torchlamp_torchlamp_chainhold_mtl_BaseColor.png"
+dest_files=["res://.godot/imported/torchlamp_torchlamp_chainhold_mtl_BaseColor.png-7ae20e32b65b6edfb8c102ba71c966f6.s3tc.ctex"]
 
 [params]
 

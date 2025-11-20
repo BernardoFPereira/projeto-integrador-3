@@ -1,4 +1,4 @@
-[gd_scene load_steps=2653 format=3 uid="uid://imk5ccgfjb4n"]
+[gd_scene load_steps=2654 format=3 uid="uid://imk5ccgfjb4n"]
 
 [ext_resource type="PackedScene" uid="uid://drak54rbqaie4" path="res://scenes/ui.tscn" id="1_m3lcs"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_wne16"]
@@ -26,7 +26,7 @@
 [ext_resource type="Material" uid="uid://ccufryuyxhhh5" path="res://materials/stonegroundchapel02.tres" id="23_7ogv1"]
 [ext_resource type="PackedScene" uid="uid://dph66wxcgr54" path="res://scenes/prefabs/Room Prefabs/giga_level_design.tscn" id="23_dmbe0"]
 [ext_resource type="PackedScene" uid="uid://bgq3f8nmtd42e" path="res://book_stack_1.tscn" id="23_scd3h"]
-[ext_resource type="Material" path="res://materials/grassy.tres" id="24_22gq3"]
+[ext_resource type="Material" uid="uid://c6sax7aaq4yo5" path="res://materials/grassy.tres" id="24_22gq3"]
 [ext_resource type="PackedScene" uid="uid://dvu67awddwb6q" path="res://scenes/angel_statue.tscn" id="25_dk8ee"]
 [ext_resource type="PackedScene" uid="uid://dh4r6fk7n0ge3" path="res://scenes/prefabs/table.tscn" id="26_7udxk"]
 [ext_resource type="PackedScene" uid="uid://cfbqdor8tyw7e" path="res://scenes/prefabs/benchsmall.tscn" id="26_cjtp2"]
@@ -42,7 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://dwg5tkv3m03yg" path="res://scenes/prefabs/brokenbed.tscn" id="31_s4hnk"]
 [ext_resource type="PackedScene" uid="uid://du4lyekygvy8q" path="res://scenes/prefabs/candle_01.tscn" id="36_7q40q"]
 [ext_resource type="PackedScene" uid="uid://c88sl2vxwrldk" path="res://scenes/prefabs/Room Prefabs/front_chapel_altar.tscn" id="36_8wkyj"]
-[ext_resource type="PackedScene" path="res://scenes/prefabs/Room Prefabs/outside_window.tscn" id="37_17trx"]
+[ext_resource type="PackedScene" uid="uid://cuw0o3ktjm24x" path="res://scenes/prefabs/Room Prefabs/outside_window.tscn" id="37_17trx"]
 [ext_resource type="PackedScene" uid="uid://dvs7a03xf3jah" path="res://scenes/prefabs/Room Prefabs/workdesk third floor.tscn" id="37_325qb"]
 [ext_resource type="PackedScene" uid="uid://btgit6gihlpns" path="res://scenes/inspect_room.tscn" id="37_devb0"]
 [ext_resource type="Texture2D" uid="uid://2f1gjruy8rfn" path="res://models/Garden/ArvoreJardim_arvorewillow_treesheet_mtl_BaseColor.png" id="38_2pfjf"]
@@ -61,6 +61,7 @@
 [ext_resource type="PackedScene" uid="uid://0bomh01kmrkc" path="res://scenes/prefabs/Room Prefabs/thirdfloor_tapetes.tscn" id="41_wclvc"]
 [ext_resource type="PackedScene" uid="uid://dgwexqpva8xhx" path="res://scenes/HolyPage.tscn" id="42_sfyr8"]
 [ext_resource type="AudioStream" uid="uid://pv4cnrf3p4wa" path="res://audio/book_down.ogg" id="43_oxgrl"]
+[ext_resource type="PackedScene" uid="uid://dmtavq4a10kny" path="res://models/Chapel/bigdoor.glb" id="44_hlj86"]
 [ext_resource type="AudioStream" uid="uid://bwqg18nknwevo" path="res://audio/stone_door.ogg" id="45_o5gvt"]
 [ext_resource type="PackedScene" uid="uid://ddhttv3uxb3pl" path="res://scenes/prefabs/altar.tscn" id="51_kybql"]
 [ext_resource type="PackedScene" uid="uid://jhvky7xprbq" path="res://scenes/prefabs/Room Prefabs/garden_bench.tscn" id="52_s880u"]
@@ -28065,6 +28066,9 @@ shape = SubResource("BoxShape3D_cxx48")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.074409, 0.0452126, 0.383148)
 
 [node name="thirdfloor tapetes" parent="Furniture/Misc" instance=ExtResource("41_wclvc")]
+
+[node name="bigdoor" parent="Furniture/Misc" instance=ExtResource("44_hlj86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.05638, 0.0407987, 13)
 
 [node name="angel_statue" parent="Furniture" instance=ExtResource("25_dk8ee")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.1837, 2.49029, 0.731561)

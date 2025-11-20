@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7qakjk8hbv88"
-path.s3tc="res://.godot/imported/dirtground_mtl_BaseColor.1001.png-e7f5b5a5c8516a0e53f40845cc5000fd.s3tc.ctex"
+uid="uid://de0rvqnu3dxny"
+path.s3tc="res://.godot/imported/torchlamp_torchlamp_lampplanes_mtl_BaseColor.png-19f1ba6b1cb3937e61dc0266a9682ec7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "e74f40f9bb187bf90f9abb80db19969a"
+}
 
 [deps]
 
-source_file="res://textures/dirtground_mtl_BaseColor.1001.png"
-dest_files=["res://.godot/imported/dirtground_mtl_BaseColor.1001.png-e7f5b5a5c8516a0e53f40845cc5000fd.s3tc.ctex"]
+source_file="res://models/torch/torchlamp_torchlamp_lampplanes_mtl_BaseColor.png"
+dest_files=["res://.godot/imported/torchlamp_torchlamp_lampplanes_mtl_BaseColor.png-19f1ba6b1cb3937e61dc0266a9682ec7.s3tc.ctex"]
 
 [params]
 

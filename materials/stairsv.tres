@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ceja4wic0xhma"]
+
+[ext_resource type="Texture2D" uid="uid://dl5ph61n5e8uq" path="res://textures/stairs_low_cubotex_mtl_BaseColor.1001.png" id="1_et0mn"]
+
+[resource]
+albedo_texture = ExtResource("1_et0mn")
