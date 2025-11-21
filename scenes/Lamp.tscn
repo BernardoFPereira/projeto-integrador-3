@@ -39,14 +39,15 @@ gravity = Vector3(0, 0.5, 0)
 radial_accel_max = 0.2
 scale_curve = SubResource("CurveTexture_tgqas")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06x22"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_4w41a"]
 transparency = 1
 shading_mode = 0
 diffuse_mode = 3
-albedo_color = Color(0.986605, 0.601242, 7.70092e-07, 1)
+albedo_color = Color(3.784, 1.082, 0, 1)
+texture_filter = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_gsueo"]
-material = SubResource("StandardMaterial3D_06x22")
+material = SubResource("ORMMaterial3D_4w41a")
 size = Vector3(0.035, 0.035, 0.035)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_53dlx"]
@@ -55,7 +56,6 @@ transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_u4tvt")
 texture_filter = 2
-disable_receive_shadows = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_xuslq"]
 _surfaces = [{
@@ -177,7 +177,6 @@ transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_u4tvt")
 texture_filter = 2
-disable_receive_shadows = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_5v6mu"]
 _surfaces = [{
@@ -420,7 +419,6 @@ transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_u4tvt")
 texture_filter = 2
-disable_receive_shadows = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_cc5w0"]
 _surfaces = [{
@@ -462,7 +460,6 @@ transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_u4tvt")
 texture_filter = 2
-disable_receive_shadows = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_neywc"]
 _surfaces = [{
@@ -576,6 +573,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.578236, 0)
 transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
 
 [node name="backplane_geo" type="MeshInstance3D" parent="torchlamp/torchlamp_grp"]
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_epvir")
 skeleton = NodePath("")
 
@@ -588,6 +586,7 @@ mesh = SubResource("ArrayMesh_gf75u")
 skeleton = NodePath("")
 
 [node name="frontplane_geo" type="MeshInstance3D" parent="torchlamp/torchlamp_grp"]
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_a4o5x")
 skeleton = NodePath("")
 
@@ -612,10 +611,12 @@ mesh = SubResource("ArrayMesh_3du22")
 skeleton = NodePath("")
 
 [node name="sideplane2_geo" type="MeshInstance3D" parent="torchlamp/torchlamp_grp"]
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_rvf1i")
 skeleton = NodePath("")
 
 [node name="sideplane_geo" type="MeshInstance3D" parent="torchlamp/torchlamp_grp"]
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_oepg1")
 skeleton = NodePath("")
 

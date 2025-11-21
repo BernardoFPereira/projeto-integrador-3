@@ -26520,7 +26520,7 @@ tg_obj = NodePath("../../Interactable/Pages/HolyPage3")
 activation_contact = 2
 
 [node name="LibraryTrigger" parent="Triggers" node_paths=PackedStringArray("tg_obj") instance=ExtResource("41_57uwx")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.8505, 6.95329, -10.9517)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 13.4242, 6.95329, -10.9517)
 tg_obj = NodePath("../../Giga Level Design/library")
 activation_contact = 4
 
