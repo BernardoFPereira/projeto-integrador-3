@@ -1,3 +1,3 @@
 extends Node
 
-var intro_played = false
+var intro_played = true

@@ -27,9 +27,13 @@ func _ready():
 	apply_audio_settings()
 
 func _on_resolution_option_button_item_selected(index):
-	Settings.resolution = available_resolutions[index]
-	apply_video_settings()
-	Settings.save()
+	match index:
+		0:
+			DisplayServer.window_set_size(Vector2i(1920,1080))
+		1:
+			DisplayServer.window_set_size(Vector2i(1600,900))
+		2:
+			DisplayServer.window_set_size(Vector2i(1280,720))
 
 func _on_fullscreen_check_box_toggled(toggled_on):
 	Settings.fullscreen = true
@@ -48,16 +52,16 @@ func _on_master_slider_value_changed(value):
 	apply_audio_settings()
 	Settings.save()
 
-func _on_music_slider_value_changed(value):
-	Settings.volume_music = value / 100.0
-	apply_audio_settings()
-	Settings.save()
-
 func _on_sfx_slider_value_changed(value):
 	Settings.volume_sfx = value / 100.0
 	apply_audio_settings()
 	Settings.save()
 
+func _on_music_slider_value_changed(value):
+	Settings.volume_music = value / 100.0
+	apply_audio_settings()
+	Settings.save()
+	
 func apply_audio_settings():
 	AudioServer.set_bus_volume_db(
 		AudioServer.get_bus_index("Master"),

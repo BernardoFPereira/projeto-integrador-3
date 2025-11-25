@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://cx1j2np5gvor2"]
+[gd_scene load_steps=77 format=3 uid="uid://cx1j2np5gvor2"]
 
 [ext_resource type="Texture2D" uid="uid://b00jvlgi8gb2i" path="res://cutscenes/assets/carruagem/carruagem_carruagem_carruagem_mtl_BaseColor.png" id="1_ge4f2"]
 [ext_resource type="Texture2D" uid="uid://5h4uggomcwig" path="res://cutscenes/assets/carruagem/carruagem_carruagem_janela_mtl_BaseColor-carruagem_janela_mtl_alpha.png" id="2_83mfg"]
@@ -21,7 +21,6 @@
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="18_fi5qh"]
 [ext_resource type="FontFile" uid="uid://b40jo8iw2wqxv" path="res://fonts/PF Pixelscript Pro Regular.ttf" id="19_6sany"]
 [ext_resource type="FontFile" uid="uid://b8lxgqho3723q" path="res://fonts/Alkhemikal.ttf" id="21_8uf1t"]
-[ext_resource type="Script" path="res://scripts/settings_menu.gd" id="22_b6mpa"]
 [ext_resource type="Theme" uid="uid://culmsqdigx4gk" path="res://resources/Menu_Theme_1.tres" id="23_1r6v8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhq5w"]
@@ -5352,10 +5351,10 @@ transform = Transform3D(2.94, 0, 0, 0, 2.94, 0, 0, 0, 2.94, 0, 0, 0)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -6.84508, 0)
 
 [node name="arvore_geo" parent="enviroment ring" index="0"]
-transform = Transform3D(23.623, 6.27056e-05, -2.9221e-11, 0, -8.5515e-05, -3.041, -6.27056e-05, 23.623, -1.10084e-05, 0, 0, 0)
+transform = Transform3D(23.623, 6.27056e-05, -3.52844e-13, 0, -1.03259e-06, -3.041, -6.27056e-05, 23.623, -1.32926e-07, 0, 0, 0)
 
 [node name="groundlevelparallax_geo" parent="enviroment ring" index="1"]
-transform = Transform3D(0.01, -1.2509e-07, 4.52823e-13, 0, -3.61999e-08, -0.01, 1.2509e-07, 0.01, -3.61999e-08, -5.96906e-11, 1.31819, 4.77183e-06)
+transform = Transform3D(0.01, -1.2509e-07, 5.46786e-15, 0, -4.37114e-10, -0.01, 1.2509e-07, 0.01, -4.37114e-10, -5.96906e-11, 1.31819, 4.77183e-06)
 
 [node name="groundlevelparallax_geo" type="MeshInstance3D" parent="enviroment ring/groundlevelparallax_geo" index="0"]
 transform = Transform3D(0.73, 0, 0, 0, 0.73, -2.27374e-13, 0, 2.27374e-13, 0.73, 0, 0, 0)
@@ -5368,7 +5367,7 @@ mesh = SubResource("ArrayMesh_u7fo2")
 skeleton = NodePath("")
 
 [node name="montanhas_geo" parent="enviroment ring" index="2"]
-transform = Transform3D(0.00127296, -50, 4.22815e-05, 0, -0.000181, -11.68, 50, 0.00127296, -1.07645e-09, 0, 6.39, 0)
+transform = Transform3D(0.00127335, -50, 5.10549e-07, 0, -2.18557e-06, -11.68, 50, 0.00127335, -1.30022e-11, 0, 6.39, 0)
 
 [node name="monastery plane" type="Node3D" parent="enviroment ring"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 1.4971, 0)
@@ -5514,7 +5513,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("22_b6mpa")
 
 [node name="Label" type="Label" parent="Master/Settings"]
 layout_mode = 1
@@ -5591,7 +5589,14 @@ offset_bottom = -194.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("23_1r6v8")
+item_count = 3
 selected = 0
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "1600x900"
+popup/item_1/id = 1
+popup/item_2/text = "1280x720"
+popup/item_2/id = 2
 
 [node name="FullscreenCheckBox" type="CheckBox" parent="Master/Settings"]
 layout_mode = 1
@@ -5652,6 +5657,7 @@ offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("23_1r6v8")
+value = 100.0
 
 [node name="Label" type="Label" parent="Master/Settings/MasterSlider"]
 layout_mode = 1
@@ -5679,6 +5685,7 @@ offset_bottom = 76.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("23_1r6v8")
+value = 100.0
 
 [node name="Label2" type="Label" parent="Master/Settings/SFXSlider"]
 layout_mode = 1
@@ -5706,6 +5713,7 @@ offset_bottom = 140.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("23_1r6v8")
+value = 100.0
 
 [node name="Label3" type="Label" parent="Master/Settings/MusicSlider"]
 layout_mode = 1
@@ -5723,8 +5731,6 @@ label_settings = SubResource("LabelSettings_66kl7")
 [connection signal="pressed" from="Master/MainMenu/Control/SettingsButton" to="Master" method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Master/MainMenu/Control/QuitButton" to="Master" method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Master/Settings/BackButton" to="Master" method="_on_back_button_pressed"]
-[connection signal="item_selected" from="Master/Settings/ResolutionOptionButton" to="Master/Settings" method="_on_resolution_option_button_item_selected"]
-[connection signal="toggled" from="Master/Settings/FullscreenCheckBox" to="Master/Settings" method="_on_fullscreen_check_box_toggled"]
 
 [editable path="enviroment ring"]
 [editable path="enviroment ring/monastery plane/cutscenemonasteryplane"]

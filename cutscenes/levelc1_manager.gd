@@ -19,6 +19,7 @@ func _physics_process(delta):
 func _on_animation_finished(anim_name):
 	if anim_name == "MainScene":
 		animation_player.play("MenuLoop")
+		GameState.intro_played = true
 	
 	if anim_name == "EnterMenu":
 		animation_player.play("MenuLoop")
