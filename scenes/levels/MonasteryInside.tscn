@@ -26,7 +26,7 @@
 [ext_resource type="Material" uid="uid://ccufryuyxhhh5" path="res://materials/stonegroundchapel02.tres" id="23_7ogv1"]
 [ext_resource type="PackedScene" uid="uid://dph66wxcgr54" path="res://scenes/prefabs/Room Prefabs/giga_level_design.tscn" id="23_dmbe0"]
 [ext_resource type="PackedScene" uid="uid://bgq3f8nmtd42e" path="res://book_stack_1.tscn" id="23_scd3h"]
-[ext_resource type="Material" path="res://materials/grassy.tres" id="24_22gq3"]
+[ext_resource type="Material" uid="uid://c6sax7aaq4yo5" path="res://materials/grassy.tres" id="24_22gq3"]
 [ext_resource type="PackedScene" uid="uid://dvu67awddwb6q" path="res://scenes/angel_statue.tscn" id="25_dk8ee"]
 [ext_resource type="PackedScene" uid="uid://dh4r6fk7n0ge3" path="res://scenes/prefabs/table.tscn" id="26_7udxk"]
 [ext_resource type="PackedScene" uid="uid://cfbqdor8tyw7e" path="res://scenes/prefabs/benchsmall.tscn" id="26_cjtp2"]
@@ -42,7 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://dwg5tkv3m03yg" path="res://scenes/prefabs/brokenbed.tscn" id="31_s4hnk"]
 [ext_resource type="PackedScene" uid="uid://du4lyekygvy8q" path="res://scenes/prefabs/candle_01.tscn" id="36_7q40q"]
 [ext_resource type="PackedScene" uid="uid://c88sl2vxwrldk" path="res://scenes/prefabs/Room Prefabs/front_chapel_altar.tscn" id="36_8wkyj"]
-[ext_resource type="PackedScene" path="res://scenes/prefabs/Room Prefabs/outside_window.tscn" id="37_17trx"]
+[ext_resource type="PackedScene" uid="uid://cuw0o3ktjm24x" path="res://scenes/prefabs/Room Prefabs/outside_window.tscn" id="37_17trx"]
 [ext_resource type="PackedScene" uid="uid://dvs7a03xf3jah" path="res://scenes/prefabs/Room Prefabs/workdesk third floor.tscn" id="37_325qb"]
 [ext_resource type="PackedScene" uid="uid://btgit6gihlpns" path="res://scenes/inspect_room.tscn" id="37_devb0"]
 [ext_resource type="Texture2D" uid="uid://2f1gjruy8rfn" path="res://models/Garden/ArvoreJardim_arvorewillow_treesheet_mtl_BaseColor.png" id="38_2pfjf"]
@@ -28068,7 +28068,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.074409, 0.0452126, 0.38314
 [node name="thirdfloor tapetes" parent="Furniture/Misc" instance=ExtResource("41_wclvc")]
 
 [node name="bigdoor" parent="Furniture/Misc" instance=ExtResource("44_hlj86")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.05638, 0.0407987, 13)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.37115, 0.0407987, 13)
 
 [node name="angel_statue" parent="Furniture" instance=ExtResource("25_dk8ee")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.1837, 2.49029, 0.731561)
@@ -28806,23 +28806,50 @@ transform = Transform3D(-5.8411e-09, 0, 0.133629, 0, 0.133629, 0, -0.133629, 0, 
 [node name="altar" parent="." instance=ExtResource("51_kybql")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.601, 6.5, -11.1108)
 
-[node name="Quadro01" parent="." instance=ExtResource("64_kiyqm")]
-transform = Transform3D(0.55499, 0, 0, 0, 0.55499, 0, 0, 0, 0.55499, -16, 9.22488, -10.9368)
-
-[node name="Quadro04" parent="." instance=ExtResource("64_kiyqm")]
-transform = Transform3D(0.55499, 0, 0, 0, -0.109174, 0.63814, 0, -0.629562, -0.110662, -16, 11.8395, -5.27022)
-
 [node name="Quadro02" parent="." instance=ExtResource("65_crxh6")]
-transform = Transform3D(0.469689, 0, 0, 0, 0.469689, 0, 0, 0, 0.469689, -16, 9.88632, -8.31904)
+transform = Transform3D(0.469689, 0, 0, 0, 0.466669, 0.0531785, 0, -0.0531785, 0.466669, -16, 9.97519, -8.31904)
 
-[node name="Quadro05" parent="." instance=ExtResource("64_kiyqm")]
-transform = Transform3D(0.55499, 0, 0, 0, -2.42594e-08, -0.55499, 0, 0.55499, -2.42594e-08, -16, 12.1769, -7.86386)
+[node name="quadro_chique" parent="Quadro02" index="0"]
+visible = false
+
+[node name="quadro_chique4" parent="Quadro02" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.178183, -1.56365)
+visible = true
+
+[node name="Quadro04" parent="." instance=ExtResource("65_crxh6")]
+transform = Transform3D(0.469689, 0, 0, 0, 0.467083, 0.0494057, 0, -0.0494057, 0.467083, -16, 11.6752, -5.77158)
+
+[node name="quadro_chique" parent="Quadro04" index="0"]
+visible = false
+
+[node name="quadro_chique3" parent="Quadro04" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 7.45058e-09, 0, -7.45058e-09, 1, 0, -1.06047, -1.70747)
+visible = true
+
+[node name="Quadro05" parent="." instance=ExtResource("65_crxh6")]
+transform = Transform3D(0.469689, 0, 0, 0, 0.469674, 0.00377906, 0, -0.00377906, 0.469674, -16, 12.2207, -4.13372)
+
+[node name="quadro_chique" parent="Quadro05" index="0"]
+visible = false
+
+[node name="quadro_chique3" parent="Quadro05" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 7.45058e-09, 0, -7.45058e-09, 1, 0, -1.06047, -1.70747)
+
+[node name="quadro_chique5" parent="Quadro05" index="4"]
+visible = true
 
 [node name="Quadro06" parent="." instance=ExtResource("65_crxh6")]
-transform = Transform3D(0.469689, 0, 0, 0, -2.05308e-08, -0.469689, 0, 0.469689, -2.05308e-08, -16, 11.8242, -11.3808)
+transform = Transform3D(0.469689, 0, 0, 0, 0.469112, 0.0232799, 0, -0.0232799, 0.469112, -16, 8.81478, -11.6466)
 
 [node name="Quadro03" parent="." instance=ExtResource("65_crxh6")]
-transform = Transform3D(0.469689, 0, 0, 0, -1.51399e-08, -0.317934, 0, 0.34636, -1.38973e-08, -16, 12.6261, -2.93576)
+transform = Transform3D(0.469689, 0, 0, 0, 0.346309, -0.00544329, 0, 0.00592997, 0.317887, -16, 12.6261, -2.93576)
+
+[node name="quadro_chique" parent="Quadro03" index="0"]
+visible = false
+
+[node name="quadro_chique2" parent="Quadro03" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.86265e-09, 0, 3.72529e-09, 1, 0, 0.054039, 3.43848)
+visible = true
 
 [node name="altar2" parent="." instance=ExtResource("51_kybql")]
 transform = Transform3D(0.578647, 0, 0, 0, 1, 0, 0, 0, 0.578647, -15.3739, 0, -12.5731)
@@ -28836,6 +28863,9 @@ light_negative = true
 light_specular = 0.0
 shadow_enabled = true
 omni_range = 1.30832
+
+[node name="Quadro01" parent="." instance=ExtResource("64_kiyqm")]
+transform = Transform3D(0.55499, 0, 0, 0, 0.554915, 0.00911449, 0, -0.00911449, 0.554915, -16, 2.53904, -8.22238)
 
 [editable path="Keys/ConfessionaryKey"]
 [editable path="Keys/LibraryKey"]
@@ -28865,3 +28895,7 @@ omni_range = 1.30832
 [editable path="Lights/Candelabra2"]
 [editable path="Lights/Lighting Pass"]
 [editable path="Lights/Candelabra3"]
+[editable path="Quadro02"]
+[editable path="Quadro04"]
+[editable path="Quadro05"]
+[editable path="Quadro03"]

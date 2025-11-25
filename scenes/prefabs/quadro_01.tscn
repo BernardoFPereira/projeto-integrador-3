@@ -1,8 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://dipurvmrylacm"]
+[gd_scene load_steps=6 format=3 uid="uid://dipurvmrylacm"]
 
 [ext_resource type="PackedScene" uid="uid://bhr2irap5y5t7" path="res://models/quadro_chique.glb" id="1_4bikb"]
+[ext_resource type="PackedScene" uid="uid://ca3hs5raicw0n" path="res://models/quadro_chique2.glb" id="2_nhlvm"]
+[ext_resource type="PackedScene" uid="uid://5vin128tpaoo" path="res://models/quadro_chique3.glb" id="3_qnr8c"]
+[ext_resource type="PackedScene" uid="uid://dc5qtrwaejo34" path="res://models/quadro_chique4.glb" id="4_u1ecp"]
+[ext_resource type="PackedScene" uid="uid://b84i0yg161xxr" path="res://models/quadro_chique5.glb" id="5_dinuq"]
 
 [node name="Quadro01" type="Node3D"]
 transform = Transform3D(0.469689, 0, 0, 0, 0.469689, 0, 0, 0, 0.469689, 0, 0, 0)
 
 [node name="quadro_chique" parent="." instance=ExtResource("1_4bikb")]
+
+[node name="quadro_chique2" parent="." instance=ExtResource("2_nhlvm")]
+visible = false
+
+[node name="quadro_chique3" parent="." instance=ExtResource("3_qnr8c")]
+visible = false
+
+[node name="quadro_chique4" parent="." instance=ExtResource("4_u1ecp")]
+visible = false
+
+[node name="quadro_chique5" parent="." instance=ExtResource("5_dinuq")]
+visible = false

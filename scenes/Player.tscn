@@ -5998,7 +5998,7 @@ mesh = SubResource("ArrayMesh_j1tg7")
 skin = SubResource("Skin_wqf3n")
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="ThePriest/GuardNode/Char_Full_Anims/Armature/Skeleton3D"]
-transform = Transform3D(-0.188353, -0.0378534, 0.981372, 0.90252, 0.387367, 0.188161, -0.387274, 0.921148, -0.0387985, -0.464086, 1.62708, 0.527447)
+transform = Transform3D(-0.115087, 0.539828, 0.833871, 0.929389, 0.35488, -0.10147, -0.350701, 0.763313, -0.542552, -0.287956, 1.73672, 0.698097)
 bone_name = "hand.R"
 bone_idx = 21
 

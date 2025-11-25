@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b311jcm8q58fr"
-path.s3tc="res://.godot/imported/tapete001_tapete001_standardSurface1_BaseColor.png-ce16896c9d547d5ea5882cb92782186d.s3tc.ctex"
+uid="uid://c437b1dyjeumy"
+path.s3tc="res://.godot/imported/quadro_chique4_quadro_chique_Igor_BaseColor.png-8e9d7f3dc55269ff3915f51e08fcb5c7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "30307a818a6c658ee7d1c1af848744a3"
+"md5": "68df1efc7e13710a0764d592c88d6118"
 }
 
 [deps]
 
-source_file="res://models/Chapel/tapete001_tapete001_standardSurface1_BaseColor.png"
-dest_files=["res://.godot/imported/tapete001_tapete001_standardSurface1_BaseColor.png-ce16896c9d547d5ea5882cb92782186d.s3tc.ctex"]
+source_file="res://models/quadro_chique4_quadro_chique_Igor_BaseColor.png"
+dest_files=["res://.godot/imported/quadro_chique4_quadro_chique_Igor_BaseColor.png-8e9d7f3dc55269ff3915f51e08fcb5c7.s3tc.ctex"]
 
 [params]
 

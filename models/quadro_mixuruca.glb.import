@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bcfsg31shimyg"
-path="res://.godot/imported/quadro_michuruca.glb-edec27f31452a5d3096ceb6c575bf8de.scn"
+uid="uid://6b6vfqh2nwt5"
+path="res://.godot/imported/quadro_mixuruca.glb-d4ef1419449b2ed240a8aac98efe4882.scn"
 
 [deps]
 
-source_file="res://models/quadro_michuruca.glb"
-dest_files=["res://.godot/imported/quadro_michuruca.glb-edec27f31452a5d3096ceb6c575bf8de.scn"]
+source_file="res://models/quadro_mixuruca.glb"
+dest_files=["res://.godot/imported/quadro_mixuruca.glb-d4ef1419449b2ed240a8aac98efe4882.scn"]
 
 [params]
 

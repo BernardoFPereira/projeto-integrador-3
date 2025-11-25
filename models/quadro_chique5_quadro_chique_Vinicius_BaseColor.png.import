@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b311jcm8q58fr"
-path.s3tc="res://.godot/imported/tapete001_tapete001_standardSurface1_BaseColor.png-ce16896c9d547d5ea5882cb92782186d.s3tc.ctex"
+uid="uid://d1xssskifiaic"
+path.s3tc="res://.godot/imported/quadro_chique5_quadro_chique_Vinicius_BaseColor.png-97f100a88befe895baf098f1678c53c3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "30307a818a6c658ee7d1c1af848744a3"
+"md5": "111c4393899e71f2a8c5ab9b556b4c19"
 }
 
 [deps]
 
-source_file="res://models/Chapel/tapete001_tapete001_standardSurface1_BaseColor.png"
-dest_files=["res://.godot/imported/tapete001_tapete001_standardSurface1_BaseColor.png-ce16896c9d547d5ea5882cb92782186d.s3tc.ctex"]
+source_file="res://models/quadro_chique5_quadro_chique_Vinicius_BaseColor.png"
+dest_files=["res://.godot/imported/quadro_chique5_quadro_chique_Vinicius_BaseColor.png-97f100a88befe895baf098f1678c53c3.s3tc.ctex"]
 
 [params]
 

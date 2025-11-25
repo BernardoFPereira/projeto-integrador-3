@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b311jcm8q58fr"
-path.s3tc="res://.godot/imported/tapete001_tapete001_standardSurface1_BaseColor.png-ce16896c9d547d5ea5882cb92782186d.s3tc.ctex"
+uid="uid://duef8usoft3k"
+path.s3tc="res://.godot/imported/quadro_mixuruca_quadro_michuruca_DefaultMaterial_BaseColor.png-cdc8c1d01a7a5d2d1bc57d3dd711016b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "30307a818a6c658ee7d1c1af848744a3"
+"md5": "e3766a36b66e99e279e994d2fce36426"
 }
 
 [deps]
 
-source_file="res://models/Chapel/tapete001_tapete001_standardSurface1_BaseColor.png"
-dest_files=["res://.godot/imported/tapete001_tapete001_standardSurface1_BaseColor.png-ce16896c9d547d5ea5882cb92782186d.s3tc.ctex"]
+source_file="res://models/quadro_mixuruca_quadro_michuruca_DefaultMaterial_BaseColor.png"
+dest_files=["res://.godot/imported/quadro_mixuruca_quadro_michuruca_DefaultMaterial_BaseColor.png-cdc8c1d01a7a5d2d1bc57d3dd711016b.s3tc.ctex"]
 
 [params]
 
