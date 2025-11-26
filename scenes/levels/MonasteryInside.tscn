@@ -1,4 +1,4 @@
-[gd_scene load_steps=2655 format=3 uid="uid://imk5ccgfjb4n"]
+[gd_scene load_steps=2657 format=3 uid="uid://imk5ccgfjb4n"]
 
 [ext_resource type="PackedScene" uid="uid://drak54rbqaie4" path="res://scenes/ui.tscn" id="1_m3lcs"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_wne16"]
@@ -26180,6 +26180,9 @@ shadow_mesh = SubResource("ArrayMesh_2drxb")
 [sub_resource type="BoxShape3D" id="BoxShape3D_cxx48"]
 size = Vector3(1.37622, 1.46667, 6)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_l62v0"]
+size = Vector3(5.24048, 4.53418, 1)
+
 [sub_resource type="Animation" id="Animation_wu7rj"]
 length = 0.001
 tracks/0/type = "value"
@@ -26504,6 +26507,12 @@ offset = Vector3(147.37, 126.32, 0)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0q8xx"]
 noise = SubResource("FastNoiseLite_fkip5")
+
+[sub_resource type="FogMaterial" id="FogMaterial_puvxr"]
+density = 8.0
+albedo = Color(0.0949389, 0.0475423, 0.0254791, 1)
+emission = Color(0.119331, 0.0542573, 0.0186436, 1)
+edge_fade = 1.71484
 
 [node name="MonasteryInside" type="Node"]
 
@@ -28075,6 +28084,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.074409, 0.0452126, 0.38314
 [node name="bigdoor" parent="Furniture/Misc" instance=ExtResource("44_hlj86")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.37115, 0.0407987, 13)
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Furniture/Misc/bigdoor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furniture/Misc/bigdoor/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.569702, 1.76709, 0)
+shape = SubResource("BoxShape3D_l62v0")
+
 [node name="angel_statue" parent="Furniture" instance=ExtResource("25_dk8ee")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.1837, 2.49029, 0.731561)
 
@@ -28704,7 +28719,7 @@ spot_angle = 28.3987
 
 [node name="GardenLight2" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(0.548585, 0, 0.836095, 0, 1, 0, -0.836095, 0, 0.548585, 3.9092, 2.42619, 0.972315)
-light_color = Color(0.298175, 0.13197, 0.562264, 1)
+light_color = Color(0.0402603, 0.164615, 0.276742, 1)
 light_energy = 1.523
 light_volumetric_fog_energy = 2.196
 light_bake_mode = 1
@@ -28883,6 +28898,11 @@ light_negative = true
 light_specular = 0.0
 shadow_enabled = true
 omni_range = 1.30832
+
+[node name="FogVolume" type="FogVolume" parent="InsideShadow"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.9075, 2.72522, -2.64067)
+size = Vector3(18.4781, 2.60468, 3.20669)
+material = SubResource("FogMaterial_puvxr")
 
 [node name="Quadro01" parent="." instance=ExtResource("64_kiyqm")]
 transform = Transform3D(0.55499, 0, 0, 0, 0.554915, 0.00911449, 0, -0.00911449, 0.554915, -16, 2.53904, -8.22238)
