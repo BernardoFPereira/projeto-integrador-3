@@ -10,18 +10,18 @@
 [ext_resource type="Script" path="res://cutscenes/camera_controls.gd" id="7_2q0j3"]
 [ext_resource type="Script" path="res://cutscenes/levelc1_manager.gd" id="8_7ej02"]
 [ext_resource type="AudioStream" uid="uid://llw2koymacha" path="res://cutscenes/assets/audio/carriage-moving.wav" id="8_yefp1"]
-[ext_resource type="FontFile" uid="uid://c4dkcqmbiiplv" path="res://fonts/OwreKynge.ttf" id="10_y1nll"]
+[ext_resource type="FontFile" path="res://fonts/OwreKynge.ttf" id="10_y1nll"]
 [ext_resource type="AudioStream" uid="uid://dyrdmqrfh3num" path="res://cutscenes/assets/audio/rain-inside-carriage.wav" id="10_ykm2a"]
-[ext_resource type="PackedScene" uid="uid://dsqx0xqkt7bby" path="res://cutscenes/assets/enviroment/skydome.glb" id="11_npgx7"]
+[ext_resource type="PackedScene" path="res://cutscenes/assets/enviroment/skydome.glb" id="11_npgx7"]
 [ext_resource type="PackedScene" uid="uid://nf0jb3h468fm" path="res://cutscenes/assets/enviroment/enviroment ring.glb" id="11_q1plu"]
 [ext_resource type="Texture2D" uid="uid://cr82as2r1ld7y" path="res://cutscenes/assets/enviroment/enviroment ring_skyring_groundlevelparallax_mtl_BaseColor.png" id="12_gkvwi"]
 [ext_resource type="PackedScene" uid="uid://nv1kbb77qa4t" path="res://cutscenes/assets/enviroment/enviroment extras/cutscenemonasteryplane.glb" id="12_w7ava"]
 [ext_resource type="PackedScene" uid="uid://kgeyc6s73mgv" path="res://cutscenes/assets/enviroment/enviroment extras/cutscenemounds.glb" id="13_vmv0m"]
 [ext_resource type="PackedScene" uid="uid://c8hrbkd3f0lr7" path="res://cutscenes/assets/enviroment/enviroment extras/cutscenerocks.glb" id="14_2edbx"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="18_fi5qh"]
-[ext_resource type="FontFile" uid="uid://b40jo8iw2wqxv" path="res://fonts/PF Pixelscript Pro Regular.ttf" id="19_6sany"]
+[ext_resource type="FontFile" path="res://fonts/PF Pixelscript Pro Regular.ttf" id="19_6sany"]
 [ext_resource type="FontFile" uid="uid://b8lxgqho3723q" path="res://fonts/Alkhemikal.ttf" id="21_8uf1t"]
-[ext_resource type="Theme" uid="uid://culmsqdigx4gk" path="res://resources/Menu_Theme_1.tres" id="23_1r6v8"]
+[ext_resource type="Theme" path="res://resources/Menu_Theme_1.tres" id="23_1r6v8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhq5w"]
 resource_name = "carruagem_mtl.001"
@@ -66,6 +66,7 @@ shadow_mesh = SubResource("ArrayMesh_xgr6r")
 resource_name = "carruagem_mtl.002"
 cull_mode = 2
 albedo_texture = ExtResource("1_ge4f2")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_byrkn"]
 _surfaces = [{
@@ -5184,7 +5185,7 @@ mesh = SubResource("ArrayMesh_hth18")
 skin = SubResource("Skin_euxfc")
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="padre-sitting/Armature/Skeleton3D"]
-transform = Transform3D(-0.482528, -0.253447, -0.83841, -0.865048, 0.287984, 0.410802, 0.137332, 0.923488, -0.358204, -0.288748, 1.25604, -0.424236)
+transform = Transform3D(-0.482527, -0.253447, -0.83841, -0.865048, 0.287984, 0.410801, 0.137332, 0.923488, -0.358204, -0.288748, 1.25604, -0.424236)
 bone_name = "hand.R"
 bone_idx = 21
 
@@ -5216,7 +5217,7 @@ fov = 60.0
 near = 0.02
 script = ExtResource("7_2q0j3")
 shake_enabled = true
-intensity = 0.0
+intensity = 0.001
 speed = 8.0
 
 [node name="Control" type="Control" parent="."]
@@ -5228,7 +5229,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
-modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -5291,7 +5291,7 @@ bus = &"SFX"
 [node name="Rain" type="Node3D" parent="."]
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Rain"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.05191, 41.1134, 10.4099)
+transform = Transform3D(0.770914, -0.63694, 0, 0.63694, 0.770914, 0, 0, 0, 1, 4.05191, 41.1134, 10.4099)
 amount = 2500
 randomness = 0.64
 visibility_aabb = AABB(-42.4057, -61.2865, -59.3164, 84.8115, 79.032, 118.633)
@@ -5351,10 +5351,10 @@ transform = Transform3D(2.94, 0, 0, 0, 2.94, 0, 0, 0, 2.94, 0, 0, 0)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -6.84508, 0)
 
 [node name="arvore_geo" parent="enviroment ring" index="0"]
-transform = Transform3D(23.623, 6.27056e-05, -3.52844e-13, 0, -1.03259e-06, -3.041, -6.27056e-05, 23.623, -1.32926e-07, 0, 0, 0)
+transform = Transform3D(23.623, 0, 0, 0, -8.5515e-05, -3.041, 0, 23.623, -1.10084e-05, 0, 0, 0)
 
 [node name="groundlevelparallax_geo" parent="enviroment ring" index="1"]
-transform = Transform3D(0.01, -1.2509e-07, 5.46786e-15, 0, -4.37114e-10, -0.01, 1.2509e-07, 0.01, -4.37114e-10, -5.96906e-11, 1.31819, 4.77183e-06)
+transform = Transform3D(0.01, 0, 0, 0, -3.61999e-08, -0.01, 0, 0.01, -3.61999e-08, -5.96906e-11, 1.31819, 4.77183e-06)
 
 [node name="groundlevelparallax_geo" type="MeshInstance3D" parent="enviroment ring/groundlevelparallax_geo" index="0"]
 transform = Transform3D(0.73, 0, 0, 0, 0.73, -2.27374e-13, 0, 2.27374e-13, 0.73, 0, 0, 0)
@@ -5367,10 +5367,10 @@ mesh = SubResource("ArrayMesh_u7fo2")
 skeleton = NodePath("")
 
 [node name="montanhas_geo" parent="enviroment ring" index="2"]
-transform = Transform3D(0.00127335, -50, 5.10549e-07, 0, -2.18557e-06, -11.68, 50, 0.00127335, -1.30022e-11, 0, 6.39, 0)
+transform = Transform3D(50, 0, 0, 0, -0.000181, -11.68, 0, 50, -4.22815e-05, 0, 6.39, 0)
 
 [node name="monastery plane" type="Node3D" parent="enviroment ring"]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 1.4971, 0)
+transform = Transform3D(-0.736405, 0, -0.312583, 0, 0.8, 0, 0.312583, 0, -0.736405, 0, 1.4971, 0)
 
 [node name="cutscenemonasteryplane" parent="enviroment ring/monastery plane" instance=ExtResource("12_w7ava")]
 transform = Transform3D(1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 0, -0.0425267, 0)

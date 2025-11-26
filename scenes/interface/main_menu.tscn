@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_oxakc"]
 [ext_resource type="Theme" uid="uid://ckunkgvgme6kl" path="res://resources/button_theme.tres" id="2_7mvmg"]
-[ext_resource type="FontFile" uid="uid://b40jo8iw2wqxv" path="res://fonts/PF Pixelscript Pro Regular.ttf" id="2_ybg4j"]
+[ext_resource type="FontFile" path="res://fonts/PF Pixelscript Pro Regular.ttf" id="2_ybg4j"]
 [ext_resource type="FontFile" uid="uid://b8lxgqho3723q" path="res://fonts/Alkhemikal.ttf" id="4_h1tt7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_66kl7"]

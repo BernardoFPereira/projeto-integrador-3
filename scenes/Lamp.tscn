@@ -595,18 +595,22 @@ mesh = SubResource("ArrayMesh_jq84h")
 skeleton = NodePath("")
 
 [node name="sidedetail1_geo" type="MeshInstance3D" parent="torchlamp/torchlamp_grp"]
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_f48qq")
 skeleton = NodePath("")
 
 [node name="sidedetail2_geo" type="MeshInstance3D" parent="torchlamp/torchlamp_grp"]
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_njxq0")
 skeleton = NodePath("")
 
 [node name="sidedetail3_geo" type="MeshInstance3D" parent="torchlamp/torchlamp_grp"]
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_0rcyy")
 skeleton = NodePath("")
 
 [node name="sidedetail4_geo" type="MeshInstance3D" parent="torchlamp/torchlamp_grp"]
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_3du22")
 skeleton = NodePath("")
 
