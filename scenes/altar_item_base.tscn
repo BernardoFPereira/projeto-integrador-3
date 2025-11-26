@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://bsp2mw6wcqx4k"]
+[gd_scene load_steps=9 format=3 uid="uid://bsp2mw6wcqx4k"]
 
 [ext_resource type="Script" path="res://scripts/altar_item_base.gd" id="1_3ubyo"]
+[ext_resource type="Material" uid="uid://bwfv7poepsg5" path="res://materials/squaretileground.tres" id="2_86v16"]
 [ext_resource type="PackedScene" uid="uid://dw4dwel00bs3y" path="res://models/collectables/estatua01.glb" id="2_bk88e"]
 [ext_resource type="PackedScene" uid="uid://1cg3m0hpg8qm" path="res://models/collectables/estatua02.glb" id="3_47l37"]
 [ext_resource type="PackedScene" uid="uid://bjjrcwf1pmnxf" path="res://models/collectables/estatua03.glb" id="4_628c3"]
 [ext_resource type="AudioStream" uid="uid://df8cm3rka7ky0" path="res://audio/dropItem.ogg" id="5_3qxbk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hgg1j"]
+material = ExtResource("2_86v16")
 size = Vector3(0.3, 0.04, 0.3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t7jn3"]

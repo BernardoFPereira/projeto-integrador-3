@@ -28233,7 +28233,7 @@ transform = Transform3D(0.999998, 0, -2.13163e-14, 0, 1.69589, 0, -1.24345e-13, 
 transform = Transform3D(0.999999, 0, -1.77636e-14, 0, 1.7199, 0, -1.27898e-13, 0, 1, 15.7404, -0.69752, 0.534685)
 
 [node name="column2" parent="Giga Level Design/Third Floor Corner Detail/InnerColumns" index="2"]
-transform = Transform3D(0.999999, 0, -7.10543e-15, 0, 1.65212, 0, -9.9476e-14, 0, 1, 3.89683, -0.760219, 0.564654)
+transform = Transform3D(0.999999, 0, -2.4869e-14, 0, 1.65212, 0, -1.03029e-13, 0, 1.39251, 3.89683, -0.760219, 0.564651)
 
 [node name="column3" parent="Giga Level Design/Third Floor Corner Detail/InnerColumns" index="3"]
 transform = Transform3D(0.999999, 0, -7.10543e-15, 0, 1.77115, 0, -8.88178e-14, 0, 1, 9.15644, -0.686124, 0.52482)
@@ -28281,8 +28281,23 @@ transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, -3.98562
 [node name="BasicBook" parent="Giga Level Design/library" index="3"]
 transform = Transform3D(1, 0, 0, 0, 0.528435, 0.848974, 0, -0.848974, 0.528435, -3.96942, 2.60421, 2.41942)
 
+[node name="shelfsmall2" parent="Giga Level Design/library/Bookshelfs Library" index="0"]
+transform = Transform3D(1.00096, 0, 0.160579, 0, 1.25575, 0, -0.2253, 0, 0.713415, 4.98735, 0, -0.318294)
+
 [node name="shelfbig" parent="Giga Level Design/library/Bookshelfs Library" index="8"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.564, -0.243713, 1.60981)
+
+[node name="BookStack4" parent="Giga Level Design/library/Bookshelfs Library" index="12"]
+transform = Transform3D(0.975592, 0, 0.219591, 0, 1, 0, -0.219591, 0, 0.975592, 4.95699, -0.0769119, -0.0764484)
+
+[node name="BasicBook4" parent="Giga Level Design/library/Bookshelfs Library" index="24"]
+transform = Transform3D(0.344885, 0.919997, 0.186171, -0.58425, 0.0551703, 0.809697, 0.734648, -0.388022, 0.556535, 4.7873, -0.0938759, 0.260604)
+
+[node name="BasicBook5" parent="Giga Level Design/library/Bookshelfs Library" index="25"]
+transform = Transform3D(0.539588, 0.771642, 0.33677, -0.58425, 0.0551703, 0.809697, 0.606217, -0.63366, 0.480601, 4.78056, 0.0574765, 0.230689)
+
+[node name="BasicBook6" parent="Giga Level Design/library/Bookshelfs Library" index="26"]
+transform = Transform3D(0.601679, 0.798445, 0.0216111, 0.0242615, -0.0453131, 0.998678, 0.79837, -0.600359, -0.0466355, 4.65898, 0.676796, -0.309494)
 
 [node name="BasicBook32" parent="Giga Level Design/library/Bookshelfs Library" index="29" instance=ExtResource("28_hcnc1")]
 transform = Transform3D(0.386182, 0.922348, -0.0116756, 0.0144172, 0.00662063, 0.999874, 0.922311, -0.386302, -0.010741, 25.0287, -5.1731, -3.5132)
