@@ -12,12 +12,19 @@ grow_vertical = 2
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 texture_filter = 1
-offset_left = 398.0
-offset_top = -169.0
-offset_right = 62645.0
-offset_bottom = 41332.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.880729
+anchor_top = 0.0037037
+anchor_right = 2.02552
+anchor_bottom = 1.56018
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.56733
 texture = ExtResource("1_2mahm")
-region_rect = Rect2(61.7123, 9.14491, 2175.97, 1632.93)
-patch_margin_left = 80
-patch_margin_top = 56
-patch_margin_bottom = 55
+region_rect = Rect2(96, 32, 2128, 1576)
+patch_margin_left = 400
+patch_margin_top = 472
+patch_margin_right = 504
+patch_margin_bottom = 552
+metadata/_edit_use_anchors_ = true
