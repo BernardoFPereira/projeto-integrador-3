@@ -1,7 +1,6 @@
 extends Control
 
-
-@onready var resolution_option_button = $"Master/Settings/ResolutionOptionButton"
+@onready var resolution_option_button = $ResolutionOptionButton
 @onready var ui_enter = $"../UI_Enter"
 @onready var ui_exit = $"../UI_Exit"
 
@@ -14,13 +13,12 @@ const RESOLUTIONS_DICTIONARY: Dictionary = {
 func _ready():
 	add_res_items()
 
+func _on_resolution_option_button_item_selected(index: int) -> void:
+	DisplayServer.window_set_size(RESOLUTIONS_DICTIONARY.values()[index])
+
 func add_res_items() -> void:
 	for resolution_size_text in RESOLUTIONS_DICTIONARY:
 		resolution_option_button.add_item(resolution_size_text)
-	
-
-func _on_resolution_option_button_item_selected(index: int) -> void:
-	DisplayServer.window_set_size(RESOLUTIONS_DICTIONARY.values()[index])
 
 func _on_fullscreen_check_box_toggled(toggled_on):
 	if toggled_on:

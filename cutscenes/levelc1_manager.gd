@@ -43,9 +43,9 @@ func exit_loop():
 	animation_player.play("EnterIntro")
 	can_skip = false
 
-#func allow_skip():
-	#skip_text_button.button_mask = MOUSE_BUTTON_LEFT
-	#can_skip = true
+func allow_skip():
+	skip_text_button.button_mask = MOUSE_BUTTON_LEFT
+	can_skip = true
 
 func show_skip_line():
 	if can_skip:

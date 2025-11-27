@@ -53,11 +53,7 @@ func _on_animation_finished(anim_name):
 func get_choice(value):
 	is_finale_selected = true
 	finale = value
-	print("Escolha feita: ", value)
 
 func verify_selection():
 	if not is_finale_selected:
 		scene_animation_player.play("DecisionLoop")
-		print("NotSelected")
-	else:
-		print("Finale Selected")

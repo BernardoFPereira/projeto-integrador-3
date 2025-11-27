@@ -40,7 +40,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Control/Control1/Alma:modulate")
+tracks/2/path = NodePath("Control/Control1/Ingrid:modulate")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -164,7 +164,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Control/Control1/Alma:modulate")
+tracks/2/path = NodePath("Control/Control1/Ingrid:modulate")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -396,7 +396,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="Control"]
-modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -435,6 +434,7 @@ grow_vertical = 2
 pivot_offset = Vector2(343, 349)
 
 [node name="GameByLabel" type="Label" parent="Control/Control1"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -454,7 +454,8 @@ text = "Um jogo por:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Alma" type="Label" parent="Control/Control1"]
+[node name="Ingrid" type="Label" parent="Control/Control1"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -470,11 +471,12 @@ grow_vertical = 2
 pivot_offset = Vector2(131, 25)
 theme_override_fonts/font = ExtResource("2_g4w5f")
 theme_override_font_sizes/font_size = 48
-text = "Alma"
+text = "Ingrid Miranda"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Bernardo" type="Label" parent="Control/Control1"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -495,6 +497,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Lauro" type="Label" parent="Control/Control1"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -515,6 +518,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Igor" type="Label" parent="Control/Control1"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -535,6 +539,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Vinicius" type="Label" parent="Control/Control1"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
