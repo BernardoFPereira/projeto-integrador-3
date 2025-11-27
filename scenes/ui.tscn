@@ -1075,6 +1075,8 @@ libraries = {
 }
 autoplay = "RESET"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Notification"]
+
 [connection signal="pressed" from="Journal/TextureButton" to="." method="_on_pages_button_pressed"]
 [connection signal="pressed" from="Journal/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Journal/PagesButton" to="." method="_on_pages_button_pressed"]
