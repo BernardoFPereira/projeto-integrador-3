@@ -22,6 +22,8 @@ var altar_item_count := 0
 var journal: Journal
 var page_notes: PageNotes
 
+var altar_complete := false
+
 #func _ready() -> void:
 	#if get_tree().current_scene.name != "MonasteryInside":
 	#get_tree().root.connect("game_start", _on_game_start)
@@ -30,7 +32,8 @@ var page_notes: PageNotes
 	#page_notes = get_tree().get_first_node_in_group("UI").find_child("Pages")
 
 func _process(delta) -> void:
-	if altar_item_count >= 2:
+	if altar_item_count >= 2 and altar_complete:
+		altar_complete = false
 		emit_signal("game_complete")
 
 func _on_game_start() -> void:
