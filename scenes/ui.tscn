@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://drak54rbqaie4"]
+[gd_scene load_steps=71 format=3 uid="uid://drak54rbqaie4"]
 
 [ext_resource type="Script" path="res://scripts/UI_Manager.gd" id="1_txv8k"]
 [ext_resource type="AudioStream" uid="uid://d2g5yis528a7" path="res://audio/UI/PI3 PaperPage1.wav" id="2_fsku8"]
@@ -37,6 +37,10 @@
 [ext_resource type="Texture2D" uid="uid://c1kmkuxgnexpc" path="res://UI/pixel/9patch pen.png" id="27_mp0r3"]
 [ext_resource type="Script" path="res://scripts/notification.gd" id="27_xnuut"]
 [ext_resource type="AudioStream" uid="uid://ch24rqf2dd47n" path="res://audio/UI/PI3 PenWrite3.wav" id="29_mp1jx"]
+[ext_resource type="Script" path="res://scripts/settings_ingame.gd" id="33_72ugf"]
+[ext_resource type="Script" path="res://scripts/audio_control.gd" id="34_hxw3k"]
+[ext_resource type="StyleBox" uid="uid://u7jkhjsiivbj" path="res://resources/UI_Button_Hover_Style.tres" id="34_vqw1d"]
+[ext_resource type="Theme" uid="uid://culmsqdigx4gk" path="res://resources/Menu_Theme_1.tres" id="36_5d3e0"]
 [ext_resource type="AudioStream" uid="uid://bvxsvryv8ly8t" path="res://audio/UI/PI3 PenWrite1.wav" id="36_41lmy"]
 [ext_resource type="AudioStream" uid="uid://l86kiuagnfkh" path="res://audio/UI/PI3 PenWrite2.wav" id="37_0uuj3"]
 
@@ -81,6 +85,14 @@ vertical = true
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ssw3q"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4tm0f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xxyja"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sermn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ebfpg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cnv0t"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_21gjq"]
 font = ExtResource("4_n24mj")
@@ -421,6 +433,7 @@ theme_override_colors/default_color = Color(0.0619636, 0.0335877, 0.111845, 1)
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 24
 text = "O que será que aconteceu aqui? O que será que é esse livro? Esses símbolos devem ter algum significado."
+scroll_active = false
 
 [node name="InspectTextureButton01" type="TextureButton" parent="Pages/Panel/Page01"]
 z_index = -1
@@ -488,6 +501,7 @@ theme_override_colors/default_color = Color(0.0619636, 0.0335877, 0.111845, 1)
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 24
 text = "Acho que não estou sozinho... Não vejo nenhum dos monges ou sinal deles. Mas me sinto sendo observado constantemente. Senhor me proteja."
+scroll_active = false
 
 [node name="InspectButton02" type="Button" parent="Pages/Panel/Page02"]
 visible = false
@@ -555,6 +569,7 @@ theme_override_colors/default_color = Color(0.0619636, 0.0335877, 0.111845, 1)
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 24
 text = "Finalmente. Já tenho tudo que preciso para resolver esse mistério. Aquele grande altar na Capela deve ter algo a ver com isso."
+scroll_active = false
 
 [node name="InspectButton03" type="Button" parent="Pages/Panel/Page03"]
 visible = false
@@ -699,13 +714,13 @@ text = "SAIR"
 alignment = 0
 
 [node name="Settings" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("33_72ugf")
 metadata/_edit_lock_ = true
 
 [node name="SettingsBackButton" type="Button" parent="Settings"]
@@ -722,9 +737,14 @@ offset_bottom = -93.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("3_x8ns6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xxyja")
+theme_override_styles/hover = ExtResource("34_vqw1d")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sermn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ebfpg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cnv0t")
 text = "VOLTAR"
 
-[node name="HSlider" type="HSlider" parent="Settings"]
+[node name="MasterSlider" type="HSlider" parent="Settings"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -732,13 +752,17 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -107.0
-offset_top = -9.0
+offset_top = 15.0
 offset_right = 113.0
-offset_bottom = 16.0
+offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
+max_value = 1.0
+step = 0.05
+script = ExtResource("34_hxw3k")
+audio_bus_name = "Master"
 
-[node name="Label" type="Label" parent="Settings/HSlider"]
+[node name="Label" type="Label" parent="Settings/MasterSlider"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -750,7 +774,8 @@ grow_vertical = 2
 text = "MASTER"
 label_settings = SubResource("LabelSettings_21gjq")
 
-[node name="HSlider2" type="HSlider" parent="Settings"]
+[node name="MusicSlider" type="HSlider" parent="Settings"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -763,8 +788,11 @@ offset_right = 113.0
 offset_bottom = 71.5
 grow_horizontal = 2
 grow_vertical = 2
+step = 0.05
+script = ExtResource("34_hxw3k")
+audio_bus_name = "Music"
 
-[node name="Label2" type="Label" parent="Settings/HSlider2"]
+[node name="Label2" type="Label" parent="Settings/MusicSlider"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -776,7 +804,7 @@ grow_vertical = 2
 text = "MUSICA"
 label_settings = SubResource("LabelSettings_21gjq")
 
-[node name="HSlider3" type="HSlider" parent="Settings"]
+[node name="SFXSlider" type="HSlider" parent="Settings"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -789,8 +817,12 @@ offset_right = 113.0
 offset_bottom = 127.5
 grow_horizontal = 2
 grow_vertical = 2
+max_value = 1.0
+step = 0.05
+script = ExtResource("34_hxw3k")
+audio_bus_name = "SFX"
 
-[node name="Label3" type="Label" parent="Settings/HSlider3"]
+[node name="Label3" type="Label" parent="Settings/SFXSlider"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -802,7 +834,38 @@ grow_vertical = 2
 text = "EFEITOS"
 label_settings = SubResource("LabelSettings_21gjq")
 
-[node name="OptionButton" type="OptionButton" parent="Settings"]
+[node name="UISlider" type="HSlider" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = 159.0
+offset_right = 113.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.05
+script = ExtResource("34_hxw3k")
+audio_bus_name = "UI"
+
+[node name="Label3" type="Label" parent="Settings/UISlider"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -30.0
+offset_right = 63.0
+offset_bottom = -7.0
+grow_vertical = 2
+text = "INTERFACE"
+label_settings = SubResource("LabelSettings_21gjq")
+
+[node name="OLD_ResolutionOptionButton" type="OptionButton" parent="Settings"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -823,7 +886,8 @@ popup/item_0/id = 0
 popup/item_1/text = "1920x1080"
 popup/item_1/id = 1
 
-[node name="CheckBox" type="CheckBox" parent="Settings"]
+[node name="OLD_CheckBox" type="CheckBox" parent="Settings"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -837,6 +901,38 @@ offset_bottom = -106.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_x8ns6")
+text = "Tela-cheia"
+
+[node name="ResolutionOptionButton" type="OptionButton" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = -238.0
+offset_right = 197.0
+offset_bottom = -194.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("36_5d3e0")
+
+[node name="FullscreenCheckBox" type="CheckBox" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -191.0
+offset_top = -238.0
+offset_right = -17.0
+offset_bottom = -194.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("36_5d3e0")
+button_pressed = true
 text = "Tela-cheia"
 
 [node name="InteractTip" type="Control" parent="."]
@@ -1091,8 +1187,17 @@ autoplay = "RESET"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("29_mp1jx")
-volume_db = -15.0
+volume_db = 1.053
 pitch_scale = 0.91
+
+[node name="UI_Enter" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_cjmiy")
+bus = &"UI"
+
+[node name="UI_Exit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_11hqb")
+volume_db = -2.0
+bus = &"UI"
 
 [connection signal="pressed" from="Journal/TextureButton" to="." method="_on_pages_button_pressed"]
 [connection signal="pressed" from="Journal/MenuButton" to="." method="_on_menu_button_pressed"]
@@ -1108,5 +1213,19 @@ pitch_scale = 0.91
 [connection signal="pressed" from="Menu/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Menu/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Settings/SettingsBackButton" to="." method="_on_settings_back_button_pressed"]
+[connection signal="drag_ended" from="Settings/MasterSlider" to="Settings/MasterSlider" method="_on_drag_ended"]
+[connection signal="drag_started" from="Settings/MasterSlider" to="Settings/MasterSlider" method="_on_drag_started"]
+[connection signal="value_changed" from="Settings/MasterSlider" to="Settings/MasterSlider" method="_on_master_slider_value_changed"]
+[connection signal="drag_ended" from="Settings/MusicSlider" to="Settings/MusicSlider" method="_on_drag_ended"]
+[connection signal="drag_started" from="Settings/MusicSlider" to="Settings/MusicSlider" method="_on_drag_started"]
+[connection signal="value_changed" from="Settings/MusicSlider" to="Settings/MusicSlider" method="_on_music_slider_value_changed"]
+[connection signal="drag_ended" from="Settings/SFXSlider" to="Settings/SFXSlider" method="_on_drag_ended"]
+[connection signal="drag_started" from="Settings/SFXSlider" to="Settings/SFXSlider" method="_on_drag_started"]
+[connection signal="value_changed" from="Settings/SFXSlider" to="Settings/SFXSlider" method="_on_sfx_slider_value_changed"]
+[connection signal="drag_ended" from="Settings/UISlider" to="Settings/UISlider" method="_on_ui_slider_drag_ended"]
+[connection signal="drag_started" from="Settings/UISlider" to="Settings/UISlider" method="_on_drag_started"]
+[connection signal="value_changed" from="Settings/UISlider" to="Settings/UISlider" method="_on_ui_slider_value_changed"]
+[connection signal="item_selected" from="Settings/ResolutionOptionButton" to="Settings" method="_on_resolution_option_button_item_selected"]
+[connection signal="toggled" from="Settings/FullscreenCheckBox" to="Settings" method="_on_fullscreen_check_box_toggled"]
 [connection signal="pressed" from="Temp_End/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
 [connection signal="pressed" from="Temp_End/QuitButton" to="." method="_on_quit_button_pressed"]

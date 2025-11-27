@@ -26,6 +26,5 @@ func _on_fullscreen_check_box_toggled(toggled_on):
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		ui_exit.play(0)
-		
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 

@@ -5,6 +5,9 @@ class_name CamFX
 @onready var player = $".."
 @onready var is_end_game = false
 
+func _ready() -> void:
+	fade_out()
+
 func fade_in(is_end: bool) -> void:
 	animation_player.play("fade")
 	if is_end:

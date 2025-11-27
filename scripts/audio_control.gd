@@ -7,10 +7,10 @@ extends Control
 var audio_bus_id
 var db
 
-
 func _ready():
 	audio_bus_id = AudioServer.get_bus_index(audio_bus_name)
-
+	var bus_volume_db = AudioServer.get_bus_volume_db(audio_bus_id)
+	AudioServer.set_bus_volume_db(audio_bus_id, bus_volume_db)
 
 func _on_master_slider_value_changed(value):
 	db = linear_to_db(value)
