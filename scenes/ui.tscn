@@ -1201,7 +1201,6 @@ bus = &"UI"
 
 [node name="UI_Exit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_11hqb")
-volume_db = -2.0
 bus = &"UI"
 
 [connection signal="pressed" from="Journal/TextureButton" to="." method="_on_pages_button_pressed"]

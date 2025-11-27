@@ -28809,6 +28809,7 @@ shadow_enabled = true
 stream = ExtResource("13_x0f82")
 pitch_scale = 0.75
 autoplay = true
+bus = &"SFX"
 
 [node name="RainSoundGarden" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.01276, 1.50712, -3.34963)
@@ -28818,6 +28819,7 @@ unit_size = 14.25
 pitch_scale = 0.53
 autoplay = true
 panning_strength = 0.54
+bus = &"SFX"
 
 [node name="RainSoundTopFloor" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.6468, 14.0778, 6.5133)
@@ -28827,6 +28829,7 @@ unit_size = 14.25
 pitch_scale = 0.53
 autoplay = true
 panning_strength = 0.54
+bus = &"SFX"
 
 [node name="InspectRoom" parent="." groups=["InspectRoom"] instance=ExtResource("37_devb0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.73682, 0)

@@ -30,6 +30,7 @@ func _on_music_slider_value_changed(value):
 func _on_ui_slider_value_changed(value):
 	db = linear_to_db(value)
 	AudioServer.set_bus_volume_db(audio_bus_id, db)
+	ui_exit.play(0)
 
 func _on_cutscenes_slider_value_changed(value):
 	db = linear_to_db(value)

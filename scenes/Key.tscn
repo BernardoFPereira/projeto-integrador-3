@@ -123,3 +123,4 @@ draw_pass_1 = SubResource("QuadMesh_t5i8c")
 stream = ExtResource("5_8tb7q")
 volume_db = -15.0
 pitch_scale = 0.81
+bus = &"SFX"
