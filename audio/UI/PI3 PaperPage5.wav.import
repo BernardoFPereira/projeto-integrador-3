@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://nbx1dmkjhtr0"
+path="res://.godot/imported/PI3 PaperPage5.wav-8c56e2d71fcda6e03e4a37316f588bd7.sample"
+
+[deps]
+
+source_file="res://audio/UI/PI3 PaperPage5.wav"
+dest_files=["res://.godot/imported/PI3 PaperPage5.wav-8c56e2d71fcda6e03e4a37316f588bd7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
