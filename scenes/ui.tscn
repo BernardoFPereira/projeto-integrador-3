@@ -421,6 +421,7 @@ theme_override_colors/default_color = Color(0.0619636, 0.0335877, 0.111845, 1)
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 24
 text = "O que será que aconteceu aqui? O que será que é esse livro? Esses símbolos devem ter algum significado."
+scroll_active = false
 
 [node name="InspectTextureButton01" type="TextureButton" parent="Pages/Panel/Page01"]
 z_index = -1
@@ -488,6 +489,7 @@ theme_override_colors/default_color = Color(0.0619636, 0.0335877, 0.111845, 1)
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 24
 text = "Acho que não estou sozinho... Não vejo nenhum dos monges ou sinal deles. Mas me sinto sendo observado constantemente. Senhor me proteja."
+scroll_active = false
 
 [node name="InspectButton02" type="Button" parent="Pages/Panel/Page02"]
 visible = false
@@ -555,6 +557,7 @@ theme_override_colors/default_color = Color(0.0619636, 0.0335877, 0.111845, 1)
 theme_override_fonts/normal_font = ExtResource("4_n24mj")
 theme_override_font_sizes/normal_font_size = 24
 text = "Finalmente. Já tenho tudo que preciso para resolver esse mistério. Aquele grande altar na Capela deve ter algo a ver com isso."
+scroll_active = false
 
 [node name="InspectButton03" type="Button" parent="Pages/Panel/Page03"]
 visible = false

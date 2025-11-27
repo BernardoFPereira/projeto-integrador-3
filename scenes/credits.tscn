@@ -490,7 +490,7 @@ grow_vertical = 2
 pivot_offset = Vector2(131, 25)
 theme_override_fonts/font = ExtResource("2_g4w5f")
 theme_override_font_sizes/font_size = 48
-text = "Bernardo Fonseca"
+text = "Bernardo Fonseca Pereira"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -510,7 +510,7 @@ grow_vertical = 2
 pivot_offset = Vector2(131, 25)
 theme_override_fonts/font = ExtResource("2_g4w5f")
 theme_override_font_sizes/font_size = 48
-text = "Lauro Rosa"
+text = "Lauro Rosa Marques"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -530,7 +530,7 @@ grow_vertical = 2
 pivot_offset = Vector2(131, 25)
 theme_override_fonts/font = ExtResource("2_g4w5f")
 theme_override_font_sizes/font_size = 48
-text = "Igor Leal"
+text = "Igor Leal Nunes"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -550,7 +550,7 @@ grow_vertical = 2
 pivot_offset = Vector2(131, 25)
 theme_override_fonts/font = ExtResource("2_g4w5f")
 theme_override_font_sizes/font_size = 48
-text = "Vinicius Baeta
+text = "Vinicius Baeta Neves
 "
 horizontal_alignment = 1
 vertical_alignment = 1
