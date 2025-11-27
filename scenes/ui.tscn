@@ -714,6 +714,7 @@ text = "SAIR"
 alignment = 0
 
 [node name="Settings" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -759,6 +760,7 @@ grow_horizontal = 2
 grow_vertical = 2
 max_value = 1.0
 step = 0.05
+value = 1.0
 script = ExtResource("34_hxw3k")
 audio_bus_name = "Master"
 
@@ -789,6 +791,7 @@ offset_bottom = 71.5
 grow_horizontal = 2
 grow_vertical = 2
 step = 0.05
+value = 1.0
 script = ExtResource("34_hxw3k")
 audio_bus_name = "Music"
 
@@ -819,6 +822,7 @@ grow_horizontal = 2
 grow_vertical = 2
 max_value = 1.0
 step = 0.05
+value = 1.0
 script = ExtResource("34_hxw3k")
 audio_bus_name = "SFX"
 
@@ -849,6 +853,7 @@ grow_horizontal = 2
 grow_vertical = 2
 max_value = 1.0
 step = 0.05
+value = 1.0
 script = ExtResource("34_hxw3k")
 audio_bus_name = "UI"
 
