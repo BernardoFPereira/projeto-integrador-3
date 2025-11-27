@@ -15,12 +15,6 @@ extends Node
 @onready var credits_max_page = 3
 @onready var credits_current_page = 1
 
-func _ready():
-	if GameState.is_in_main_menu:
-		credits_animation_player.play("Credits_Menu")
-	else:
-		credits_animation_player.play("Credits_From_Finale")
-
 func check_next_credits_page():
 	if credits_current_page == 1:
 		prev_credit_button.disabled = false
@@ -36,7 +30,7 @@ func check_next_credits_page():
 
 func check_prev_credits_page():
 	if credits_current_page == 3:
-		next_credit_button.disabled = true
+		next_credit_button.disabled = false
 		control_3.visible = false
 		control_2.visible = true
 		credits_current_page = clampi(credits_current_page - 1, credits_min_page, credits_max_page)

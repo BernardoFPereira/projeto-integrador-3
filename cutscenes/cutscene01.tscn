@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=3 uid="uid://cx1j2np5gvor2"]
+[gd_scene load_steps=112 format=3 uid="uid://cx1j2np5gvor2"]
 
 [ext_resource type="Texture2D" uid="uid://b00jvlgi8gb2i" path="res://cutscenes/assets/carruagem/carruagem_carruagem_carruagem_mtl_BaseColor.png" id="1_ge4f2"]
 [ext_resource type="Texture2D" uid="uid://5h4uggomcwig" path="res://cutscenes/assets/carruagem/carruagem_carruagem_janela_mtl_BaseColor-carruagem_janela_mtl_alpha.png" id="2_83mfg"]
@@ -4503,6 +4503,18 @@ tracks/21/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Credits/Control:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_ijnjm"]
 resource_name = "EnterLoop"
@@ -4747,6 +4759,18 @@ tracks/19/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Credits/Control:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_apcnh"]
 resource_name = "EnterIntro"
@@ -4848,6 +4872,18 @@ tracks/7/keys = {
 "args": [],
 "method": &"allow_skip"
 }]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Credits/Control:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_luun8"]
@@ -5110,12 +5146,28 @@ tracks/4/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_71x5x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Credits/Control:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v4gbs"]
 _data = {
 "EnterIntro": SubResource("Animation_r8pij"),
 "EnterMenuLoop": SubResource("Animation_ijnjm"),
 "EnterText": SubResource("Animation_apcnh"),
 "MenuLoop": SubResource("Animation_luun8"),
+"RESET": SubResource("Animation_71x5x"),
 "TextLoop": SubResource("Animation_e0t7b")
 }
 
@@ -5586,7 +5638,7 @@ tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/path = NodePath("Control/PrevCreditButton:modulate")
-tracks/7/interp = 1
+tracks/7/interp = 2
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0, 14, 15),
@@ -5598,7 +5650,7 @@ tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/path = NodePath("Control/NextCreditButton:modulate")
-tracks/8/interp = 1
+tracks/8/interp = 2
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0, 14, 15),
@@ -5610,7 +5662,7 @@ tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/path = NodePath("Control/BackButton:modulate")
-tracks/9/interp = 1
+tracks/9/interp = 2
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0, 14, 15),
@@ -5621,19 +5673,31 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("")
+tracks/10/path = NodePath("Control:visible")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Control:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": []
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_ofrss"]
 resource_name = "Exit_Credits"
-length = 2.0
+length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -5674,7 +5738,7 @@ tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/path = NodePath("Control:modulate")
-tracks/3/interp = 1
+tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0.5, 1.5),
@@ -5689,17 +5753,93 @@ tracks/4/path = NodePath("Control:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Master/MainMenu:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(2),
 "transitions": PackedFloat32Array(1),
 "update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Master/MainMenu:modulate")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(3, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_r8qii"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Master/MainMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Master/MainMenu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
 "values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h3nt5"]
 _data = {
 "Credits_From_Finale": SubResource("Animation_vujl2"),
 "Credits_Menu": SubResource("Animation_o4qxh"),
-"Exit_Credits": SubResource("Animation_ofrss")
+"Exit_Credits": SubResource("Animation_ofrss"),
+"RESET": SubResource("Animation_r8qii")
 }
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_es64o"]
@@ -6043,13 +6183,13 @@ libraries = {
 }
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.988302, 0.010168, 0.152169, -0.0242821, 0.995538, 0.0911839, -0.150563, -0.0938123, 0.984139, -0.391039, 1.52303, 0.700459)
+transform = Transform3D(-0.504204, 0.0338635, 0.86292, -0.0250462, 0.998237, -0.0538083, -0.863221, -0.0487433, -0.502467, -0.749796, 1.401, -0.403912)
 current = true
 fov = 60.0
 near = 0.02
 script = ExtResource("7_2q0j3")
 shake_enabled = true
-intensity = 0.001
+intensity = 0.0
 speed = 8.0
 
 [node name="Control" type="Control" parent="."]
@@ -6061,6 +6201,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -6114,7 +6255,7 @@ scroll_active = false
 [node name="Rain" type="Node3D" parent="."]
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Rain"]
-transform = Transform3D(0.717628, -0.696427, 0, 0.696427, 0.717628, 0, 0, 0, 1, 4.05191, 41.1134, 10.4099)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.05191, 41.1134, 10.4099)
 amount = 2500
 randomness = 0.64
 visibility_aabb = AABB(-42.4057, -61.2865, -59.3164, 84.8115, 79.032, 118.633)
@@ -6179,11 +6320,11 @@ skeleton = NodePath("")
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -6.84508, 0)
 
 [node name="arvore_geo" parent="enviroment ring" index="0"]
-transform = Transform3D(23.623, 0, 0, 0, -8.5515e-05, -3.041, 0, 23.623, -1.10084e-05, 0, 0, 0)
+transform = Transform3D(23.623, 6.27056e-05, -2.9221e-11, 0, -8.5515e-05, -3.041, -6.27056e-05, 23.623, -1.10084e-05, 0, 0, 0)
 sorting_offset = -20.0
 
 [node name="groundlevelparallax_geo" parent="enviroment ring" index="1"]
-transform = Transform3D(0.01, 0, 0, 0, -3.61999e-08, -0.01, 0, 0.01, -3.61999e-08, -5.96906e-11, 1.31819, 4.77183e-06)
+transform = Transform3D(0.01, -1.2509e-07, 4.52823e-13, 0, -3.61999e-08, -0.01, 1.2509e-07, 0.01, -3.61999e-08, -5.96906e-11, 1.31819, 4.77183e-06)
 
 [node name="groundlevelparallax_geo" type="MeshInstance3D" parent="enviroment ring/groundlevelparallax_geo" index="0"]
 transform = Transform3D(0.73, 0, 0, 0, 0.73, -2.27374e-13, 0, 2.27374e-13, 0.73, 0, 0, 0)
@@ -6198,11 +6339,11 @@ mesh = SubResource("ArrayMesh_u7fo2")
 skeleton = NodePath("")
 
 [node name="montanhas_geo" parent="enviroment ring" index="2"]
-transform = Transform3D(50, 0, 0, 0, -0.000181, -11.68, 0, 50, -4.22815e-05, 0, 6.39, 0)
+transform = Transform3D(0.00127296, -50, 4.22815e-05, 0, -0.000181, -11.68, 50, 0.00127296, -1.07645e-09, 0, 6.39, 0)
 sorting_offset = -100.0
 
 [node name="monastery plane" type="Node3D" parent="enviroment ring"]
-transform = Transform3D(-0.736405, 0, -0.312583, 0, 0.8, 0, 0.312583, 0, -0.736405, 0, 1.4971, 0)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 1.4971, 0)
 
 [node name="cutscenemonasteryplane" type="Node3D" parent="enviroment ring/monastery plane"]
 transform = Transform3D(1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 0, -0.0425267, 0)
@@ -6252,7 +6393,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="GameTitleLabel" type="Label" parent="Master/MainMenu"]
-modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -6270,7 +6410,6 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Control" type="Control" parent="Master/MainMenu"]
-modulate = Color(1, 1, 1, 0)
 anchors_preset = 0
 offset_left = 100.0
 offset_right = 140.0
@@ -6668,6 +6807,8 @@ text = "Cutscenes
 label_settings = SubResource("LabelSettings_66kl7")
 
 [node name="SkipTextButton" type="Control" parent="Master"]
+visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -6761,7 +6902,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="Credits/Control"]
-modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -6988,9 +7128,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -492.0
-offset_top = -65.0
+offset_top = -113.0
 offset_right = 492.0
-offset_bottom = 34.0
+offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(131, 25)
@@ -7009,9 +7149,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -499.5
-offset_top = 62.5
+offset_top = 14.5
 offset_right = 499.5
-offset_bottom = 161.5
+offset_bottom = 113.5
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(131, 25)
@@ -7030,9 +7170,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -441.0
-offset_top = 188.5
+offset_top = 140.5
 offset_right = 441.0
-offset_bottom = 287.5
+offset_bottom = 239.5
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(131, 25)
@@ -7145,6 +7285,7 @@ root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_h3nt5")
 }
+autoplay = "RESET"
 
 [node name="NextCreditButton" type="Button" parent="Credits/Control"]
 modulate = Color(1, 1, 1, 0)
@@ -7210,7 +7351,7 @@ offset_right = 30.0
 offset_bottom = 438.0
 grow_horizontal = 2
 grow_vertical = 2
-pivot_offset = Vector2(30, 30)
+pivot_offset = Vector2(82, 30)
 theme_override_fonts/font = ExtResource("21_8uf1t")
 theme_override_font_sizes/font_size = 52
 theme_override_styles/normal = SubResource("StyleBoxEmpty_es64o")
@@ -7252,6 +7393,8 @@ stream = ExtResource("34_y4k3t")
 [connection signal="mouse_entered" from="Master/SkipTextButton/SkipTextButton" to="." method="show_skip_line"]
 [connection signal="mouse_exited" from="Master/SkipTextButton/SkipTextButton" to="." method="hide_skip_line"]
 [connection signal="pressed" from="Master/SkipTextButton/SkipTextButton" to="." method="exit_loop"]
+[connection signal="pressed" from="Credits/Control/NextCreditButton" to="Credits" method="check_next_credits_page"]
+[connection signal="pressed" from="Credits/Control/PrevCreditButton" to="Credits" method="check_prev_credits_page"]
 [connection signal="pressed" from="Credits/Control/BackButton" to="Credits" method="_on_back_button_pressed"]
 
 [editable path="enviroment ring"]

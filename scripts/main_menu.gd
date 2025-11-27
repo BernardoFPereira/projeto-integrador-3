@@ -14,7 +14,6 @@ signal game_start
 @onready var thunder_crack = $"../Credits/ThunderCrack"
 
 func _on_play_button_pressed():
-	GameState.is_in_main_menu = false
 	ui_enter.play(0)
 	get_tree().change_scene_to_packed(first_scene)
 	
