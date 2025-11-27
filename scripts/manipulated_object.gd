@@ -14,6 +14,9 @@ func interact():
 	player.interact_target = null
 	player.can_interact = false
 	
+	var ui = get_tree().get_first_node_in_group("UI")
+	ui.show_notification()
+	
 	interact_area.monitorable = false
 	was_collected = true
 	player.set_state(player.States.INSPECT)

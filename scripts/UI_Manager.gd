@@ -8,6 +8,7 @@ extends Control
 @onready var inspect_text = $InspectDetailText
 @onready var exit_inspect_tip = $ExitInspectTip
 @onready var inner_thought = $InnerThought
+@onready var notification = $Notification
 
 # TEMPORARY NODE
 @onready var temp_end = $Temp_End
@@ -34,6 +35,10 @@ func clear_menu() -> void:
 	pages.visible = false
 	
 	menu_type = MenuType.NONE
+
+func show_notification() -> void:
+	var anim_player: AnimationPlayer = $Notification/AnimationPlayer
+	anim_player.play("notification")
 
 func _on_menu_button_pressed():
 	journal.visible = false
