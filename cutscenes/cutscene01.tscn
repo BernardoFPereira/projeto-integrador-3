@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://cx1j2np5gvor2"]
+[gd_scene load_steps=110 format=3 uid="uid://cx1j2np5gvor2"]
 
 [ext_resource type="Texture2D" uid="uid://b00jvlgi8gb2i" path="res://cutscenes/assets/carruagem/carruagem_carruagem_carruagem_mtl_BaseColor.png" id="1_ge4f2"]
 [ext_resource type="Texture2D" uid="uid://5h4uggomcwig" path="res://cutscenes/assets/carruagem/carruagem_carruagem_janela_mtl_BaseColor-carruagem_janela_mtl_alpha.png" id="2_83mfg"]
@@ -31,6 +31,9 @@
 [ext_resource type="AudioStream" uid="uid://t7wh3cwd4jiw" path="res://audio/UI/UI_Yes.wav" id="25_roxgw"]
 [ext_resource type="AudioStream" uid="uid://dc066m5gkymi5" path="res://audio/UI/UI_No.wav" id="26_j0kt3"]
 [ext_resource type="AudioStream" uid="uid://cen7f2rk4u06f" path="res://audio/soundtrack/TornUpPage-OST.wav" id="28_ndlht"]
+[ext_resource type="Script" path="res://scripts/credits.gd" id="32_ijfhb"]
+[ext_resource type="AudioStream" uid="uid://jjh26v6je6j4" path="res://cutscenes/assets/audio/FinalCutscene_Credits.wav" id="33_g3lke"]
+[ext_resource type="AudioStream" uid="uid://cfg0vbtkeoyle" path="res://cutscenes/assets/audio/thunderCrackTreated.wav" id="34_y4k3t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhq5w"]
 resource_name = "carruagem_mtl.001"
@@ -5043,201 +5046,6 @@ tracks/15/keys = {
 "values": [false]
 }
 
-[sub_resource type="Animation" id="Animation_6c65v"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.656932, 1.45548, -0.534192)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.00667065, 2.3703, -0.0226797)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Master/MainMenu/GameTitleLabel:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Master/MainMenu/Control:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Master/IntroCutscene_EnterText:playing")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Master/IntroCutscene_OnlyRain:playing")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Master/IntroCutscene_EnterIntro:playing")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Master/IntroCutscene_TextLoop:playing")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Master/SkipTextButton/SkipTextButton:modulate")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Master/SkipTextButton:visible")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("Master/SkipTextButton:modulate")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath(".:rotate_speed_multiplier")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [-120]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("Master/MainMenu/Control/PlayButton:mouse_filter")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("Master/MainMenu/Control/SettingsButton:mouse_filter")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("Master/MainMenu/Control/CreditsButton:mouse_filter")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("Master/MainMenu/Control/QuitButton:mouse_filter")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
-}
-
 [sub_resource type="Animation" id="Animation_e0t7b"]
 resource_name = "TextLoop"
 length = 7.0
@@ -5308,7 +5116,6 @@ _data = {
 "EnterMenuLoop": SubResource("Animation_ijnjm"),
 "EnterText": SubResource("Animation_apcnh"),
 "MenuLoop": SubResource("Animation_luun8"),
-"RESET": SubResource("Animation_6c65v"),
 "TextLoop": SubResource("Animation_e0t7b")
 }
 
@@ -5568,6 +5375,8 @@ blend_mode = 3
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_157kc"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3md6"]
+
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_26kwx"]
 color = Color(1, 1, 1, 1)
 grow_begin = 2.0
@@ -5583,8 +5392,321 @@ font_size = 26
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47fye"]
 bg_color = Color(1, 1, 1, 0.72549)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pfnm1"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_vujl2"]
+resource_name = "Credits_From_Finale"
+length = 44.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/PanelContainer:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/Control1/GameByLabel:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(11, 13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/Control1/Alma:modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(15, 17),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/Control1/Bernardo:modulate")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(16.8, 18.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Control/Control1/Lauro:modulate")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(18.6, 20.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Control/Control1/Igor:modulate")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(20.4, 22.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Control/Control1/Vinicius:modulate")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(22.2, 24.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Credits Audio:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_o4qxh"]
+resource_name = "Credits_Menu"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/PanelContainer:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 4.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/Control1/GameByLabel:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.7, 7.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/Control1/Alma:modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 7.7, 9.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/Control1/Bernardo:modulate")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 8.3, 10.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Control/Control1/Lauro:modulate")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 8.9, 10.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Control/Control1/Igor:modulate")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 9.5, 11.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Control/Control1/Vinicius:modulate")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 10.1, 12.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Control/PrevCreditButton:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 14, 15),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Control/NextCreditButton:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 14, 15),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Control/BackButton:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 14, 15),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_ofrss"]
+resource_name = "Exit_Credits"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/PanelContainer:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0999985, 0.299999, 0.399998, 0.5, 0.799999, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ThunderCrack:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ThunderCrack:pitch_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Control:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h3nt5"]
+_data = {
+"Credits_From_Finale": SubResource("Animation_vujl2"),
+"Credits_Menu": SubResource("Animation_o4qxh"),
+"Exit_Credits": SubResource("Animation_ofrss")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_es64o"]
+
 [node name="Cutscene01" type="Node3D"]
 script = ExtResource("8_7ej02")
+rotate_speed_multiplier = -70
 
 [node name="carruagem" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0732179, 0)
@@ -5921,13 +6043,13 @@ libraries = {
 }
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.716931, -0.0116116, 0.697047, -0.0226772, 0.999721, -0.0066706, -0.696775, -0.0205895, -0.716994, -0.656932, 1.45548, -0.534192)
+transform = Transform3D(0.988302, 0.010168, 0.152169, -0.0242821, 0.995538, 0.0911839, -0.150563, -0.0938123, 0.984139, -0.391039, 1.52303, 0.700459)
 current = true
 fov = 60.0
 near = 0.02
 script = ExtResource("7_2q0j3")
 shake_enabled = true
-intensity = 0.0
+intensity = 0.001
 speed = 8.0
 
 [node name="Control" type="Control" parent="."]
@@ -5939,7 +6061,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
-modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -5993,7 +6114,7 @@ scroll_active = false
 [node name="Rain" type="Node3D" parent="."]
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Rain"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.05191, 41.1134, 10.4099)
+transform = Transform3D(0.717628, -0.696427, 0, 0.696427, 0.717628, 0, 0, 0, 1, 4.05191, 41.1134, 10.4099)
 amount = 2500
 randomness = 0.64
 visibility_aabb = AABB(-42.4057, -61.2865, -59.3164, 84.8115, 79.032, 118.633)
@@ -6058,11 +6179,11 @@ skeleton = NodePath("")
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -6.84508, 0)
 
 [node name="arvore_geo" parent="enviroment ring" index="0"]
-transform = Transform3D(23.623, 6.27056e-05, -2.9221e-11, 0, -8.5515e-05, -3.041, -6.27056e-05, 23.623, -1.10084e-05, 0, 0, 0)
+transform = Transform3D(23.623, 0, 0, 0, -8.5515e-05, -3.041, 0, 23.623, -1.10084e-05, 0, 0, 0)
 sorting_offset = -20.0
 
 [node name="groundlevelparallax_geo" parent="enviroment ring" index="1"]
-transform = Transform3D(0.01, -1.2509e-07, 4.52823e-13, 0, -3.61999e-08, -0.01, 1.2509e-07, 0.01, -3.61999e-08, -5.96906e-11, 1.31819, 4.77183e-06)
+transform = Transform3D(0.01, 0, 0, 0, -3.61999e-08, -0.01, 0, 0.01, -3.61999e-08, -5.96906e-11, 1.31819, 4.77183e-06)
 
 [node name="groundlevelparallax_geo" type="MeshInstance3D" parent="enviroment ring/groundlevelparallax_geo" index="0"]
 transform = Transform3D(0.73, 0, 0, 0, 0.73, -2.27374e-13, 0, 2.27374e-13, 0.73, 0, 0, 0)
@@ -6077,11 +6198,11 @@ mesh = SubResource("ArrayMesh_u7fo2")
 skeleton = NodePath("")
 
 [node name="montanhas_geo" parent="enviroment ring" index="2"]
-transform = Transform3D(0.00127296, -50, 4.22815e-05, 0, -0.000181, -11.68, 50, 0.00127296, -1.07645e-09, 0, 6.39, 0)
+transform = Transform3D(50, 0, 0, 0, -0.000181, -11.68, 0, 50, -4.22815e-05, 0, 6.39, 0)
 sorting_offset = -100.0
 
 [node name="monastery plane" type="Node3D" parent="enviroment ring"]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 1.4971, 0)
+transform = Transform3D(-0.736405, 0, -0.312583, 0, 0.8, 0, 0.312583, 0, -0.736405, 0, 1.4971, 0)
 
 [node name="cutscenemonasteryplane" type="Node3D" parent="enviroment ring/monastery plane"]
 transform = Transform3D(1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 0, -0.0425267, 0)
@@ -6131,6 +6252,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="GameTitleLabel" type="Label" parent="Master/MainMenu"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -6250,9 +6372,9 @@ anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -287.0
-offset_top = 69.0
+offset_top = 101.0
 offset_right = 287.0
-offset_bottom = 141.0
+offset_bottom = 173.0
 theme = ExtResource("23_1r6v8")
 theme_override_fonts/font = ExtResource("19_6sany")
 theme_override_font_sizes/font_size = 28
@@ -6267,13 +6389,19 @@ anchor_left = 0.501
 anchor_top = 1.0
 anchor_right = 0.501
 anchor_bottom = 1.0
-offset_left = -67.9201
-offset_top = -177.0
-offset_right = 69.0799
-offset_bottom = -133.0
+offset_left = -84.42
+offset_top = -162.0
+offset_right = 52.58
+offset_bottom = -118.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("23_1r6v8")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w3md6")
+theme_override_styles/hover = ExtResource("20_n22ar")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_w3md6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w3md6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w3md6")
 text = "VOLTAR"
 flat = true
 
@@ -6548,6 +6676,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="SkipTextButton" type="Button" parent="Master/SkipTextButton"]
+modulate = Color(1, 1, 1, 0)
 top_level = true
 layout_mode = 1
 anchors_preset = 7
@@ -6618,6 +6747,486 @@ volume_db = -4.0
 autoplay = true
 bus = &"Music"
 
+[node name="Credits" type="Node" parent="."]
+script = ExtResource("32_ijfhb")
+
+[node name="Control" type="Control" parent="Credits"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Credits/Control"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pfnm1")
+
+[node name="GameTitleLabel" type="Label" parent="Credits/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -201.0
+offset_top = 68.0
+offset_right = 201.0
+offset_bottom = 147.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("19_6sany")
+theme_override_font_sizes/font_size = 36
+text = "O Monastério"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control1" type="Control" parent="Credits/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 617.0
+offset_top = 191.0
+offset_right = -617.0
+offset_bottom = -191.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(343, 349)
+
+[node name="GameByLabel" type="Label" parent="Credits/Control/Control1"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -314.0
+offset_right = 160.0
+offset_bottom = -246.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131, 25)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 68
+text = "Um jogo por:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Alma" type="Label" parent="Credits/Control/Control1"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -177.0
+offset_right = 131.0
+offset_bottom = -127.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131, 25)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 48
+text = "Alma"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bernardo" type="Label" parent="Credits/Control/Control1"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -162.0
+offset_top = -97.0
+offset_right = 162.0
+offset_bottom = -47.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131, 25)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 48
+text = "Bernardo Fonseca"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Lauro" type="Label" parent="Credits/Control/Control1"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -17.0
+offset_right = 131.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131, 25)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 48
+text = "Lauro Rosa"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Igor" type="Label" parent="Credits/Control/Control1"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = 63.0
+offset_right = 131.0
+offset_bottom = 113.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131, 25)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 48
+text = "Igor Leal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Vinicius" type="Label" parent="Credits/Control/Control1"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = 143.0
+offset_right = 131.0
+offset_bottom = 193.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131, 25)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 48
+text = "Vinicius Baeta
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="Credits/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 617.0
+offset_top = 191.0
+offset_right = -617.0
+offset_bottom = -191.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(343, 349)
+
+[node name="AssetsExternos" type="Label" parent="Credits/Control/Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -314.0
+offset_right = 160.0
+offset_bottom = -246.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131, 25)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 68
+text = "Assets Externos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Kenney" type="Label" parent="Credits/Control/Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -219.0
+offset_top = -201.0
+offset_right = 219.0
+offset_bottom = -151.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131, 25)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 48
+text = "Kenney RPG Audio Pack"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cpfcfan10" type="Label" parent="Credits/Control/Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -492.0
+offset_top = -65.0
+offset_right = 492.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131, 25)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 48
+text = "Cpfcfan10
+https://freesound.org/people/Cpfcfan10/sounds/789822"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Speedenza" type="Label" parent="Credits/Control/Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -499.5
+offset_top = 62.5
+offset_right = 499.5
+offset_bottom = 161.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131, 25)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 48
+text = "Speedenza
+https://freesound.org/people/Speedenza/sounds/207753"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TRP" type="Label" parent="Credits/Control/Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -441.0
+offset_top = 188.5
+offset_right = 441.0
+offset_bottom = 287.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131, 25)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 48
+text = "TRP
+https://freesound.org/people/TRP/sounds/567945"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control3" type="Control" parent="Credits/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 617.0
+offset_top = 191.0
+offset_right = -617.0
+offset_bottom = -191.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(343, 349)
+
+[node name="AssetsExternos" type="Label" parent="Credits/Control/Control3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -314.0
+offset_right = 160.0
+offset_bottom = -246.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131, 25)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 68
+text = "Assets Externos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CGEffex" type="Label" parent="Credits/Control/Control3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -492.0
+offset_top = -201.0
+offset_right = 492.0
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131, 25)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 48
+text = "CGEffex
+https://freesound.org/people/CGEffex/sounds/127977"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="richwise" type="Label" parent="Credits/Control/Control3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -492.0
+offset_top = -65.0
+offset_right = 492.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131, 25)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 48
+text = "richwise
+https://freesound.org/people/richwise/sounds/522902"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="D4XX" type="Label" parent="Credits/Control/Control3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -492.0
+offset_top = 71.0
+offset_right = 492.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(131, 25)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 48
+text = "D4XX
+https://freesound.org/people/D4XX/sounds/753170"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CreditsAnimationPlayer" type="AnimationPlayer" parent="Credits/Control"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_h3nt5")
+}
+
+[node name="NextCreditButton" type="Button" parent="Credits/Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 508.0
+offset_top = -30.0
+offset_right = 568.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(30, 30)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxEmpty_es64o")
+theme_override_styles/hover = ExtResource("20_n22ar")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_es64o")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_es64o")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_es64o")
+text = ">"
+flat = true
+
+[node name="PrevCreditButton" type="Button" parent="Credits/Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -568.0
+offset_top = -30.0
+offset_right = -508.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(30, 30)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxEmpty_es64o")
+theme_override_styles/hover = ExtResource("20_n22ar")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_es64o")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_es64o")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_es64o")
+text = "<"
+flat = true
+
+[node name="BackButton" type="Button" parent="Credits/Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = 378.0
+offset_right = 30.0
+offset_bottom = 438.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(30, 30)
+theme_override_fonts/font = ExtResource("21_8uf1t")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxEmpty_es64o")
+theme_override_styles/hover = ExtResource("20_n22ar")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_es64o")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_es64o")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_es64o")
+text = "VOLTAR"
+flat = true
+
+[node name="Credits Audio" type="AudioStreamPlayer" parent="Credits"]
+stream = ExtResource("33_g3lke")
+
+[node name="ThunderCrack" type="AudioStreamPlayer" parent="Credits"]
+stream = ExtResource("34_y4k3t")
+
 [connection signal="pressed" from="Master/MainMenu/Control/PlayButton" to="Master" method="_on_play_button_pressed"]
 [connection signal="pressed" from="Master/MainMenu/Control/SettingsButton" to="Master" method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Master/MainMenu/Control/CreditsButton" to="Master" method="_on_credits_button_pressed"]
@@ -6643,5 +7252,6 @@ bus = &"Music"
 [connection signal="mouse_entered" from="Master/SkipTextButton/SkipTextButton" to="." method="show_skip_line"]
 [connection signal="mouse_exited" from="Master/SkipTextButton/SkipTextButton" to="." method="hide_skip_line"]
 [connection signal="pressed" from="Master/SkipTextButton/SkipTextButton" to="." method="exit_loop"]
+[connection signal="pressed" from="Credits/Control/BackButton" to="Credits" method="_on_back_button_pressed"]
 
 [editable path="enviroment ring"]

@@ -8,8 +8,13 @@ signal game_start
 @onready var settings = $Settings
 @onready var ui_enter = $UI_Enter
 @onready var ui_exit = $UI_Exit
+@onready var credits = $"../Credits"
+@onready var credits_control = $"../Credits/Control"
+@onready var credits_animation_player = $"../Credits/Control/CreditsAnimationPlayer"
+@onready var thunder_crack = $"../Credits/ThunderCrack"
 
 func _on_play_button_pressed():
+	GameState.is_in_main_menu = false
 	ui_enter.play(0)
 	get_tree().change_scene_to_packed(first_scene)
 	
@@ -29,5 +34,8 @@ func _on_quit_button_pressed():
 	get_tree().quit()
 
 func _on_credits_button_pressed():
-	ui_enter.play(0)
-	get_tree().change_scene_to_file("res://scenes/credits.tscn")
+	main_menu.visible = false
+	credits_control.visible = true
+	thunder_crack.play(0)
+	credits_animation_player.play("Credits_Menu")
+	

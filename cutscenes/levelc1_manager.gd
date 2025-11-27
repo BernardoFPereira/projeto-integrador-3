@@ -11,6 +11,7 @@ extends Node
 @export var rotate_speed_multiplier = -120
 
 func _ready():
+	GameState.is_in_main_menu = true
 	animation_player.animation_finished.connect(_on_animation_finished)
 	if GameState.intro_played:
 		animation_player.play("EnterMenuLoop")
