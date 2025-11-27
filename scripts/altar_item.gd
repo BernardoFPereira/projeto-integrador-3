@@ -1,6 +1,7 @@
 extends Node3D
 
 @export var item_order: ItemOrder
+@onready var audio_player = $AudioStreamPlayer3D
 
 @onready var interact_area = $InteractArea
 
@@ -28,6 +29,7 @@ func _ready():
 			#pass
 	
 func interact():
+	audio_player.play()
 	match item_order:
 		ItemOrder.FIRST:
 			ProgressManager.has_item_01 = true

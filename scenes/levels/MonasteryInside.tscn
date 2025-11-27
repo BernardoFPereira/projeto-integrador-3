@@ -1,4 +1,4 @@
-[gd_scene load_steps=2657 format=3 uid="uid://imk5ccgfjb4n"]
+[gd_scene load_steps=2660 format=3 uid="uid://imk5ccgfjb4n"]
 
 [ext_resource type="PackedScene" uid="uid://drak54rbqaie4" path="res://scenes/ui.tscn" id="1_m3lcs"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_wne16"]
@@ -67,7 +67,10 @@
 [ext_resource type="PackedScene" uid="uid://ddhttv3uxb3pl" path="res://scenes/prefabs/altar.tscn" id="51_kybql"]
 [ext_resource type="PackedScene" uid="uid://jhvky7xprbq" path="res://scenes/prefabs/Room Prefabs/garden_bench.tscn" id="52_s880u"]
 [ext_resource type="PackedScene" uid="uid://dtbr6wi5uu3oe" path="res://scenes/prefabs/Room Prefabs/chapel_lights.tscn" id="52_sq1ix"]
+[ext_resource type="PackedScene" uid="uid://n3x0dypsgsah" path="res://models/Chapel/Janela.glb" id="55_nl0cj"]
 [ext_resource type="Texture2D" uid="uid://cb5kgpn2ys0hc" path="res://models/confessionary_confessionario_inGame_confessionario_mtl_BaseColor.png" id="56_w1nx7"]
+[ext_resource type="PackedScene" uid="uid://db5ysjuhpv456" path="res://scenes/prefabs/candelabro.tscn" id="60_d5f27"]
+[ext_resource type="Script" path="res://scripts/DistanceAwareLight.gd" id="62_mnswk"]
 [ext_resource type="PackedScene" uid="uid://3tfq0uaojln7" path="res://scenes/prefabs/quadro_02.tscn" id="64_kiyqm"]
 [ext_resource type="PackedScene" uid="uid://dipurvmrylacm" path="res://scenes/prefabs/quadro_01.tscn" id="65_crxh6"]
 
@@ -222,18 +225,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(-1.01404, 0, 0), Vector3(-1.5543, -2.91981, -2.72658e-06)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AudioStreamPlayer3D:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
 
 [sub_resource type="Animation" id="Animation_rkboq"]
 length = 0.001
@@ -260,18 +251,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(-1.01404, 0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AudioStreamPlayer3D:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0choq"]
@@ -28219,6 +28198,9 @@ is_on = false
 [node name="candle11" parent="Furniture/Front Chapel Altar" index="17"]
 transform = Transform3D(-0.54857, 0, 0.836104, 0, 1, 0, -0.836104, 0, -0.54857, -4.193, 1.26793, -11.3213)
 
+[node name="Janela1" parent="Furniture" instance=ExtResource("55_nl0cj")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 25.1657, 6.62294, 5.11487)
+
 [node name="Giga Level Design" parent="." instance=ExtResource("23_dmbe0")]
 
 [node name="column" parent="Giga Level Design/Garden Columns" index="0"]
@@ -28387,7 +28369,19 @@ is_on = true
 [node name="candle07" parent="Giga Level Design/Confessionary Room/Candelabro" index="14"]
 is_on = true
 
+[node name="pCylinder1" parent="Giga Level Design/Library Lights/Candelabro/Candelabra" index="6"]
+transform = Transform3D(0.0126344, 5.29396e-23, -1.26218e-29, 0, -4.51842e-09, -0.00954555, -5.29396e-23, 0.0126344, -3.41375e-09, 0, 0.12152, 0)
+
 [node name="candle01" parent="Giga Level Design/Library Lights/Candelabro" index="8"]
+is_on = true
+
+[node name="Candelabro5" parent="Giga Level Design/Library Lights" index="1" instance=ExtResource("60_d5f27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6257, 10.2139, 8.70888)
+
+[node name="pCylinder1" parent="Giga Level Design/Library Lights/Candelabro5/Candelabra" index="6"]
+transform = Transform3D(0.0126344, 5.29396e-23, -1.26218e-29, 0, -4.51842e-09, -0.00954555, -5.29396e-23, 0.0126344, -3.41375e-09, 0, 0.12152, 0)
+
+[node name="candle01" parent="Giga Level Design/Library Lights/Candelabro5" index="8"]
 is_on = true
 
 [node name="candle06" parent="Giga Level Design/Library Lights/Candelabro2" index="10"]
@@ -28567,6 +28561,7 @@ shadow_enabled = true
 shadow_blur = 2.11
 omni_range = 7.56621
 omni_attenuation = 0.901251
+script = ExtResource("62_mnswk")
 
 [node name="BackCorridor Lights" type="Node3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.90936, -2.38419e-07, -9.23495)
@@ -28930,6 +28925,7 @@ transform = Transform3D(0.55499, 0, 0, 0, 0.554915, 0.00911449, 0, -0.00911449, 
 [editable path="Giga Level Design/Confessionary Room/confessionary2"]
 [editable path="Giga Level Design/Confessionary Room/Candelabro"]
 [editable path="Giga Level Design/Library Lights/Candelabro"]
+[editable path="Giga Level Design/Library Lights/Candelabro5"]
 [editable path="Giga Level Design/Library Lights/Candelabro2"]
 [editable path="Giga Level Design/Library Lights/Candelabro4"]
 [editable path="Lights/Candelabra"]
