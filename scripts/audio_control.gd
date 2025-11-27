@@ -7,6 +7,7 @@ extends Control
 var audio_bus_id
 var db
 
+
 func _ready():
 	audio_bus_id = AudioServer.get_bus_index(audio_bus_name)
 
@@ -42,9 +43,3 @@ func _on_drag_started():
 func _on_drag_ended(value_changed):
 	ui_exit.play(0)
 
-
-func _on_fullscreen_check_box_toggled(toggled_on):
-	if toggled_on:
-		ui_enter.play(0)
-	else:
-		ui_exit.play(0)

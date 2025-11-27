@@ -15,6 +15,19 @@ extends Node
 @onready var credits_max_page = 3
 @onready var credits_current_page = 1
 
+func _ready():
+	credits_animation_player.animation_finished.connect(_on_animation_finished)
+	if GameState.is_in_menu == false:
+		credits_animation_player.play("Credits_From_Finale")
+
+func _on_animation_finished(anim_name):
+	if anim_name == "Credits_From_Finale":
+		credits_animation_player.play("Exit_Credits")
+	
+	if anim_name == "Exit_Credits" and not GameState.is_in_menu:
+		get_tree().change_scene_to_file("res://cutscenes/cutscene01.tscn")
+
+
 func check_next_credits_page():
 	if credits_current_page == 1:
 		prev_credit_button.disabled = false

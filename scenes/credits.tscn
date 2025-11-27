@@ -1,9 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://d0c8xt0ogwldh"]
+[gd_scene load_steps=14 format=3 uid="uid://d0c8xt0ogwldh"]
 
 [ext_resource type="Script" path="res://scripts/credits.gd" id="1_7scpn"]
 [ext_resource type="FontFile" uid="uid://b40jo8iw2wqxv" path="res://fonts/PF Pixelscript Pro Regular.ttf" id="1_ti76b"]
 [ext_resource type="FontFile" uid="uid://b8lxgqho3723q" path="res://fonts/Alkhemikal.ttf" id="2_g4w5f"]
-[ext_resource type="AudioStream" uid="uid://jjh26v6je6j4" path="res://cutscenes/assets/audio/FinalCutscene_Credits.wav" id="4_7g1xk"]
+[ext_resource type="AudioStream" uid="uid://k3ihm7mxwr0i" path="res://cutscenes/assets/audio/FinalCutscene_Credits.wav" id="4_7g1xk"]
 [ext_resource type="AudioStream" uid="uid://cfg0vbtkeoyle" path="res://cutscenes/assets/audio/thunderCrackTreated.wav" id="4_j2fg0"]
 [ext_resource type="StyleBox" uid="uid://u7jkhjsiivbj" path="res://resources/UI_Button_Hover_Style.tres" id="4_tot3j"]
 
@@ -12,7 +12,7 @@ bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Animation" id="Animation_vujl2"]
 resource_name = "Credits_From_Finale"
-length = 44.0
+length = 25.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -44,7 +44,7 @@ tracks/2/path = NodePath("Control/Control1/Alma:modulate")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(15, 17),
+"times": PackedFloat32Array(12.9, 14.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -56,7 +56,7 @@ tracks/3/path = NodePath("Control/Control1/Bernardo:modulate")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(16.8, 18.8),
+"times": PackedFloat32Array(14.7, 16.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -68,7 +68,7 @@ tracks/4/path = NodePath("Control/Control1/Lauro:modulate")
 tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(18.6, 20.6),
+"times": PackedFloat32Array(16.5, 18.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -80,7 +80,7 @@ tracks/5/path = NodePath("Control/Control1/Igor:modulate")
 tracks/5/interp = 2
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(20.4, 22.4),
+"times": PackedFloat32Array(18.3, 20.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -92,7 +92,7 @@ tracks/6/path = NodePath("Control/Control1/Vinicius:modulate")
 tracks/6/interp = 2
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(22.2, 24.2),
+"times": PackedFloat32Array(20.1, 22.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -104,6 +104,30 @@ tracks/7/path = NodePath("Credits Audio:playing")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Control:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Control:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -236,14 +260,26 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("")
+tracks/10/path = NodePath("Control:modulate")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": []
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Control:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_ofrss"]
@@ -310,11 +346,39 @@ tracks/4/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_06hev"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h3nt5"]
 _data = {
 "Credits_From_Finale": SubResource("Animation_vujl2"),
 "Credits_Menu": SubResource("Animation_o4qxh"),
-"Exit_Credits": SubResource("Animation_ofrss")
+"Exit_Credits": SubResource("Animation_ofrss"),
+"RESET": SubResource("Animation_06hev")
 }
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_es64o"]
@@ -323,6 +387,7 @@ _data = {
 script = ExtResource("1_7scpn")
 
 [node name="Control" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -712,6 +777,7 @@ libraries = {
 autoplay = "Credits_Menu"
 
 [node name="NextCreditButton" type="Button" parent="Control"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -736,6 +802,7 @@ text = ">"
 flat = true
 
 [node name="PrevCreditButton" type="Button" parent="Control"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -760,6 +827,7 @@ text = "<"
 flat = true
 
 [node name="BackButton" type="Button" parent="Control"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -788,4 +856,3 @@ stream = ExtResource("4_7g1xk")
 
 [node name="ThunderCrack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_j2fg0")
-pitch_scale = 0.7

@@ -5,8 +5,8 @@ extends Node
 
 
 
-var is_finale_selected = false
-var finale = ""
+var is_finale_selected = true
+var finale = "A"
 
 func _ready():
 	scene_animation_player.play("AmbientShot")
@@ -19,7 +19,9 @@ func _on_animation_finished(anim_name):
 		scene_animation_player.play("EnterDecision")
 	
 	if anim_name == "EnterDecision":
-		scene_animation_player.play("DecisionLoop")
+		#scene_animation_player.play("DecisionLoop")
+		scene_animation_player.play("Finale_A")
+		char_animation_player.play("cutscene02-finale_A")
 		
 	
 	if anim_name == "DecisionLoop":
@@ -27,8 +29,9 @@ func _on_animation_finished(anim_name):
 			scene_animation_player.play("DecisionLoop")
 		else:
 			if finale == "A":
-				scene_animation_player.play("Finale_A")
-				char_animation_player.play("cutscene02-finale_A")
+				pass
+				#scene_animation_player.play("Finale_A")
+				#char_animation_player.play("cutscene02-finale_A")
 	
 	if anim_name == "Finale_A":
 		scene_animation_player.play("Finale_A_2")
