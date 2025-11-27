@@ -1,11 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://d0c8xt0ogwldh"]
+[gd_scene load_steps=14 format=3 uid="uid://bpi00ppiflmvg"]
 
 [ext_resource type="Script" path="res://scripts/credits.gd" id="1_7scpn"]
 [ext_resource type="FontFile" uid="uid://b40jo8iw2wqxv" path="res://fonts/PF Pixelscript Pro Regular.ttf" id="1_ti76b"]
 [ext_resource type="FontFile" uid="uid://b8lxgqho3723q" path="res://fonts/Alkhemikal.ttf" id="2_g4w5f"]
 [ext_resource type="AudioStream" uid="uid://k3ihm7mxwr0i" path="res://cutscenes/assets/audio/FinalCutscene_Credits.wav" id="4_7g1xk"]
 [ext_resource type="AudioStream" uid="uid://cfg0vbtkeoyle" path="res://cutscenes/assets/audio/thunderCrackTreated.wav" id="4_j2fg0"]
-[ext_resource type="StyleBox" uid="uid://u7jkhjsiivbj" path="res://resources/UI_Button_Hover_Style.tres" id="4_tot3j"]
+[ext_resource type="StyleBox" path="res://resources/UI_Button_Hover_Style.tres" id="4_tot3j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pfnm1"]
 bg_color = Color(1, 1, 1, 1)
@@ -470,7 +470,7 @@ grow_vertical = 2
 pivot_offset = Vector2(131, 25)
 theme_override_fonts/font = ExtResource("2_g4w5f")
 theme_override_font_sizes/font_size = 48
-text = "Alma"
+text = "Ingrid Rebecca Miranda"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -777,6 +777,7 @@ libraries = {
 autoplay = "Credits_Menu"
 
 [node name="NextCreditButton" type="Button" parent="Control"]
+visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -802,6 +803,7 @@ text = ">"
 flat = true
 
 [node name="PrevCreditButton" type="Button" parent="Control"]
+visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -856,3 +858,5 @@ stream = ExtResource("4_7g1xk")
 
 [node name="ThunderCrack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_j2fg0")
+
+[connection signal="pressed" from="Control/BackButton" to="." method="_on_back_button_pressed"]

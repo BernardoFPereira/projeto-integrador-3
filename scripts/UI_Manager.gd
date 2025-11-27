@@ -132,6 +132,8 @@ func _on_inspect_button_03_pressed():
 		
 func _on_altar_complete() -> void:
 	var player = get_tree().get_first_node_in_group("Player")
-	var cam_fx: CamFX = player.get_child(0)
+	#get_tree().change_scene_to_file("res://cutscenes/cutscene2/cutscene02.tscn")
+	var cam_fx = player.get_child(0)
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	cam_fx.fade_in(true)
+	

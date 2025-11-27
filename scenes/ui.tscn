@@ -661,6 +661,7 @@ text = "NOTAS"
 alignment = 0
 
 [node name="SettingsButton" type="Button" parent="Menu"]
+visible = false
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -1091,7 +1092,7 @@ autoplay = "RESET"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("29_mp1jx")
-volume_db = -15.0
+volume_db = 1.053
 pitch_scale = 0.91
 
 [connection signal="pressed" from="Journal/TextureButton" to="." method="_on_pages_button_pressed"]

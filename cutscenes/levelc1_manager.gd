@@ -12,9 +12,9 @@ func _ready():
 	GameState.is_in_menu = true
 	animation_player.animation_finished.connect(_on_animation_finished)
 	if GameState.intro_played:
-		animation_player.play("EnterMenuLoop")
+		animation_player.play("EnterIntro")
 	else:
-		animation_player.play("EnterText")
+		animation_player.play("MenuLoop")
 		
 
 func _physics_process(delta):

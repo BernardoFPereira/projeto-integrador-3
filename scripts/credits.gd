@@ -57,5 +57,6 @@ func check_prev_credits_page():
 
 
 func _on_back_button_pressed():
-	credits_animation_player.play("Exit_Credits")
-	scene_animation_player.play("EnterMenuLoop")
+	#credits_animation_player.play("Exit_Credits")
+	#scene_animation_player.play("EnterMenuLoop")
+	get_tree().change_scene_to_file("res://cutscenes/cutscene01.tscn")

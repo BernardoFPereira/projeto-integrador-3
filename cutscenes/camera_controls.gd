@@ -1,6 +1,7 @@
 extends Camera3D
 class_name CameraShake
 
+@onready var camera_fx = $CameraFX
 @export var shake_enabled: bool = false
 @export var intensity: float = 0.02
 @export var speed: float = 5.0
@@ -24,3 +25,5 @@ func apply_shake() -> void:
 
 	base_transform.origin += offset
 	global_transform = base_transform
+
+	

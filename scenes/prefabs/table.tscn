@@ -124,7 +124,6 @@ size = Vector3(22.1953, 9.36035, 10.3269)
 transform = Transform3D(-5.84112e-09, 0, -0.133629, 0, 0.133629, 0, 0.133629, 0, -5.84112e-09, 0, 0, 0)
 
 [node name="table-02b_model" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="table_detail" type="MeshInstance3D" parent="table-02b_model"]
 mesh = SubResource("ArrayMesh_43u13")
