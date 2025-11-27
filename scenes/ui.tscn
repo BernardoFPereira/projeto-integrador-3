@@ -1,16 +1,24 @@
-[gd_scene load_steps=51 format=3 uid="uid://drak54rbqaie4"]
+[gd_scene load_steps=63 format=3 uid="uid://drak54rbqaie4"]
 
 [ext_resource type="Script" path="res://scripts/UI_Manager.gd" id="1_txv8k"]
+[ext_resource type="AudioStream" uid="uid://d2g5yis528a7" path="res://audio/UI/PI3 PaperPage1.wav" id="2_fsku8"]
 [ext_resource type="Script" path="res://scripts/Journal.gd" id="2_qjj1l"]
 [ext_resource type="Texture2D" uid="uid://cyvj1swmg58jk" path="res://UI/pixel/Buttons/SmallButton1.png" id="3_6p6vo"]
+[ext_resource type="AudioStream" uid="uid://cb2486ch37ivj" path="res://audio/UI/PI3 PaperPage2.wav" id="3_ovasy"]
 [ext_resource type="FontFile" uid="uid://bq5aief5ce6cv" path="res://fonts/Pixeled English Font.ttf" id="3_u26e6"]
 [ext_resource type="Theme" uid="uid://ckunkgvgme6kl" path="res://resources/button_theme.tres" id="3_x8ns6"]
+[ext_resource type="AudioStream" uid="uid://c3uck16rgo03x" path="res://audio/UI/PI3 PaperPage3.wav" id="4_78cp7"]
 [ext_resource type="FontFile" uid="uid://b8lxgqho3723q" path="res://fonts/Alkhemikal.ttf" id="4_n24mj"]
 [ext_resource type="Texture2D" uid="uid://cqqnr15rwo60a" path="res://UI/Buttons/SmallButtonclicked1.png" id="4_y5yx5"]
+[ext_resource type="AudioStream" uid="uid://qfpuglxy2f0g" path="res://audio/UI/PI3 PaperPage4.wav" id="5_bkmwu"]
 [ext_resource type="Texture2D" uid="uid://bqe6fermxai5t" path="res://UI/Buttons/SmallButton1hover.png" id="5_cm4ld"]
+[ext_resource type="AudioStream" uid="uid://nbx1dmkjhtr0" path="res://audio/UI/PI3 PaperPage5.wav" id="6_dqm2t"]
 [ext_resource type="Texture2D" uid="uid://c7c2vg6lbhmfn" path="res://addons/cyclops_level_builder/art/icons/arrow_right.svg" id="6_i6sl0"]
 [ext_resource type="Script" path="res://scripts/holy_pages.gd" id="7_5gck7"]
+[ext_resource type="AudioStream" uid="uid://dc066m5gkymi5" path="res://audio/UI/UI_No.wav" id="7_11hqb"]
 [ext_resource type="Texture2D" uid="uid://dmu0ivr826rwb" path="res://addons/cyclops_level_builder/art/icons/eye_open.svg" id="7_28cvy"]
+[ext_resource type="AudioStream" uid="uid://t7wh3cwd4jiw" path="res://audio/UI/UI_Yes.wav" id="8_cjmiy"]
+[ext_resource type="AudioStream" uid="uid://brwtmwyiwjx65" path="res://audio/UI/UI_No2.wav" id="9_4vtsb"]
 [ext_resource type="Script" path="res://scripts/InnerThoughtsManager.gd" id="10_45j4o"]
 [ext_resource type="Texture2D" uid="uid://cpeyuvojceg0j" path="res://UI/go_text_arrow.png" id="10_abgis"]
 [ext_resource type="Texture2D" uid="uid://cr5o6styk74fm" path="res://UI/pixel/9patch menu.png" id="10_djbkj"]
@@ -27,6 +35,10 @@
 [ext_resource type="Texture2D" uid="uid://b6t671s831fmm" path="res://UI/Buttons/SmallButtonclicked2.png" id="21_gkxat"]
 [ext_resource type="Texture2D" uid="uid://hub7vnuaqhq" path="res://UI/Buttons/SmallButton2hover.png" id="22_kytrr"]
 [ext_resource type="Texture2D" uid="uid://c1kmkuxgnexpc" path="res://UI/pixel/9patch pen.png" id="27_mp0r3"]
+[ext_resource type="Script" path="res://scripts/notification.gd" id="27_xnuut"]
+[ext_resource type="AudioStream" uid="uid://ch24rqf2dd47n" path="res://audio/UI/PI3 PenWrite3.wav" id="29_mp1jx"]
+[ext_resource type="AudioStream" uid="uid://bvxsvryv8ly8t" path="res://audio/UI/PI3 PenWrite1.wav" id="36_41lmy"]
+[ext_resource type="AudioStream" uid="uid://l86kiuagnfkh" path="res://audio/UI/PI3 PenWrite2.wav" id="37_0uuj3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hsyih"]
 font = ExtResource("3_u26e6")
@@ -93,6 +105,21 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 anti_aliasing = false
 
+[sub_resource type="Animation" id="Animation_dd1el"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_7r37b"]
 resource_name = "notification"
 length = 3.0
@@ -109,21 +136,6 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_dd1el"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_umb4u"]
 _data = {
 "RESET": SubResource("Animation_dd1el"),
@@ -138,6 +150,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_txv8k")
+audio_paper_list = Array[AudioStream]([ExtResource("2_fsku8"), ExtResource("3_ovasy"), ExtResource("4_78cp7"), ExtResource("5_bkmwu"), ExtResource("6_dqm2t")])
+UI_button_sounds = Array[AudioStream]([ExtResource("7_11hqb"), ExtResource("8_cjmiy")])
+UI_quit_sound = ExtResource("9_4vtsb")
 metadata/_edit_lock_ = true
 
 [node name="Journal" type="Control" parent="."]
@@ -235,6 +250,7 @@ text = "Chegada. O monastério se encontra aparentemente vazio. O único sinal d
 O que será que aconteceu por aqui?"
 
 [node name="Note2" type="RichTextLabel" parent="Journal/Panel"]
+visible = false
 texture_filter = 3
 layout_mode = 1
 anchors_preset = 8
@@ -260,6 +276,7 @@ O que estavam pensando quando
 rasgaram páginas sagradas?"
 
 [node name="Note3" type="RichTextLabel" parent="Journal/Panel"]
+visible = false
 texture_filter = 3
 layout_mode = 1
 anchors_preset = 8
@@ -375,6 +392,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Page01" type="Control" parent="Pages/Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -441,6 +459,7 @@ grow_vertical = 2
 icon = ExtResource("7_28cvy")
 
 [node name="Page02" type="Control" parent="Pages/Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -507,6 +526,7 @@ texture_pressed = ExtResource("15_r3tn0")
 texture_hover = ExtResource("16_dr5h0")
 
 [node name="Page03" type="Control" parent="Pages/Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -601,20 +621,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_lock_ = true
 
 [node name="MainMenuButton" type="Button" parent="Menu"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -147.0
-offset_top = -63.0
-offset_right = 147.0
-offset_bottom = -3.0
-grow_horizontal = 2
+offset_left = 140.0
+offset_top = 50.0
+offset_right = 487.0
+offset_bottom = 110.0
 grow_vertical = 2
 theme = ExtResource("3_x8ns6")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_int5n")
@@ -623,19 +639,17 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_int5n")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_int5n")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_int5n")
 text = "MENU PRINCIPAL"
+alignment = 0
 
 [node name="NotesButton" type="Button" parent="Menu"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -114.0
-offset_top = 52.0
-offset_right = 114.0
-offset_bottom = 108.0
-grow_horizontal = 2
+offset_left = 140.0
+offset_top = 137.0
+offset_right = 368.0
+offset_bottom = 193.0
 grow_vertical = 2
 theme = ExtResource("3_x8ns6")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_m3a8d")
@@ -644,19 +658,17 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_oukfy")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_hr8hg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3wr0b")
 text = "NOTAS"
+alignment = 0
 
 [node name="SettingsButton" type="Button" parent="Menu"]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -81.0
-offset_top = -306.0
-offset_right = 81.0
-offset_bottom = -250.0
-grow_horizontal = 2
+offset_left = 140.0
+offset_top = -286.0
+offset_right = 302.0
+offset_bottom = -230.0
 grow_vertical = 0
 theme = ExtResource("3_x8ns6")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_fr5fo")
@@ -665,19 +677,17 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_c1unq")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_nnrpr")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_vp6lm")
 text = "OPÇÕES"
+alignment = 0
 
 [node name="QuitButton" type="Button" parent="Menu"]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -55.5
-offset_top = -202.0
-offset_right = 57.5
-offset_bottom = -150.0
-grow_horizontal = 2
+offset_left = 140.0
+offset_top = -197.0
+offset_right = 253.0
+offset_bottom = -145.0
 grow_vertical = 0
 theme = ExtResource("3_x8ns6")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_isxc1")
@@ -686,6 +696,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_8mj25")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_ssw3q")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4tm0f")
 text = "SAIR"
+alignment = 0
 
 [node name="Settings" type="Control" parent="."]
 visible = false
@@ -1049,6 +1060,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("27_xnuut")
+audio_clips = Array[AudioStream]([ExtResource("36_41lmy"), ExtResource("37_0uuj3"), ExtResource("29_mp1jx")])
+metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="Notification"]
 modulate = Color(1, 1, 1, 0)
@@ -1075,7 +1089,10 @@ libraries = {
 }
 autoplay = "RESET"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Notification"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_mp1jx")
+volume_db = -15.0
+pitch_scale = 0.91
 
 [connection signal="pressed" from="Journal/TextureButton" to="." method="_on_pages_button_pressed"]
 [connection signal="pressed" from="Journal/MenuButton" to="." method="_on_menu_button_pressed"]

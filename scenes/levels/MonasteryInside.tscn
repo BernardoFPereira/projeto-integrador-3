@@ -26517,6 +26517,7 @@ edge_fade = 1.71484
 [node name="MonasteryInside" type="Node"]
 
 [node name="UI" parent="." instance=ExtResource("1_m3lcs")]
+UI_button_sounds = Array[AudioStream]([])
 
 [node name="Triggers" type="Node" parent="."]
 

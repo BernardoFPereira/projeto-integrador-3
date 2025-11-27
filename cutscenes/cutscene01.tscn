@@ -6058,11 +6058,11 @@ skeleton = NodePath("")
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -6.84508, 0)
 
 [node name="arvore_geo" parent="enviroment ring" index="0"]
-transform = Transform3D(23.623, 6.27056e-05, -2.9221e-11, 0, -8.5515e-05, -3.041, -6.27056e-05, 23.623, -1.10084e-05, 0, 0, 0)
+transform = Transform3D(23.623, 6.27056e-05, -3.52844e-13, 0, -1.03259e-06, -3.041, -6.27056e-05, 23.623, -1.32926e-07, 0, 0, 0)
 sorting_offset = -20.0
 
 [node name="groundlevelparallax_geo" parent="enviroment ring" index="1"]
-transform = Transform3D(0.01, -1.2509e-07, 4.52823e-13, 0, -3.61999e-08, -0.01, 1.2509e-07, 0.01, -3.61999e-08, -5.96906e-11, 1.31819, 4.77183e-06)
+transform = Transform3D(0.01, -1.2509e-07, 5.46786e-15, 0, -4.37114e-10, -0.01, 1.2509e-07, 0.01, -4.37114e-10, -5.96906e-11, 1.31819, 4.77183e-06)
 
 [node name="groundlevelparallax_geo" type="MeshInstance3D" parent="enviroment ring/groundlevelparallax_geo" index="0"]
 transform = Transform3D(0.73, 0, 0, 0, 0.73, -2.27374e-13, 0, 2.27374e-13, 0.73, 0, 0, 0)
@@ -6077,7 +6077,7 @@ mesh = SubResource("ArrayMesh_u7fo2")
 skeleton = NodePath("")
 
 [node name="montanhas_geo" parent="enviroment ring" index="2"]
-transform = Transform3D(0.00127296, -50, 4.22815e-05, 0, -0.000181, -11.68, 50, 0.00127296, -1.07645e-09, 0, 6.39, 0)
+transform = Transform3D(0.00127335, -50, 5.10549e-07, 0, -2.18557e-06, -11.68, 50, 0.00127335, -1.30022e-11, 0, 6.39, 0)
 sorting_offset = -100.0
 
 [node name="monastery plane" type="Node3D" parent="enviroment ring"]

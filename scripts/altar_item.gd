@@ -34,6 +34,7 @@ func interact():
 		ItemOrder.SECOND:
 			ProgressManager.emit_signal("first_item_picked")
 			ProgressManager.has_item_02 = true
+			ProgressManager.altar_complete = true
 			#ProgressManager.has_item_02 = true
 			#pass
 		ItemOrder.THIRD:

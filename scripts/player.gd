@@ -110,8 +110,8 @@ func _input(event):
 			
 		_:
 			# DEV POWER -- DISABLE ON BUILD
-			if Input.is_action_just_pressed("ui_accept"):
-				velocity.y = JUMP_VELOCITY
+			#if Input.is_action_just_pressed("ui_accept"):
+				#velocity.y = JUMP_VELOCITY
 			
 			if state != States.CHECK_BOOK:
 				if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
