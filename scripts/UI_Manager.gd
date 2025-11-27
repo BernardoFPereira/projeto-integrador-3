@@ -57,7 +57,7 @@ func _on_menu_button_pressed():
 	menu_type = MenuType.MENU
 
 func _on_main_menu_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/interface/main_menu.tscn")
+	get_tree().change_scene_to_file("res://cutscenes/cutscene01.tscn")
 
 func _on_notes_button_pressed():
 	menu.visible = false
@@ -132,6 +132,6 @@ func _on_inspect_button_03_pressed():
 		
 func _on_altar_complete() -> void:
 	var player = get_tree().get_first_node_in_group("Player")
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	var cam_fx: CamFX = player.get_child(0)
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	cam_fx.fade_in(true)
