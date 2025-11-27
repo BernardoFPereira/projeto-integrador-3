@@ -2,8 +2,6 @@ extends Node
 
 @onready var scene_animation_player = $SelectionAnimationPlayer
 @onready var char_animation_player = $"padre-cutscene-finale_a/AnimationPlayer"
-@onready var cutscene_loop = $"Cutscene-Loop"
-@onready var cutscene_scene_a = $"Cutscene-Scene_A"
 
 
 
@@ -15,7 +13,6 @@ func _ready():
 	char_animation_player.play("cutscene02-scene01")
 	scene_animation_player.animation_finished.connect(_on_animation_finished)
 	char_animation_player.animation_finished.connect(_on_animation_finished)
-	cutscene_loop.finished.connect(play_loop_audio)
 
 func _on_animation_finished(anim_name):
 	if anim_name == "AmbientShot":
@@ -32,25 +29,14 @@ func _on_animation_finished(anim_name):
 			if finale == "A":
 				scene_animation_player.play("Finale_A")
 				char_animation_player.play("cutscene02-finale_A")
-				cutscene_loop.stop()
-				cutscene_scene_a.play(0)
-			elif finale == "B":
-				scene_animation_player.play("Finale_B")
-				cutscene_loop.stop()
-				#char_animation_player.play("CharFinaleB")
 	
 	if anim_name == "Finale_A":
 		scene_animation_player.play("Finale_A_2")
 		char_animation_player.play("cutscene02-finale_a_2")
 	
 	if anim_name == "Finale_A_2":
-		scene_animation_player.play("Credits")
-	
-	if anim_name == "Credits":
-		get_tree().change_scene_to_file("res://cutscenes/cutscene01.tscn")
-	
-	if anim_name == "Finale_B":
-		scene_animation_player.play("Credits")
+		get_tree().change_scene_to_file("res://scenes/credits.tscn")
+		
 	
 	if anim_name == "cutscene02-scene01":
 		char_animation_player.play("cutscene02-loopscene")
@@ -72,6 +58,3 @@ func verify_selection():
 		print("NotSelected")
 	else:
 		print("Finale Selected")
-
-func play_loop_audio():
-	cutscene_loop.play(0)
